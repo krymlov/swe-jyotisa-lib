@@ -1,4 +1,4 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Dec 30 13:24:40 EET 2021
-swe-2.10.02.jar>=
-swe-2.10.02.pom>=
+#Tue Jan 04 19:39:58 EET 2022
+swe-2.10.02a.pom>=
+swe-2.10.02a.jar>=
