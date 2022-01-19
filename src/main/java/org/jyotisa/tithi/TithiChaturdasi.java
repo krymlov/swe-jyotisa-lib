@@ -18,6 +18,7 @@ import static org.jyotisa.graha.shukra.GrahaShukra.SHUKRA;
  * @version 1.0, 2021-01
  */
 public enum TithiChaturdasi implements ITithiChaturdasi {
+    S14,
     K14 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiChaturdasi implements ITithiChaturdasi {
         public String code() {
             return K14_CD;
         }
-    },
-    S14;
+    };
 
     @Override
     public IGrahaShukra lord() {

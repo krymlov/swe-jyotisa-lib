@@ -18,6 +18,7 @@ import static org.jyotisa.graha.shukra.GrahaShukra.SHUKRA;
  * @version 1.0, 2021-01
  */
 public enum TithiShashthi implements ITithiShashthi {
+    S6,
     K6 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiShashthi implements ITithiShashthi {
         public String code() {
             return K06_CD;
         }
-    },
-    S6;
+    };
 
     @Override
     public IGrahaShukra lord() {

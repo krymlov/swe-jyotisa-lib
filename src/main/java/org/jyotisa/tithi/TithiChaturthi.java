@@ -18,6 +18,7 @@ import static org.jyotisa.graha.budha.GrahaBudha.BUDHA;
  * @version 1.0, 2021-01
  */
 public enum TithiChaturthi implements ITithiChaturthi {
+    S4,
     K4 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiChaturthi implements ITithiChaturthi {
         public String code() {
             return K04_CD;
         }
-    },
-    S4;
+    };
 
     @Override
     public IGrahaBudha lord() {

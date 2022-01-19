@@ -18,6 +18,7 @@ import static org.jyotisa.graha.chandra.GrahaChandra.CHANDRA;
  * @version 1.0, 2021-01
  */
 public enum TithiDwitiya implements ITithiDwitiya {
+    S2,
     K2 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiDwitiya implements ITithiDwitiya {
         public String code() {
             return K02_CD;
         }
-    },
-    S2;
+    };
 
     @Override
     public IGrahaChandra lord() {

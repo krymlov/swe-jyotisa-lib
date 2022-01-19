@@ -18,6 +18,7 @@ import static org.jyotisa.graha.surya.GrahaSurya.SURYA;
  * @version 1.0, 2021-01
  */
 public enum TithiPratipada implements ITithiPratipada {
+    S1,
     K1 {
         @Override
         public int uid() {
@@ -28,8 +29,8 @@ public enum TithiPratipada implements ITithiPratipada {
         public String code() {
             return K01_CD;
         }
-    },
-    S1;
+    };
+
 
     @Override
     public IGrahaSurya lord() {

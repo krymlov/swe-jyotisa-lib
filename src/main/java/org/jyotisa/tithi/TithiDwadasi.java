@@ -18,6 +18,7 @@ import static org.jyotisa.graha.budha.GrahaBudha.BUDHA;
  * @version 1.0, 2021-01
  */
 public enum TithiDwadasi implements ITithiDwadasi {
+    S12,
     K12 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiDwadasi implements ITithiDwadasi {
         public String code() {
             return K12_CD;
         }
-    },
-    S12;
+    };
 
     @Override
     public IGrahaBudha lord() {

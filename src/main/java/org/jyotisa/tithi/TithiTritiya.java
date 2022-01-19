@@ -18,6 +18,7 @@ import static org.jyotisa.graha.mangala.GrahaMangala.MANGALA;
  * @version 1.0, 2021-01
  */
 public enum TithiTritiya implements ITithiTritiya {
+    S3,
     K3 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiTritiya implements ITithiTritiya {
         public String code() {
             return K03_CD;
         }
-    },
-    S3;
+    };
 
     @Override
     public IGrahaMangala lord() {

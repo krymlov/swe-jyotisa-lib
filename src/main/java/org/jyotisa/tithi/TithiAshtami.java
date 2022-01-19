@@ -18,6 +18,7 @@ import static org.jyotisa.graha.chaya.GrahaRahu.RAHU;
  * @version 1.0, 2021-01
  */
 public enum TithiAshtami implements ITithiAshtami {
+    S8,
     K8 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiAshtami implements ITithiAshtami {
         public String code() {
             return K08_CD;
         }
-    },
-    S8;
+    };
 
     @Override
     public IGrahaRahu lord() {

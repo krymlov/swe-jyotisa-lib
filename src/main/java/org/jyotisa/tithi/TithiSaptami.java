@@ -18,6 +18,7 @@ import static org.jyotisa.graha.shani.GrahaShani.SHANI;
  * @version 1.0, 2021-01
  */
 public enum TithiSaptami implements ITithiSaptami {
+    S7,
     K7 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiSaptami implements ITithiSaptami {
         public String code() {
             return K07_CD;
         }
-    },
-    S7;
+    };
 
     @Override
     public IGrahaShani lord() {

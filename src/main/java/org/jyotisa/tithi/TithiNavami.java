@@ -18,6 +18,7 @@ import static org.jyotisa.graha.surya.GrahaSurya.SURYA;
  * @version 1.0, 2021-01
  */
 public enum TithiNavami implements ITithiNavami {
+    S9,
     K9 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiNavami implements ITithiNavami {
         public String code() {
             return K09_CD;
         }
-    },
-    S9;
+    };
 
     @Override
     public IGrahaSurya lord() {

@@ -18,6 +18,7 @@ import static org.jyotisa.graha.guru.GrahaGuru.GURU;
  * @version 1.0, 2021-01
  */
 public enum TithiPanchami implements ITithiPanchami {
+    S5,
     K5 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiPanchami implements ITithiPanchami {
         public String code() {
             return K05_CD;
         }
-    },
-    S5;
+    };
 
     @Override
     public IGrahaGuru lord() {

@@ -18,6 +18,7 @@ import static org.jyotisa.graha.guru.GrahaGuru.GURU;
  * @version 1.0, 2021-01
  */
 public enum TithiTrayodasi implements ITithiTrayodasi {
+    S13,
     K13 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiTrayodasi implements ITithiTrayodasi {
         public String code() {
             return K13_CD;
         }
-    },
-    S13;
+    };
 
     @Override
     public IGrahaGuru lord() {

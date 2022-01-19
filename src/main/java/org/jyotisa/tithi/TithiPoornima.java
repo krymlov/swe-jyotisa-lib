@@ -20,6 +20,12 @@ import static org.jyotisa.graha.shani.GrahaShani.SHANI;
  * @version 1.0, 2021-01
  */
 public enum TithiPoornima implements ITithiPoornima {
+    S15 {
+        @Override
+        public IGrahaShani lord() {
+            return SHANI;
+        }
+    },
     K15 {
         @Override
         public int uid() {
@@ -34,12 +40,6 @@ public enum TithiPoornima implements ITithiPoornima {
         @Override
         public String code() {
             return K15_CD;
-        }
-    },
-    S15 {
-        @Override
-        public IGrahaShani lord() {
-            return SHANI;
         }
     };
 

@@ -18,6 +18,7 @@ import static org.jyotisa.graha.mangala.GrahaMangala.MANGALA;
  * @version 1.0, 2021-01
  */
 public enum TithiEkadasi implements ITithiEkadasi {
+    S11,
     K11 {
         @Override
         public int uid() {
@@ -28,8 +29,7 @@ public enum TithiEkadasi implements ITithiEkadasi {
         public String code() {
             return K11_CD;
         }
-    },
-    S11;
+    };
 
     @Override
     public IGrahaMangala lord() {
