@@ -9,7 +9,7 @@
 
     <groupId>swisseph</groupId>
     <artifactId>swe-jyotisa</artifactId>
-    <version>2.10.02d</version>
+    <version>2.10.02e</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,7 +23,7 @@
         <dependency>
             <groupId>swisseph</groupId>
             <artifactId>swe</artifactId>
-            <version>2.10.02b</version>
+            <version>2.10.02e</version>
         </dependency>
 
         <dependency>

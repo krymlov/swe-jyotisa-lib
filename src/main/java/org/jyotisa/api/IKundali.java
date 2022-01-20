@@ -16,6 +16,8 @@ import org.jyotisa.api.panchanga.IPanchanga;
 import org.jyotisa.api.upagraha.IUpagrahas;
 import org.jyotisa.api.varga.IVarga;
 
+import java.io.Serializable;
+
 /**
  * Jyotisha (ज्योतिष) is the traditional Indian system of astrology[1] rooted in Vedic-Purānic tradition. It is
  * often called Vedic Jyotiṣa by its practitioners and Hindu or Indian astrology by foreigners. Jyotiṣa is a
@@ -36,7 +38,7 @@ import org.jyotisa.api.varga.IVarga;
  * @author Yura Krymlov
  * @version 1.0, 2019-12
  */
-public interface IKundali extends IKundaliContext {
+public interface IKundali extends IKundaliContext, Serializable {
     IDignity dignity(final IVarga varga, final IGraha graha);
     IDignity dignity(final IGraha graha);
 

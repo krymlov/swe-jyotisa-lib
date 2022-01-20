@@ -27,7 +27,7 @@ import static swisseph.SweConst.SE_SUN;
  */
 public class KaranaIterator extends KundaliSequenceIterator<IKaranaEntity> {
     
-    protected boolean startFrom2ndKaranaIfActual;
+    protected final boolean startFrom2ndKaranaIfActual;
     protected boolean karana2nd;
 
     public KaranaIterator(IKundali kundali) {
