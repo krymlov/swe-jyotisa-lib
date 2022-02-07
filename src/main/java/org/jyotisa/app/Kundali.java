@@ -51,6 +51,7 @@ import org.swisseph.api.ISweObjectsOptions;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Collections.sort;
 import static org.jyotisa.graha.chaya.GrahaKetu.KETU;
 import static org.jyotisa.graha.chaya.GrahaKetu.KETU_TRUE;
 import static org.jyotisa.graha.chaya.GrahaRahu.RAHU;
@@ -122,7 +123,9 @@ public class Kundali implements IKundali {
 
         for (int i = SY; i < RA; i++) entities.add(all[i]);
         if ( !sevenKarakas ) entities.add(all[RA]);
-        entities.sort(options.charaKarakaOption());
+
+        // sort grahas according to Chara karakas
+        sort(entities, options.charaKarakaOption());
 
         for (int index = 0, karaka = 1; index < entities.size(); index++, karaka++) {
             if ( sevenKarakas && karaka == ECharaKaraka.PITRI_KARAKA.uid() ) karaka++;
