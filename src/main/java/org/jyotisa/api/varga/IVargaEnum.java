@@ -31,10 +31,6 @@ public interface IVargaEnum extends IKundaliSequence<IVargaEnum> {
         return varga().length();
     }
 
-    default double rasiLongitude(final double longitude) {
-        return varga().rasiLongitude(longitude);
-    }
-
     default IRasi rasi(final double longitude) {
         return varga().rasi(longitude);
     }

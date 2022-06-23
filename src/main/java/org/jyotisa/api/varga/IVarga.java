@@ -10,6 +10,7 @@ import org.jyotisa.api.rasi.IRasi;
 
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
 import static org.jyotisa.api.rasi.IRasi.rasiFid0;
+import static org.jyotisa.rasi.ERasi.byLongitude;
 import static org.swisseph.api.ISweConstants.CHAKRA_LENGTH;
 import static org.swisseph.utils.IModuloUtils.fix360;
 
@@ -19,25 +20,38 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  */
 public interface IVarga extends IKundaliSequence<IVarga> {
 
-    IRasi rasi(final double longitude);
+    @Override
+    default double length() {
+        return CHAKRA_LENGTH;
+    }
+
+    default IRasi rasi(double longitudeInD1) {
+        return byLongitude(virtualDegree(longitudeInD1));
+    }
 
     /**
      * For finding longitude of an object in any divisional chart (varga chakra)
      * multiply the degrees, minutes, seconds by the number of the Varga
      * (2 for hora, 3 for drekkana and so on) now leave the completed signs
-     * and retain the degrees, minutes, seconds as the longitude
+     * and retain the degrees, minutes, seconds as the longitudeInD1
      * of the object for that divisional chart.
      *
      * @return longitude in a sign of the varga
      */
-    default double rasiLongitude(double longitude) {
-        longitude *= fid();
-        return rasiDegree(longitude);
+    default double rasiLongitude(double longitudeInD1) {
+        return rasiDegree(virtualDegree(longitudeInD1));
     }
 
-    @Override
-    default double length() {
-        return CHAKRA_LENGTH;
+    /**
+     * For finding a degree (virtual longitude) of an object in any divisional chart (varga chakra)
+     * multiply the degrees, minutes, seconds by the number of the Varga (2 for hora and so on).
+     *
+     * @return degree in a whole varga chakra. It is a virtual longitude needed to calculate {@link IRasi}
+     * and you should not use it as a real longitude
+     */
+    default double virtualDegree(double longitudeInD1) {
+        longitudeInD1 *= fid();
+        return fix360(longitudeInD1);
     }
 
     String D01_CD = "D1";

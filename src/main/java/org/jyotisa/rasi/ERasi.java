@@ -12,6 +12,8 @@ import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
 import org.swisseph.app.SweEnumIterator;
 
+import static org.jyotisa.api.rasi.IRasi.rasiFid;
+
 /**
  * @author Yura Krymlov
  * @version 1.1, 2019-08
@@ -72,7 +74,7 @@ public enum ERasi implements IRasiEnum {
     }
 
     public static IRasi byLongitude(final double longitude) {
-        return values()[IRasi.rasiFid(longitude)].rasi();
+        return values()[rasiFid(longitude)].rasi();
     }
 
     public static IRasi byName(final String name) {

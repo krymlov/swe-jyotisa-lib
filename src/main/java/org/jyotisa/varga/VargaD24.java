@@ -5,9 +5,7 @@
  */
 package org.jyotisa.varga;
 
-import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD24;
-import org.jyotisa.rasi.ERasi;
 
 import static org.jyotisa.api.rasi.IRasi.inOddRasi;
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
@@ -29,16 +27,11 @@ public enum VargaD24 implements IVargaD24 {
     }
 
     @Override
-    public IRasi rasi(final double longitude) {
-        return ERasi.byLongitude(vargaLongitude(longitude));
-    }
-
-    public double vargaLongitude(double longitude) {
+    public double virtualDegree(double longitude) {
         final double result;
         double basepos = rasiDegree(longitude) * d24;
         if (inOddRasi(longitude)) result = basepos + d120;
         else result = basepos + d90;
         return fix360(result);
     }
-
 }

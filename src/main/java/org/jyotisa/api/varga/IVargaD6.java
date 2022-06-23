@@ -25,5 +25,4 @@ public interface IVargaD6 extends IVarga {
     default String code() {
         return D06_CD;
     }
-
 }

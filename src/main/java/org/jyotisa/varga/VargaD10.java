@@ -5,9 +5,7 @@
  */
 package org.jyotisa.varga;
 
-import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD10;
-import org.jyotisa.rasi.ERasi;
 
 import static org.jyotisa.api.rasi.IRasi.*;
 import static org.swisseph.api.ISweConstants.*;
@@ -28,16 +26,11 @@ public enum VargaD10 implements IVargaD10 {
     }
 
     @Override
-    public IRasi rasi(double longitude) {
-        return ERasi.byLongitude(vargaLongitude(longitude));
-    }
-
-    public double vargaLongitude(final double longitude) {
+    public double virtualDegree(double longitude) {
         final double result;
         double basepos = rasiFid0(longitude) * i30 + rasiDegree(longitude) * d10;
         if (inOddRasi(longitude)) result = basepos;
         else result = basepos + d240;
         return fix360(result);
     }
-
 }

@@ -22,5 +22,4 @@ public interface IVargaD108 extends IVarga {
     default String code() {
         return D108_CD;
     }
-
 }

@@ -102,7 +102,7 @@ public interface IRasi extends IKundaliSequence<IRasi> {
      * LIBRA, SCORPIO, SAGITTARIUS, CAPRICORN, AQUARIUS, PISCES = 12
      */
     static int rasiFid(final double longitude) {
-        int fid = (int) (fix360(longitude) / RASI_LENGTH);
+        int fid = rasiFid0(longitude);
         return ++fid;
     }
 

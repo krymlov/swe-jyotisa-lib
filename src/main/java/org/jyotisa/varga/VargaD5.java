@@ -26,11 +26,11 @@ public enum VargaD5 implements IVargaD5 {
     }
 
     @Override
-    public IRasi rasi(final double longitude) {
+    public IRasi rasi(final double longitudeInD1) {
         final double part = (d30 / 5);
-        final double rem = longitude % i30;
+        final double rem = longitudeInD1 % i30;
         final int pos = (int) (rem / part) + 1;
-        int uid = (int) (longitude / i30) + 1;
+        int uid = (int) (longitudeInD1 / i30) + 1;
 
         if ((uid % 2) != i0) {
             switch (pos) {
@@ -53,5 +53,4 @@ public enum VargaD5 implements IVargaD5 {
         if (uid == i0) uid = i12;
         return ERasi.byUid(uid);
     }
-
 }

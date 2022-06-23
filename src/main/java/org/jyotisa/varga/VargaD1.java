@@ -5,11 +5,7 @@
  */
 package org.jyotisa.varga;
 
-import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD1;
-import org.jyotisa.rasi.ERasi;
-
-import static org.swisseph.utils.IModuloUtils.fix360;
 
 /**
  * 1 Rasi
@@ -24,14 +20,4 @@ public enum VargaD1 implements IVargaD1 {
     public IVargaD1[] all() {
         return values();
     }
-
-    @Override
-    public IRasi rasi(final double longitude) {
-        return ERasi.byLongitude(longitude);
-    }
-
-    public double vargaLongitude(final double longitude) {
-        return fix360(longitude * fid());
-    }
-
 }
