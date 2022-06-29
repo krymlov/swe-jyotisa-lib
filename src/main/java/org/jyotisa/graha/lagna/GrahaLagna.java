@@ -14,8 +14,8 @@ import org.jyotisa.api.graha.IGrahaLagna;
  */
 public enum GrahaLagna implements IGrahaLagna {
     G0,
-    LG,
-    LAGNA;
+    LG, LAGNA,
+    As, Ascendant;
 
     @Override
     public IGrahaLagna[] all() {

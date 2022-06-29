@@ -27,8 +27,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaBudha implements IGrahaBudha {
     G5,
-    BU,
-    BUDHA;
+    BU, BUDHA,
+    Me, Mercury;
 
     @Override
     public IGrahaBudha[] all() {

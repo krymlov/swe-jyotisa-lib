@@ -30,8 +30,8 @@ import org.jyotisa.api.graha.IGrahaSweta;
  */
 public enum GrahaSweta implements IGrahaSweta {
     G10,
-    SW,
-    SWETA;
+    SW, SWETA,
+    Ur, Uranus;
 
     @Override
     public IGrahaSweta[] all() {

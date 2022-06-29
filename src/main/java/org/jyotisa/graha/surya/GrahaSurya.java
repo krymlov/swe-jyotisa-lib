@@ -30,8 +30,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaSurya implements IGrahaSurya {
     G1,
-    SY,
-    SURYA;
+    SY, SURYA,
+    Su, Sun;
 
     @Override
     public IGrahaSurya[] all() {

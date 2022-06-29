@@ -24,8 +24,8 @@ import static swisseph.SweConst.SE_TRUE_NODE;
  */
 public enum GrahaKetu implements IGrahaKetu {
     G7,
-    KE,
-    KETU,
+    KE, KETU,
+    Ke, Ketu,
     KETU_TRUE {
         @Override
         public int swefid() {

@@ -28,8 +28,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaShukra implements IGrahaShukra {
     G6,
-    SK,
-    SHUKRA;
+    SK, SHUKRA,
+    Ve, Venus;
 
     @Override
     public IGrahaShukra[] all() {

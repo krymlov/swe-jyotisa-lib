@@ -28,8 +28,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaMangala implements IGrahaMangala {
     G9,
-    MA,
-    MANGALA;
+    MA, MANGALA,
+    Ma, Mars;
 
     @Override
     public IGrahaMangala[] all() {

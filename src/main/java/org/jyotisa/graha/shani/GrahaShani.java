@@ -28,8 +28,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaShani implements IGrahaShani {
     G8,
-    SA,
-    SHANI;
+    SA, SHANI,
+    Sa, Saturn;
 
     @Override
     public IGrahaShani[] all() {

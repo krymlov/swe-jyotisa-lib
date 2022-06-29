@@ -33,8 +33,8 @@ import org.jyotisa.api.graha.IGrahaSyama;
  */
 public enum GrahaSyama implements IGrahaSyama {
     G11,
-    SM,
-    SYAMA;
+    SM, SYAMA,
+    Ne, Neptune;
 
     @Override
     public IGrahaSyama[] all() {

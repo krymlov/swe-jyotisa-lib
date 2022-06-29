@@ -26,8 +26,8 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  */
 public enum GrahaChandra implements IGrahaChandra {
     G2,
-    CH,
-    CHANDRA;
+    CH, CHANDRA,
+    Mo, Moon;
 
     @Override
     public IGrahaChandra[] all() {

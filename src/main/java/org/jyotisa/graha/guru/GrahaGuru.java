@@ -28,8 +28,8 @@ import static org.swisseph.api.ISweConstants.*;
  */
 public enum GrahaGuru implements IGrahaGuru {
     G3,
-    GU,
-    GURU;
+    GU, GURU,
+    Ju, Jupiter;
 
     @Override
     public IGrahaGuru[] all() {
