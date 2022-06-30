@@ -27,9 +27,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaGuru implements IGrahaGuru {
-    G3,
-    GU, GURU,
-    Ju, Jupiter;
+    G3, GU, GURU, Ju, Jupiter;
 
     @Override
     public IGrahaGuru[] all() {
@@ -38,7 +36,7 @@ public enum GrahaGuru implements IGrahaGuru {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d90 && d <= d95) return UCC;
         if (d > d95 && d < d120) return EXT;

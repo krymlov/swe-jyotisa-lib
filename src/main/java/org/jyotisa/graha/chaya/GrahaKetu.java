@@ -23,9 +23,7 @@ import static swisseph.SweConst.SE_TRUE_NODE;
  * @version 1.0, 2019-10
  */
 public enum GrahaKetu implements IGrahaKetu {
-    G7,
-    KE, KETU,
-    Ke, Ketu,
+    G7, KE, KETU, Ke, Ketu,
     KETU_TRUE {
         @Override
         public int swefid() {
@@ -40,7 +38,7 @@ public enum GrahaKetu implements IGrahaKetu {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d240 && d < d270) return UCC;
         if (d >= d330 && d < d360) return MLT;

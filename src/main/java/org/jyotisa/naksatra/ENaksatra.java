@@ -105,6 +105,15 @@ public enum ENaksatra implements INaksatraEnum {
         return values();
     }
 
+    @Override
+    public INaksatraPada pada(final int pada) {
+        if (1 > pada || pada > 4) {
+            throw new RuntimeException("Wrong pada number: " + pada);
+        }
+
+        return ENaksatraPada.byUid(pada + (4 * (fid() - 1)));
+    }
+
     public static ISweEnumIterator<INaksatraEnum> iterator() {
         return new SweEnumIterator<>(values(), ASHWINI.ordinal());
     }
@@ -146,4 +155,5 @@ public enum ENaksatra implements INaksatraEnum {
     public static byte pada(final double longitude) {
         return (byte)(((fix360(longitude) / NAKSHATRA_PADA_LENGTH) % 4) + 1);
     }
+
 }

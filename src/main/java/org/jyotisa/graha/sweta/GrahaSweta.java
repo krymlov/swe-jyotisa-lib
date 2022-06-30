@@ -29,9 +29,7 @@ import org.jyotisa.api.graha.IGrahaSweta;
  * @version 1.0, 2020-05
  */
 public enum GrahaSweta implements IGrahaSweta {
-    G10,
-    SW, SWETA,
-    Ur, Uranus;
+    G10, SW, SWETA, Ur, Uranus;
 
     @Override
     public IGrahaSweta[] all() {

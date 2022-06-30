@@ -23,9 +23,7 @@ import static swisseph.SweConst.SE_TRUE_NODE;
  * @version 1.0, 2019-10
  */
 public enum GrahaRahu implements IGrahaRahu {
-    G4,
-    RA, RAHU,
-    Ra, Rahu,
+    G4, RA, RAHU, Ra, Rahu,
     RAHU_TRUE {
         @Override
         public int swefid() {
@@ -40,7 +38,7 @@ public enum GrahaRahu implements IGrahaRahu {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d60 && d < d90) return UCC;
         if (d >= d150 && d < d180) return MLT;

@@ -16,6 +16,7 @@ import static org.swisseph.api.ISweConstants.NAKSHATRA_LENGTH;
  */
 public interface INaksatraEnum extends IKundaliSequence<INaksatraEnum> {
     INaksatra naksatra();
+    INaksatraPada pada(int pada);
 
     @Override
     default int fid() {

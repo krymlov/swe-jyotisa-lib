@@ -27,9 +27,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaMangala implements IGrahaMangala {
-    G9,
-    MA, MANGALA,
-    Ma, Mars;
+    G9, MA, MANGALA, Ma, Mars;
 
     @Override
     public IGrahaMangala[] all() {
@@ -38,7 +36,7 @@ public enum GrahaMangala implements IGrahaMangala {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d270 && d <= d298) return UCC;
         if (d > d298 && d < d300) return EXT;

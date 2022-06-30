@@ -27,9 +27,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaShukra implements IGrahaShukra {
-    G6,
-    SK, SHUKRA,
-    Ve, Venus;
+    G6, SK, SHUKRA, Ve, Venus;
 
     @Override
     public IGrahaShukra[] all() {
@@ -38,7 +36,7 @@ public enum GrahaShukra implements IGrahaShukra {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d330 && d <= d357) return UCC;
         if (d > d357 && d < d360) return EXT;

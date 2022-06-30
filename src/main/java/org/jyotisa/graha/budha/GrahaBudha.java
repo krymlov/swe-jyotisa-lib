@@ -26,9 +26,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaBudha implements IGrahaBudha {
-    G5,
-    BU, BUDHA,
-    Me, Mercury;
+    G5, BU, BUDHA, Me, Mercury;
 
     @Override
     public IGrahaBudha[] all() {
@@ -37,7 +35,7 @@ public enum GrahaBudha implements IGrahaBudha {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d150 && d < d165) return UCC;
         if (d >= d165 && d <= d170) return MLT;

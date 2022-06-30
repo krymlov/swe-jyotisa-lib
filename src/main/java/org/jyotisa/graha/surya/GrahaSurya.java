@@ -29,9 +29,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaSurya implements IGrahaSurya {
-    G1,
-    SY, SURYA,
-    Su, Sun;
+    G1, SY, SURYA, Su, Sun;
 
     @Override
     public IGrahaSurya[] all() {
@@ -40,7 +38,7 @@ public enum GrahaSurya implements IGrahaSurya {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d0 && d <= d10) return UCC; // ARI 0-10
         if (d > d10 && d < d30) return EXT;  // ARI 10-30

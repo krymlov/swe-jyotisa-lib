@@ -27,9 +27,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.0, 2019-10
  */
 public enum GrahaShani implements IGrahaShani {
-    G8,
-    SA, SHANI,
-    Sa, Saturn;
+    G8, SA, SHANI, Sa, Saturn;
 
     @Override
     public IGrahaShani[] all() {
@@ -38,7 +36,7 @@ public enum GrahaShani implements IGrahaShani {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = IModuloUtils.fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d180 && d <= d200) return UCC;
         if (d > d200 && d < d210) return EXT;

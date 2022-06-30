@@ -25,9 +25,7 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @version 1.0, 2019-10
  */
 public enum GrahaChandra implements IGrahaChandra {
-    G2,
-    CH, CHANDRA,
-    Mo, Moon;
+    G2, CH, CHANDRA, Mo, Moon;
 
     @Override
     public IGrahaChandra[] all() {
@@ -36,7 +34,7 @@ public enum GrahaChandra implements IGrahaChandra {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = fix360(longitude * varga.fid());
+        final double d = varga.virtualDegree(longitude);
 
         if (d >= d30 && d < d34) return UCC;
         if (d >= d34 && d <= d60) return MLT;

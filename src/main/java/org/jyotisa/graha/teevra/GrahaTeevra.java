@@ -49,9 +49,7 @@ import org.jyotisa.api.graha.IGrahaTeevra;
  * @version 1.0, 2020-05
  */
 public enum GrahaTeevra implements IGrahaTeevra {
-    G12,
-    TE, TEEVRA,
-    Pl, Pluto;
+    G12, TE, TEEVRA, Pl, Pluto;
 
     @Override
     public IGrahaTeevra[] all() {
