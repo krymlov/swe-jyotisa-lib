@@ -20,8 +20,10 @@ Gal. Center,SgrA*,ICRS,17,45,40.03599,-29,00,28.1699,-2.755718425, -5.547,  0.0,
 # 325.3, -7.2, 4844 km s-1 according to Kraan-Korteweg et al. 1996, 
 # Woudt 1998
 Great Attractor,GA,2000,16,15,02.836,-60,53,22.54,0.000,   0.00,  0.0,0.0000159,999.99,  0,    0
-# Virgo Cluster, according to NED (Nasa Extragalactic Database)
-Virgo Cluster,VC,2000,12,26,32.1,12,43,24,0.000,   0.00,  0.0,0.0000,999.99,  0,    0
+# Virgo Cluster, according to NED (Nasa Extragalactic Database) (old from 2008 or earlier)
+# Virgo Cluster,VC,2000,12,26,32.1,12,43,24,0.000,   0.00,  0.0,0.0000,999.99,  0,    0
+# Virgo Cluster, according to NED (Nasa Extragalactic Database) 17 June 2021
+Virgo Cluster,VC,2000,12,30,47.3,12,20,13,0.000,   0.00,  0.0,0.0000,999.99,  0,    0
 Andromeda Galaxy,M31,ICRS,00,42,44.330,+41,16,07.50,-35.99,-12.92,-301,0.00128205,3.44,  0,    0
 # Prasepe (Beehive Cluster): http://seds.lpl.arizona.edu/messier/m/m044.html (note, the apparent dimension is 95.0 arc min)
 Praesepe Cluster,M44,2000,08,40,6.000,19,59,0.00,0.000,   0.00,  0.0,5.65,3.7,  0,    0
