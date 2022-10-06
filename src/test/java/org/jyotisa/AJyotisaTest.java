@@ -92,8 +92,16 @@ public abstract class AJyotisaTest {
         return r;
     }
 
+    protected static SwissEph newSwissEph(String ephePath) {
+        return new SwissEph(ephePath);
+    }
+
     protected static SwissEph newSwissEph() {
         return new SwissEph(EPHE_PATH);
+    }
+
+    protected static SwephNative newSwephExp(String ephePath) {
+        return new SwephNative(ephePath);
     }
 
     protected static SwephNative newSwephExp() {

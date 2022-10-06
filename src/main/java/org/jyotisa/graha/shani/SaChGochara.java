@@ -6,7 +6,6 @@ import org.jyotisa.api.IKundali;
 import org.jyotisa.api.graha.IGrahaEnumEntity;
 import org.jyotisa.app.KundaliIterator;
 import org.jyotisa.gochara.GrahaEntity;
-import org.swisseph.api.ISweAyanamsa;
 import org.swisseph.api.ISweGeoLocation;
 import swisseph.SwissOut;
 import swisseph.TransitCalculator;
@@ -19,7 +18,6 @@ import static java.lang.Double.parseDouble;
 import static org.jyotisa.graha.shani.GrahaShani.SHANI;
 
 abstract class SaChGochara extends KundaliIterator<IGrahaEnumEntity> {
-    protected final ISweAyanamsa ayanamsa;
     protected final int limit;
 
     protected double startDegree = -1.;
@@ -28,9 +26,8 @@ abstract class SaChGochara extends KundaliIterator<IGrahaEnumEntity> {
     /**
      * @param limit number of complete transits to include into the output
      */
-    protected SaChGochara(final IKundali kundali, final ISweAyanamsa ayanamsa, final int limit) {
+    protected SaChGochara(final IKundali kundali, final int limit) {
         super(kundali, true);
-        this.ayanamsa = ayanamsa;
         this.limit = limit;
     }
 
@@ -49,7 +46,7 @@ abstract class SaChGochara extends KundaliIterator<IGrahaEnumEntity> {
         addGocharaStartDate(builder);
         addGocharaEndDate(builder);
 
-        builder.append(" -sid").append(ayanamsa.fid());
+        builder.append(" -sid").append(kundali.sweOptions().ayanamsa().fid());
         builder.append(" -true -Dloc24en -fj10v -ut -eswe -edir");
         builder.append(kundali.swissEph().swe_get_ephe_path());
 

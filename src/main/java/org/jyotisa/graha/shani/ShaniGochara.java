@@ -9,7 +9,6 @@ package org.jyotisa.graha.shani;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.rasi.IRasiEnum;
 import org.jyotisa.rasi.ERasi;
-import org.swisseph.api.ISweAyanamsa;
 import org.swisseph.api.ISweSegment;
 
 /**
@@ -44,8 +43,8 @@ public class ShaniGochara extends SaChGochara {
     /**
      * @param bhava Saturn transits through the house/bhava from the Moon in the birth-chart
      */
-    public ShaniGochara(final IKundali kundali, final ISweAyanamsa ayanamsa, final int bhava) {
-        super(kundali, ayanamsa, 4);
+    public ShaniGochara(final IKundali kundali, final int bhava) {
+        super(kundali, 4);
         this.bhava = bhava;
     }
 

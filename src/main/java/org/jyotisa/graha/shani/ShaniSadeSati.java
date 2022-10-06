@@ -9,7 +9,6 @@ package org.jyotisa.graha.shani;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.rasi.IRasiEnum;
 import org.jyotisa.rasi.ERasi;
-import org.swisseph.api.ISweAyanamsa;
 
 /**
  * @author Yura Krymlov
@@ -17,8 +16,8 @@ import org.swisseph.api.ISweAyanamsa;
  */
 public class ShaniSadeSati extends SaChGochara {
 
-    public ShaniSadeSati(final IKundali kundali, final ISweAyanamsa ayanamsa) {
-        super(kundali, ayanamsa, 4);
+    public ShaniSadeSati(final IKundali kundali) {
+        super(kundali, 4);
     }
 
     protected void addGocharaLongitudes(final StringBuilder gocharaArgsBuilder) {
