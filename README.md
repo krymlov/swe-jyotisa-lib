@@ -6,7 +6,7 @@ To build the library from command line you need:
 - JDK 8 or newer
 
 Inside the folder swe-jyotisa-lib run the following command:
-- mvn clean package
+- mvn clean install
 
 ### Restrictions:
 - project includes swe-jni-lib for Windows x64 only, copied from:
