@@ -5,10 +5,12 @@
  */
 package org.jyotisa.varga;
 
+import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD60;
 
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
 import static org.jyotisa.api.rasi.IRasi.rasiFid0;
+import static org.jyotisa.rasi.ERasi.byLongitude;
 import static org.swisseph.api.ISweConstants.d60;
 import static org.swisseph.api.ISweConstants.i30;
 import static org.swisseph.utils.IModuloUtils.fix360;
@@ -25,6 +27,11 @@ public enum VargaD60 implements IVargaD60 {
     @Override
     public IVargaD60[] all() {
         return values();
+    }
+
+    @Override
+    public IRasi rasi(final double longitudeInD1) {
+        return byLongitude(virtualDegree(longitudeInD1));
     }
 
     @Override

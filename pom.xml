@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>swisseph</groupId>
-            <artifactId>swe</artifactId>
+            <artifactId>swe-jyotisa-api</artifactId>
             <version>2.10.03i</version>
         </dependency>
 

@@ -5,8 +5,11 @@
  */
 package org.jyotisa.varga;
 
+import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaD144;
+
+import static org.jyotisa.rasi.ERasi.byLongitude;
 
 
 /**
@@ -21,6 +24,11 @@ public enum VargaD144 implements IVargaD144 {
     @Override
     public IVargaD144[] all() {
         return values();
+    }
+
+    @Override
+    public IRasi rasi(final double longitudeInD1) {
+        return byLongitude(virtualDegree(longitudeInD1));
     }
 
     @Override

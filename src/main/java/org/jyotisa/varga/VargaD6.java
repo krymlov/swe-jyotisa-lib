@@ -5,7 +5,10 @@
  */
 package org.jyotisa.varga;
 
+import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD6;
+
+import static org.jyotisa.rasi.ERasi.byLongitude;
 
 /**
  * 6 Shashthamsa
@@ -19,5 +22,10 @@ public enum VargaD6 implements IVargaD6 {
     @Override
     public IVargaD6[] all() {
         return values();
+    }
+
+    @Override
+    public IRasi rasi(final double longitudeInD1) {
+        return byLongitude(virtualDegree(longitudeInD1));
     }
 }

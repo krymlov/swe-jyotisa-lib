@@ -5,7 +5,10 @@
  */
 package org.jyotisa.varga;
 
+import org.jyotisa.api.rasi.IRasi;
 import org.jyotisa.api.varga.IVargaD81;
+
+import static org.jyotisa.rasi.ERasi.byLongitude;
 
 /**
  * 81 NavaNavāṁśa
@@ -19,5 +22,10 @@ public enum VargaD81 implements IVargaD81 {
     @Override
     public IVargaD81[] all() {
         return values();
+    }
+
+    @Override
+    public IRasi rasi(final double longitudeInD1) {
+        return byLongitude(virtualDegree(longitudeInD1));
     }
 }
