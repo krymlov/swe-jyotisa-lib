@@ -54,15 +54,19 @@ public enum EUpagraha implements IUpagrahaEnum {
     }
 
     public static ISweEnumIterator<IUpagrahaEnum> iterator() {
-        return new SweEnumIterator<>(values(), DHUMA.uid());
+        return new SweEnumIterator<>(values(), DHUMA.ordinal());
     }
 
     public static ISweEnumIterator<IUpagrahaEnum> iteratorFrom(final IUpagrahaEnum upagraha) {
-        return new SweEnumIterator<>(values(), upagraha.uid());
+        return new SweEnumIterator<>(values(), upagraha.ordinal());
     }
 
     public static ISweEnumIterator<IUpagrahaEnum> iteratorTo(IUpagrahaEnum upagraha) {
-        return new SweEnumIterator<>(values(), DHUMA.uid(), upagraha.uid());
+        return new SweEnumIterator<>(values(), DHUMA.ordinal(), upagraha.ordinal());
+    }
+
+    public static ISweEnumIterator<IUpagrahaEnum> iterator(IUpagrahaEnum upagrahaFrom, IUpagrahaEnum upagrahaTo) {
+        return new SweEnumIterator<>(values(), upagrahaFrom.ordinal(), upagrahaTo.ordinal());
     }
 
     public static IUpagrahaEnum byUpagraha(final IUpagraha upagraha) {
