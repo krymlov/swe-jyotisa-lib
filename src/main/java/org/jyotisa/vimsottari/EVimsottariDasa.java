@@ -62,12 +62,17 @@ public enum EVimsottariDasa implements IVimsottariDasaEnum {
         return new SweEnumIterator<>(values(), SURYA_DASA.ordinal());
     }
 
-    public static ISweEnumIterator<IVimsottariDasaEnum> iteratorFrom(final IVimsottariDasaEnum vimsottari) {
-        return new SweEnumIterator<>(values(), vimsottari.ordinal());
+    public static ISweEnumIterator<IVimsottariDasaEnum> iteratorFrom(final IVimsottariDasaEnum dasa) {
+        return new SweEnumIterator<>(values(), dasa.ordinal());
     }
 
-    public static ISweEnumIterator<IVimsottariDasaEnum> iteratorTo(final IVimsottariDasaEnum vimsottari) {
-        return new SweEnumIterator<>(values(), SURYA_DASA.ordinal(), vimsottari.ordinal());
+    public static ISweEnumIterator<IVimsottariDasaEnum> iteratorTo(final IVimsottariDasaEnum dasa) {
+        return new SweEnumIterator<>(values(), SURYA_DASA.ordinal(), dasa.ordinal());
+    }
+
+    public static ISweEnumIterator<IVimsottariDasaEnum> iterator(final IVimsottariDasaEnum dasaFrom,
+                                                                 final IVimsottariDasaEnum dasaTo) {
+        return new SweEnumIterator<>(values(), dasaFrom.ordinal(), dasaTo.ordinal());
     }
 
     public static IVimsottariDasaEnum byDasa(final IVimsottariDasa vimsottariDasa) {

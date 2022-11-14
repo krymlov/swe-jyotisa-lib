@@ -61,11 +61,12 @@ public enum EUpagraha implements IUpagrahaEnum {
         return new SweEnumIterator<>(values(), upagraha.ordinal());
     }
 
-    public static ISweEnumIterator<IUpagrahaEnum> iteratorTo(IUpagrahaEnum upagraha) {
+    public static ISweEnumIterator<IUpagrahaEnum> iteratorTo(final IUpagrahaEnum upagraha) {
         return new SweEnumIterator<>(values(), DHUMA.ordinal(), upagraha.ordinal());
     }
 
-    public static ISweEnumIterator<IUpagrahaEnum> iterator(IUpagrahaEnum upagrahaFrom, IUpagrahaEnum upagrahaTo) {
+    public static ISweEnumIterator<IUpagrahaEnum> iterator(final IUpagrahaEnum upagrahaFrom,
+                                                           final IUpagrahaEnum upagrahaTo) {
         return new SweEnumIterator<>(values(), upagrahaFrom.ordinal(), upagrahaTo.ordinal());
     }
 
