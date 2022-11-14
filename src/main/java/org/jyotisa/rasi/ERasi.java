@@ -62,15 +62,19 @@ public enum ERasi implements IRasiEnum {
     }
 
     public static ISweEnumIterator<IRasiEnum> iterator() {
-        return new SweEnumIterator<>(values(), MESHA.uid());
+        return new SweEnumIterator<>(values(), MESHA.ordinal());
     }
 
     public static ISweEnumIterator<IRasiEnum> iteratorFrom(final IRasiEnum rasi) {
-        return new SweEnumIterator<>(values(), rasi.uid());
+        return new SweEnumIterator<>(values(), rasi.ordinal());
     }
 
     public static ISweEnumIterator<IRasiEnum> iteratorTo(final IRasiEnum rasi) {
-        return new SweEnumIterator<>(values(), MESHA.uid(), rasi.uid());
+        return new SweEnumIterator<>(values(), MESHA.ordinal(), rasi.ordinal());
+    }
+
+    public static ISweEnumIterator<IRasiEnum> iterator(final IRasiEnum rasiFrom, final IRasiEnum rasiTo) {
+        return new SweEnumIterator<>(values(), rasiFrom.ordinal(), rasiTo.ordinal());
     }
 
     public static IRasi byLongitude(final double longitude) {

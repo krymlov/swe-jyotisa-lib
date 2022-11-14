@@ -57,15 +57,19 @@ public enum EDignity implements IDignityEnum {
     }
 
     public static ISweEnumIterator<IDignityEnum> iterator() {
-        return new SweEnumIterator<>(values(), NEECHA.uid());
+        return new SweEnumIterator<>(values(), NEECHA.ordinal());
     }
 
     public static ISweEnumIterator<IDignityEnum> iteratorFrom(final IDignityEnum dignity) {
-        return new SweEnumIterator<>(values(), dignity.uid());
+        return new SweEnumIterator<>(values(), dignity.ordinal());
     }
 
     public static ISweEnumIterator<IDignityEnum> iteratorTo(final IDignityEnum dignity) {
-        return new SweEnumIterator<>(values(), NEECHA.uid(), dignity.uid());
+        return new SweEnumIterator<>(values(), NEECHA.ordinal(), dignity.ordinal());
+    }
+
+    public static ISweEnumIterator<IDignityEnum> iterator(final IDignityEnum dignityFrom, final IDignityEnum dignityTo) {
+        return new SweEnumIterator<>(values(), dignityFrom.ordinal(), dignityTo.ordinal());
     }
 
     public static IDignityEnum byDignity(final IDignity dignity) {

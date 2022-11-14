@@ -57,23 +57,27 @@ public enum EGraha implements IGrahaEnum {
     }
 
     public static ISweEnumIterator<IGrahaEnum> iterator() {
-        return new SweEnumIterator<>(values(), SURYA.uid());
+        return new SweEnumIterator<>(values(), SURYA.ordinal());
     }
 
     public static ISweEnumIterator<IGrahaEnum> iteratorNodes() {
-        return new SweEnumIterator<>(values(), RAHU.uid());
+        return new SweEnumIterator<>(values(), RAHU.ordinal());
     }
 
     public static ISweEnumIterator<IGrahaEnum> iteratorNoNodes() {
-        return new SweEnumIterator<>(values(), i1, SHANI.uid());
+        return new SweEnumIterator<>(values(), i1, SHANI.ordinal());
     }
 
     public static ISweEnumIterator<IGrahaEnum> iteratorFrom(final IGrahaEnum graha) {
-        return new SweEnumIterator<>(values(), graha.uid());
+        return new SweEnumIterator<>(values(), graha.ordinal());
     }
 
     public static ISweEnumIterator<IGrahaEnum> iteratorTo(final IGrahaEnum graha) {
-        return new SweEnumIterator<>(values(), SURYA.uid(), graha.uid());
+        return new SweEnumIterator<>(values(), SURYA.ordinal(), graha.ordinal());
+    }
+
+    public static ISweEnumIterator<IGrahaEnum> iterator(final IGrahaEnum grahaFrom, final IGrahaEnum grahaTo) {
+        return new SweEnumIterator<>(values(), grahaFrom.ordinal(), grahaTo.ordinal());
     }
 
     public static IGrahaEnum byGraha(final IGraha graha) {

@@ -77,6 +77,10 @@ public enum EVarga implements IVargaEnum {
         return new SweEnumIterator<>(values(), RASI.ordinal(), varga.ordinal());
     }
 
+    public static ISweEnumIterator<IVargaEnum> iterator(final IVargaEnum vargaFrom, final IVargaEnum vargaTo) {
+        return new SweEnumIterator<>(values(), vargaFrom.ordinal(), vargaTo.ordinal());
+    }
+
     public static IVargaEnum byVarga(final IVarga varga) {
         return ISweEnum.byCode(varga.code(), values());
     }

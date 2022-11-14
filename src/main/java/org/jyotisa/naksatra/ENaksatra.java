@@ -119,11 +119,15 @@ public enum ENaksatra implements INaksatraEnum {
     }
 
     public static ISweEnumIterator<INaksatraEnum> iteratorFrom(final INaksatraEnum naksatra) {
-        return new SweEnumIterator<>(values(), naksatra.uid());
+        return new SweEnumIterator<>(values(), naksatra.ordinal());
     }
 
     public static ISweEnumIterator<INaksatraEnum> iteratorTo(final INaksatraEnum naksatra) {
-        return new SweEnumIterator<>(values(), ASHWINI.uid(), naksatra.uid());
+        return new SweEnumIterator<>(values(), ASHWINI.ordinal(), naksatra.ordinal());
+    }
+
+    public static ISweEnumIterator<INaksatraEnum> iterator(final INaksatraEnum naksatraFrom, final INaksatraEnum naksatraTo) {
+        return new SweEnumIterator<>(values(), naksatraFrom.ordinal(), naksatraTo.ordinal());
     }
 
     public static INaksatraEnum byNaksatra(final INaksatra naksatra) {

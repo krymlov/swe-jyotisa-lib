@@ -110,11 +110,15 @@ public enum ECharaKaraka implements ICharaKaraka {
     }
 
     public static ISweEnumIterator<ICharaKaraka> iteratorFrom(final ICharaKaraka karaka) {
-        return new SweEnumIterator<>(values(), karaka.uid());
+        return new SweEnumIterator<>(values(), karaka.ordinal());
     }
 
     public static ISweEnumIterator<ICharaKaraka> iteratorTo(final ICharaKaraka karaka) {
-        return new SweEnumIterator<>(values(), ATMA_KARAKA.uid(), karaka.uid());
+        return new SweEnumIterator<>(values(), ATMA_KARAKA.ordinal(), karaka.ordinal());
+    }
+
+    public static ISweEnumIterator<ICharaKaraka> iterator(final ICharaKaraka karakaFrom, final ICharaKaraka karakaTo) {
+        return new SweEnumIterator<>(values(), karakaFrom.ordinal(), karakaTo.ordinal());
     }
 
     public static ICharaKaraka byCode(String code) {

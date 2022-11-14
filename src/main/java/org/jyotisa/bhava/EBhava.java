@@ -56,15 +56,19 @@ public enum EBhava implements IBhavaEnum {
     }
 
     public static ISweEnumIterator<IBhavaEnum> iterator() {
-        return new SweEnumIterator<>(values(), TANU.uid());
+        return new SweEnumIterator<>(values(), TANU.ordinal());
     }
 
     public static ISweEnumIterator<IBhavaEnum> iteratorFrom(final IBhavaEnum bhava) {
-        return new SweEnumIterator<>(values(), bhava.uid());
+        return new SweEnumIterator<>(values(), bhava.ordinal());
     }
 
     public static ISweEnumIterator<IBhavaEnum> iteratorTo(final IBhavaEnum bhava) {
-        return new SweEnumIterator<>(values(), TANU.uid(), bhava.uid());
+        return new SweEnumIterator<>(values(), TANU.ordinal(), bhava.ordinal());
+    }
+
+    public static ISweEnumIterator<IBhavaEnum> iterator(final IBhavaEnum bhavaFrom, final IBhavaEnum bhavaTo) {
+        return new SweEnumIterator<>(values(), bhavaFrom.ordinal(), bhavaTo.ordinal());
     }
 
     public static IBhavaEnum byBhava(final IBhava bhava) {
