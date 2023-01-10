@@ -29,7 +29,7 @@ import static java.lang.Double.longBitsToDouble;
 import static java.util.TimeZone.getTimeZone;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_8_KARAKAS;
 import static org.swisseph.api.ISweConstants.EPHE_PATH;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_CITRAPAKSA;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
 
 /**
  * @author Yura Krymlov
@@ -54,7 +54,7 @@ public abstract class AJyotisaTest {
 
     protected IKundali newChennaiKundali(ISwissEph swissEph) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone("Asia/Calcutta"))), GEO_CHENNAI, LAHIRI_CITRAPAKSA).completeBuild());
+                newCalendar(getTimeZone("Asia/Calcutta"))), GEO_CHENNAI, TRUECITRA_AYANAMSA).completeBuild());
     }
 
     /**
@@ -66,7 +66,7 @@ public abstract class AJyotisaTest {
 
     protected IKundali newKyivKundali(ISwissEph swissEph) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone("Europe/Kiev"))), GEO_KYIV, LAHIRI_CITRAPAKSA).completeBuild());
+                newCalendar(getTimeZone("Europe/Kiev"))), GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
     }
 
     /**
