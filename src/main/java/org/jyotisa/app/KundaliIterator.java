@@ -17,7 +17,6 @@ import static org.swisseph.api.ISweConstants.*;
 import static org.swisseph.api.ISweJulianDate.JULDAY_MAX;
 import static org.swisseph.api.ISweJulianDate.JULDAY_MIN;
 import static org.swisseph.utils.IModuloUtils.fix360;
-import static swisseph.SweConst.*;
 
 /**
  * @author Yura Krymlov
@@ -47,7 +46,7 @@ public abstract class KundaliIterator<E extends IKundaliEntity<?>> implements IK
 
     @Override
     public int transitCalcFlags() {
-        return SEFLG_TRANSIT_LONGITUDE | ((kundali.sweOptions().calcFlags() ^ SEFLG_NONUT) ^ SEFLG_SPEED);
+        return kundali.sweOptions().transitFlags();
     }
 
     protected abstract TransitCalculator createTransitCalc(final double startOffset);
@@ -77,7 +76,7 @@ public abstract class KundaliIterator<E extends IKundaliEntity<?>> implements IK
     }
 
     /**
-     * By default initiates/aligns transit calculation for the given event date, 
+     * By default, initiates/aligns transit calculation for the given event date,
      * means return the event date/degree as the first next() value.<br>
      * <br>
      * In many cases it is mandatory, but if you need to disable then set alignTransit=false<br>

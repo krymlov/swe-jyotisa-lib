@@ -45,7 +45,7 @@ public class PanchangaUtils {
     }
 
     public static int transitCalcFlags(final IKundali kundali) {
-        return SEFLG_TRANSIT_LONGITUDE | ((kundali.sweOptions().calcFlags() ^ SEFLG_NONUT) ^ SEFLG_SPEED);
+        return kundali.sweOptions().transitFlags();
     }
     
     public static ITithiEntity[] getTransitOfTithi(IKundali kundali, ITithi tithi) {
