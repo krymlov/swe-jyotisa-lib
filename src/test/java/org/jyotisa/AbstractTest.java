@@ -6,12 +6,20 @@
 
 package org.jyotisa;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.jyotisa.api.IKundali;
+import org.jyotisa.api.graha.IGrahaEntity;
+import org.jyotisa.api.rasi.IRasi;
+import org.jyotisa.api.varga.IVarga;
+import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.app.Kundali;
+import org.jyotisa.varga.EVarga;
 import org.swisseph.ISwissEph;
 import org.swisseph.SwephNative;
 import org.swisseph.api.ISweGeoLocation;
@@ -20,16 +28,25 @@ import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
 import swisseph.SwissEph;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.Random;
 import java.util.TimeZone;
 
 import static java.lang.Double.doubleToLongBits;
 import static java.lang.Double.longBitsToDouble;
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.TimeZone.getTimeZone;
+import static org.apache.commons.io.FilenameUtils.getName;
+import static org.apache.commons.io.FilenameUtils.getPath;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_8_KARAKAS;
 import static org.swisseph.api.ISweConstants.EPHE_PATH;
+import static org.swisseph.api.ISweConstants.UTF8;
 import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.utils.IDegreeUtils.toDMS;
 
 /**
  * @author Yura Krymlov
@@ -38,7 +55,7 @@ import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
 @TestInstance(Lifecycle.PER_CLASS)
 @Execution(ExecutionMode.CONCURRENT)
 @TestMethodOrder(MethodOrderer.MethodName.class)
-public abstract class AJyotisaTest {
+public abstract class AbstractTest {
     protected static final Random RANDOM = new Random();
     protected static final ThreadLocal<ISwissEph> SWISS_EPHS = new ThreadLocal<>();
     protected static final ThreadLocal<ISwissEph> SWEPH_EXPS = new ThreadLocal<>();
@@ -74,6 +91,8 @@ public abstract class AJyotisaTest {
      * Location : 50°27'N, 30°31'E. Time Zone : (+02:00)
      */
     public static final ISweGeoLocation GEO_KYIV = new SweGeoLocation(30 + (31 / 60.), 50 + (26 / 60.), 180);
+
+    public static final ISweGeoLocation GEO_LUCKNOW = new SweGeoLocation(81.83, 25.95, 123);
 
     /**
      * @param origin the least value, unless greater than bound
@@ -162,4 +181,60 @@ public abstract class AJyotisaTest {
     protected void callAfterAll() {
     }
 
+    public static StringBuilder printKundali(IKundali kundali) {
+        StringBuilder builder = new StringBuilder(kundali.toString());
+        builder.append('\n');
+
+        final Iterator<IVargaEnum> iterator = EVarga.iterator();
+        final IGrahaEntity[] grahas = kundali.grahas().all();
+
+        while (iterator.hasNext()) {
+            final IVarga varga = iterator.next().varga();
+            builder.append(varga.code()).append("\t= ");
+
+            for (int i = 0; i < grahas.length; i++) {
+                final IGrahaEntity graha = grahas[i];
+                final double longitude = graha.longitude();
+                final IRasi rasi = varga.rasi(longitude);
+                final double vrl = varga.rasiLongitude(longitude);
+
+                builder.append(' ').append(rasi.following());
+                builder.append('[').append(toDMS(vrl)).append(']');
+            }
+
+            builder.append('\n');
+        }
+
+        return builder;
+    }
+
+    protected String loadAndAssert(String resourceName, String content) throws IOException {
+        final URL resourceUrl = getClass().getResource(resourceName);
+
+        String reference = null;
+        if ( null != resourceUrl && new File(resourceUrl.getFile()).exists() ) {
+            reference = IOUtils.toString(resourceUrl, UTF_8).trim();
+        }
+
+        content = saveResourceInTempDirectory(resourceName, content); // for faster comparison and fixes
+        Assertions.assertNotNull(reference);
+
+        if (!reference.equals(content)) Assertions.fail();
+        return reference;
+    }
+
+    protected String saveResourceInTempDirectory(String resourceName, String content) throws IOException {
+        final URL resourceUrl = getClass().getResource(resourceName);
+        String resFile = resourceName;
+
+        if ( null != resourceUrl) {
+            resFile = FilenameUtils.normalize(resourceUrl.getFile());
+            if (File.separatorChar == '\\') resFile = resFile.replaceFirst("\\\\", "");
+        }
+
+        File tempFilePath = new File(FileUtils.getTempDirectory(), getPath(resFile));
+        File tempFileName = new File(tempFilePath, getName(resFile));
+        FileUtils.write(tempFileName, content = content.trim(), UTF8);
+        return content;
+    }
 }

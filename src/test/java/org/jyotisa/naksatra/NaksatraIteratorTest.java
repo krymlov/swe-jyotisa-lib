@@ -8,7 +8,7 @@ package org.jyotisa.naksatra;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.jyotisa.AJyotisaTest;
+import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.naksatra.INaksatraEntity;
 import org.jyotisa.api.naksatra.INaksatraEnum;
@@ -20,7 +20,7 @@ import static org.jyotisa.naksatra.ENaksatra.REVATI;
  * @author Yura Krymlov
  * @version 1.0, 2021-11
  */
-public class NaksatraIteratorTest extends AJyotisaTest {
+public class NaksatraIteratorTest extends AbstractTest {
 
     @Test
     void testForwardIterator() {

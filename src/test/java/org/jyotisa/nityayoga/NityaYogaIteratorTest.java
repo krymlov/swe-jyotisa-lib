@@ -8,7 +8,7 @@ package org.jyotisa.nityayoga;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.jyotisa.AJyotisaTest;
+import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.nityayoga.INityaYogaEntity;
 import org.jyotisa.api.nityayoga.INityaYogaEnum;
@@ -19,7 +19,7 @@ import static org.jyotisa.nityayoga.ENityaYoga.VAIDHRITI;
  * @author Yura Krymlov
  * @version 1.0, 2021-11
  */
-public class NityaYogaIteratorTest extends AJyotisaTest {
+public class NityaYogaIteratorTest extends AbstractTest {
 
     @Test
     void testForwardIterator() {

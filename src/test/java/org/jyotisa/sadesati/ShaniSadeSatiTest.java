@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.jyotisa.AJyotisaTest;
+import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.graha.shani.ShaniSadeSati;
 import org.swisseph.ISwissEph;
@@ -13,7 +13,7 @@ import org.swisseph.app.SweRuntimeException;
 import static org.apache.commons.io.FileUtils.getTempDirectoryPath;
 
 @Execution(ExecutionMode.SAME_THREAD)
-public class ShaniSadeSatiTest extends AJyotisaTest {
+public class ShaniSadeSatiTest extends AbstractTest {
 
     @Test
     void testSadeSatiWithoutEpheThrowsException() {

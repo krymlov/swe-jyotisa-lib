@@ -9,7 +9,7 @@ package org.jyotisa.tithi;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.jyotisa.AJyotisaTest;
+import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.tithi.ITithiEnum;
 
@@ -19,7 +19,7 @@ import static org.jyotisa.tithi.ETithi.KRISHNA_AMAVASYA;
  * @author Yura Krymlov
  * @version 1.0, 2021-11
  */
-public class TithiIteratorTest extends AJyotisaTest {
+public class TithiIteratorTest extends AbstractTest {
 
     @Test
     void testForwardIterator() {
