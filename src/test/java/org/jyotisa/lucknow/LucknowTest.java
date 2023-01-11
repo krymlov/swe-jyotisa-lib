@@ -1,6 +1,8 @@
 package org.jyotisa.lucknow;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.parallel.Execution;
+import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.jyotisa.AbstractTest;
 import org.jyotisa.app.Kundali;
 import org.swisseph.api.ISweObjects;
@@ -17,6 +19,7 @@ import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
  * @author Yura Krymlov
  * @version 1.0, 2021-11
  */
+@Execution(ExecutionMode.SAME_THREAD)
 public class LucknowTest extends AbstractTest {
     final int[] date1947 = new int[]{1947, 8, 15, 10, 30, 0};
 
