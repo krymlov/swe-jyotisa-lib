@@ -25,7 +25,7 @@ HL   = 68°55'11.85"  -> Rasi= MIT (29.73%) | 08°55'11.85" -> Naksatra= ARD1|RA
 GL   = 174°58'08.42" -> Rasi= KAN (83.23%) | 24°58'08.42" -> Naksatra= CHT1|MA (12.27%) -> Navamsa= SIM|SY -> Bhava= B1 
 
 Julian Day		: 2432412.9375
- Delta T		: 28.108929
+ Delta T		: 28.108928689667277
 Sidereal Time	: 13:30:11
 UTC Moonrise	: 1947-08-14 22:28:25
 UTC Moonset		: 1947-08-15 12:20:16

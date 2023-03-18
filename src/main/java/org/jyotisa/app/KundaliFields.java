@@ -311,7 +311,7 @@ public class KundaliFields implements IKundaliFields {
         ISwissEph swissEph = sweObjects.swissEph();
 
         builder.append("Julian Day\t\t: ").append(sweObjects.sweJulianDate().julianDay())
-                .append("\n Delta T\t\t: ").append((float)(sweObjects.sweJulianDate().deltaT() * d86400))
+                .append("\n Delta T\t\t: ").append(sweObjects.sweJulianDate().deltaT() * d86400)
                 .append("\nSidereal Time\t: ").append(toDMS(siderealTime(), true))
                 .append("\nUTC Moonrise\t: ").append(format(swissEph.initDateTime(
                         new SweJulianDate(moonrise())), F4Y_2M_2D_2H_2M_2S))
