@@ -1,4 +1,4 @@
-Ayanamsa: LAHIRI|23°07'18.71", Event Date: 1947-08-15 10:30:00 UTC: 00:00:00, Location: 81°49'48"E / 25°57'00"N
+Ayanamsa: LAHIRI|23°07'18.71", Event Date: 1947-08-15 10:30:00 UTC:+00:00:00, Location: 81°49'48"E / 25°57'00"N
 Housesys: WHOLE_SIGN, Naksatra: PUS(80.46%), Tithi: K14(78.55%), Vaara: SKVR, Nitya Yoga: VYAT(70.23%), Karana: SKN(57.11%)
 Bhrigu Bindu: 69°32'53.15", Bhava: B7, Rasi: MIT, Naksatra: ARD
 LG   = 256°22'36.50" -> Rasi= DHN (54.59%) | 16°22'36.50" -> Naksatra= PSH1|SK (22.83%) -> Navamsa= SIM|SY -> Bhava= B1  -> Dignity= NIL ->     ->   

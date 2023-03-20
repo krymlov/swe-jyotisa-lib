@@ -1,4 +1,4 @@
-Ayanamsa: TRUE_CITRA|23°06'14.40", Event Date: 1947-08-15 10:30:00 UTC: 00:00:00, Location: 81°49'48"E / 25°57'00"N
+Ayanamsa: TRUE_CITRA|23°06'14.40", Event Date: 1947-08-15 10:30:00 UTC:+00:00:00, Location: 81°49'48"E / 25°57'00"N
 Housesys: WHOLE_SIGN, Naksatra: PUS(80.58%), Tithi: K14(78.55%), Vaara: SKVR, Nitya Yoga: VYAT(70.46%), Karana: SKN(57.11%)
 Bhrigu Bindu: 69°33'47.56", Bhava: B7, Rasi: MIT, Naksatra: ARD
 LG   = 256°23'40.82" -> Rasi= DHN (54.65%) | 16°23'40.82" -> Naksatra= PSH1|SK (22.96%) -> Navamsa= SIM|SY -> Bhava= B1  -> Dignity= NIL ->     ->   
