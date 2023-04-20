@@ -26,17 +26,17 @@ public class AbstractGrahan implements IGrahan {
     }
 
     @Override
-    public double[] getCoordinates() {
+    public double[] coordinates() {
         return coordinates;
     }
 
     @Override
-    public double[] getOccasions() {
+    public double[] occasions() {
         return occasions;
     }
 
     @Override
-    public double[] getAttributes() {
+    public double[] attributes() {
         return attributes;
     }
 }

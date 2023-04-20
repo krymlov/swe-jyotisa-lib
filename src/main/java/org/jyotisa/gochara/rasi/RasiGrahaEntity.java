@@ -25,7 +25,7 @@ public class RasiGrahaEntity extends RasiEntity implements IRasiGrahaEntity {
         this.graha = graha;
     }
     
-    public IGraha getGraha() {
+    public IGraha graha() {
         return graha;
     }
 

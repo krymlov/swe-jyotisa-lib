@@ -156,12 +156,12 @@ public class Kundali implements IKundali {
 
         if (locally) {
             swissEph().swe_sol_eclipse_when_loc(fields().sunrise(), SEFLG_SWIEPH,
-                    grahan.getCoordinates(), grahan.getOccasions(), grahan.getAttributes(),
+                    grahan.coordinates(), grahan.occasions(), grahan.attributes(),
                     backward ? 1 : 0, serr);
         } else {
             //final double julday = ((long) getJulianDate().getJulDay()) - d05;
             swissEph().swe_sol_eclipse_when_glob(fields().sunrise(), SEFLG_SWIEPH,
-                    0, grahan.getOccasions(), backward ? 1 : 0, serr);
+                    0, grahan.occasions(), backward ? 1 : 0, serr);
         }
 
         if (serr.length() > 0) {
@@ -178,12 +178,12 @@ public class Kundali implements IKundali {
 
         if (locally) {
             swissEph().swe_lun_eclipse_when_loc(fields().moonrise(), SEFLG_SWIEPH,
-                    grahan.getCoordinates(), grahan.getOccasions(), grahan.getAttributes(),
+                    grahan.coordinates(), grahan.occasions(), grahan.attributes(),
                     backward ? 1 : 0, serr);
         } else {
             //final double julday = ((long) getJulianDate().getJulDay()) - d05;
             swissEph().swe_lun_eclipse_when(fields().moonrise(), SEFLG_SWIEPH,
-                    0, grahan.getOccasions(), backward ? 1 : 0, serr);
+                    0, grahan.occasions(), backward ? 1 : 0, serr);
         }
 
         if (serr.length() > 0) {

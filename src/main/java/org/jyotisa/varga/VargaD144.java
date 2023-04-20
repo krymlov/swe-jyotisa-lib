@@ -33,7 +33,7 @@ public enum VargaD144 implements IVargaD144 {
 
     @Override
     public double virtualDegree(double longitude) {
-        longitude = IVarga.getDvadasamsaLongitude(longitude);
-        return IVarga.getDvadasamsaLongitude(longitude);
+        longitude = IVarga.dvadasamsaLongitude(longitude);
+        return IVarga.dvadasamsaLongitude(longitude);
     }
 }
