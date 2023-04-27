@@ -1,4 +1,4 @@
-Ayanamsa: LAHIRI|23°07'18.71", Event Date: 1947-08-15 10:30:00 UTC:+00:00:00, Location: 81°49'48"E / 25°57'00"N
+Ayanamsa: LAHIRI|23°07'18.71", Event Date: 1947–08–15 10:30:00 UTC:+00:00:00, Location: 81°49'48"E / 25°57'00"N
 Housesys: WHOLE_SIGN, Naksatra: PUS(80.46%), Tithi: K14(78.55%), Vaara: SKVR, Nitya Yoga: VYAT(70.23%), Karana: SKN(57.11%)
 Bhrigu Bindu: 69°32'53.15", Bhava: B7, Rasi: MIT, Naksatra: ARD
 LG   = 256°22'36.50" -> Rasi= DHN (54.59%) | 16°22'36.50" -> Naksatra= PSH1|SK (22.83%) -> Navamsa= SIM|SY -> Bhava= B1  -> Dignity= NIL ->     ->   
@@ -27,10 +27,10 @@ GL   = 174°58'08.42" -> Rasi= KAN (83.23%) | 24°58'08.42" -> Naksatra= CHT1|MA
 Julian Day		: 2432412.9375
  Delta T		: 28.108928689667277
 Sidereal Time	: 13:30:11
-UTC Moonrise	: 1947-08-14 22:28:25
-UTC Moonset		: 1947-08-15 12:20:16
-UTC Sunrise		: 1947-08-15 00:08:36
-UTC Sunset		: 1947-08-15 13:05:33
+UTC Moonrise	: 1947–08–14 22:28:25
+UTC Moonset		: 1947–08–15 12:20:16
+UTC Sunrise		: 1947–08–15 00:08:36
+UTC Sunset		: 1947–08–15 13:05:33
 
 D1	=  DHN[16°22'37"] KAR[28°38'07"] KAR[14°03'42"] MIT[07°54'06"] KAR[14°54'03"] TUL[25°56'16"] KAR[23°23'49"] KAR[20°33'57"] VRB[05°02'04"] VRC[05°02'04"] MIT[02°05'01"] KAN[15°43'49"] KAR[20°08'03"]
 D2	=  KAR[02°45'13"] SIM[27°16'14"] KAR[28°07'25"] SIM[15°48'12"] KAR[29°48'07"] KAR[21°52'32"] SIM[16°47'38"] SIM[11°07'53"] KAR[10°04'08"] KAR[10°04'08"] SIM[04°10'01"] SIM[01°27'39"] SIM[10°16'07"]
