@@ -35,7 +35,7 @@ public enum GrahaBudha implements IGrahaBudha {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d150 && d < d165) return UCC;
         if (d >= d165 && d <= d170) return MLT;

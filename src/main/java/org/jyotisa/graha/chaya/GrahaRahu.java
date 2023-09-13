@@ -38,7 +38,7 @@ public enum GrahaRahu implements IGrahaRahu {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d60 && d < d90) return UCC;
         if (d >= d150 && d < d180) return MLT;

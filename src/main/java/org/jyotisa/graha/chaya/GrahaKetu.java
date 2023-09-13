@@ -38,7 +38,7 @@ public enum GrahaKetu implements IGrahaKetu {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d240 && d < d270) return UCC;
         if (d >= d330 && d < d360) return MLT;

@@ -36,7 +36,7 @@ public enum GrahaShukra implements IGrahaShukra {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d330 && d <= d357) return UCC;
         if (d > d357 && d < d360) return EXT;

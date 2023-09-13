@@ -38,7 +38,7 @@ public enum GrahaSurya implements IGrahaSurya {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d0 && d <= d10) return UCC; // ARI 0-10
         if (d > d10 && d < d30) return EXT;  // ARI 10-30

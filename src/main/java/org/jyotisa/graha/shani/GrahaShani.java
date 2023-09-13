@@ -36,7 +36,7 @@ public enum GrahaShani implements IGrahaShani {
 
     @Override
     public IDignity dignity(final IVarga varga, final double longitude) {
-        final double d = varga.virtualDegree(longitude);
+        final double d = varga.chakraLongitude(longitude);
 
         if (d >= d180 && d <= d200) return UCC;
         if (d > d200 && d < d210) return EXT;
