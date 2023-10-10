@@ -9,6 +9,7 @@ package org.jyotisa.gochara.naksatra;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.naksatra.INaksatraPada;
 import org.jyotisa.api.naksatra.INaksatraPadaEntity;
+import org.jyotisa.api.naksatra.INaksatraPadaGrahaEntity;
 import org.jyotisa.naksatra.ENaksatraPada;
 import org.swisseph.api.ISweSegment;
 
@@ -20,24 +21,24 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @author  Yura Krymlov
  * @version 1.0, 2020-06
  */
-public class NaksatraPadaChayaGochara extends NaksatraPadaGochara {
+public class NaksatraPadaChayaGrahaGochara extends NaksatraPadaGrahaGochara {
     protected final boolean rahu;
 
-    public NaksatraPadaChayaGochara(IKundali kundali) {
+    public NaksatraPadaChayaGrahaGochara(IKundali kundali) {
         this(kundali, true);
     }
     
-    public NaksatraPadaChayaGochara(IKundali kundali, boolean forward) {
+    public NaksatraPadaChayaGrahaGochara(IKundali kundali, boolean forward) {
         this(kundali, true, forward);
     }
 
-    public NaksatraPadaChayaGochara(IKundali kundali, boolean rahu, boolean forward) {
+    public NaksatraPadaChayaGrahaGochara(IKundali kundali, boolean rahu, boolean forward) {
         super(kundali, kundali.chayaGraha(rahu), forward);
         this.rahu = rahu;
     }
     
     @Override
-    public INaksatraPadaEntity newTransitEntity() {
+    public INaksatraPadaGrahaEntity newTransitEntity() {
         double offset = transitCalc.getOffset();
         
         if ( ! rahu ) {
@@ -46,7 +47,7 @@ public class NaksatraPadaChayaGochara extends NaksatraPadaGochara {
         }
 
         final INaksatraPada eenum = ENaksatraPada.byLongitude(offset);
-        return new NaksatraPadaEntity(offset, graha, eenum, julianDay);
+        return new NaksatraPadaGrahaEntity(offset, graha, eenum, julianDay);
     }
     
     @Override
@@ -57,7 +58,7 @@ public class NaksatraPadaChayaGochara extends NaksatraPadaGochara {
     }
     
     @Override
-    public double getNextOffset(final INaksatraPadaEntity entity) {
+    public double getNextOffset(final INaksatraPadaGrahaEntity entity) {
         double offset = transitCalc.getOffset();
         if ( offsetStep == d0 ) return offset;
         if ( forward ) offset -= offsetStep;

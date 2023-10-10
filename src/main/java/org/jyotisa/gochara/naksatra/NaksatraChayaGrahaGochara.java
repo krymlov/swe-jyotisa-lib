@@ -7,7 +7,7 @@
 package org.jyotisa.gochara.naksatra;
 
 import org.jyotisa.api.IKundali;
-import org.jyotisa.api.naksatra.INaksatraEntity;
+import org.jyotisa.api.naksatra.INaksatraGrahaEntity;
 import org.swisseph.api.ISweSegment;
 
 import static org.jyotisa.naksatra.ENaksatra.byLongitude;
@@ -19,24 +19,24 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @author  Yura Krymlov
  * @version 1.0, 2020-06
  */
-public class NaksatraChayaGochara extends NaksatraGochara {
+public class NaksatraChayaGrahaGochara extends NaksatraGrahaGochara {
     protected final boolean rahu;
 
-    public NaksatraChayaGochara(IKundali kundali) {
+    public NaksatraChayaGrahaGochara(IKundali kundali) {
         this(kundali, true);
     }
     
-    public NaksatraChayaGochara(IKundali kundali, boolean forward) {
+    public NaksatraChayaGrahaGochara(IKundali kundali, boolean forward) {
         this(kundali, true, forward);
     }
 
-    public NaksatraChayaGochara(IKundali kundali, boolean rahu, boolean forward) {
+    public NaksatraChayaGrahaGochara(IKundali kundali, boolean rahu, boolean forward) {
         super(kundali, kundali.chayaGraha(rahu), forward);
         this.rahu = rahu;
     }
     
     @Override
-    public INaksatraEntity newTransitEntity() {
+    public INaksatraGrahaEntity newTransitEntity() {
         double offset = transitCalc.getOffset();
         
         if ( ! rahu ) {
@@ -44,7 +44,7 @@ public class NaksatraChayaGochara extends NaksatraGochara {
             offset = fix360(offset);
         }
 
-        return new NaksatraEntity(offset, graha, byLongitude(offset), julianDay);
+        return new NaksatraGrahaEntity(offset, graha, byLongitude(offset), julianDay);
     }
     
     @Override
@@ -55,7 +55,7 @@ public class NaksatraChayaGochara extends NaksatraGochara {
     }
     
     @Override
-    public double getNextOffset(final INaksatraEntity entity) {
+    public double getNextOffset(final INaksatraGrahaEntity entity) {
         double offset = transitCalc.getOffset();
         if ( offsetStep == d0 ) return offset;
         if ( forward ) offset -= offsetStep;

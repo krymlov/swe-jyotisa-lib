@@ -12,7 +12,7 @@ import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.naksatra.INaksatraEntity;
 import org.jyotisa.api.naksatra.INaksatraEnum;
-import org.jyotisa.gochara.naksatra.NaksatraGochara;
+import org.jyotisa.gochara.naksatra.NaksatraGrahaGochara;
 
 import static org.jyotisa.naksatra.ENaksatra.REVATI;
 
@@ -25,7 +25,7 @@ public class NaksatraIteratorTest extends AbstractTest {
     @Test
     void testForwardIterator() {
         final IKundali kundali = newChennaiKundali(getSwephExp());
-        final NaksatraGochara iterator = new NaksatraGochara(kundali);
+        final NaksatraGrahaGochara iterator = new NaksatraGrahaGochara(kundali);
         INaksatraEnum refEnum = ENaksatra.byNaksatra(kundali.panchanga().pada().naksatra());
 
         for (int index = 0; index < REVATI.ordinal() * 10; index++, refEnum = refEnum.following()) {
@@ -37,7 +37,7 @@ public class NaksatraIteratorTest extends AbstractTest {
     @Test
     void testBackwardIterator() {
         final IKundali kundali = newChennaiKundali(getSwephExp());
-        final NaksatraGochara iterator = new NaksatraGochara(kundali, false);
+        final NaksatraGrahaGochara iterator = new NaksatraGrahaGochara(kundali, false);
         INaksatraEnum refEnum = ENaksatra.byNaksatra(kundali.panchanga().pada().naksatra());
         refEnum = refEnum.following(); // we start from the end
 

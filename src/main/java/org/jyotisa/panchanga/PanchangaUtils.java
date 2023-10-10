@@ -16,8 +16,8 @@ import org.jyotisa.api.nityayoga.INityaYoga;
 import org.jyotisa.api.nityayoga.INityaYogaEntity;
 import org.jyotisa.api.tithi.ITithi;
 import org.jyotisa.api.tithi.ITithiEntity;
-import org.jyotisa.gochara.naksatra.NaksatraEntity;
-import org.jyotisa.gochara.naksatra.NaksatraPadaEntity;
+import org.jyotisa.gochara.naksatra.NaksatraGrahaEntity;
+import org.jyotisa.gochara.naksatra.NaksatraPadaGrahaEntity;
 import org.jyotisa.karana.EKarana;
 import org.jyotisa.karana.KaranaEntity;
 import org.jyotisa.naksatra.ENaksatra;
@@ -149,7 +149,7 @@ public class PanchangaUtils {
 
     protected static INaksatraEntity newNaksatraEntity(TransitCalculator transitCalc, final double julday) {
         final double offset = transitCalc.getOffset();
-        return new NaksatraEntity(offset, CHANDRA, ENaksatra.byLongitude(offset), julday);
+        return new NaksatraGrahaEntity(offset, CHANDRA, ENaksatra.byLongitude(offset), julday);
     }
     
     protected static INityaYogaEntity newNityaYogaEntity(TransitCalculator transitCalc, final double julday) {
@@ -159,6 +159,6 @@ public class PanchangaUtils {
     
     protected static INaksatraPadaEntity newNaksatraPadaEntity(TransitCalculator transitCalc, final double julday) {
         final double offset = transitCalc.getOffset();
-        return new NaksatraPadaEntity(offset, CHANDRA, ENaksatraPada.byLongitude(offset), julday);
+        return new NaksatraPadaGrahaEntity(offset, CHANDRA, ENaksatraPada.byLongitude(offset), julday);
     }
 }
