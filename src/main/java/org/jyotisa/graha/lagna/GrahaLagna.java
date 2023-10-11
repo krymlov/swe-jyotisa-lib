@@ -13,7 +13,7 @@ import org.jyotisa.api.graha.IGrahaLagna;
  * @version 1.0, 2019-10
  */
 public enum GrahaLagna implements IGrahaLagna {
-    G0, LG, LAGNA, Asc, Ascendant;
+    G0, LG, LAGNA, AC, Ascendant;
 
     @Override
     public IGrahaLagna[] all() {
