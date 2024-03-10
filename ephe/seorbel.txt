@@ -55,8 +55,8 @@ J1900, J1900, 165.5163, 83.66907, 0.00000,   0.0000,   0.0000, 0.0000, Poseidon 
 J1900,JDATE, 252.8987988 + 707550.7341 * T, 0.13744, 0.019, 322.212069+1670.056*T, 47.787931-1670.056*T, 7.5, Vulcan # 16
 # Selena/White Moon
 J2000,JDATE, 242.2205555 + 5143.5418158 * T, 0.05280098949, 0.0, 0.0, 0.0, 0.0, Selena/White Moon, geo # 17
-# Hypothetical planet Proserpina, according to http://www.geocities.com/Hollywood/Academy/7519/proserpina.html
-# J1900, 170.73 + 51.05 * T
+# Hypothetical planet Proserpina, data from Valentin Abramov
+# see also http://www.geocities.ws/rognavaldre/proserpina.html
 J1900,JDATE, 170.73, 79.225630, 0, 0, 0, 0, Proserpina #18
 # Waldemath's Second Earth Moon 
 # Elements were derived by D.Koch from Waldemaths original elements as given in 
@@ -85,6 +85,8 @@ J1900,JDATE, 170.73, 79.225630, 0, 0, 0, 0, Proserpina #18
 # Yeomans/Kiang, Mon. Not. R. astr. Soc. (1981), 197, p. 643
 # http://adsabs.harvard.edu/full/1981MNRAS.197..633Y
 1283983.73252, B1950, 0.0, 16.80480637, 0.9625705, 74.46894, 14.66132, 162.95968, Comet Halley 1198 BCE # 25
+J2000,JDATE, 0.0 + 0.00000 * T, 80000, 0.0, 0.0, 0.0, 0.0, VEA # 26
+#J2000,JDATE, 0.0 , 80000, 0.0, 0.0, 0.0, 0.0, VEA # 26
 #
 # The following elements are for test only
 # (Selena without T)
