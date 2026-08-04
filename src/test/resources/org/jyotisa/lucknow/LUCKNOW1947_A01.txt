@@ -20,7 +20,7 @@ PAR  = 288°01'52.84" -> Rasi= MAK (60.1 %) | 18°01'52.84" -> Naksatra= SHR3|CH
 CHP  = 71°58'07.16"  -> Rasi= MIT (39.9 %) | 11°58'07.16" -> Naksatra= ARD2|RA (39.76%) -> Navamsa= MAK|SA -> Bhava= B7 
 UPK  = 88°38'07.16"  -> Rasi= MIT (95.45%) | 28°38'07.16" -> Naksatra= PUN3|GU (64.76%) -> Navamsa= MIT|BU -> Bhava= B7 
 JL   = 256°22'36.50" -> Rasi= DHN (54.59%) | 16°22'36.50" -> Naksatra= PSH1|SK (22.83%) -> Navamsa= SIM|SY -> Bhava= B1 
-BL   = 273°34'12.99" -> Rasi= MAK (11.9 %) | 03°34'12.99" -> Naksatra= USH3|SY (51.78%) -> Navamsa= KUM|SA -> Bhava= B1 
+BL   = 273°34'13.00" -> Rasi= MAK (11.9 %) | 03°34'13.00" -> Naksatra= USH3|SY (51.78%) -> Navamsa= KUM|SA -> Bhava= B1 
 HL   = 68°55'11.85"  -> Rasi= MIT (29.73%) | 08°55'11.85" -> Naksatra= ARD1|RA (16.9 %) -> Navamsa= DHN|GU -> Bhava= B1 
 GL   = 174°58'08.42" -> Rasi= KAN (83.23%) | 24°58'08.42" -> Naksatra= CHT1|MA (12.27%) -> Navamsa= SIM|SY -> Bhava= B1 
 
