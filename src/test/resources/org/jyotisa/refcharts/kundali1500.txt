@@ -1,0 +1,33 @@
+Ayanamsa: LAHIRI|16°52'47.04", Event Date: 1500–04–04 17:50:40 UTC:+05:30:00, Location: 81°08'00"E / 16°10'00"N
+Housesys: WHOLE_SIGN, Naksatra: ARD(36.86%), Tithi: S6(37.69%), Vaara: SAVR, Nitya Yoga: ATIG(89.8%), Karana: KLV(75.37%)
+Bhrigu Bindu: 62°24'13.45", Bhava: B9, Rasi: MIT, Naksatra: MRG
+LG   = 180°52'21.03" -> Rasi= TUL (2.91 %) | 00°52'21.03" -> Naksatra= CHT3|MA (56.54%) -> Navamsa= TUL|SK -> Bhava= B1  -> Dignity= NIL ->     ->   
+SY   = 07°03'32.63"  -> Rasi= MES (23.53%) | 07°03'32.63" -> Naksatra= ASH3|KE (52.94%) -> Navamsa= MIT|BU -> Bhava= B7  -> Dignity= UCC ->  PK ->   
+CH   = 71°34'52.56"  -> Rasi= MIT (38.6 %) | 11°34'52.56" -> Naksatra= ARD2|RA (36.86%) -> Navamsa= MAK|SA -> Bhava= B9  -> Dignity= MIR ->  MK ->   
+MA   = 62°26'22.04"  -> Rasi= MIT (8.13 %) | 02°26'22.04" -> Naksatra= MRG3|MA (68.3 %) -> Navamsa= TUL|SK -> Bhava= B9  -> Dignity= SRU ->  DK ->   
+BU   = 345°09'12.74" -> Rasi= MEE (50.51%) | 15°09'12.74" -> Naksatra= UBH4|SA (88.65%) -> Navamsa= VRC|MA -> Bhava= B6  -> Dignity= DET ->  BK ->   
+GU   = 329°27'20.98" -> Rasi= KUM (98.19%) | 29°27'20.98" -> Naksatra= PBH3|GU (70.92%) -> Navamsa= MIT|BU -> Bhava= B5  -> Dignity= SAM ->  AK ->   
+SK   = 28°46'35.00"  -> Rasi= MES (95.92%) | 28°46'35.00" -> Naksatra= KRI1|SY (15.82%) -> Navamsa= DHN|GU -> Bhava= B7  -> Dignity= SAM -> AmK -> !22%
+SA   = 33°29'46.22"  -> Rasi= VRB (11.65%) | 03°29'46.22" -> Naksatra= KRI3|SY (51.22%) -> Navamsa= KUM|SA -> Bhava= B8  -> Dignity= MIR ->  GK -> !50%
+(RA) = 53°13'34.35"  -> Rasi= VRB (22.58%) | 23°13'34.35" -> Naksatra= ROH4|CH (0.8  %) -> Navamsa= KAR|CH -> Bhava= B8  -> Dignity= NIL ->     ->   
+(KE) = 233°13'34.35" -> Rasi= VRC (22.58%) | 23°13'34.35" -> Naksatra= JYE2|BU (50.8 %) -> Navamsa= MAK|SA -> Bhava= B2  -> Dignity= SWT ->     -> !23%
+SW   = 312°10'01.01" -> Rasi= KUM (40.56%) | 12°10'01.01" -> Naksatra= SAT2|RA (41.25%) -> Navamsa= MAK|SA -> Bhava= B5  -> Dignity= NIL ->     ->   
+SM   = 270°17'30.88" -> Rasi= MAK (0.97 %) | 00°17'30.88" -> Naksatra= USH2|SY (27.19%) -> Navamsa= MAK|SA -> Bhava= B4  -> Dignity= NIL ->     ->   
+(TE) = 217°49'54.49" -> Rasi= VRC (26.11%) | 07°49'54.49" -> Naksatra= ANU2|SA (33.74%) -> Navamsa= KAN|BU -> Bhava= B2  -> Dignity= NIL ->     ->   
+DHU  = 140°23'32.63" -> Rasi= SIM (67.97%) | 20°23'32.63" -> Naksatra= PPH3|SK (52.94%) -> Navamsa= TUL|SK -> Bhava= B11
+VYA  = 219°36'27.37" -> Rasi= VRC (32.03%) | 09°36'27.37" -> Naksatra= ANU2|SA (47.06%) -> Navamsa= KAN|BU -> Bhava= B2 
+PAR  = 39°36'27.37"  -> Rasi= VRB (32.03%) | 09°36'27.37" -> Naksatra= KRI4|SY (97.06%) -> Navamsa= MEE|GU -> Bhava= B8 
+CHP  = 320°23'32.63" -> Rasi= KUM (67.97%) | 20°23'32.63" -> Naksatra= PBH1|GU (2.94 %) -> Navamsa= MES|MA -> Bhava= B5 
+UPK  = 337°03'32.63" -> Rasi= MEE (23.53%) | 07°03'32.63" -> Naksatra= UBH2|SA (27.94%) -> Navamsa= KAN|BU -> Bhava= B6 
+JL   = 180°52'21.03" -> Rasi= TUL (2.91 %) | 00°52'21.03" -> Naksatra= CHT3|MA (56.54%) -> Navamsa= TUL|SK -> Bhava= B1 
+BL   = 185°27'42.42" -> Rasi= TUL (18.21%) | 05°27'42.42" -> Naksatra= CHT4|MA (90.96%) -> Navamsa= VRC|MA -> Bhava= B1 
+HL   = 04°20'56.76"  -> Rasi= MES (14.5 %) | 04°20'56.76" -> Naksatra= ASH2|KE (32.62%) -> Navamsa= VRB|SK -> Bhava= B7 
+GL   = 181°00'39.79" -> Rasi= TUL (3.37 %) | 01°00'39.79" -> Naksatra= CHT3|MA (57.58%) -> Navamsa= TUL|SK -> Bhava= B1 
+
+Julian Day		: 2269027.014351852
+ Delta T		: 291.08076933747714
+Sidereal Time	: 07:14:28
+UTC Moonrise	: 1500–04–04 04:15:31
+UTC Moonset		: 1500–04–04 17:39:52
+UTC Sunrise		: 1500–04–04 00:25:07
+UTC Sunset		: 1500–04–04 12:46:33
