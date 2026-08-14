@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.app.SweAyanamsa.LAHIRI;
+import static org.swisseph.app.SweAyanamsa.TRUE_CITRA;
+import static org.swisseph.app.SweHouseSystem.PLACIDUS;
 import static org.swisseph.app.SweHouseSystem.WHOLE_SIGN;
 import static org.swisseph.utils.IModuloUtils.fix360;
 
@@ -201,6 +203,32 @@ class KundaliRefChartsTest {
         }
     }
 
+    /**
+     * The Bhava column of the four special-lagna rows (Janma, Bhava, Hora, Ghati) must be
+     * the sign distance from the ascendant, exactly as the upagraha rows above them are -
+     * only Janma Lagna is bhava 1 by definition. Hora Lagna in particular wanders a long way
+     * from the ascendant, so a hardcoded "B1" there is visibly wrong.
+     */
+    @ParameterizedTest(name = "{0} special lagna bhava")
+    @ValueSource(ints = {0, 100, 500, 1000, 1500, 1700, 1800, 1900,
+            1970, 1990, 2000, 2010, 2030, 2050, 2070, 2090, 2100})
+    void specialLagnaBhavaIsTheSignDistanceFromTheAscendant(int year) {
+        assumeTrue(Swetest.available());
+        final KundaliText text = chart(jhd(year));
+        final int lagnaRasi = (int) (fix360(text.row("LG").longitude) / RASI_LEN);
+
+        for (String lagna : new String[]{"JL", "BL", "HL", "GL"}) {
+            final KundaliText.Row row = text.row(lagna);
+            final int rasi = (int) (fix360(row.longitude) / RASI_LEN);
+            final int bhava = (rasi - lagnaRasi + 12) % 12 + 1;
+            assertEquals("B" + bhava, row.bhava, lagna + " bhava in " + year
+                    + " (at " + row.longitude + ", ascendant in " + RASI_CODES[lagnaRasi] + ")");
+        }
+        // Janma Lagna is the ascendant itself, so it is always bhava 1 - a useful control:
+        // if the others were right only because they equal the ascendant, this would not hold
+        assertEquals("B1", text.row("JL").bhava, "janma lagna is always bhava 1");
+    }
+
     @ParameterizedTest(name = "{0} naksatra pada")
     @ValueSource(ints = {0, 100, 500, 1000, 1500, 1700, 1800, 1900,
             1970, 1990, 2000, 2010, 2030, 2050, 2070, 2090, 2100})
@@ -329,6 +357,107 @@ class KundaliRefChartsTest {
             assertEquals(s < 0., text.row(pair[1]).retrograde,
                     pair[0] + " retrograde flag in " + year + " (speed " + s + ")");
         }
+    }
+
+    // ======================================================= other configurations
+
+    private KundaliText chart(JhdChart jhd, ISweObjectsOptions options) {
+        final ISweObjects objects = new SweObjects(swissEph(), jhd.julianDate(),
+                jhd.geoLocation(), options).completeBuild();
+        return KundaliText.parse(new Kundali(KUNDALI_7_KARAKAS, objects).toString());
+    }
+
+    @ParameterizedTest(name = "{0} true node")
+    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
+    void trueNodeChartUsesSwetestTrueNode(int year) {
+        assumeTrue(Swetest.available());
+        final JhdChart jhd = jhd(year);
+        final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
+                .ayanamsa(LAHIRI).houseSystem(WHOLE_SIGN).trueNode(true).build());
+
+        final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
+                "-p" + Swetest.BODIES + "mt", "-true", "-sid" + LAHIRI.fid(), "-fPl");
+
+        assertEquals(ref.get("true Node"), text.row("RA").longitude, DELTA,
+                "Rahu must be the TRUE node in " + year);
+        assertEquals(fix360(ref.get("true Node") + 180.), text.row("KE").longitude, DELTA,
+                "Ketu opposite the true node in " + year);
+    }
+
+    @ParameterizedTest(name = "{0} True Citra ayanamsa")
+    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
+    void trueCitraChartMatchesSwetest(int year) {
+        assumeTrue(Swetest.available());
+        final JhdChart jhd = jhd(year);
+        final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
+                .ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN).build());
+
+        assertEquals("TRUE_CITRA", text.ayanamsaName());
+        assertEquals(Swetest.ayanamsa(jhd.date(), jhd.utcTime(), TRUE_CITRA.fid()),
+                text.ayanamsa(), DELTA, "True Citra ayanamsa in " + year);
+
+        final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
+                "-p" + Swetest.BODIES + "m", "-true", "-sid" + TRUE_CITRA.fid(), "-fPl");
+        for (String[] pair : BODY_TO_CODE) {
+            assertEquals(ref.get(pair[0]), text.row(pair[1]).longitude, DELTA,
+                    pair[0] + " under True Citra in " + year);
+        }
+    }
+
+    /**
+     * With a real (non whole sign) house system the graha rows take their bhava from
+     * {@code sweObjects.houses()}, i.e. from {@code swe_house_pos} against the actual cusps,
+     * while the upagraha and special lagna rows below them still count whole signs from the
+     * ascendant - the only way those points have ever been placed. The two therefore need
+     * not agree, and this test pins that they are each internally right rather than pretending
+     * one convention governs the whole report: the grahas are checked against swetest's own
+     * Placidus cusps, the upagrahas against the sign distance.
+     */
+    @ParameterizedTest(name = "{0} Placidus bhava")
+    @ValueSource(ints = {1900, 2000, 2100})
+    void placidusChartTakesGrahaBhavaFromTheRealCusps(int year) {
+        assumeTrue(Swetest.available());
+        final JhdChart jhd = jhd(year);
+        final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
+                .ayanamsa(LAHIRI).houseSystem(PLACIDUS).build());
+
+        final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
+                "-p" + Swetest.BODIES + "m", "-true", "-sid" + LAHIRI.fid(), "-fPl",
+                Swetest.house(jhd.longitude(), jhd.latitude(), 'P'));
+
+        final double[] cusps = new double[13];
+        for (int h = 1; h <= 12; h++) {
+            final Double cusp = ref.get("house " + (h < 10 ? " " : "") + h);
+            assertTrue(null != cusp, "swetest printed no Placidus cusp " + h + " for " + year);
+            cusps[h] = cusp;
+        }
+
+        for (String[] pair : BODY_TO_CODE) {
+            final KundaliText.Row row = text.row(pair[1]);
+            assertEquals("B" + houseOf(row.longitude, cusps), row.bhava,
+                    pair[0] + " Placidus bhava in " + year + " (at " + row.longitude + ")");
+        }
+
+        // and the upagrahas are still whole sign, counted from the ascendant's sign
+        final int lagnaRasi = (int) (fix360(text.row("LG").longitude) / RASI_LEN);
+        for (String upagraha : new String[]{"DHU", "VYA", "PAR", "CHP", "UPK"}) {
+            final KundaliText.Row row = text.row(upagraha);
+            final int rasi = (int) (fix360(row.longitude) / RASI_LEN);
+            assertEquals("B" + ((rasi - lagnaRasi + 12) % 12 + 1), row.bhava,
+                    upagraha + " stays whole sign in " + year);
+        }
+    }
+
+    /** which Placidus house a longitude falls in, walking the cusps the way swetest lays them out */
+    static int houseOf(double longitude, double[] cusps) {
+        final double lon = fix360(longitude);
+        for (int h = 1; h <= 12; h++) {
+            final double from = cusps[h];
+            final double to = cusps[h == 12 ? 1 : h + 1];
+            final double span = fix360(to - from);
+            if (fix360(lon - from) < span) return h;
+        }
+        throw new AssertionError("no house contains " + longitude);
     }
 
     // ============================================================== sanity of the fixture

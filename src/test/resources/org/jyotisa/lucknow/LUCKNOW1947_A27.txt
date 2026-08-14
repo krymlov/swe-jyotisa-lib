@@ -20,9 +20,9 @@ PAR  = 288°00'58.43" -> Rasi= MAK (60.05%) | 18°00'58.43" -> Naksatra= SHR3|CH
 CHP  = 71°59'01.57"  -> Rasi= MIT (39.95%) | 11°59'01.57" -> Naksatra= ARD2|RA (39.88%) -> Navamsa= MAK|SA -> Bhava= B7 
 UPK  = 88°39'01.57"  -> Rasi= MIT (95.5 %) | 28°39'01.57" -> Naksatra= PUN3|GU (64.88%) -> Navamsa= MIT|BU -> Bhava= B7 
 JL   = 256°23'30.91" -> Rasi= DHN (54.64%) | 16°23'30.91" -> Naksatra= PSH1|SK (22.94%) -> Navamsa= SIM|SY -> Bhava= B1 
-BL   = 273°35'07.41" -> Rasi= MAK (11.95%) | 03°35'07.41" -> Naksatra= USH3|SY (51.89%) -> Navamsa= KUM|SA -> Bhava= B1 
-HL   = 68°56'06.26"  -> Rasi= MIT (29.78%) | 08°56'06.26" -> Naksatra= ARD1|RA (17.01%) -> Navamsa= DHN|GU -> Bhava= B1 
-GL   = 174°59'02.83" -> Rasi= KAN (83.28%) | 24°59'02.83" -> Naksatra= CHT1|MA (12.38%) -> Navamsa= SIM|SY -> Bhava= B1 
+BL   = 273°35'07.41" -> Rasi= MAK (11.95%) | 03°35'07.41" -> Naksatra= USH3|SY (51.89%) -> Navamsa= KUM|SA -> Bhava= B2 
+HL   = 68°56'06.26"  -> Rasi= MIT (29.78%) | 08°56'06.26" -> Naksatra= ARD1|RA (17.01%) -> Navamsa= DHN|GU -> Bhava= B7 
+GL   = 174°59'02.83" -> Rasi= KAN (83.28%) | 24°59'02.83" -> Naksatra= CHT1|MA (12.38%) -> Navamsa= SIM|SY -> Bhava= B10
 
 Julian Day		: 2432412.9375
  Delta T		: 28.108928689667277

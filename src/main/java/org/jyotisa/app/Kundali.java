@@ -60,6 +60,7 @@ import static org.jyotisa.karaka.ECharaKarakaOption.SEVEN_KARAKAS;
 import static org.jyotisa.upagraha.EUpagraha.UPAKETU;
 import static org.swisseph.api.ISweConstants.CH_VS;
 import static org.swisseph.api.ISweConstants.d0;
+import static org.swisseph.api.ISweConstants.i12;
 import static org.swisseph.api.ISweEnum.NIL_CD;
 import static org.swisseph.api.ISweObjects.*;
 import static org.swisseph.utils.IDateUtils.format6;
@@ -290,6 +291,10 @@ public class Kundali implements IKundali {
                     pada.navamsa().lord().code(), upagraha.bhava()));
         }
 
+        // the sign the ascendant occupies - the whole sign bhava of any other point is its
+        // own sign counted from this one, exactly as UpagrahaEntity computes it
+        final int lagnaSign = sweObjects.signs()[LG];
+
         ISweEnumIterator<ILagnaEnum> lagnaIterator = ELagna.iteratorTo(ELagna.GHATI_LAGNA);
         while (lagnaIterator.hasNext()) {
             ILagnaEnum lgenum = lagnaIterator.next();
@@ -303,7 +308,8 @@ public class Kundali implements IKundali {
                     lg, toDMSms(degree), pada.rasi().following(), IRasi.progress(degree),
                     toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
                     INaksatra.progress(degree), pada.navamsa().following(),
-                    pada.navamsa().lord().code(), EBhava.TANU.code()));
+                    pada.navamsa().lord().code(),
+                    EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)));
         }
 
         builder.append('\n').append(fields());
