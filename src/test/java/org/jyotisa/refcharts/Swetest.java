@@ -23,10 +23,10 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
  * its output, so this library can be diffed against it live rather than against numbers
  * pasted into a test.
  * <p>
- * The ephemeris directory deliberately defaults to <b>{@code swe-java-lib}'s</b>
- * {@code ephe}, not this project's: this project ships only the {@code _18} block (year 1800
- * onwards), while the reference charts reach back to year 0. Both the library under test and
- * swetest are pointed at the same directory so neither can silently fall back to Moshier.
+ * Both the library under test and swetest are pointed at this project's own {@code ephe},
+ * so neither can silently fall back to Moshier. That directory now carries the {@code _00}
+ * … {@code _18} blocks, i.e. real Swiss Ephemeris data from year 0, which is what lets the
+ * reference charts be tested at every epoch rather than only from 1800.
  * Override with {@code -Dswetest.exe=...} / {@code -Dswetest.ephe=...}.
  *
  * @author Yura Krymlov
@@ -38,7 +38,7 @@ public final class Swetest {
             "E:/Github/swisseph/windows/programs/swetest64.exe");
 
     public static final File EPHE = new File(System.getProperty("swetest.ephe",
-            "../swe-java-lib/ephe")).getAbsoluteFile();
+            "ephe")).getAbsoluteFile();
 
     /** swetest body letters in order, and where each lands in {@code ISweObjects} */
     public static final String BODIES = "0123456789";

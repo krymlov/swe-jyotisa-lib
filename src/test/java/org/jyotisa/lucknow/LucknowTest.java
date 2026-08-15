@@ -28,7 +28,8 @@ public class LucknowTest extends AbstractTest {
         ISweObjects sweObjects = new SweObjects(getSwephExp(), new SweJulianDate(date1947, 0f, 10.5),
                 GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild();
 
-        String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
+        //String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
+        String kundaliText = new Kundali(KUNDALI_7_KARAKAS, sweObjects).toString();
         loadAndAssert("LUCKNOW1947_A01.txt", kundaliText);
         System.out.println(kundaliText);
     }
@@ -37,7 +38,8 @@ public class LucknowTest extends AbstractTest {
     void testTruecitraKundali() throws IOException {
         ISweObjects sweObjects = new SweObjects(getSwephExp(), new SweJulianDate(date1947, 0f, 10.5),
                 GEO_LUCKNOW, TRUECITRA_AYANAMSA).completeBuild();
-        String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
+        //String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
+        String kundaliText = new Kundali(KUNDALI_7_KARAKAS, sweObjects).toString();
         loadAndAssert("LUCKNOW1947_A27.txt", kundaliText);
         System.out.println(kundaliText);
     }

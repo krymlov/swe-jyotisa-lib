@@ -68,6 +68,27 @@ public final class KundaliText {
         }
     }
 
+    /** one {@code Dn} line of the varga table: the sign and degree of each graha, in EGraha order */
+    public static final class VargaRow {
+        public final String code;
+        public final String[] signs;
+        public final double[] degrees;
+
+        VargaRow(String code, String[] signs, double[] degrees) {
+            this.code = code;
+            this.signs = signs;
+            this.degrees = degrees;
+        }
+    }
+
+    /** the grahas the varga table lists, in the order {@code Kundali.toString()} prints them */
+    public static final String[] VARGA_COLUMNS = {"LG", "SY", "CH", "MA", "BU", "GU", "SK",
+            "SA", "RA", "KE", "SW", "SM", "TE"};
+
+    private static final java.util.regex.Pattern VARGA_CELL =
+            java.util.regex.Pattern.compile("([A-Z]{3})\\[([^\\]]+)\\]");
+
+    private final Map<String, VargaRow> vargas = new LinkedHashMap<>();
     private final Map<String, Row> rows = new LinkedHashMap<>();
     private String ayanamsaName;
     private double ayanamsa;
@@ -90,6 +111,9 @@ public final class KundaliText {
             else if (trimmed.contains("-> Rasi=")) {
                 final Row row = parseRow(trimmed);
                 out.rows.put(row.name, row);
+            } else if (trimmed.matches("^D\\d+\\s*=.*")) {
+                final VargaRow varga = parseVargaRow(trimmed);
+                out.vargas.put(varga.code, varga);
             }
         }
         return out;
@@ -175,6 +199,32 @@ public final class KundaliText {
         return new Row(name, retrograde, longitude, rasi, rasiProgress, degreeInRasi, naksatraPada,
                 naksatraLord, naksatraProgress, navamsa, navamsaLord, bhava, dignity, karaka);
     }
+
+    /** "D9\t=  VRB[17°19'04"] MAK[10°38'39"] ..." */
+    static VargaRow parseVargaRow(String line) {
+        final int eq = line.indexOf('=');
+        final String code = line.substring(0, eq).trim();
+
+        final java.util.List<String> signs = new java.util.ArrayList<>();
+        final java.util.List<Double> degrees = new java.util.ArrayList<>();
+        final java.util.regex.Matcher m = VARGA_CELL.matcher(line.substring(eq + 1));
+        while (m.find()) {
+            signs.add(m.group(1));
+            degrees.add(Swetest.parseDms(m.group(2)));
+        }
+
+        final double[] deg = new double[degrees.size()];
+        for (int i = 0; i < deg.length; i++) deg[i] = degrees.get(i);
+        return new VargaRow(code, signs.toArray(new String[0]), deg);
+    }
+
+    public VargaRow varga(String code) {
+        final VargaRow row = vargas.get(code);
+        if (null == row) throw new AssertionError("no varga '" + code + "' in " + vargas.keySet());
+        return row;
+    }
+
+    public Map<String, VargaRow> vargas() { return vargas; }
 
     private static String between(String s, String from, String to) {
         final int a = s.indexOf(from) + from.length();

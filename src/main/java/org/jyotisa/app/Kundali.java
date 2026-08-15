@@ -29,6 +29,7 @@ import org.jyotisa.api.upagraha.IUpagrahaEntity;
 import org.jyotisa.api.upagraha.IUpagrahaEnum;
 import org.jyotisa.api.upagraha.IUpagrahas;
 import org.jyotisa.api.varga.IVarga;
+import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.bindu.BhriguBindu;
 import org.jyotisa.graha.EGraha;
@@ -42,6 +43,7 @@ import org.jyotisa.panchanga.Panchanga;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.upagraha.EUpagraha;
 import org.jyotisa.upagraha.Upagrahas;
+import org.jyotisa.varga.EVarga;
 import org.jyotisa.varga.VargaD1;
 import org.swisseph.api.ISweEnumIterator;
 import org.swisseph.api.ISweGeoLocation;
@@ -49,6 +51,7 @@ import org.swisseph.api.ISweObjects;
 import org.swisseph.api.ISweObjectsOptions;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static java.util.Collections.sort;
@@ -213,7 +216,7 @@ public class Kundali implements IKundali {
 
     @Override
     public String toString() {
-        final StringBuilder builder = new StringBuilder(5120);
+        final StringBuilder builder = new StringBuilder(8192);
         final ISweObjectsOptions opt = sweObjects.sweOptions();
         final ISweGeoLocation geo = sweObjects.sweLocation();
         final IPanchanga pnchng = panchanga();
@@ -312,7 +315,28 @@ public class Kundali implements IKundali {
                     EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)));
         }
 
-        builder.append('\n').append(fields());
+        builder.append('\n').append(fields()).append('\n');
+
+        final Iterator<IVargaEnum> iterator = EVarga.iterator();
+        final IGrahaEntity[] grahas = grahas().all();
+
+        while (iterator.hasNext()) {
+            final IVarga varga = iterator.next().varga();
+            builder.append(varga.code()).append("\t= ");
+
+            for (int i = 0; i < grahas.length; i++) {
+                final IGrahaEntity graha = grahas[i];
+                final double longitude = graha.longitude();
+                final IRasi rasi = varga.rasi(longitude);
+                final double vrl = varga.rasiLongitude(longitude);
+
+                builder.append(' ').append(rasi.following());
+                builder.append('[').append(toDMS(vrl)).append(']');
+            }
+
+            builder.append('\n');
+        }
+
         return builder.toString();
     }
 

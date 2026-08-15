@@ -181,6 +181,7 @@ public abstract class AbstractTest {
     protected void callAfterAll() {
     }
 
+    /*
     public static StringBuilder printKundali(IKundali kundali) {
         StringBuilder builder = new StringBuilder(kundali.toString());
         builder.append('\n');
@@ -206,7 +207,7 @@ public abstract class AbstractTest {
         }
 
         return builder;
-    }
+    }*/
 
     protected String loadAndAssert(String resourceName, String content) throws IOException {
         final URL resourceUrl = getClass().getResource(resourceName);
