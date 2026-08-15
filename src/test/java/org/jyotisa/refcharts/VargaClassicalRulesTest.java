@@ -204,26 +204,41 @@ class VargaClassicalRulesTest {
                 + year + ":\n  " + String.join("\n  ", problems));
     }
 
+    /** the divisor of all 23 divisional charts the report prints, in the order it prints them */
+    static final int[] ALL_DIVISORS = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 16, 20, 24, 27,
+            30, 40, 45, 60, 81, 108, 144};
+
     /**
-     * For every equally divided varga the degree printed inside the brackets is the position
-     * within that division rescaled to a full sign, i.e. {@code (deg * n) mod 30} - which is
-     * what makes the bracketed figure comparable across vargas. D2, D5 and D30 are excluded:
-     * their divisions are not equal, so no such single expression exists.
+     * The degree printed inside the brackets, for <b>every</b> one of the 23 vargas and every
+     * graha - not just the ones with a classical starting-sign rule. It is the position
+     * within the division rescaled to a whole sign, {@code (deg mod 30/n) * n}, which is the
+     * same thing as {@code (deg * n) mod 30} for any equal division and is what makes the
+     * bracketed figure comparable across vargas.
+     * <p>
+     * This holds even where the <i>sign</i> rule is not a plain multiplication: an overridden
+     * {@code virtualDegree()} shifts by whole signs (multiples of 30) and so leaves the
+     * fractional part alone, and D2/D5 divide their sign equally (15&deg; and 6&deg;) even
+     * though they choose the sign by parity. D30 is the one division that is genuinely
+     * unequal - 5/5/8/7/5 degrees to five lords - but it still steps in whole degrees, so the
+     * printed figure is the position within the current 1&deg; step, and the same expression
+     * describes it. See {@link #trimsamsaDegreeIsTheStepPositionNotTheUnequalSpan}.
      */
-    @ParameterizedTest(name = "{0} varga degrees")
-    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
-    void equallyDividedVargasRescaleTheDegreeWithinTheDivision(int year) {
+    @ParameterizedTest(name = "{0} varga degrees, all 23")
+    @ValueSource(ints = {0, 100, 500, 1000, 1500, 1700, 1800, 1900,
+            1970, 1990, 2000, 2010, 2030, 2050, 2070, 2090, 2100})
+    void everyVargaRescalesTheDegreeWithinItsDivision(int year) {
         assumeTrue(Swetest.available());
         final KundaliText text = chart(year);
+        final List<String> problems = new ArrayList<>();
 
-        for (int n : new int[]{1, 3, 4, 7, 9, 10, 12, 16, 20, 24, 27, 40, 45, 60}) {
+        for (int n : ALL_DIVISORS) {
             final KundaliText.VargaRow row = text.varga("D" + n);
 
             // two roundings stack up here: the varga degree is printed with toDMS, to the
             // whole arc second (up to 0.5"), and the D1 longitude this test multiplies by n
             // was itself read back from toDMSms, to 1/100 of an arc second (up to 0.005",
             // which the multiplication scales to n * 0.005"). A wrong formula would be out
-            // by whole degrees, so this stays a sharp check.
+            // by whole degrees, so this stays a sharp check even at n = 144.
             final double delta = (0.5 + n * 0.005) / 3600.;
 
             for (int i = 0; i < KundaliText.VARGA_COLUMNS.length; i++) {
@@ -232,9 +247,90 @@ class VargaClassicalRulesTest {
                 final double deg = lon - ((int) (lon / 30.)) * 30.;
                 final double expected = (deg * n) % 30.;
 
-                assertEquals(expected, row.degrees[i], delta,
-                        "D" + n + " " + graha + " degree within the division in " + year);
+                if (Math.abs(expected - row.degrees[i]) > delta) {
+                    problems.add(String.format("D%d %s: D1 deg %.6f -> expected %.6f, printed %.6f",
+                            n, graha, deg, expected, row.degrees[i]));
+                }
             }
+        }
+
+        assertTrue(problems.isEmpty(), "varga degrees that do not rescale correctly in "
+                + year + ":\n  " + String.join("\n  ", problems));
+    }
+
+    /**
+     * The same degrees again, but computed from <b>swetest's own full-precision sidereal
+     * longitudes</b> rather than from the D1 column of the report. That removes the input
+     * rounding the test above has to allow for, so the only slack left is the half arc second
+     * {@code toDMS} itself introduces - and it makes the check independent of the printed D1
+     * longitude, closing the chain ephemeris → varga degree end to end instead of only
+     * verifying the report against itself.
+     */
+    @ParameterizedTest(name = "{0} varga degrees vs swetest longitudes")
+    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
+    void everyVargaDegreeFollowsFromSwetestLongitudes(int year) {
+        assumeTrue(Swetest.available());
+        final JhdChart jhd = KundaliRefChartsTest.jhd(year);
+        final KundaliText text = chart(year);
+
+        final java.util.Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
+                "-p" + Swetest.BODIES + "m", "-true", "-sid" + LAHIRI.fid(), "-fPl",
+                Swetest.house(jhd.longitude(), jhd.latitude(), 'W'));
+
+        // the varga table's columns, in order, sourced straight from swetest
+        final double[] longitudes = {
+                ref.get("Ascendant"), ref.get("Sun"), ref.get("Moon"), ref.get("Mars"),
+                ref.get("Mercury"), ref.get("Jupiter"), ref.get("Venus"), ref.get("Saturn"),
+                ref.get("mean Node"), fix360(ref.get("mean Node") + 180.),
+                ref.get("Uranus"), ref.get("Neptune"), ref.get("Pluto")};
+
+        final List<String> problems = new ArrayList<>();
+
+        for (int n : ALL_DIVISORS) {
+            final KundaliText.VargaRow row = text.varga("D" + n);
+
+            for (int i = 0; i < longitudes.length; i++) {
+                final double lon = fix360(longitudes[i]);
+                final double deg = lon - ((int) (lon / 30.)) * 30.;
+                final double expected = (deg * n) % 30.;
+                // only toDMS's own rounding to the whole arc second is unaccounted for
+                final double diff = Math.abs(expected - row.degrees[i]);
+
+                if (diff > 0.6 / 3600. && Math.abs(diff - 30.) > 0.6 / 3600.) {
+                    problems.add(String.format("D%d %s: swetest %.9f -> expected %.6f, printed %.6f",
+                            n, KundaliText.VARGA_COLUMNS[i], lon, expected, row.degrees[i]));
+                }
+            }
+        }
+
+        assertTrue(problems.isEmpty(), "varga degrees disagreeing with swetest in "
+                + year + ":\n  " + String.join("\n  ", problems));
+    }
+
+    /**
+     * Trimsamsa's five spans are 5/5/8/7/5 degrees, so a graha 3&deg; into the 8&deg; Jupiter
+     * span is 3/8 of the way through it - yet the report prints the position within the
+     * current whole degree, rescaled, exactly as every equally divided varga does. That is a
+     * deliberate consequence of the implementation stepping D30 in 1&deg; units and then
+     * bucketing those steps into the five spans: the <b>sign</b> is the classical one, the
+     * <b>degree</b> is nominal and does not measure progress through the span it belongs to.
+     * Pinned here so the distinction is not mistaken for a defect - only the sign of a
+     * trimsamsa carries classical meaning.
+     */
+    @Test
+    void trimsamsaDegreeIsTheStepPositionNotTheUnequalSpan() {
+        assumeTrue(Swetest.available());
+        final KundaliText text = chart(2000);
+        final KundaliText.VargaRow d30 = text.varga("D30");
+
+        for (int i = 0; i < KundaliText.VARGA_COLUMNS.length; i++) {
+            final double lon = fix360(text.row(KundaliText.VARGA_COLUMNS[i]).longitude);
+            final double deg = lon - ((int) (lon / 30.)) * 30.;
+
+            // the position within the current whole degree, scaled to a sign
+            final double stepPosition = (deg % 1.) * 30.;
+            assertEquals(stepPosition, d30.degrees[i], (0.5 + 30 * 0.005) / 3600.,
+                    "D30 " + KundaliText.VARGA_COLUMNS[i] + " degree");
         }
     }
 
