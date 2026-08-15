@@ -36,8 +36,24 @@ import java.util.List;
  * 13  city
  * 14  country
  * </pre>
- * Longitude, latitude, time zone and the local time are all stored as
+ * Longitude, latitude, time zone and the local time are <b>all four</b> stored as
  * <b>degrees.minutes</b>, not decimal: 16.10 is 16&deg;10', i.e. 16.1666...
+ * <p>
+ * That the <i>time</i> and <i>time zone</i> fields follow the same convention as the
+ * coordinates is worth proving, because reading them as decimal hours is the obvious
+ * mistake and it is silently wrong by minutes. Three of Jagannatha Hora's own shipped
+ * charts settle it, each against independently known data:
+ * <pre>
+ * Gandhi       lon 69.49 -&gt; 69&deg;49'E, tz 4.392667 -&gt; 4&deg;39'16"   69.8167/15 = 4h39m16s exactly
+ * Vivekananda  lon 88.30 -&gt; 88&deg;30'E, tz 5.54     -&gt; 5&deg;54'      88.5/15    = 5h54m    exactly
+ *              time 6.3300 -&gt; 06:33, his documented birth time
+ * India        tz 5.30 -&gt; 5:30 (decimal would be 5:18), 77.13/28.40 -&gt; Delhi 77&deg;13'E 28&deg;40'N
+ * </pre>
+ * Both time zones are the local mean time of that same longitude to the second, which only
+ * works out under the degrees.minutes reading.
+ * <p>
+ * <b>{@code swe-java-lib}'s own {@code org.swisseph.JhdChart} differs here</b> - it reads
+ * {@code localTime} and {@code timeZone} as plain decimal. See this workspace's CLAUDE.md.
  *
  * @author Yura Krymlov
  * @version 1.0, 2026-08
