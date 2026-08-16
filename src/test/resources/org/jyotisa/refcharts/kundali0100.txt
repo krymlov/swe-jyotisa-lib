@@ -38,10 +38,10 @@ IL   = 244°37'36.36" -> Rasi= DHN (15.42%) | 04°37'36.36" -> Naksatra= MUL2|KE
 Julian Day		: 1757677.0143518518
  Delta T		: 9537.833911935277
 Sidereal Time	: 06:31:19
-UTC Moonrise	: 100–04–04 05:24:32
+UTC Moonrise	: 100–04–04 05:24:33
 UTC Moonset		: 100–04–04 18:30:24
 UTC Sunrise		: 100–04–04 00:32:13
-UTC Sunset		: 100–04–04 12:44:03
+UTC Sunset		: 100–04–04 12:44:04
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE

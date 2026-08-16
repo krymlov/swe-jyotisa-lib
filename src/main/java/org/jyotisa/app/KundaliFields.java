@@ -330,6 +330,33 @@ public class KundaliFields implements IKundaliFields {
         return fields[VIGHATI_LAGNA];
     }
 
+    /**
+     * Moves a julian day to the <b>middle</b> of the second it rounds to, for rendering only.
+     * <p>
+     * The rise/set lines below print whole seconds, but
+     * {@code IDateUtils.format(.., F4Y_2M_2D_2H_2M_2S)} <b>truncates</b> - it casts
+     * {@code (int) dseconds()}. The 1970 reference sunrise is {@code 00:32:21.847564}, so it
+     * printed {@code 00:32:21} where Jagannatha Hora shows {@code 00:32:22} - a second of
+     * apparent disagreement about an instant the two actually share to within 0.07 ms.
+     * <p>
+     * Landing on the exact second boundary is <b>not</b> enough to fix that: a julian day is
+     * ~2.44e6, so multiplying by 86400 spends twelve digits before the decimal point and the
+     * round trip back through the calendar conversion can leave the seconds at 21.9999999.
+     * Truncation then drops it to 21 again - and for the 1970 moonset it actually pushed
+     * {@code 11:05:22.07} <em>down</em> to {@code 11:05:21}, which rounding must never do.
+     * Targeting the mid-second instead puts half a second of slack on either side of the value
+     * the formatter reads, so truncation reliably yields the intended second.
+     * <p>
+     * Working on the julian day rather than the seconds field also keeps every carry correct for
+     * free: 23:59:59.7 becomes 00:00:00 of the next day through the ordinary calendar
+     * conversion, instead of the impossible "24:00:00" that rounding an isolated seconds field
+     * would produce.
+     */
+    protected static double atWholeSecond(final double julianDay) {
+        final double seconds = julianDay * d86400;
+        return (Math.floor(seconds + d05) + d05) / d86400;
+    }
+
     @Override
     public String toString() {
         final StringBuilder builder = new StringBuilder(512);
@@ -339,13 +366,13 @@ public class KundaliFields implements IKundaliFields {
                 .append("\n Delta T\t\t: ").append(sweObjects.sweJulianDate().deltaT() * d86400)
                 .append("\nSidereal Time\t: ").append(toDMS(siderealTime(), true))
                 .append("\nUTC Moonrise\t: ").append(format(swissEph.initDateTime(
-                        new SweJulianDate(moonrise())), F4Y_2M_2D_2H_2M_2S))
+                        new SweJulianDate(atWholeSecond(moonrise()))), F4Y_2M_2D_2H_2M_2S))
                 .append("\nUTC Moonset\t\t: ").append(format(swissEph.initDateTime(
-                        new SweJulianDate(moonset())), F4Y_2M_2D_2H_2M_2S))
+                        new SweJulianDate(atWholeSecond(moonset()))), F4Y_2M_2D_2H_2M_2S))
                 .append("\nUTC Sunrise\t\t: ").append(format(swissEph.initDateTime(
-                        new SweJulianDate(sunrise())), F4Y_2M_2D_2H_2M_2S))
+                        new SweJulianDate(atWholeSecond(sunrise()))), F4Y_2M_2D_2H_2M_2S))
                 .append("\nUTC Sunset\t\t: ").append(format(swissEph.initDateTime(
-                        new SweJulianDate(sunset())), F4Y_2M_2D_2H_2M_2S))
+                        new SweJulianDate(atWholeSecond(sunset()))), F4Y_2M_2D_2H_2M_2S))
                 /*.append("\nSurya Spashta\t: ").append(toDMS(suryaSpashta()))
                 .append("\nIshta Kaala\t\t: ").append(toGPV(ishtaKaala()))
                 .append("\nSavana Day\t\t: ").append(toGPV(savanaDay()))

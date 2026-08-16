@@ -39,7 +39,7 @@ Julian Day		: 1721152.0143518518
  Delta T		: 10554.281607847191
 Sidereal Time	: 06:28:21
 UTC Moonrise	: 0–04–04 10:13:23
-UTC Moonset		: 0–04–04 22:38:29
+UTC Moonset		: 0–04–04 22:38:30
 UTC Sunrise		: 0–04–04 00:32:44
 UTC Sunset		: 0–04–04 12:43:53
 

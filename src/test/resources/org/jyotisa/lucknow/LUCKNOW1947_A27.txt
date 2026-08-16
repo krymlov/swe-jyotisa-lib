@@ -39,8 +39,8 @@ Julian Day		: 2432412.9375
  Delta T		: 28.108928689667277
 Sidereal Time	: 13:29:17
 UTC Moonrise	: 1947–08–14 22:27:33
-UTC Moonset		: 1947–08–15 12:31:10
-UTC Sunrise		: 1947–08–15 00:08:36
+UTC Moonset		: 1947–08–15 12:31:11
+UTC Sunrise		: 1947–08–15 00:08:37
 UTC Sunset		: 1947–08–15 13:05:32
 
 

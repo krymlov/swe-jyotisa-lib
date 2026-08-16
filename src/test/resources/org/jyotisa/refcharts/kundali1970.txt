@@ -40,7 +40,7 @@ Julian Day		: 2440681.014351852
 Sidereal Time	: 06:34:49
 UTC Moonrise	: 1970–04–03 22:59:52
 UTC Moonset		: 1970–04–04 11:05:22
-UTC Sunrise		: 1970–04–04 00:32:21
+UTC Sunrise		: 1970–04–04 00:32:22
 UTC Sunset		: 1970–04–04 12:45:07
 
 

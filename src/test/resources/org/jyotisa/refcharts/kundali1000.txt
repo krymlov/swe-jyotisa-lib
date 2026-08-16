@@ -38,9 +38,9 @@ IL   = 03°36'46.24"  -> Rasi= MES (12.04%) | 03°36'46.24" -> Naksatra= ASH2|KE
 Julian Day		: 2086402.0143518518
  Delta T		: 1462.171131617323
 Sidereal Time	: 06:58:21
-UTC Moonrise	: 1000–04–03 22:20:14
-UTC Moonset		: 1000–04–04 10:06:49
-UTC Sunrise		: 1000–04–04 00:27:36
+UTC Moonrise	: 1000–04–03 22:20:15
+UTC Moonset		: 1000–04–04 10:06:50
+UTC Sunrise		: 1000–04–04 00:27:37
 UTC Sunset		: 1000–04–04 12:45:39
 
 

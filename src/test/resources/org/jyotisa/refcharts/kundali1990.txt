@@ -38,10 +38,10 @@ IL   = 16°23'29.31"  -> Rasi= MES (54.64%) | 16°23'29.31" -> Naksatra= BHA1|SK
 Julian Day		: 2447986.014351852
  Delta T		: 57.02771422573678
 Sidereal Time	: 06:35:26
-UTC Moonrise	: 1990–04–04 08:08:56
-UTC Moonset		: 1990–04–04 21:08:26
+UTC Moonrise	: 1990–04–04 08:08:57
+UTC Moonset		: 1990–04–04 21:08:27
 UTC Sunrise		: 1990–04–04 00:32:15
-UTC Sunset		: 1990–04–04 12:45:08
+UTC Sunset		: 1990–04–04 12:45:09
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE

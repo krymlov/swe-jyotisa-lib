@@ -38,9 +38,9 @@ IL   = 311°35'27.84" -> Rasi= KUM (38.64%) | 11°35'27.84" -> Naksatra= SAT2|RA
 Julian Day		: 2269027.014351852
  Delta T		: 291.08076933747714
 Sidereal Time	: 07:13:35
-UTC Moonrise	: 1500–04–04 04:17:30
+UTC Moonrise	: 1500–04–04 04:17:31
 UTC Moonset		: 1500–04–04 17:38:30
-UTC Sunrise		: 1500–04–04 00:25:07
+UTC Sunrise		: 1500–04–04 00:25:08
 UTC Sunset		: 1500–04–04 12:46:33
 
 

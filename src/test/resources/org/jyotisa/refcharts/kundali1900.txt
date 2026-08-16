@@ -38,10 +38,10 @@ IL   = 53°59'23.43"  -> Rasi= VRB (79.97%) | 23°59'23.43" -> Naksatra= MRG1|MA
 Julian Day		: 2415114.014351852
  Delta T		: -1.6917172708817465
 Sidereal Time	: 06:34:38
-UTC Moonrise	: 1900–04–04 04:05:45
+UTC Moonrise	: 1900–04–04 04:05:46
 UTC Moonset		: 1900–04–04 17:21:37
 UTC Sunrise		: 1900–04–04 00:32:25
-UTC Sunset		: 1900–04–04 12:45:08
+UTC Sunset		: 1900–04–04 12:45:09
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE

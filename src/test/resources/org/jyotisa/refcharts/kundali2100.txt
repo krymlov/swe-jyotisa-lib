@@ -38,9 +38,9 @@ IL   = 142°49'24.97" -> Rasi= SIM (76.08%) | 22°49'24.97" -> Naksatra= PPH3|SK
 Julian Day		: 2488163.014351852
  Delta T		: 93.30057852596798
 Sidereal Time	: 06:36:51
-UTC Moonrise	: 2100–04–03 21:09:54
-UTC Moonset		: 2100–04–04 08:35:45
-UTC Sunrise		: 2100–04–04 00:31:58
+UTC Moonrise	: 2100–04–03 21:09:55
+UTC Moonset		: 2100–04–04 08:35:46
+UTC Sunrise		: 2100–04–04 00:31:59
 UTC Sunset		: 2100–04–04 12:45:11
 
 
