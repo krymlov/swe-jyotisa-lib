@@ -23,14 +23,15 @@ import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
 
 /**
- * Of the 9 special {@code ILagna} types, only 4 (janma/bhava/hora/ghati) are implemented;
- * of the 11 {@code IUpagraha} types, only 5 (dhuma/vyatipaata/parivesha/indrachaapa/upaketu)
- * are implemented - the remaining 6, including the two most commonly used in practice
- * (Gulika, Maandi), throw {@link KundaliRuntimeException}. Pinned here so implementing one
- * updates this test rather than silently changing behavior; see this project's CLAUDE.md.
+ * Of the 9 special {@code ILagna} types, only 4 (janma/bhava/hora/ghati) are implemented; the
+ * remaining 5 throw {@link KundaliRuntimeException}. All 11 {@code IUpagraha} types are now
+ * implemented (the 6 Kalavela upagrahas - kaala/mrityu/arthaprahaara/yamaghantaka/gulika/maandi -
+ * were added 2026-08, see {@link org.jyotisa.upagraha.Upagrahas#calcKalavelaUpagrahas}). Pinned
+ * here so implementing a Lagna type updates this test rather than silently changing behavior;
+ * see this project's CLAUDE.md.
  *
  * @author Yura Krymlov
- * @version 1.0, 2026-08
+ * @version 1.1, 2026-08
  */
 class UnimplementedFeaturesTest extends AbstractTest {
     static final int[] DATE_1947 = {1947, 8, 15, 10, 30};
@@ -63,22 +64,18 @@ class UnimplementedFeaturesTest extends AbstractTest {
     }
 
     @Test
-    void upagrahas_fiveImplementedTypesDoNotThrow() {
+    void upagrahas_allElevenTypesDoNotThrow() {
         IUpagrahas upagrahas = newLucknow1947().upagrahas();
         assertDoesNotThrow(upagrahas::dhuma);
         assertDoesNotThrow(upagrahas::vyatipaata);
         assertDoesNotThrow(upagrahas::parivesha);
         assertDoesNotThrow(upagrahas::indrachaapa);
         assertDoesNotThrow(upagrahas::upaketu);
-    }
-
-    @Test
-    void upagrahas_sixUnimplementedTypesThrow_notablyGulikaAndMaandi() {
-        IUpagrahas upagrahas = newLucknow1947().upagrahas();
-        for (Executable e : new Executable[]{upagrahas::kaala, upagrahas::mrityu,
-                upagrahas::arthaprahaara, upagrahas::yamaghantaka, upagrahas::gulika, upagrahas::maandi}) {
-            KundaliRuntimeException ex = assertThrows(KundaliRuntimeException.class, e);
-            org.junit.jupiter.api.Assertions.assertTrue(ex.getMessage().contains("not implemented"));
-        }
+        assertDoesNotThrow(upagrahas::kaala);
+        assertDoesNotThrow(upagrahas::mrityu);
+        assertDoesNotThrow(upagrahas::arthaprahaara);
+        assertDoesNotThrow(upagrahas::yamaghantaka);
+        assertDoesNotThrow(upagrahas::gulika);
+        assertDoesNotThrow(upagrahas::maandi);
     }
 }

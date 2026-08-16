@@ -19,6 +19,12 @@ VYA  = 210°51'49.79" -> Rasi= VRC (2.88 %) | 00°51'49.79" -> Naksatra= VIS4|GU
 PAR  = 30°51'49.79"  -> Rasi= VRB (2.88 %) | 00°51'49.79" -> Naksatra= KRI2|SY (31.48%) -> Navamsa= MAK|SA -> Bhava= B8 
 CHP  = 329°08'10.21" -> Rasi= KUM (97.12%) | 29°08'10.21" -> Naksatra= PBH3|GU (68.52%) -> Navamsa= MIT|BU -> Bhava= B5 
 UPK  = 345°48'10.21" -> Rasi= MEE (52.68%) | 15°48'10.21" -> Naksatra= UBH4|SA (93.52%) -> Navamsa= VRC|MA -> Bhava= B6 
+KAA  = 55°15'52.22"  -> Rasi= VRB (84.22%) | 25°15'52.22" -> Naksatra= MRG1|MA (14.48%) -> Navamsa= SIM|SY -> Bhava= B8 
+MRT  = 99°39'39.32"  -> Rasi= KAR (32.2 %) | 09°39'39.32" -> Naksatra= PUS2|SA (47.46%) -> Navamsa= KAN|BU -> Bhava= B10
+ART  = 120°12'54.77" -> Rasi= SIM (0.72 %) | 00°12'54.77" -> Naksatra= MAG1|KE (1.61 %) -> Navamsa= MES|MA -> Bhava= B11
+YAM  = 141°02'34.75" -> Rasi= SIM (70.14%) | 21°02'34.75" -> Naksatra= PPH3|SK (57.82%) -> Navamsa= TUL|SK -> Bhava= B11
+GLK  = 29°17'17.86"  -> Rasi= MES (97.63%) | 29°17'17.86" -> Naksatra= KRI1|SY (19.66%) -> Navamsa= DHN|GU -> Bhava= B7 
+MND  = 15°19'17.73"  -> Rasi= MES (51.07%) | 15°19'17.73" -> Naksatra= BHA1|SK (14.91%) -> Navamsa= SIM|SY -> Bhava= B7 
 JL   = 190°09'01.34" -> Rasi= TUL (33.83%) | 10°09'01.34" -> Naksatra= SWA2|RA (26.13%) -> Navamsa= MAK|SA -> Bhava= B1 
 BL   = 192°26'28.84" -> Rasi= TUL (41.47%) | 12°26'28.84" -> Naksatra= SWA2|RA (43.31%) -> Navamsa= MAK|SA -> Bhava= B1 
 HL   = 09°33'19.65"  -> Rasi= MES (31.85%) | 09°33'19.65" -> Naksatra= ASH3|KE (71.67%) -> Navamsa= MIT|BU -> Bhava= B7 
@@ -31,6 +37,18 @@ UTC Moonrise	: 100–04–04 05:13:36
 UTC Moonset		: 100–04–04 18:41:25
 UTC Sunrise		: 100–04–04 00:32:12
 UTC Sunset		: 100–04–04 12:44:04
+
+
+Bhinnashtakavarga: MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
+SY         4   3   4   4   3   5   4   4   7   4   3   3
+CH         4   3   2   5   5   5   2   5   4   6   4   4
+BU         3   4   4   4   6   6   3   3   7   5   4   5
+SK         0   4   7   3   6   5   3   5   4   4   7   4
+MA         2   2   4   3   4   5   3   2   5   3   3   3
+GU         6   4   4   3   4   4   5   4   4   7   5   6
+SA         3   3   1   4   2   3   3   2   5   6   3   4
+LG         3   5   4   5   5   5   1   3   5   5   4   4
+Sarva:    22  23  26  26  30  33  23  25  36  35  29  29
 
 D1	=  TUL[10°09'01"] MES[15°48'10"] KAR[04°38'01"] MEE[16°31'09"] MES[08°31'38"] KUM[22°38'29"] VRB[25°23'23"] VRC[04°28'23"] KAN[01°15'48"] MEE[01°15'48"] MIT[03°42'38"] MIT[28°35'46"] MEE[19°56'36"]
 D2	=  SIM[20°18'03"] KAR[01°36'20"] KAR[09°16'01"] SIM[03°02'18"] SIM[17°03'15"] KAR[15°16'58"] SIM[20°46'46"] KAR[08°56'45"] KAR[02°31'36"] KAR[02°31'36"] SIM[07°25'17"] KAR[27°11'31"] SIM[09°53'12"]

@@ -30,6 +30,7 @@ import org.jyotisa.api.upagraha.IUpagrahaEnum;
 import org.jyotisa.api.upagraha.IUpagrahas;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
+import org.jyotisa.ashtakavarga.Ashtakavarga;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.bindu.BhriguBindu;
 import org.jyotisa.graha.EGraha;
@@ -60,7 +61,7 @@ import static org.jyotisa.graha.chaya.GrahaKetu.KETU_TRUE;
 import static org.jyotisa.graha.chaya.GrahaRahu.RAHU;
 import static org.jyotisa.graha.chaya.GrahaRahu.RAHU_TRUE;
 import static org.jyotisa.karaka.ECharaKarakaOption.SEVEN_KARAKAS;
-import static org.jyotisa.upagraha.EUpagraha.UPAKETU;
+import static org.jyotisa.upagraha.EUpagraha.MAANDI;
 import static org.swisseph.api.ISweConstants.CH_VS;
 import static org.swisseph.api.ISweConstants.d0;
 import static org.swisseph.api.ISweConstants.i12;
@@ -87,6 +88,7 @@ public class Kundali implements IKundali {
     protected IUpagrahas upagrahas;
     protected IGrahas grahas;
     protected ILagnas lagnas;
+    protected Ashtakavarga ashtakavarga;
 
     public Kundali(IKundaliOptions options, ISweObjects sweObjects) {
         this.sweObjects = sweObjects;
@@ -144,6 +146,11 @@ public class Kundali implements IKundali {
     public IUpagrahas upagrahas() {
         if (null != upagrahas) return upagrahas;
         return upagrahas = new Upagrahas(options, sweObjects);
+    }
+
+    public Ashtakavarga ashtakavarga() {
+        if (null != ashtakavarga) return ashtakavarga;
+        return ashtakavarga = new Ashtakavarga(options, sweObjects);
     }
 
     @Override
@@ -278,7 +285,7 @@ public class Kundali implements IKundali {
             );
         }
 
-        ISweEnumIterator<IUpagrahaEnum> upagrahaIterator = EUpagraha.iteratorTo(UPAKETU);
+        ISweEnumIterator<IUpagrahaEnum> upagrahaIterator = EUpagraha.iteratorTo(MAANDI);
         while (upagrahaIterator.hasNext()) {
             final IUpagrahaEnum upgen = upagrahaIterator.next();
             IUpagrahaEntity upagraha = upgrhs.all()[upgen.uid()];
@@ -316,6 +323,8 @@ public class Kundali implements IKundali {
         }
 
         builder.append('\n').append(fields()).append('\n');
+
+        builder.append('\n').append(ashtakavarga()).append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();
         final IGrahaEntity[] grahas = grahas().all();
