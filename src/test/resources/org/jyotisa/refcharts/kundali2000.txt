@@ -39,7 +39,7 @@ UTC Sunrise		: 2000–04–04 00:31:49
 UTC Sunset		: 2000–04–04 12:45:14
 
 
-Bhinnashtakavarga: MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
+BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
 SY         4   3   3   4   4   3   4   5   7   5   5   1
 CH         2   6   5   3   5   6   2   4   5   5   5   1
 BU         6   3   4   6   2   2   6   6   5   6   6   2

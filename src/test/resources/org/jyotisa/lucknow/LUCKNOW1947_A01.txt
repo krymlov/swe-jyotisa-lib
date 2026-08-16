@@ -39,7 +39,7 @@ UTC Sunrise		: 1947–08–15 00:08:36
 UTC Sunset		: 1947–08–15 13:05:33
 
 
-Bhinnashtakavarga: MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
+BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
 SY         5   5   4   3   3   4   3   2   4   4   5   6
 CH         6   7   0   4   2   6   5   5   3   5   4   2
 BU         4   7   3   5   4   5   4   3   5   3   4   7

@@ -39,7 +39,7 @@ UTC Sunrise		: 1970–04–04 00:32:21
 UTC Sunset		: 1970–04–04 12:45:07
 
 
-Bhinnashtakavarga: MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
+BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
 SY         4   2   4   4   3   3   4   5   6   4   5   4
 CH         3   3   5   5   7   3   4   4   4   5   6   0
 BU         5   5   3   6   4   4   3   5   6   4   6   3

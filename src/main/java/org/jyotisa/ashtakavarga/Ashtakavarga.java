@@ -209,7 +209,7 @@ public class Ashtakavarga {
     @Override
     public String toString() {
         final StringBuilder builder = new StringBuilder(1024);
-        builder.append(String.format("%-8s", "Bhinnashtakavarga:"));
+        builder.append(String.format("%-8s", "BAV:"));
         for (int rasiFid = 1; rasiFid <= 12; rasiFid++) {
             builder.append(String.format("%4s", ERasi.byUid(rasiFid).following()));
         }

@@ -39,7 +39,7 @@ UTC Sunrise		: 2050–04–04 00:31:53
 UTC Sunset		: 2050–04–04 12:45:13
 
 
-Bhinnashtakavarga: MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
+BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
 SY         2   2   5   3   4   5   5   4   5   5   3   5
 CH         3   5   5   4   6   2   6   3   2   6   6   1
 BU         4   3   6   5   5   5   3   4   5   5   6   3
