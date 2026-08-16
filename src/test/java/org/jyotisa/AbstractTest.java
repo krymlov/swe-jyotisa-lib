@@ -87,12 +87,20 @@ public abstract class AbstractTest {
     }
 
     /**
-     * Options-taking variant. Needed because the <b>pure Java Moshier fallback cannot compute
-     * {@code SE_TRUE_NODE}</b> - pointed at an ephemeris-less directory it fails with a bogus
-     * julian day ("jd -0.001010 outside Moshier planet range") instead of falling back the way
-     * it does for every ordinary planet. That is a gap in {@code swe-java-lib}'s ported
-     * Swiss Ephemeris, not in this project, so the one test that deliberately exercises the
-     * ephemeris-less path passes mean-node options here rather than being deleted.
+     * Options-taking variant, needed for the one test that deliberately runs without ephemeris
+     * files.
+     * <p>
+     * <b>Upstream Swiss Ephemeris bug (2.10.03), not ours:</b> with a star-derived sidereal
+     * ayanamsa (True Citra) and no ephemeris files, {@code SE_TRUE_NODE} fails with a bogus
+     * julian day - {@code "jd -0.001010 outside Moshier planet range"} - instead of falling back
+     * to Moshier the way every ordinary planet and the mean node do. Verified to reproduce
+     * identically in astro.com's own {@code swetest64.exe}:
+     * <pre>
+     * swetest64.exe -b16.08.2026 -ut12:00 -pt -sid27 -fPl -edir&lt;empty dir&gt;
+     * </pre>
+     * so there is nothing to fix in this workspace (and the Swiss Ephemeris sources are
+     * deliberately kept as a pure upstream copy). It cannot arise in normal use because every
+     * project ships a real {@code ephe/} folder, which {@code EphemerisIsRealTest} now enforces.
      */
     protected IKundali newKyivKundali(ISwissEph swissEph, ISweObjectsOptions options) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(

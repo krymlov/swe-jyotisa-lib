@@ -28,10 +28,11 @@ public class ShaniSadeSatiTest extends AbstractTest {
     }
 
     /**
-     * Mean node on purpose: the pure Java Moshier fallback cannot compute {@code SE_TRUE_NODE}
-     * (it fails with "jd -0.001010 outside Moshier planet range" rather than falling back the
-     * way it does for every ordinary planet), so the rest of the suite's true-node default
-     * cannot be used for the deliberately ephemeris-less path this test exercises. See
+     * Mean node on purpose. This is the one test that deliberately runs with no ephemeris files,
+     * and an <b>upstream Swiss Ephemeris 2.10.03 bug</b> makes {@code SE_TRUE_NODE} fail in
+     * exactly that situation when the ayanamsa is star-derived (True Citra) - it reports
+     * "jd -0.001010 outside Moshier planet range" instead of falling back. Reproduces identically
+     * in astro.com's own swetest, so it is not ours to fix; see
      * {@link AbstractTest#newKyivKundali(ISwissEph, org.swisseph.api.ISweObjectsOptions)}.
      */
     @Test
