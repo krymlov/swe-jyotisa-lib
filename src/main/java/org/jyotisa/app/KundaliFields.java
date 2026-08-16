@@ -21,6 +21,7 @@ import static org.swisseph.utils.IDateUtils.F4Y_2M_2D_2H_2M_2S;
 import static org.swisseph.utils.IDateUtils.format;
 import static org.swisseph.utils.IDegreeUtils.toDMS;
 import static org.swisseph.utils.IModuloUtils.fix360;
+import static org.swisseph.utils.IModuloUtils.modulo;
 import static swisseph.SweConst.*;
 
 /**
@@ -57,9 +58,24 @@ public class KundaliFields implements IKundaliFields {
         calcMainFields();
     }
 
+    /**
+     * Local apparent sidereal time, in hours.
+     * <p>
+     * {@code swe_sidtime()} returns sidereal time at <b>Greenwich</b>, so the place's own
+     * longitude has to be added as an <b>angle</b> - {@code longitude / 15} hours - to the
+     * result. It must not be folded into the julian day instead: shifting the instant by
+     * {@code longitude / 360} of a day advances sidereal time by that span times the
+     * sidereal/solar ratio 1.0027379, which over-rotates by {@code (longitude / 15) * 0.0027379}
+     * hours. That was the previous implementation, and at this project's own reference longitude
+     * (81&deg;08'E) it ran <b>53 seconds fast</b> - {@code 06:35:42} where Jagannatha Hora and
+     * {@code swetest}'s {@code ARMC/15} both give {@code 06:34:49}. See
+     * {@code KundaliFieldsSiderealTimeTest}.
+     */
     protected void calcMainFields() {
-        fields[SDRL_TIME] = sweObjects.swissEph().swe_sidtime(sweObjects.sweJulianDate()
-                .julianDay() + sweObjects.sweLocation().longitude() / d360);
+        final double greenwichSiderealTime = sweObjects.swissEph()
+                .swe_sidtime(sweObjects.sweJulianDate().julianDay());
+        fields[SDRL_TIME] = modulo(d24, greenwichSiderealTime
+                + sweObjects.sweLocation().longitude() / d15);
     }
 
     protected void calcSunRiseSet() {

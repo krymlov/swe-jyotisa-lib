@@ -19,29 +19,29 @@ VYA  = 236°08'54.34" -> Rasi= VRC (87.16%) | 26°08'54.34" -> Naksatra= JYE3|BU
 PAR  = 56°08'54.34"  -> Rasi= VRB (87.16%) | 26°08'54.34" -> Naksatra= MRG1|MA (21.11%) -> Navamsa= SIM|SY -> Bhava= B9 
 CHP  = 303°51'05.66" -> Rasi= KUM (12.84%) | 03°51'05.66" -> Naksatra= DHA4|MA (78.89%) -> Navamsa= VRC|MA -> Bhava= B6 
 UPK  = 320°31'05.66" -> Rasi= KUM (68.39%) | 20°31'05.66" -> Naksatra= PBH1|GU (3.89 %) -> Navamsa= MES|MA -> Bhava= B6 
-KAA  = 94°40'53.59"  -> Rasi= KAR (15.61%) | 04°40'53.59" -> Naksatra= PUS1|SA (10.11%) -> Navamsa= SIM|SY -> Bhava= B11
-MRT  = 137°16'03.98" -> Rasi= SIM (57.56%) | 17°16'03.98" -> Naksatra= PPH2|SK (29.51%) -> Navamsa= KAN|BU -> Bhava= B12
-ART  = 159°26'32.80" -> Rasi= KAN (31.47%) | 09°26'32.80" -> Naksatra= UPH4|SY (95.82%) -> Navamsa= MEE|GU -> Bhava= B1 
-YAM  = 03°55'19.10"  -> Rasi= MES (13.07%) | 03°55'19.10" -> Naksatra= ASH2|KE (29.41%) -> Navamsa= VRB|SK -> Bhava= B8 
-GLK  = 41°34'41.45"  -> Rasi= VRB (38.59%) | 11°34'41.45" -> Naksatra= ROH1|CH (11.84%) -> Navamsa= MES|MA -> Bhava= B9 
-MND  = 52°48'32.84"  -> Rasi= VRB (76.03%) | 22°48'32.84" -> Naksatra= ROH4|CH (96.07%) -> Navamsa= KAR|CH -> Bhava= B9 
+KAA  = 94°40'52.44"  -> Rasi= KAR (15.6 %) | 04°40'52.44" -> Naksatra= PUS1|SA (10.11%) -> Navamsa= SIM|SY -> Bhava= B11
+MRT  = 137°15'58.38" -> Rasi= SIM (57.55%) | 17°15'58.38" -> Naksatra= PPH2|SK (29.5 %) -> Navamsa= KAN|BU -> Bhava= B12
+ART  = 159°26'24.94" -> Rasi= KAN (31.47%) | 09°26'24.94" -> Naksatra= UPH4|SY (95.8 %) -> Navamsa= MEE|GU -> Bhava= B1 
+YAM  = 03°55'28.40"  -> Rasi= MES (13.08%) | 03°55'28.40" -> Naksatra= ASH2|KE (29.43%) -> Navamsa= VRB|SK -> Bhava= B8 
+GLK  = 41°34'45.88"  -> Rasi= VRB (38.6 %) | 11°34'45.88" -> Naksatra= ROH1|CH (11.85%) -> Navamsa= MES|MA -> Bhava= B9 
+MND  = 52°48'35.98"  -> Rasi= VRB (76.03%) | 22°48'35.98" -> Naksatra= ROH4|CH (96.07%) -> Navamsa= KAR|CH -> Bhava= B9 
 JL   = 164°36'02.44" -> Rasi= KAN (48.67%) | 14°36'02.44" -> Naksatra= HAS2|CH (34.51%) -> Navamsa= VRB|SK -> Bhava= B1 
-BL   = 167°11'46.32" -> Rasi= KAN (57.32%) | 17°11'46.32" -> Naksatra= HAS3|CH (53.97%) -> Navamsa= MIT|BU -> Bhava= B1 
-HL   = 344°21'33.38" -> Rasi= MEE (47.86%) | 14°21'33.38" -> Naksatra= UBH4|SA (82.69%) -> Navamsa= VRC|MA -> Bhava= B7 
-GL   = 155°50'54.54" -> Rasi= KAN (19.49%) | 05°50'54.54" -> Naksatra= UPH3|SY (68.86%) -> Navamsa= KUM|SA -> Bhava= B1 
-VG   = 293°17'40.36" -> Rasi= MAK (77.65%) | 23°17'40.36" -> Naksatra= SHR4|CH (99.71%) -> Navamsa= KAR|CH -> Bhava= B5 
+BL   = 167°11'37.38" -> Rasi= KAN (57.31%) | 17°11'37.38" -> Naksatra= HAS3|CH (53.95%) -> Navamsa= MIT|BU -> Bhava= B1 
+HL   = 344°21'15.47" -> Rasi= MEE (47.85%) | 14°21'15.47" -> Naksatra= UBH4|SA (82.66%) -> Navamsa= VRC|MA -> Bhava= B7 
+GL   = 155°50'09.74" -> Rasi= KAN (19.45%) | 05°50'09.74" -> Naksatra= UPH3|SY (68.77%) -> Navamsa= KUM|SA -> Bhava= B1 
+VG   = 293°14'41.07" -> Rasi= MAK (77.48%) | 23°14'41.07" -> Naksatra= SHR4|CH (99.34%) -> Navamsa= KAR|CH -> Bhava= B5 
 VL   = 134°36'02.44" -> Rasi= SIM (48.67%) | 14°36'02.44" -> Naksatra= PPH1|SK (9.51 %) -> Navamsa= SIM|SY -> Bhava= B12
 SL   = 28°15'50.14"  -> Rasi= MES (94.21%) | 28°15'50.14" -> Naksatra= KRI1|SY (11.98%) -> Navamsa= DHN|GU -> Bhava= B8 
-PP   = 53°17'40.36"  -> Rasi= VRB (77.65%) | 23°17'40.36" -> Naksatra= ROH4|CH (99.71%) -> Navamsa= KAR|CH -> Bhava= B9 
+PP   = 53°43'47.43"  -> Rasi= VRB (79.1 %) | 23°43'47.43" -> Naksatra= MRG1|MA (2.97 %) -> Navamsa= SIM|SY -> Bhava= B9 
 IL   = 278°17'01.77" -> Rasi= MAK (27.61%) | 08°17'01.77" -> Naksatra= USH4|SY (87.13%) -> Navamsa= MEE|GU -> Bhava= B5 
 
 Julian Day		: 2462596.014351852
  Delta T		: 69.33800189670697
-Sidereal Time	: 06:37:34
-UTC Moonrise	: 2030–04–04 01:13:46
-UTC Moonset		: 2030–04–04 14:03:21
-UTC Sunrise		: 2030–04–04 00:32:00
-UTC Sunset		: 2030–04–04 12:45:12
+Sidereal Time	: 06:36:40
+UTC Moonrise	: 2030–04–04 01:07:08
+UTC Moonset		: 2030–04–04 13:58:21
+UTC Sunrise		: 2030–04–04 00:32:01
+UTC Sunset		: 2030–04–04 12:45:11
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE

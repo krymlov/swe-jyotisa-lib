@@ -75,7 +75,8 @@ public class Lagnas implements ILagnas {
         this.all[SREE_LAGNA.uid()] = new LagnaEntity(
                 calcSree(lagnaLongitude, moonLongitude), L6, julianDay);
         this.all[PRANAPADA_LAGNA.uid()] = new LagnaEntity(
-                calcPranapada(vighatiLongitude, longitudes[SY]), L7, julianDay);
+                calcPranapada(vighatiLongitude, kundaliFields.suryaSpashta(),
+                        longitudes[SY]), L7, julianDay);
         this.all[INDU_LAGNA.uid()] = new LagnaEntity(
                 calcIndu(lagnaLongitude, moonLongitude), L8, julianDay);
     }
@@ -145,17 +146,32 @@ public class Lagnas implements ILagnas {
     }
 
     /**
-     * Pranapada Lagna: the Vighati Lagna longitude (the same sunrise-anchored progression used
-     * for {@link #vighati()}, at 5&deg;/minute since sunrise), shifted by a classical offset that
-     * trisects the zodiac by the sign-modality of the Sun: 0&deg; if Surya is in a movable sign,
-     * 120&deg; if dual, 240&deg; if fixed. Cross-checked against the reference PyJHora
-     * implementation ({@code pranapada_lagna}), which computes the identical quantity as
-     * {@code vighati_lagna_longitude + offset}.
+     * Pranapada Lagna: the arc the Vighati Lagna has swept since sunrise (5&deg; per minute of
+     * ishta kaala), added to <b>Surya's longitude at birth</b>, plus the classical offset that
+     * trisects the zodiac by the modality of the sign Surya occupies - 0&deg; movable, 120&deg;
+     * dual, 240&deg; fixed.
+     * <p>
+     * The base is deliberately the <b>birth</b> Sun, not the Sun at sunrise. Those differ by
+     * exactly the Sun's own motion over the ishta kaala (0.4847&deg; for the 1970 reference
+     * chart), and taking the sunrise Sun instead makes Pranapada a plain rotation of the Vighati
+     * Lagna, carrying no information the Vighati Lagna does not already have. Jagannatha Hora
+     * uses the birth Sun, and so does the independent {@code swetest}-based reference table in
+     * {@code jyotisa-uajhora}'s {@code відмінність.txt} (where Pranapada is Vighati + 120.485&deg;
+     * on every chart, the extra 0.485&deg; being precisely that solar motion). PyJHora's
+     * {@code pranapada_lagna} does <em>not</em> - it adds the offset straight to the Vighati
+     * Lagna and uses the birth Sun only to pick the modality - which is where this
+     * implementation originally came from; corrected 2026-08-16 after the divergence was
+     * measured at ~26 arcminutes.
+     *
+     * @param vighatiLongitude Vighati Lagna, i.e. {@code sunAtSunrise + 7200 * (jd - sunrise)}
+     * @param sunAtSunrise     Surya's longitude at sunrise, subtracted to recover the swept arc
+     * @param sunAtBirth       Surya's longitude at birth - the base, and the modality test
      */
-    static double calcPranapada(final double vighatiLongitude, final double sunLongitude) {
-        final double offset = IRasi.inFixedRasi(sunLongitude) ? 240D
-                : IRasi.inDualRasi(sunLongitude) ? 120D : 0D;
-        return fix360(vighatiLongitude + offset);
+    static double calcPranapada(final double vighatiLongitude, final double sunAtSunrise,
+                                final double sunAtBirth) {
+        final double offset = IRasi.inFixedRasi(sunAtBirth) ? 240D
+                : IRasi.inDualRasi(sunAtBirth) ? 120D : 0D;
+        return fix360(sunAtBirth + (vighatiLongitude - sunAtSunrise) + offset);
     }
 
     /**

@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.api.ISweObjects.CH;
+import static org.swisseph.api.ISweObjects.SY;
 import static org.swisseph.api.ISweObjects.LG;
 import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 import static org.swisseph.utils.IModuloUtils.fix360;
@@ -25,14 +26,19 @@ import static org.swisseph.utils.IModuloUtils.fix360;
 /**
  * The five lagnas newly implemented in {@link Lagnas} - vighati/varnada/sree/pranapada/indu -
  * have no maitreya8 reference (it implements only bhava/hora/ghatika, see this project's
- * CLAUDE.md); their formulas were instead cross-checked against the reference PyJHora
- * implementation ({@code e:\Github\PyJHora\src\jhora\panchanga\drik.py} and
- * {@code .\horoscope\chart\charts.py}, B.V. Raman's method for Varnada/Indu, JHora's own
- * default) and, where available, an independently worked classical example. This test pins
- * both: the isolated formulas against hand-worked numbers, and the Lucknow 1947 fixture against
- * values that were manually re-derived from the printed report and cross-checked for internal
- * consistency (e.g. Pranapada = Vighati + the classical modality offset, Indu/Varnada preserve
- * Chandra's/Lagna's own degree-in-sign) before being pinned here.
+ * CLAUDE.md), so they were built against the PyJHora port
+ * ({@code e:\Github\PyJHora\src\jhora\panchanga\drik.py} and {@code .\horoscope\chart\charts.py},
+ * B.V. Raman's method for Varnada/Indu) plus independently worked classical examples.
+ * <p>
+ * They were then checked directly against <b>Jagannatha Hora itself</b> on the 1970 reference
+ * chart (dumps in {@code jyotisa-uajhora/etc/v8.0/diff/2026uk/}). Varnada, Sree and Indu matched
+ * to 0.01" straight away; <b>Pranapada did not</b>, and PyJHora turned out to be the odd one
+ * out - it adds the modality offset to the Vighati Lagna, whereas JHora (and the independent
+ * swetest reference in {@code відмінність.txt}) re-anchor the swept arc on the <b>birth</b> Sun.
+ * That is a ~26' difference, corrected 2026-08-16; see {@link Lagnas#calcPranapada}.
+ * <p>
+ * This test therefore pins both layers: the isolated formulas against hand-worked numbers, and
+ * the Lucknow 1947 fixture against the structural invariants each lagna must satisfy.
  */
 class LagnaSpecialTest extends AbstractTest {
 
@@ -89,23 +95,40 @@ class LagnaSpecialTest extends AbstractTest {
         assertEquals(150, Math.floor(varnada / 30) * 30, "Varnada sign must be Kanya (Virgo)");
     }
 
-    // --- calcPranapada: the classical modality trisection (0/120/240) -----------------------
+    // --- calcPranapada: birth-Sun base + the classical modality trisection (0/120/240) -------
+    // the swept arc is (vighati - sunAtSunrise); with sunAtSunrise == sunAtBirth the two bases
+    // coincide and the result is the plain offset, which isolates the modality rule
     @Test
     void calcPranapada_movableSun_addsNoOffset() {
-        final double vighati = 47.0;
-        assertEquals(fix360(vighati), Lagnas.calcPranapada(vighati, 15.0 /* Mesha, movable */));
+        final double vighati = 47.0, sun = 15.0;   // Mesha, movable
+        assertEquals(fix360(vighati), Lagnas.calcPranapada(vighati, sun, sun));
     }
 
     @Test
     void calcPranapada_fixedSun_adds240() {
-        final double vighati = 47.0;
-        assertEquals(fix360(vighati + 240), Lagnas.calcPranapada(vighati, 45.0 /* Vrishabha, fixed */));
+        final double vighati = 47.0, sun = 45.0;   // Vrishabha, fixed
+        assertEquals(fix360(vighati + 240), Lagnas.calcPranapada(vighati, sun, sun));
     }
 
     @Test
     void calcPranapada_dualSun_adds120() {
-        final double vighati = 47.0;
-        assertEquals(fix360(vighati + 120), Lagnas.calcPranapada(vighati, 75.0 /* Mithuna, dual */));
+        final double vighati = 47.0, sun = 75.0;   // Mithuna, dual
+        assertEquals(fix360(vighati + 120), Lagnas.calcPranapada(vighati, sun, sun));
+    }
+
+    /**
+     * The distinguishing property: the base is the Sun at <b>birth</b>, so the Sun's own motion
+     * over the ishta kaala carries straight into Pranapada. Taking the sunrise Sun instead (the
+     * PyJHora reading this implementation started from) would make Pranapada a fixed rotation of
+     * the Vighati Lagna and this difference would vanish.
+     */
+    @Test
+    void calcPranapada_shiftsByTheSunsOwnMotionSinceSunrise() {
+        final double vighati = 47.0, sunAtSunrise = 15.0, solarMotion = 0.4847;
+        final double sunAtBirth = sunAtSunrise + solarMotion;   // still Mesha, offset stays 0
+
+        assertEquals(fix360(vighati + solarMotion),
+                Lagnas.calcPranapada(vighati, sunAtSunrise, sunAtBirth), 1e-9);
     }
 
     // --- calcIndu: the classical Kala table, cross-checked with an independent recomputation -
@@ -167,9 +190,15 @@ class LagnaSpecialTest extends AbstractTest {
         final double sree = lagnas.sree().longitude();
         final double indu = lagnas.indu().longitude();
 
-        // Pranapada = Vighati + classical modality offset; Surya sits in Karkata (Cancer), a
-        // movable sign, in this chart, so the offset must be 0
-        assertEquals(fix360(vighati), pranapada, 1e-6);
+        // Pranapada re-anchors the arc the Vighati Lagna has swept since sunrise onto the BIRTH
+        // Sun, then adds the modality offset - here 0, since Surya sits in Karkata, a movable
+        // sign. So it must lead the Vighati Lagna by exactly the Sun's own motion over the ishta
+        // kaala, and must NOT simply equal it.
+        final double solarMotionSinceSunrise =
+                sweObjects.longitudes()[SY] - k.fields().suryaSpashta();
+        assertEquals(fix360(vighati + solarMotionSinceSunrise), pranapada, 1e-6);
+        assertTrue(solarMotionSinceSunrise > 0.3,
+                "the Sun should have moved appreciably since sunrise: " + solarMotionSinceSunrise);
 
         // Indu and Varnada must each keep the source point's own degree-in-sign
         assertEquals(sweObjects.longitudes()[CH] % 30, indu % 30, 1e-6);

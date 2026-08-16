@@ -19,29 +19,29 @@ VYA  = 236°01'33.57" -> Rasi= VRC (86.75%) | 26°01'33.57" -> Naksatra= JYE3|BU
 PAR  = 56°01'33.57"  -> Rasi= VRB (86.75%) | 26°01'33.57" -> Naksatra= MRG1|MA (20.19%) -> Navamsa= SIM|SY -> Bhava= B9 
 CHP  = 303°58'26.43" -> Rasi= KUM (13.25%) | 03°58'26.43" -> Naksatra= DHA4|MA (79.81%) -> Navamsa= VRC|MA -> Bhava= B6 
 UPK  = 320°38'26.43" -> Rasi= KUM (68.8 %) | 20°38'26.43" -> Naksatra= PBH1|GU (4.81 %) -> Navamsa= MES|MA -> Bhava= B6 
-KAA  = 04°02'54.40"  -> Rasi= MES (13.49%) | 04°02'54.40" -> Naksatra= ASH2|KE (30.36%) -> Navamsa= VRB|SK -> Bhava= B8 
-MRT  = 52°57'25.99"  -> Rasi= VRB (76.52%) | 22°57'25.99" -> Naksatra= ROH4|CH (97.18%) -> Navamsa= KAR|CH -> Bhava= B9 
-ART  = 74°12'25.30"  -> Rasi= MIT (47.36%) | 14°12'25.30" -> Naksatra= ARD3|RA (56.55%) -> Navamsa= KUM|SA -> Bhava= B10
-YAM  = 94°49'41.79"  -> Rasi= KAR (16.09%) | 04°49'41.79" -> Naksatra= PUS1|SA (11.21%) -> Navamsa= SIM|SY -> Bhava= B11
-GLK  = 126°28'53.75" -> Rasi= SIM (21.61%) | 06°28'53.75" -> Naksatra= MAG2|KE (48.61%) -> Navamsa= VRB|SK -> Bhava= B12
-MND  = 137°23'49.02" -> Rasi= SIM (57.99%) | 17°23'49.02" -> Naksatra= PPH2|SK (30.48%) -> Navamsa= KAN|BU -> Bhava= B12
+KAA  = 04°03'04.37"  -> Rasi= MES (13.5 %) | 04°03'04.37" -> Naksatra= ASH2|KE (30.38%) -> Navamsa= VRB|SK -> Bhava= B8 
+MRT  = 52°57'29.55"  -> Rasi= VRB (76.53%) | 22°57'29.55" -> Naksatra= ROH4|CH (97.19%) -> Navamsa= KAR|CH -> Bhava= B9 
+ART  = 74°12'26.55"  -> Rasi= MIT (47.36%) | 14°12'26.55" -> Naksatra= ARD3|RA (56.56%) -> Navamsa= KUM|SA -> Bhava= B10
+YAM  = 94°49'40.93"  -> Rasi= KAR (16.09%) | 04°49'40.93" -> Naksatra= PUS1|SA (11.21%) -> Navamsa= SIM|SY -> Bhava= B11
+GLK  = 126°28'49.52" -> Rasi= SIM (21.6 %) | 06°28'49.52" -> Naksatra= MAG2|KE (48.6 %) -> Navamsa= VRB|SK -> Bhava= B12
+MND  = 137°23'43.61" -> Rasi= SIM (57.98%) | 17°23'43.61" -> Naksatra= PPH2|SK (30.47%) -> Navamsa= KAN|BU -> Bhava= B12
 JL   = 164°43'52.25" -> Rasi= KAN (49.1 %) | 14°43'52.25" -> Naksatra= HAS2|CH (35.48%) -> Navamsa= VRB|SK -> Bhava= B1 
-BL   = 167°17'33.88" -> Rasi= KAN (57.64%) | 17°17'33.88" -> Naksatra= HAS3|CH (54.7 %) -> Navamsa= MIT|BU -> Bhava= B1 
-HL   = 344°25'46.40" -> Rasi= MEE (48.1 %) | 14°25'46.40" -> Naksatra= UBH4|SA (83.22%) -> Navamsa= VRC|MA -> Bhava= B7 
-GL   = 155°50'23.96" -> Rasi= KAN (19.47%) | 05°50'23.96" -> Naksatra= UPH3|SY (68.8 %) -> Navamsa= KUM|SA -> Bhava= B1 
-VG   = 292°53'31.76" -> Rasi= MAK (76.31%) | 22°53'31.76" -> Naksatra= SHR4|CH (96.69%) -> Navamsa= KAR|CH -> Bhava= B5 
+BL   = 167°17'24.35" -> Rasi= KAN (57.63%) | 17°17'24.35" -> Naksatra= HAS3|CH (54.68%) -> Navamsa= MIT|BU -> Bhava= B1 
+HL   = 344°25'27.31" -> Rasi= MEE (48.08%) | 14°25'27.31" -> Naksatra= UBH4|SA (83.18%) -> Navamsa= VRC|MA -> Bhava= B7 
+GL   = 155°49'36.20" -> Rasi= KAN (19.42%) | 05°49'36.20" -> Naksatra= UPH3|SY (68.7 %) -> Navamsa= KUM|SA -> Bhava= B1 
+VG   = 292°50'20.61" -> Rasi= MAK (76.13%) | 22°50'20.61" -> Naksatra= SHR4|CH (96.29%) -> Navamsa= KAR|CH -> Bhava= B5 
 VL   = 134°43'52.25" -> Rasi= SIM (49.1 %) | 14°43'52.25" -> Naksatra= PPH1|SK (10.48%) -> Navamsa= SIM|SY -> Bhava= B12
 SL   = 148°13'23.90" -> Rasi= SIM (94.08%) | 28°13'23.90" -> Naksatra= UPH1|SY (11.67%) -> Navamsa= DHN|GU -> Bhava= B12
-PP   = 52°53'31.76"  -> Rasi= VRB (76.31%) | 22°53'31.76" -> Naksatra= ROH4|CH (96.69%) -> Navamsa= KAR|CH -> Bhava= B9 
+PP   = 53°19'25.66"  -> Rasi= VRB (77.75%) | 23°19'25.66" -> Naksatra= ROH4|CH (99.93%) -> Navamsa= KAR|CH -> Bhava= B9 
 IL   = 329°23'18.95" -> Rasi= KUM (97.96%) | 29°23'18.95" -> Naksatra= PBH3|GU (70.41%) -> Navamsa= MIT|BU -> Bhava= B6 
 
 Julian Day		: 2455291.014351852
  Delta T		: 66.13676277281547
-Sidereal Time	: 06:36:57
-UTC Moonrise	: 2010–04–03 17:02:11
-UTC Moonset		: 2010–04–04 04:30:55
+Sidereal Time	: 06:36:03
+UTC Moonrise	: 2010–04–03 17:09:08
+UTC Moonset		: 2010–04–04 04:22:10
 UTC Sunrise		: 2010–04–04 00:32:07
-UTC Sunset		: 2010–04–04 12:45:10
+UTC Sunset		: 2010–04–04 12:45:09
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE

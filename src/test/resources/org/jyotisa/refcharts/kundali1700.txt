@@ -19,29 +19,29 @@ VYA  = 231°36'42.61" -> Rasi= VRC (72.04%) | 21°36'42.61" -> Naksatra= JYE2|BU
 PAR  = 51°36'42.61"  -> Rasi= VRB (72.04%) | 21°36'42.61" -> Naksatra= ROH4|CH (87.09%) -> Navamsa= KAR|CH -> Bhava= B9 
 CHP  = 308°23'17.39" -> Rasi= KUM (27.96%) | 08°23'17.39" -> Naksatra= SAT1|RA (12.91%) -> Navamsa= DHN|GU -> Bhava= B6 
 UPK  = 325°03'17.39" -> Rasi= KUM (83.52%) | 25°03'17.39" -> Naksatra= PBH2|GU (37.91%) -> Navamsa= VRB|SK -> Bhava= B6 
-KAA  = 08°28'08.64"  -> Rasi= MES (28.23%) | 08°28'08.64" -> Naksatra= ASH3|KE (63.52%) -> Navamsa= MIT|BU -> Bhava= B8 
-MRT  = 57°22'13.26"  -> Rasi= VRB (91.23%) | 27°22'13.26" -> Naksatra= MRG2|MA (30.28%) -> Navamsa= KAN|BU -> Bhava= B9 
-ART  = 78°36'45.81"  -> Rasi= MIT (62.04%) | 18°36'45.81" -> Naksatra= ARD4|RA (89.6 %) -> Navamsa= MEE|GU -> Bhava= B10
-YAM  = 99°13'48.42"  -> Rasi= KAR (30.77%) | 09°13'48.42" -> Naksatra= PUS2|SA (44.23%) -> Navamsa= KAN|BU -> Bhava= B11
-GLK  = 130°53'10.88" -> Rasi= SIM (36.29%) | 10°53'10.88" -> Naksatra= MAG4|KE (81.65%) -> Navamsa= KAR|CH -> Bhava= B12
-MND  = 141°48'15.61" -> Rasi= SIM (72.68%) | 21°48'15.61" -> Naksatra= PPH3|SK (63.53%) -> Navamsa= TUL|SK -> Bhava= B12
+KAA  = 08°28'17.85"  -> Rasi= MES (28.24%) | 08°28'17.85" -> Naksatra= ASH3|KE (63.54%) -> Navamsa= MIT|BU -> Bhava= B8 
+MRT  = 57°22'16.34"  -> Rasi= VRB (91.24%) | 27°22'16.34" -> Naksatra= MRG2|MA (30.28%) -> Navamsa= KAN|BU -> Bhava= B9 
+ART  = 78°36'46.67"  -> Rasi= MIT (62.04%) | 18°36'46.67" -> Naksatra= ARD4|RA (89.6 %) -> Navamsa= MEE|GU -> Bhava= B10
+YAM  = 99°13'47.23"  -> Rasi= KAR (30.77%) | 09°13'47.23" -> Naksatra= PUS2|SA (44.22%) -> Navamsa= KAN|BU -> Bhava= B11
+GLK  = 130°53'06.42" -> Rasi= SIM (36.28%) | 10°53'06.42" -> Naksatra= MAG4|KE (81.64%) -> Navamsa= KAR|CH -> Bhava= B12
+MND  = 141°48'09.99" -> Rasi= SIM (72.68%) | 21°48'09.99" -> Naksatra= PPH3|SK (63.52%) -> Navamsa= TUL|SK -> Bhava= B12
 JL   = 169°08'02.92" -> Rasi= KAN (63.78%) | 19°08'02.92" -> Naksatra= HAS3|CH (68.51%) -> Navamsa= MIT|BU -> Bhava= B1 
-BL   = 171°43'10.71" -> Rasi= KAN (72.4 %) | 21°43'10.71" -> Naksatra= HAS4|CH (87.9 %) -> Navamsa= KAR|CH -> Bhava= B1 
-HL   = 348°52'03.23" -> Rasi= MEE (62.89%) | 18°52'03.23" -> Naksatra= REV1|BU (16.51%) -> Navamsa= DHN|GU -> Bhava= B7 
-GL   = 160°18'40.81" -> Rasi= KAN (34.37%) | 10°18'40.81" -> Naksatra= HAS1|CH (2.34 %) -> Navamsa= MES|MA -> Bhava= B1 
-VG   = 297°31'48.72" -> Rasi= MAK (91.77%) | 27°31'48.72" -> Naksatra= DHA2|MA (31.48%) -> Navamsa= KAN|BU -> Bhava= B5 
+BL   = 171°43'01.85" -> Rasi= KAN (72.39%) | 21°43'01.85" -> Naksatra= HAS4|CH (87.88%) -> Navamsa= KAR|CH -> Bhava= B1 
+HL   = 348°51'45.50" -> Rasi= MEE (62.88%) | 18°51'45.50" -> Naksatra= REV1|BU (16.47%) -> Navamsa= DHN|GU -> Bhava= B7 
+GL   = 160°17'56.45" -> Rasi= KAN (34.33%) | 10°17'56.45" -> Naksatra= HAS1|CH (2.24 %) -> Navamsa= MES|MA -> Bhava= B1 
+VG   = 297°28'51.19" -> Rasi= MAK (91.6 %) | 27°28'51.19" -> Naksatra= DHA2|MA (31.11%) -> Navamsa= KAN|BU -> Bhava= B5 
 VL   = 139°08'02.92" -> Rasi= SIM (63.78%) | 19°08'02.92" -> Naksatra= PPH2|SK (43.51%) -> Navamsa= KAN|BU -> Bhava= B12
 SL   = 121°19'34.41" -> Rasi= SIM (4.42 %) | 01°19'34.41" -> Naksatra= MAG1|KE (9.95 %) -> Navamsa= MES|MA -> Bhava= B12
-PP   = 57°31'48.72"  -> Rasi= VRB (91.77%) | 27°31'48.72" -> Naksatra= MRG2|MA (31.48%) -> Navamsa= KAN|BU -> Bhava= B9 
+PP   = 57°57'50.38"  -> Rasi= VRB (93.21%) | 27°57'50.38" -> Naksatra= MRG2|MA (34.73%) -> Navamsa= KAN|BU -> Bhava= B9 
 IL   = 34°53'45.61"  -> Rasi= VRB (16.32%) | 04°53'45.61" -> Naksatra= KRI3|SY (61.72%) -> Navamsa= KUM|SA -> Bhava= B9 
 
 Julian Day		: 2342066.014351852
  Delta T		: 14.198092888561881
-Sidereal Time	: 06:37:15
-UTC Moonrise	: 1700–04–03 12:32:03
-UTC Moonset		: 1700–04–04 00:43:37
-UTC Sunrise		: 1700–04–04 00:32:04
-UTC Sunset		: 1700–04–04 12:45:13
+Sidereal Time	: 06:36:21
+UTC Moonrise	: 1700–04–03 12:37:33
+UTC Moonset		: 1700–04–04 00:47:19
+UTC Sunrise		: 1700–04–04 00:32:05
+UTC Sunset		: 1700–04–04 12:45:12
 
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
