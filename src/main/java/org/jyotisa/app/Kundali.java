@@ -305,7 +305,7 @@ public class Kundali implements IKundali {
         // own sign counted from this one, exactly as UpagrahaEntity computes it
         final int lagnaSign = sweObjects.signs()[LG];
 
-        ISweEnumIterator<ILagnaEnum> lagnaIterator = ELagna.iteratorTo(ELagna.GHATI_LAGNA);
+        ISweEnumIterator<ILagnaEnum> lagnaIterator = ELagna.iteratorTo(ELagna.INDU_LAGNA);
         while (lagnaIterator.hasNext()) {
             ILagnaEnum lgenum = lagnaIterator.next();
             ILagnaEntity lagna = lagnas.all()[lgenum.uid()];

@@ -47,8 +47,9 @@ public class KundaliFields implements IKundaliFields {
     private static final int BHAVA_LAGNA = 12;
     private static final int HORA_LAGNA = 13;
     private static final int GHATI_LAGNA = 14;
+    private static final int VIGHATI_LAGNA = 15;
 
-    protected final double[] fields = new double[GHATI_LAGNA + 1];
+    protected final double[] fields = new double[VIGHATI_LAGNA + 1];
     protected final ISweObjects sweObjects;
 
     public KundaliFields(IKundaliOptions options, ISweObjects sweObjects) {
@@ -191,6 +192,7 @@ public class KundaliFields implements IKundaliFields {
             fields[BHAVA_LAGNA] = -1D;
             fields[HORA_LAGNA] = -1D;
             fields[GHATI_LAGNA] = -1D;
+            fields[VIGHATI_LAGNA] = -1D;
         } else {
             // Ishtakala is the time elapsed since the time of sunrise to the time of birth.
             final double julianDay = sweObjects.sweJulianDate().julianDay();
@@ -219,6 +221,7 @@ public class KundaliFields implements IKundaliFields {
             fields[BHAVA_LAGNA] = fix360(360 * jdsr + lsun);
             fields[HORA_LAGNA] = fix360( 720 * jdsr + lsun);
             fields[GHATI_LAGNA] = fix360(1800 * jdsr + lsun);
+            fields[VIGHATI_LAGNA] = fix360(7200 * jdsr + lsun);
         }
     }
 
@@ -303,6 +306,12 @@ public class KundaliFields implements IKundaliFields {
     public double ghatiLagna() {
         if (0 == fields[GHATI_LAGNA]) calcMiscFields();
         return fields[GHATI_LAGNA];
+    }
+
+    @Override
+    public double vighatiLagna() {
+        if (0 == fields[VIGHATI_LAGNA]) calcMiscFields();
+        return fields[VIGHATI_LAGNA];
     }
 
     @Override

@@ -29,6 +29,11 @@ JL   = 190°09'01.34" -> Rasi= TUL (33.83%) | 10°09'01.34" -> Naksatra= SWA2|RA
 BL   = 192°26'28.84" -> Rasi= TUL (41.47%) | 12°26'28.84" -> Naksatra= SWA2|RA (43.31%) -> Navamsa= MAK|SA -> Bhava= B1 
 HL   = 09°33'19.65"  -> Rasi= MES (31.85%) | 09°33'19.65" -> Naksatra= ASH3|KE (71.67%) -> Navamsa= MIT|BU -> Bhava= B7 
 GL   = 180°53'52.07" -> Rasi= TUL (2.99 %) | 00°53'52.07" -> Naksatra= CHT3|MA (56.73%) -> Navamsa= TUL|SK -> Bhava= B1 
+VG   = 317°36'34.18" -> Rasi= KUM (58.7 %) | 17°36'34.18" -> Naksatra= SAT4|RA (82.07%) -> Navamsa= MEE|GU -> Bhava= B5 
+VL   = 220°09'01.34" -> Rasi= VRC (33.83%) | 10°09'01.34" -> Naksatra= ANU3|SA (51.13%) -> Navamsa= TUL|SK -> Bhava= B2 
+SL   = 225°15'16.37" -> Rasi= VRC (50.85%) | 15°15'16.37" -> Naksatra= ANU4|SA (89.41%) -> Navamsa= VRC|MA -> Bhava= B2 
+PP   = 317°36'34.18" -> Rasi= KUM (58.7 %) | 17°36'34.18" -> Naksatra= SAT4|RA (82.07%) -> Navamsa= MEE|GU -> Bhava= B5 
+IL   = 244°38'00.56" -> Rasi= DHN (15.44%) | 04°38'00.56" -> Naksatra= MUL2|KE (34.75%) -> Navamsa= VRB|SK -> Bhava= B3 
 
 Julian Day		: 1757677.0143518518
  Delta T		: 9537.833911935277

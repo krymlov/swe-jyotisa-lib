@@ -7,31 +7,28 @@ package org.jyotisa.lucknow;
 
 import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
-import org.jyotisa.api.lagna.ILagnas;
 import org.jyotisa.lagna.Lagnas;
 import org.jyotisa.api.upagraha.IUpagrahas;
-import org.jyotisa.app.KundaliRuntimeException;
 import org.jyotisa.app.Kundali;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
 
 /**
- * Of the 9 special {@code ILagna} types, only 4 (janma/bhava/hora/ghati) are implemented; the
- * remaining 5 throw {@link KundaliRuntimeException}. All 11 {@code IUpagraha} types are now
- * implemented (the 6 Kalavela upagrahas - kaala/mrityu/arthaprahaara/yamaghantaka/gulika/maandi -
- * were added 2026-08, see {@link org.jyotisa.upagraha.Upagrahas#calcKalavelaUpagrahas}). Pinned
- * here so implementing a Lagna type updates this test rather than silently changing behavior;
- * see this project's CLAUDE.md.
+ * All 9 special {@code ILagna} types and all 11 {@code IUpagraha} types are now implemented (the
+ * 5 remaining lagnas - vighati/varnada/sree/pranapada/indu - and the 6 Kalavela upagrahas -
+ * kaala/mrityu/arthaprahaara/yamaghantaka/gulika/maandi - were added 2026-08, see
+ * {@link org.jyotisa.lagna.Lagnas} and
+ * {@link org.jyotisa.upagraha.Upagrahas#calcKalavelaUpagrahas}). Pinned here so any future
+ * regression updates this test rather than silently changing behavior; see this project's
+ * CLAUDE.md.
  *
  * @author Yura Krymlov
- * @version 1.1, 2026-08
+ * @version 1.2, 2026-08
  */
 class UnimplementedFeaturesTest extends AbstractTest {
     static final int[] DATE_1947 = {1947, 8, 15, 10, 30};
@@ -42,25 +39,20 @@ class UnimplementedFeaturesTest extends AbstractTest {
     }
 
     @Test
-    void lagnas_fourImplementedTypesDoNotThrow() {
-        ILagnas lagnas = newLucknow1947().lagnas();
+    void lagnas_allNineTypesDoNotThrow() {
+        // vighati()/varnada()/sree()/pranapada()/indu() are still commented out of the ILagnas
+        // interface itself (see swe-jyotisa-api's CLAUDE.md), so they're only reachable on
+        // the concrete class - same scoping already used for Ashtakavarga
+        Lagnas lagnas = (Lagnas) newLucknow1947().lagnas();
         assertDoesNotThrow(lagnas::janma);
         assertDoesNotThrow(lagnas::bhava);
         assertDoesNotThrow(lagnas::hora);
         assertDoesNotThrow(lagnas::ghati);
-    }
-
-    @Test
-    void lagnas_fiveUnimplementedTypesThrow() {
-        // vighati()/varnada()/sree()/pranapada()/indu() are commented out of the ILagnas
-        // interface itself (see swe-jyotisa-api's CLAUDE.md), so they're only reachable on
-        // the concrete class
-        Lagnas lagnas = (Lagnas) newLucknow1947().lagnas();
-        for (Executable e : new Executable[]{lagnas::vighati, lagnas::varnada, lagnas::sree,
-                lagnas::pranapada, lagnas::indu}) {
-            KundaliRuntimeException ex = assertThrows(KundaliRuntimeException.class, e);
-            org.junit.jupiter.api.Assertions.assertTrue(ex.getMessage().contains("not implemented"));
-        }
+        assertDoesNotThrow(lagnas::vighati);
+        assertDoesNotThrow(lagnas::varnada);
+        assertDoesNotThrow(lagnas::sree);
+        assertDoesNotThrow(lagnas::pranapada);
+        assertDoesNotThrow(lagnas::indu);
     }
 
     @Test
