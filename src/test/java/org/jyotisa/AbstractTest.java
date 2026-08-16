@@ -23,6 +23,7 @@ import org.jyotisa.varga.EVarga;
 import org.swisseph.ISwissEph;
 import org.swisseph.SwephNative;
 import org.swisseph.api.ISweGeoLocation;
+import org.swisseph.api.ISweObjectsOptions;
 import org.swisseph.app.SweGeoLocation;
 import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
@@ -45,7 +46,7 @@ import static org.apache.commons.io.FilenameUtils.getPath;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_8_KARAKAS;
 import static org.swisseph.api.ISweConstants.EPHE_PATH;
 import static org.swisseph.api.ISweConstants.UTF8;
-import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 import static org.swisseph.utils.IDegreeUtils.toDMS;
 
 /**
@@ -71,7 +72,7 @@ public abstract class AbstractTest {
 
     protected IKundali newChennaiKundali(ISwissEph swissEph) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone("Asia/Calcutta"))), GEO_CHENNAI, TRUECITRA_AYANAMSA).completeBuild());
+                newCalendar(getTimeZone("Asia/Calcutta"))), GEO_CHENNAI, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     /**
@@ -82,8 +83,20 @@ public abstract class AbstractTest {
 
 
     protected IKundali newKyivKundali(ISwissEph swissEph) {
+        return newKyivKundali(swissEph, TRUECITRA_AYANAMSA_TRUE_NODE);
+    }
+
+    /**
+     * Options-taking variant. Needed because the <b>pure Java Moshier fallback cannot compute
+     * {@code SE_TRUE_NODE}</b> - pointed at an ephemeris-less directory it fails with a bogus
+     * julian day ("jd -0.001010 outside Moshier planet range") instead of falling back the way
+     * it does for every ordinary planet. That is a gap in {@code swe-java-lib}'s ported
+     * Swiss Ephemeris, not in this project, so the one test that deliberately exercises the
+     * ephemeris-less path passes mean-node options here rather than being deleted.
+     */
+    protected IKundali newKyivKundali(ISwissEph swissEph, ISweObjectsOptions options) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone("Europe/Kiev"))), GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
+                newCalendar(getTimeZone("Europe/Kiev"))), GEO_KYIV, options).completeBuild());
     }
 
     /**

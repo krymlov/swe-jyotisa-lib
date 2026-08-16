@@ -26,7 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
-import static org.swisseph.app.SweAyanamsa.LAHIRI;
+import static org.swisseph.app.SweAyanamsa.TRUE_CITRA;
 import static org.swisseph.app.SweHouseSystem.WHOLE_SIGN;
 import static org.swisseph.utils.IModuloUtils.fix360;
 
@@ -97,7 +97,8 @@ class VargaClassicalRulesTest {
     private KundaliText chart(int year) {
         final JhdChart jhd = KundaliRefChartsTest.jhd(year);
         final ISweObjects objects = new SweObjects(swissEph(), jhd.julianDate(), jhd.geoLocation(),
-                new SweObjectsOptions.Builder().ayanamsa(LAHIRI).houseSystem(WHOLE_SIGN).build())
+                new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
+                        .trueNode(true).build())
                 .completeBuild();
         return KundaliText.parse(new Kundali(KUNDALI_7_KARAKAS, objects).toString());
     }
@@ -274,14 +275,14 @@ class VargaClassicalRulesTest {
         final KundaliText text = chart(year);
 
         final java.util.Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
-                "-p" + Swetest.BODIES + "m", "-true", "-sid" + LAHIRI.fid(), "-fPl",
+                "-p" + Swetest.BODIES + "mt", "-true", "-sid" + TRUE_CITRA.fid(), "-fPl",
                 Swetest.house(jhd.longitude(), jhd.latitude(), 'W'));
 
         // the varga table's columns, in order, sourced straight from swetest
         final double[] longitudes = {
                 ref.get("Ascendant"), ref.get("Sun"), ref.get("Moon"), ref.get("Mars"),
                 ref.get("Mercury"), ref.get("Jupiter"), ref.get("Venus"), ref.get("Saturn"),
-                ref.get("mean Node"), fix360(ref.get("mean Node") + 180.),
+                ref.get("true Node"), fix360(ref.get("true Node") + 180.),
                 ref.get("Uranus"), ref.get("Neptune"), ref.get("Pluto")};
 
         final List<String> problems = new ArrayList<>();

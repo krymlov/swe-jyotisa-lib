@@ -1,39 +1,39 @@
-Ayanamsa: LAHIRI|09°55'15.98", Event Date: 1000–04–04 17:50:40 UTC:+05:30:00, Location: 81°08'00"E / 16°10'00"N
-Housesys: WHOLE_SIGN, Naksatra: UBH(2.07%), Tithi: K12(95.3%), Vaara: GUVR, Nitya Yoga: INDR(78.36%), Karana: TTL(90.61%)
-Bhrigu Bindu: 172°18'55.72", Bhava: B12, Rasi: KAN, Naksatra: HAS
-LG   = 184°10'27.57" -> Rasi= TUL (13.91%) | 04°10'27.57" -> Naksatra= CHT4|MA (81.31%) -> Navamsa= VRC|MA -> Bhava= B1  -> Dignity= NIL ->     -> !83%
-SY   = 10°10'20.70"  -> Rasi= MES (33.91%) | 10°10'20.70" -> Naksatra= ASH4|KE (76.29%) -> Navamsa= KAR|CH -> Bhava= B7  -> Dignity= EXT ->  PK ->   
-CH   = 333°36'32.30" -> Rasi= MEE (12.03%) | 03°36'32.30" -> Naksatra= UBH1|SA (2.07 %) -> Navamsa= SIM|SY -> Bhava= B6  -> Dignity= SAM ->  DK ->   
-MA   = 104°39'07.49" -> Rasi= KAR (48.84%) | 14°39'07.49" -> Naksatra= PUS4|SA (84.89%) -> Navamsa= VRC|MA -> Bhava= B10 -> Dignity= NEE ->  BK ->   
-BU   = 347°11'33.61" -> Rasi= MEE (57.31%) | 17°11'33.61" -> Naksatra= REV1|BU (3.95 %) -> Navamsa= DHN|GU -> Bhava= B6  -> Dignity= DET -> AmK ->   
-GU   = 276°28'29.33" -> Rasi= MAK (21.58%) | 06°28'29.33" -> Naksatra= USH3|SY (73.56%) -> Navamsa= KUM|SA -> Bhava= B4  -> Dignity= DET ->  GK ->   
-SK   = 55°17'13.11"  -> Rasi= VRB (84.29%) | 25°17'13.11" -> Naksatra= MRG1|MA (14.65%) -> Navamsa= SIM|SY -> Bhava= B8  -> Dignity= SWT ->  AK ->   
-SA   = 42°48'07.97"  -> Rasi= VRB (42.67%) | 12°48'07.97" -> Naksatra= ROH1|CH (21.02%) -> Navamsa= MES|MA -> Bhava= B8  -> Dignity= MIR ->  MK ->   
-(RA) = 11°01'19.14"  -> Rasi= MES (63.26%) | 11°01'19.14" -> Naksatra= ASH4|KE (17.34%) -> Navamsa= KAR|CH -> Bhava= B7  -> Dignity= NIL ->     ->   
-(KE) = 191°01'19.14" -> Rasi= TUL (63.26%) | 11°01'19.14" -> Naksatra= SWA2|RA (67.34%) -> Navamsa= MAK|SA -> Bhava= B1  -> Dignity= NIL ->     ->   
-SW   = 328°15'13.93" -> Rasi= KUM (94.18%) | 28°15'13.93" -> Naksatra= PBH3|GU (61.9 %) -> Navamsa= MIT|BU -> Bhava= B5  -> Dignity= NIL ->     ->   
-(SM) = 257°36'14.82" -> Rasi= DHN (58.68%) | 17°36'14.82" -> Naksatra= PSH2|SK (32.03%) -> Navamsa= KAN|BU -> Bhava= B3  -> Dignity= NIL ->     ->   
-(TE) = 205°24'43.36" -> Rasi= TUL (84.71%) | 25°24'43.36" -> Naksatra= VIS2|GU (40.59%) -> Navamsa= VRB|SK -> Bhava= B1  -> Dignity= NIL ->     ->   
-DHU  = 143°30'20.70" -> Rasi= SIM (78.35%) | 23°30'20.70" -> Naksatra= PPH4|SK (76.29%) -> Navamsa= VRC|MA -> Bhava= B11
-VYA  = 216°29'39.30" -> Rasi= VRC (21.65%) | 06°29'39.30" -> Naksatra= ANU1|SA (23.71%) -> Navamsa= SIM|SY -> Bhava= B2 
-PAR  = 36°29'39.30"  -> Rasi= VRB (21.65%) | 06°29'39.30" -> Naksatra= KRI3|SY (73.71%) -> Navamsa= KUM|SA -> Bhava= B8 
-CHP  = 323°30'20.70" -> Rasi= KUM (78.35%) | 23°30'20.70" -> Naksatra= PBH2|GU (26.29%) -> Navamsa= VRB|SK -> Bhava= B5 
-UPK  = 340°10'20.70" -> Rasi= MEE (33.91%) | 10°10'20.70" -> Naksatra= UBH3|SA (51.29%) -> Navamsa= TUL|SK -> Bhava= B6 
-KAA  = 92°47'47.25"  -> Rasi= KAR (9.32 %) | 02°47'47.25" -> Naksatra= PUN4|GU (95.97%) -> Navamsa= KAR|CH -> Bhava= B10
-MRT  = 134°44'41.51" -> Rasi= SIM (49.15%) | 14°44'41.51" -> Naksatra= PPH1|SK (10.59%) -> Navamsa= SIM|SY -> Bhava= B11
-ART  = 156°42'09.54" -> Rasi= KAN (22.34%) | 06°42'09.54" -> Naksatra= UPH4|SY (75.27%) -> Navamsa= MEE|GU -> Bhava= B12
-YAM  = 23°28'40.43"  -> Rasi= MES (78.26%) | 23°28'40.43" -> Naksatra= BHA4|SK (76.08%) -> Navamsa= VRC|MA -> Bhava= B7 
-GLK  = 71°39'22.96"  -> Rasi= MIT (38.85%) | 11°39'22.96" -> Naksatra= ARD2|RA (37.42%) -> Navamsa= MAK|SA -> Bhava= B9 
-MND  = 60°33'56.65"  -> Rasi= MIT (1.89 %) | 00°33'56.65" -> Naksatra= MRG3|MA (54.24%) -> Navamsa= TUL|SK -> Bhava= B9 
-JL   = 184°10'27.57" -> Rasi= TUL (13.91%) | 04°10'27.57" -> Naksatra= CHT4|MA (81.31%) -> Navamsa= VRC|MA -> Bhava= B1 
-BL   = 187°57'27.49" -> Rasi= TUL (26.53%) | 07°57'27.49" -> Naksatra= SWA1|RA (9.68 %) -> Navamsa= DHN|GU -> Bhava= B1 
-HL   = 06°13'27.65"  -> Rasi= MES (20.75%) | 06°13'27.65" -> Naksatra= ASH2|KE (46.68%) -> Navamsa= VRB|SK -> Bhava= B7 
-GL   = 181°01'28.13" -> Rasi= TUL (3.41 %) | 01°01'28.13" -> Naksatra= CHT3|MA (57.68%) -> Navamsa= TUL|SK -> Bhava= B1 
-VG   = 335°01'30.56" -> Rasi= MEE (16.75%) | 05°01'30.56" -> Naksatra= UBH1|SA (12.69%) -> Navamsa= SIM|SY -> Bhava= B6 
-VL   = 214°10'27.57" -> Rasi= VRC (13.91%) | 04°10'27.57" -> Naksatra= ANU1|SA (6.31 %) -> Navamsa= SIM|SY -> Bhava= B2 
-SL   = 191°36'59.67" -> Rasi= TUL (38.72%) | 11°36'59.67" -> Naksatra= SWA2|RA (37.12%) -> Navamsa= MAK|SA -> Bhava= B1 
-PP   = 335°01'30.56" -> Rasi= MEE (16.75%) | 05°01'30.56" -> Naksatra= UBH1|SA (12.69%) -> Navamsa= SIM|SY -> Bhava= B6 
-IL   = 03°36'32.30"  -> Rasi= MES (12.03%) | 03°36'32.30" -> Naksatra= ASH2|KE (27.07%) -> Navamsa= VRB|SK -> Bhava= B7 
+Ayanamsa: TRUE_CITRA|09°55'02.04", Event Date: 1000–04–04 17:50:40 UTC:+05:30:00, Location: 81°08'00"E / 16°10'00"N
+Housesys: WHOLE_SIGN, Naksatra: UBH(2.1%), Tithi: K12(95.3%), Vaara: GUVR, Nitya Yoga: INDR(78.42%), Karana: TTL(90.61%)
+Bhrigu Bindu: 172°15'58.75", Bhava: B12, Rasi: KAN, Naksatra: HAS
+LG   = 184°10'41.51" -> Rasi= TUL (13.93%) | 04°10'41.51" -> Naksatra= CHT4|MA (81.34%) -> Navamsa= VRC|MA -> Bhava= B1  -> Dignity= NIL ->     -> !82%
+SY   = 10°10'34.64"  -> Rasi= MES (33.92%) | 10°10'34.64" -> Naksatra= ASH4|KE (76.32%) -> Navamsa= KAR|CH -> Bhava= B7  -> Dignity= EXT ->  PK ->   
+CH   = 333°36'46.24" -> Rasi= MEE (12.04%) | 03°36'46.24" -> Naksatra= UBH1|SA (2.1  %) -> Navamsa= SIM|SY -> Bhava= B6  -> Dignity= SAM ->  DK ->   
+MA   = 104°39'21.43" -> Rasi= KAR (48.85%) | 14°39'21.43" -> Naksatra= PUS4|SA (84.92%) -> Navamsa= VRC|MA -> Bhava= B10 -> Dignity= NEE ->  BK ->   
+BU   = 347°11'47.55" -> Rasi= MEE (57.32%) | 17°11'47.55" -> Naksatra= REV1|BU (3.97 %) -> Navamsa= DHN|GU -> Bhava= B6  -> Dignity= DET -> AmK ->   
+GU   = 276°28'43.27" -> Rasi= MAK (21.6 %) | 06°28'43.27" -> Naksatra= USH3|SY (73.59%) -> Navamsa= KUM|SA -> Bhava= B4  -> Dignity= DET ->  GK ->   
+SK   = 55°17'27.05"  -> Rasi= VRB (84.3 %) | 25°17'27.05" -> Naksatra= MRG1|MA (14.68%) -> Navamsa= SIM|SY -> Bhava= B8  -> Dignity= SWT ->  AK ->   
+SA   = 42°48'21.91"  -> Rasi= VRB (42.69%) | 12°48'21.91" -> Naksatra= ROH1|CH (21.05%) -> Navamsa= MES|MA -> Bhava= B8  -> Dignity= MIR ->  MK ->   
+(RA) = 10°55'11.26"  -> Rasi= MES (63.6 %) | 10°55'11.26" -> Naksatra= ASH4|KE (18.1 %) -> Navamsa= KAR|CH -> Bhava= B7  -> Dignity= NIL ->     ->   
+(KE) = 190°55'11.26" -> Rasi= TUL (63.6 %) | 10°55'11.26" -> Naksatra= SWA2|RA (68.1 %) -> Navamsa= MAK|SA -> Bhava= B1  -> Dignity= NIL ->     ->   
+SW   = 328°15'27.87" -> Rasi= KUM (94.19%) | 28°15'27.87" -> Naksatra= PBH3|GU (61.93%) -> Navamsa= MIT|BU -> Bhava= B5  -> Dignity= NIL ->     ->   
+(SM) = 257°36'28.76" -> Rasi= DHN (58.69%) | 17°36'28.76" -> Naksatra= PSH2|SK (32.06%) -> Navamsa= KAN|BU -> Bhava= B3  -> Dignity= NIL ->     ->   
+(TE) = 205°24'57.30" -> Rasi= TUL (84.72%) | 25°24'57.30" -> Naksatra= VIS2|GU (40.62%) -> Navamsa= VRB|SK -> Bhava= B1  -> Dignity= NIL ->     ->   
+DHU  = 143°30'34.64" -> Rasi= SIM (78.37%) | 23°30'34.64" -> Naksatra= PPH4|SK (76.32%) -> Navamsa= VRC|MA -> Bhava= B11
+VYA  = 216°29'25.36" -> Rasi= VRC (21.63%) | 06°29'25.36" -> Naksatra= ANU1|SA (23.68%) -> Navamsa= SIM|SY -> Bhava= B2 
+PAR  = 36°29'25.36"  -> Rasi= VRB (21.63%) | 06°29'25.36" -> Naksatra= KRI3|SY (73.68%) -> Navamsa= KUM|SA -> Bhava= B8 
+CHP  = 323°30'34.64" -> Rasi= KUM (78.37%) | 23°30'34.64" -> Naksatra= PBH2|GU (26.32%) -> Navamsa= VRB|SK -> Bhava= B5 
+UPK  = 340°10'34.64" -> Rasi= MEE (33.92%) | 10°10'34.64" -> Naksatra= UBH3|SA (51.32%) -> Navamsa= TUL|SK -> Bhava= B6 
+KAA  = 113°32'37.09" -> Rasi= KAR (78.48%) | 23°32'37.09" -> Naksatra= ASL3|BU (51.58%) -> Navamsa= KUM|SA -> Bhava= B10
+MRT  = 156°42'23.49" -> Rasi= KAN (22.36%) | 06°42'23.49" -> Naksatra= UPH4|SY (75.3 %) -> Navamsa= MEE|GU -> Bhava= B12
+ART  = 179°04'14.72" -> Rasi= KAN (96.9 %) | 29°04'14.72" -> Naksatra= CHT2|MA (43.03%) -> Navamsa= KAN|BU -> Bhava= B12
+YAM  = 23°28'54.37"  -> Rasi= MES (78.27%) | 23°28'54.37" -> Naksatra= BHA4|SK (76.11%) -> Navamsa= VRC|MA -> Bhava= B7 
+GLK  = 60°34'10.59"  -> Rasi= MIT (1.9  %) | 00°34'10.59" -> Naksatra= MRG3|MA (54.27%) -> Navamsa= TUL|SK -> Bhava= B9 
+MND  = 71°39'36.90"  -> Rasi= MIT (38.87%) | 11°39'36.90" -> Naksatra= ARD2|RA (37.45%) -> Navamsa= MAK|SA -> Bhava= B9 
+JL   = 184°10'41.51" -> Rasi= TUL (13.93%) | 04°10'41.51" -> Naksatra= CHT4|MA (81.34%) -> Navamsa= VRC|MA -> Bhava= B1 
+BL   = 187°57'41.43" -> Rasi= TUL (26.54%) | 07°57'41.43" -> Naksatra= SWA1|RA (9.71 %) -> Navamsa= DHN|GU -> Bhava= B1 
+HL   = 06°13'41.59"  -> Rasi= MES (20.76%) | 06°13'41.59" -> Naksatra= ASH2|KE (46.71%) -> Navamsa= VRB|SK -> Bhava= B7 
+GL   = 181°01'42.07" -> Rasi= TUL (3.43 %) | 01°01'42.07" -> Naksatra= CHT3|MA (57.71%) -> Navamsa= TUL|SK -> Bhava= B1 
+VG   = 335°01'44.50" -> Rasi= MEE (16.76%) | 05°01'44.50" -> Naksatra= UBH1|SA (12.72%) -> Navamsa= SIM|SY -> Bhava= B6 
+VL   = 214°10'41.51" -> Rasi= VRC (13.93%) | 04°10'41.51" -> Naksatra= ANU1|SA (6.34 %) -> Navamsa= SIM|SY -> Bhava= B2 
+SL   = 191°43'29.99" -> Rasi= TUL (39.08%) | 11°43'29.99" -> Naksatra= SWA2|RA (37.94%) -> Navamsa= MAK|SA -> Bhava= B1 
+PP   = 335°01'44.50" -> Rasi= MEE (16.76%) | 05°01'44.50" -> Naksatra= UBH1|SA (12.72%) -> Navamsa= SIM|SY -> Bhava= B6 
+IL   = 03°36'46.24"  -> Rasi= MES (12.04%) | 03°36'46.24" -> Naksatra= ASH2|KE (27.1 %) -> Navamsa= VRB|SK -> Bhava= B7 
 
 Julian Day		: 2086402.0143518518
  Delta T		: 1462.171131617323
@@ -55,26 +55,26 @@ SA         3   4   2   3   3   2   5   4   4   4   2   3
 LG         3   5   4   6   5   4   3   1   5   5   4   4
 Sarva:    20  30  20  30  36  20  29  29  29  38  26  30
 
-D1	=  TUL[04°10'28"] MES[10°10'21"] MEE[03°36'32"] KAR[14°39'07"] MEE[17°11'34"] MAK[06°28'29"] VRB[25°17'13"] VRB[12°48'08"] MES[11°01'19"] TUL[11°01'19"] KUM[28°15'14"] DHN[17°36'15"] TUL[25°24'43"]
-D2	=  SIM[08°20'55"] SIM[20°20'41"] KAR[07°13'05"] KAR[29°18'15"] SIM[04°23'07"] KAR[12°56'59"] SIM[20°34'26"] KAR[25°36'16"] SIM[22°02'38"] SIM[22°02'38"] KAR[26°30'28"] KAR[05°12'30"] KAR[20°49'27"]
-D3	=  TUL[12°31'23"] SIM[00°31'02"] MEE[10°49'37"] VRC[13°57'22"] KAR[21°34'41"] MAK[19°25'28"] MAK[15°51'39"] KAN[08°24'24"] SIM[03°03'57"] KUM[03°03'57"] TUL[24°45'42"] MES[22°48'44"] MIT[16°14'10"]
-D4	=  TUL[16°41'50"] KAR[10°41'23"] MEE[14°26'09"] TUL[28°36'30"] KAN[08°46'14"] MAK[25°53'57"] KUM[11°08'52"] SIM[21°12'32"] KAR[14°05'17"] MAK[14°05'17"] VRC[23°00'56"] MIT[10°24'59"] KAR[11°38'53"]
-D5	=  MES[20°52'18"] KUM[20°51'43"] VRB[18°02'41"] MEE[13°15'37"] MEE[25°57'48"] KAN[02°22'27"] VRC[06°26'06"] MEE[04°00'40"] KUM[25°06'36"] KUM[25°06'36"] TUL[21°16'10"] DHN[28°01'14"] TUL[07°03'37"]
-D6	=  MES[25°02'45"] MIT[01°02'04"] TUL[21°39'14"] DHN[27°54'45"] MAK[13°09'22"] VRC[08°50'56"] MEE[01°43'19"] DHN[16°48'48"] MIT[06°07'55"] MIT[06°07'55"] KAN[19°31'24"] KAR[15°37'29"] KAN[02°28'20"]
-D7	=  TUL[29°13'13"] MIT[11°12'25"] KAN[25°15'46"] MES[12°33'52"] MAK[00°20'55"] SIM[15°19'25"] MES[27°00'32"] MAK[29°36'56"] MIT[17°09'14"] DHN[17°09'14"] SIM[17°46'38"] MES[03°13'44"] MEE[27°53'04"]
-D8	=  VRB[03°23'41"] MIT[21°22'46"] SIM[28°52'18"] KAR[27°13'00"] DHN[17°32'29"] VRB[21°47'55"] MIT[22°17'45"] MEE[12°25'04"] MIT[28°10'33"] MIT[28°10'33"] KAR[16°01'51"] DHN[20°49'59"] TUL[23°17'47"]
-D9	=  VRC[07°34'08"] KAR[01°33'06"] SIM[02°28'51"] VRC[11°52'07"] DHN[04°44'03"] KUM[28°16'24"] SIM[17°34'58"] MES[25°13'12"] KAR[09°11'52"] MAK[09°11'52"] MIT[14°17'05"] KAN[08°26'13"] VRB[18°42'30"]
-D10	=  VRC[11°44'36"] KAR[11°43'27"] DHN[06°05'23"] KAR[26°31'15"] MES[21°55'36"] VRC[04°44'53"] KAN[12°52'11"] VRB[08°01'20"] KAR[20°13'11"] MAK[20°13'11"] VRC[12°32'19"] VRB[26°02'28"] MIT[14°07'14"]
-D11	=  VRC[15°55'03"] KAR[21°53'48"] MIT[09°41'55"] MIT[11°10'22"] VRC[09°07'10"] KAN[11°13'23"] DHN[08°09'24"] KAR[20°49'28"] SIM[01°14'31"] KUM[01°14'31"] MES[10°47'33"] KUM[13°38'43"] KAR[09°31'57"]
-D12	=  VRC[20°05'31"] SIM[02°04'08"] MES[13°18'28"] DHN[25°49'30"] KAN[26°18'43"] MEE[17°41'52"] MEE[03°26'37"] TUL[03°37'36"] SIM[12°15'50"] KUM[12°15'50"] MAK[09°02'47"] KAR[01°14'58"] SIM[04°56'40"]
-D16	=  MIT[06°47'21"] KAN[12°45'31"] MAK[27°44'37"] VRC[24°26'00"] KAN[05°04'58"] KAR[13°35'49"] KAN[14°35'30"] KUM[24°50'08"] KAN[26°21'06"] KAN[26°21'06"] VRC[02°03'43"] KAN[11°39'57"] VRB[16°35'34"]
-D20	=  MIT[23°29'11"] TUL[23°26'54"] TUL[12°10'46"] MAK[23°02'30"] KAR[13°51'12"] SIM[09°29'47"] MES[25°44'22"] SIM[16°02'39"] VRC[10°26'23"] VRC[10°26'23"] MIT[25°04'39"] KAR[22°04'56"] SIM[28°14'27"]
-D24	=  VRC[10°11'02"] MES[04°08'17"] KAN[26°36'55"] MIT[21°39'00"] SIM[22°37'27"] DHN[05°23'44"] MEE[06°53'15"] VRB[07°15'11"] MES[24°31'39"] MES[24°31'39"] MIT[18°05'34"] TUL[02°29'56"] MES[09°53'21"]
-D27	=  MAK[22°42'24"] MAK[04°39'19"] MES[07°26'32"] KUM[05°36'22"] MES[14°12'08"] DHN[24°49'12"] VRB[22°44'54"] MIT[15°39'35"] MAK[27°35'37"] KAR[27°35'37"] VRC[12°51'16"] KAR[25°18'40"] SIM[26°07'31"]
-D30	=  MES[05°13'47"] DHN[05°10'21"] VRB[18°16'09"] MEE[19°33'45"] MEE[05°46'48"] KAN[14°14'40"] VRC[08°36'33"] MEE[24°03'59"] DHN[00°39'34"] DHN[00°39'34"] TUL[07°36'58"] DHN[18°07'25"] TUL[12°21'41"]
-D40	=  KAN[16°58'23"] VRB[16°53'48"] KUM[24°21'32"] VRB[16°05'00"] SIM[27°42'25"] MIT[18°59'33"] KAR[21°28'44"] MEE[02°05'19"] MIT[20°52'46"] MIT[20°52'46"] VRB[20°09'17"] MEE[14°09'53"] MAK[26°28'55"]
-D45	=  TUL[07°50'41"] KAR[07°45'31"] VRB[12°24'13"] MAK[29°20'37"] MAK[23°40'13"] MAK[21°22'00"] KAN[27°54'50"] MEE[06°05'59"] SIM[15°59'21"] SIM[15°59'21"] KUM[11°25'27"] KUM[12°11'07"] MIT[03°32'31"]
-D60	=  MIT[10°27'34"] DHN[10°20'42"] TUL[06°32'18"] DHN[09°07'30"] MAK[11°33'37"] MAK[28°29'20"] KAR[17°13'06"] MIT[18°07'58"] KUM[01°19'09"] SIM[01°19'09"] TUL[15°13'56"] VRC[06°14'49"] DHN[24°43'22"]
-D81	=  KAN[08°07'13"] KAR[13°57'56"] MES[22°19'36"] TUL[16°49'07"] VRB[12°36'23"] MIT[14°27'36"] KAN[08°14'42"] VRC[16°58'46"] KAN[22°46'51"] MEE[22°46'51"] KUM[08°33'49"] MEE[15°56'00"] MIT[18°22'33"]
-D108	=  KUM[00°49'38"] KAR[18°37'15"] SIM[29°46'08"] MEE[22°25'29"] MAK[26°48'30"] MAK[09°16'48"] MEE[00°59'36"] KUM[02°38'21"] TUL[20°22'27"] MES[20°22'27"] VRC[21°25'05"] DHN[11°14'41"] DHN[14°30'03"]
-D144	=  KAR[01°06'10"] SIM[24°49'40"] KAN[09°41'31"] TUL[09°53'59"] KAR[15°44'40"] TUL[02°22'23"] MES[11°19'27"] VRC[13°31'08"] DHN[27°09'57"] MIT[27°09'57"] MES[18°33'26"] KAR[14°59'34"] KAN[29°20'04"]
+D1	=  TUL[04°10'42"] MES[10°10'35"] MEE[03°36'46"] KAR[14°39'21"] MEE[17°11'48"] MAK[06°28'43"] VRB[25°17'27"] VRB[12°48'22"] MES[10°55'11"] TUL[10°55'11"] KUM[28°15'28"] DHN[17°36'29"] TUL[25°24'57"]
+D2	=  SIM[08°21'23"] SIM[20°21'09"] KAR[07°13'32"] KAR[29°18'43"] SIM[04°23'35"] KAR[12°57'27"] SIM[20°34'54"] KAR[25°36'44"] SIM[21°50'23"] SIM[21°50'23"] KAR[26°30'56"] KAR[05°12'58"] KAR[20°49'55"]
+D3	=  TUL[12°32'05"] SIM[00°31'44"] MEE[10°50'19"] VRC[13°58'04"] KAR[21°35'23"] MAK[19°26'10"] MAK[15°52'21"] KAN[08°25'06"] SIM[02°45'34"] KUM[02°45'34"] TUL[24°46'24"] MES[22°49'26"] MIT[16°14'52"]
+D4	=  TUL[16°42'46"] KAR[10°42'19"] MEE[14°27'05"] TUL[28°37'26"] KAN[08°47'10"] MAK[25°54'53"] KUM[11°09'48"] SIM[21°13'28"] KAR[13°40'45"] MAK[13°40'45"] VRC[23°01'51"] MIT[10°25'55"] KAR[11°39'49"]
+D5	=  MES[20°53'28"] KUM[20°52'53"] VRB[18°03'51"] MEE[13°16'47"] MEE[25°58'58"] KAN[02°23'36"] VRC[06°27'15"] MEE[04°01'50"] KUM[24°35'56"] KUM[24°35'56"] TUL[21°17'19"] DHN[28°02'24"] TUL[07°04'47"]
+D6	=  MES[25°04'09"] MIT[01°03'28"] TUL[21°40'37"] DHN[27°56'09"] MAK[13°10'45"] VRC[08°52'20"] MEE[01°44'42"] DHN[16°50'11"] MIT[05°31'08"] MIT[05°31'08"] KAN[19°32'47"] KAR[15°38'53"] KAN[02°29'44"]
+D7	=  TUL[29°14'51"] MIT[11°14'02"] KAN[25°17'24"] MES[12°35'30"] MAK[00°22'33"] SIM[15°21'03"] MES[27°02'09"] MAK[29°38'33"] MIT[16°26'19"] DHN[16°26'19"] SIM[17°48'15"] MES[03°15'21"] MEE[27°54'41"]
+D8	=  VRB[03°25'32"] MIT[21°24'37"] SIM[28°54'10"] KAR[27°14'51"] DHN[17°34'20"] VRB[21°49'46"] MIT[22°19'36"] MEE[12°26'55"] MIT[27°21'30"] MIT[27°21'30"] KAR[16°03'43"] DHN[20°51'50"] TUL[23°19'38"]
+D9	=  VRC[07°36'14"] KAR[01°35'12"] SIM[02°30'56"] VRC[11°54'13"] DHN[04°46'08"] KUM[28°18'29"] SIM[17°37'03"] MES[25°15'17"] KAR[08°16'41"] MAK[08°16'41"] MIT[14°19'11"] KAN[08°28'19"] VRB[18°44'36"]
+D10	=  VRC[11°46'55"] KAR[11°45'46"] DHN[06°07'42"] KAR[26°33'34"] MES[21°57'56"] VRC[04°47'13"] KAN[12°54'30"] VRB[08°03'39"] KAR[19°11'53"] MAK[19°11'53"] VRC[12°34'39"] VRB[26°04'48"] MIT[14°09'33"]
+D11	=  VRC[15°57'37"] KAR[21°56'21"] MIT[09°44'29"] MIT[11°12'56"] VRC[09°09'43"] KAN[11°15'56"] DHN[08°11'58"] KAR[20°52'01"] SIM[00°07'04"] KUM[00°07'04"] MES[10°50'07"] KUM[13°41'16"] KAR[09°34'30"]
+D12	=  VRC[20°08'18"] SIM[02°06'56"] MES[13°21'15"] DHN[25°52'17"] KAN[26°21'31"] MEE[17°44'39"] MEE[03°29'25"] TUL[03°40'23"] SIM[11°02'15"] KUM[11°02'15"] MAK[09°05'34"] KAR[01°17'45"] SIM[04°59'28"]
+D16	=  MIT[06°51'04"] KAN[12°49'14"] MAK[27°48'20"] VRC[24°29'43"] KAN[05°08'41"] KAR[13°39'32"] KAN[14°39'13"] KUM[24°53'51"] KAN[24°43'00"] KAN[24°43'00"] VRC[02°07'26"] KAN[11°43'40"] VRB[16°39'17"]
+D20	=  MIT[23°33'50"] TUL[23°31'33"] TUL[12°15'25"] MAK[23°07'09"] KAR[13°55'51"] SIM[09°34'25"] MES[25°49'01"] SIM[16°07'18"] VRC[08°23'45"] VRC[08°23'45"] MIT[25°09'17"] KAR[22°09'35"] SIM[28°19'06"]
+D24	=  VRC[10°16'36"] MES[04°13'51"] KAN[26°42'30"] MIT[21°44'34"] SIM[22°43'01"] DHN[05°29'18"] MEE[06°58'49"] VRB[07°20'46"] MES[22°04'30"] MES[22°04'30"] MIT[18°11'09"] TUL[02°35'30"] MES[09°58'55"]
+D27	=  MAK[22°48'41"] MAK[04°45'35"] MES[07°32'48"] KUM[05°42'39"] MES[14°18'24"] DHN[24°55'28"] VRB[22°51'10"] MIT[15°45'52"] MAK[24°50'04"] KAR[24°50'04"] VRC[12°57'33"] KAR[25°24'57"] SIM[26°13'47"]
+D30	=  MES[05°20'45"] DHN[05°17'19"] VRB[18°23'07"] MEE[19°40'43"] MEE[05°53'47"] KAN[14°21'38"] VRC[08°43'31"] MEE[24°10'57"] DHN[27°35'38"] DHN[27°35'38"] TUL[07°43'56"] DHN[18°14'23"] TUL[12°28'39"]
+D40	=  KAN[17°07'40"] VRB[17°03'05"] KUM[24°30'50"] VRB[16°14'17"] SIM[27°51'42"] MIT[19°08'51"] KAR[21°38'02"] MEE[02°14'36"] MIT[16°47'30"] MIT[16°47'30"] VRB[20°18'35"] MEE[14°19'10"] MAK[26°38'12"]
+D45	=  TUL[08°01'08"] KAR[07°55'59"] VRB[12°34'41"] MAK[29°31'05"] MAK[23°50'40"] MAK[21°32'27"] KAN[28°05'17"] MEE[06°16'26"] SIM[11°23'27"] SIM[11°23'27"] KUM[11°35'54"] KUM[12°21'34"] MIT[03°42'59"]
+D60	=  MIT[10°41'31"] DHN[10°34'38"] TUL[06°46'14"] DHN[09°21'26"] MAK[11°47'33"] MAK[28°43'16"] KAR[17°27'03"] MIT[18°21'55"] MAK[25°11'15"] KAR[25°11'15"] TUL[15°27'52"] VRC[06°28'46"] DHN[24°57'18"]
+D81	=  KAN[08°26'02"] KAR[14°16'45"] MES[22°38'25"] TUL[17°07'56"] VRB[12°55'12"] MIT[14°46'25"] KAN[08°33'31"] VRC[17°17'35"] KAN[14°30'12"] MEE[14°30'12"] KUM[08°52'38"] MEE[16°14'50"] MIT[18°41'22"]
+D108	=  KUM[01°14'43"] KAR[19°02'21"] KAN[00°11'14"] MEE[22°50'35"] MAK[27°13'36"] MAK[09°41'53"] MEE[01°24'41"] KUM[03°03'26"] TUL[09°20'16"] MES[09°20'16"] VRC[21°50'10"] DHN[11°39'46"] DHN[14°55'09"]
+D144	=  KAR[01°39'37"] SIM[25°23'08"] KAN[10°14'59"] TUL[10°27'26"] KAR[16°18'08"] TUL[02°55'51"] MES[11°52'55"] VRC[14°04'35"] DHN[12°27'01"] MIT[12°27'01"] MES[19°06'54"] KAR[15°33'02"] KAN[29°53'32"]

@@ -19,8 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.api.ISweObjects.CH;
 import static org.swisseph.api.ISweObjects.LG;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
-import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 import static org.swisseph.utils.IModuloUtils.fix360;
 
 /**
@@ -40,12 +39,12 @@ class LagnaSpecialTest extends AbstractTest {
     private static IKundali newLucknow1947() {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(getSwephExp(),
                 new SweJulianDate(new int[]{1947, 8, 15, 10, 30}, 0f, 10.5),
-                GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild());
+                GEO_LUCKNOW, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     private static IKundali newKundali(final int[] date, final float tz, final double lt) {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(getSwephExp(),
-                new SweJulianDate(date, tz, lt), GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
+                new SweJulianDate(date, tz, lt), GEO_KYIV, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     // --- calcSree: BPHS-style worked example -------------------------------------------------

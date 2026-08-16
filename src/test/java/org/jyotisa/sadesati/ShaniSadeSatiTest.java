@@ -11,6 +11,7 @@ import org.swisseph.ISwissEph;
 import org.swisseph.app.SweRuntimeException;
 
 import static org.apache.commons.io.FileUtils.getTempDirectoryPath;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
 
 @Execution(ExecutionMode.SAME_THREAD)
 public class ShaniSadeSatiTest extends AbstractTest {
@@ -26,10 +27,17 @@ public class ShaniSadeSatiTest extends AbstractTest {
         Assertions.assertTrue(exception.getMessage().contains("SwissEph file 'sepl_18.se1' not found in the paths of:"));
     }
 
+    /**
+     * Mean node on purpose: the pure Java Moshier fallback cannot compute {@code SE_TRUE_NODE}
+     * (it fails with "jd -0.001010 outside Moshier planet range" rather than falling back the
+     * way it does for every ordinary planet), so the rest of the suite's true-node default
+     * cannot be used for the deliberately ephemeris-less path this test exercises. See
+     * {@link AbstractTest#newKyivKundali(ISwissEph, org.swisseph.api.ISweObjectsOptions)}.
+     */
     @Test
     void testSadeSatiWithoutEphe() {
         try (ISwissEph swissEph = newSwephExp(getTempDirectoryPath())) {
-            testSadeSati(newKyivKundali(swissEph));
+            testSadeSati(newKyivKundali(swissEph, TRUECITRA_AYANAMSA));
         }
     }
 

@@ -16,7 +16,7 @@ import org.swisseph.app.SweObjects;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 
 /**
  * All 9 special {@code ILagna} types and all 11 {@code IUpagraha} types are now implemented (the
@@ -35,7 +35,7 @@ class UnimplementedFeaturesTest extends AbstractTest {
 
     IKundali newLucknow1947() {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(getSwephExp(),
-                new SweJulianDate(DATE_1947, 0f, 10.5), GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild());
+                new SweJulianDate(DATE_1947, 0f, 10.5), GEO_LUCKNOW, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     @Test

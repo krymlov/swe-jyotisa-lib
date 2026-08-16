@@ -24,8 +24,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.jyotisa.api.graha.IGraha.*;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.api.ISweObjects.*;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
-import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 
 /**
  * The core correctness check here does not need a "reference chart" at all: the classical
@@ -54,12 +53,12 @@ class AshtakavargaTest extends AbstractTest {
 
     private IKundali newLucknow1947() {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(getSwephExp(),
-                new SweJulianDate(new int[]{1947, 8, 15, 10, 30}, 0f, 10.5), GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild());
+                new SweJulianDate(new int[]{1947, 8, 15, 10, 30}, 0f, 10.5), GEO_LUCKNOW, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     private IKundali newKundali(final ISwissEph swe, final int[] date, final float tz, final double lt) {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swe,
-                new SweJulianDate(date, tz, lt), GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
+                new SweJulianDate(date, tz, lt), GEO_KYIV, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild());
     }
 
     private void assertClassicalTotalsHold(final Ashtakavarga av) {

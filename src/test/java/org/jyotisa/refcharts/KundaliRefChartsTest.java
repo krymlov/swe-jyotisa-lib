@@ -72,7 +72,7 @@ class KundaliRefChartsTest {
     static final String[][] BODY_TO_CODE = {
             {"Sun", "SY"}, {"Moon", "CH"}, {"Mercury", "BU"}, {"Venus", "SK"}, {"Mars", "MA"},
             {"Jupiter", "GU"}, {"Saturn", "SA"}, {"Uranus", "SW"}, {"Neptune", "SM"},
-            {"Pluto", "TE"}, {"mean Node", "RA"}};
+            {"Pluto", "TE"}, {"true Node", "RA"}};
 
     static final String[] RASI_CODES = {"MES", "VRB", "MIT", "KAR", "SIM", "KAN",
             "TUL", "VRC", "DHN", "MAK", "KUM", "MEE"};
@@ -98,20 +98,31 @@ class KundaliRefChartsTest {
         return JhdChart.read(String.format("org/jyotisa/refcharts/ref%04d.jhd", year));
     }
 
+    /**
+     * The primary configuration these tests run under: <b>True Citra ayanamsa with true (not
+     * mean) lunar nodes</b>, whole sign houses - the same setup Jagannatha Hora is being
+     * compared against. The three deliberate contrast configurations (mean node, Lahiri,
+     * Placidus) live in <i>other configurations</i> below, so each of those axes is still
+     * covered even though it is no longer the default.
+     */
     private KundaliText chart(JhdChart jhd) {
         final ISweObjectsOptions options = new SweObjectsOptions.Builder()
-                .ayanamsa(LAHIRI).houseSystem(WHOLE_SIGN).build();
+                .ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN).trueNode(true).build();
         final ISweObjects objects = new SweObjects(swissEph(), jhd.julianDate(),
                 jhd.geoLocation(), options).completeBuild();
         return KundaliText.parse(new Kundali(KUNDALI_7_KARAKAS, objects).toString());
     }
 
-    /** swetest's own longitudes for the same instant, keyed by body name */
+    /**
+     * swetest's own longitudes for the same instant, keyed by body name. The {@code mt} suffix
+     * asks swetest for both nodes so {@code "true Node"} is available - {@link #BODY_TO_CODE}
+     * maps RA to the true one, matching the {@code trueNode(true)} chart above.
+     */
     private Map<String, Double> reference(JhdChart jhd, String... extra) {
         final String[] args = new String[extra.length + 4];
-        args[0] = "-p" + Swetest.BODIES + "m";
+        args[0] = "-p" + Swetest.BODIES + "mt";
         args[1] = "-true";
-        args[2] = "-sid" + LAHIRI.fid();
+        args[2] = "-sid" + TRUE_CITRA.fid();
         args[3] = "-fPl";
         System.arraycopy(extra, 0, args, 4, extra.length);
         return Swetest.values(jhd.date(), jhd.utcTime(), args);
@@ -131,8 +142,8 @@ class KundaliRefChartsTest {
         final JhdChart jhd = jhd(year);
         final KundaliText text = chart(jhd);
 
-        assertEquals("LAHIRI", text.ayanamsaName());
-        assertEquals(Swetest.ayanamsa(jhd.date(), jhd.utcTime(), LAHIRI.fid()),
+        assertEquals("TRUE_CITRA", text.ayanamsaName());
+        assertEquals(Swetest.ayanamsa(jhd.date(), jhd.utcTime(), TRUE_CITRA.fid()),
                 text.ayanamsa(), DELTA, "ayanamsa in " + year);
     }
 
@@ -304,7 +315,9 @@ class KundaliRefChartsTest {
         final KundaliText text = chart(jhd);
         final Map<String, Double> ref = reference(jhd);
 
-        final double expected = (ref.get("Moon") + ref.get("mean Node")) / 2.;
+        // Bhrigu Bindu is the Chandra/Rahu midpoint taken from the chart's own Rahu, so under the
+        // true-node default it is the TRUE node that feeds it - not the mean one
+        final double expected = (ref.get("Moon") + ref.get("true Node")) / 2.;
         assertEquals(expected, text.bhriguBindu(), DELTA, "bhrigu bindu in " + year);
         assertEquals(rasiCodeOf(expected), text.bhriguRasi(), "bhrigu bindu rasi in " + year);
 
@@ -367,40 +380,53 @@ class KundaliRefChartsTest {
         return KundaliText.parse(new Kundali(KUNDALI_7_KARAKAS, objects).toString());
     }
 
-    @ParameterizedTest(name = "{0} true node")
+    /**
+     * The mean-node contrast to the true-node default. Keeps the {@code trueNode(false)} path
+     * covered now that the primary configuration above uses true nodes, and pins that the two
+     * really do resolve to different bodies rather than the flag being ignored.
+     */
+    @ParameterizedTest(name = "{0} mean node")
     @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
-    void trueNodeChartUsesSwetestTrueNode(int year) {
+    void meanNodeChartUsesSwetestMeanNode(int year) {
+        assumeTrue(Swetest.available());
+        final JhdChart jhd = jhd(year);
+        final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
+                .ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN).trueNode(false).build());
+
+        final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
+                "-p" + Swetest.BODIES + "mt", "-true", "-sid" + TRUE_CITRA.fid(), "-fPl");
+
+        assertEquals(ref.get("mean Node"), text.row("RA").longitude, DELTA,
+                "Rahu must be the MEAN node in " + year);
+        assertEquals(fix360(ref.get("mean Node") + 180.), text.row("KE").longitude, DELTA,
+                "Ketu opposite the mean node in " + year);
+
+        // the default chart uses the true node; the two must not silently coincide
+        assertEquals(ref.get("true Node"), chart(jhd).row("RA").longitude, DELTA,
+                "the default chart must still be on the TRUE node in " + year);
+    }
+
+    /**
+     * The Lahiri contrast to the True Citra default - the other ayanamsa this library is
+     * routinely used with, kept covered end to end against swetest.
+     */
+    @ParameterizedTest(name = "{0} Lahiri ayanamsa")
+    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
+    void lahiriChartMatchesSwetest(int year) {
         assumeTrue(Swetest.available());
         final JhdChart jhd = jhd(year);
         final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
                 .ayanamsa(LAHIRI).houseSystem(WHOLE_SIGN).trueNode(true).build());
 
+        assertEquals("LAHIRI", text.ayanamsaName());
+        assertEquals(Swetest.ayanamsa(jhd.date(), jhd.utcTime(), LAHIRI.fid()),
+                text.ayanamsa(), DELTA, "Lahiri ayanamsa in " + year);
+
         final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
                 "-p" + Swetest.BODIES + "mt", "-true", "-sid" + LAHIRI.fid(), "-fPl");
-
-        assertEquals(ref.get("true Node"), text.row("RA").longitude, DELTA,
-                "Rahu must be the TRUE node in " + year);
-        assertEquals(fix360(ref.get("true Node") + 180.), text.row("KE").longitude, DELTA,
-                "Ketu opposite the true node in " + year);
-    }
-
-    @ParameterizedTest(name = "{0} True Citra ayanamsa")
-    @ValueSource(ints = {0, 500, 1000, 1500, 1900, 2000, 2100})
-    void trueCitraChartMatchesSwetest(int year) {
-        assumeTrue(Swetest.available());
-        final JhdChart jhd = jhd(year);
-        final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
-                .ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN).build());
-
-        assertEquals("TRUE_CITRA", text.ayanamsaName());
-        assertEquals(Swetest.ayanamsa(jhd.date(), jhd.utcTime(), TRUE_CITRA.fid()),
-                text.ayanamsa(), DELTA, "True Citra ayanamsa in " + year);
-
-        final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
-                "-p" + Swetest.BODIES + "m", "-true", "-sid" + TRUE_CITRA.fid(), "-fPl");
         for (String[] pair : BODY_TO_CODE) {
             assertEquals(ref.get(pair[0]), text.row(pair[1]).longitude, DELTA,
-                    pair[0] + " under True Citra in " + year);
+                    pair[0] + " under Lahiri in " + year);
         }
     }
 
@@ -419,10 +445,10 @@ class KundaliRefChartsTest {
         assumeTrue(Swetest.available());
         final JhdChart jhd = jhd(year);
         final KundaliText text = chart(jhd, new SweObjectsOptions.Builder()
-                .ayanamsa(LAHIRI).houseSystem(PLACIDUS).build());
+                .ayanamsa(TRUE_CITRA).houseSystem(PLACIDUS).trueNode(true).build());
 
         final Map<String, Double> ref = Swetest.values(jhd.date(), jhd.utcTime(),
-                "-p" + Swetest.BODIES + "m", "-true", "-sid" + LAHIRI.fid(), "-fPl",
+                "-p" + Swetest.BODIES + "mt", "-true", "-sid" + TRUE_CITRA.fid(), "-fPl",
                 Swetest.house(jhd.longitude(), jhd.latitude(), 'P'));
 
         final double[] cusps = new double[13];

@@ -31,7 +31,7 @@ import static org.jyotisa.karaka.ECharaKaraka.DARA_KARAKA;
 import static org.jyotisa.karaka.ECharaKaraka.PITRI_KARAKA;
 import static org.swisseph.api.ISweObjects.RA;
 import static org.swisseph.api.ISweObjects.SY;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA_TRUE_NODE;
 import static org.swisseph.utils.IModuloUtils.fix360;
 
 /**
@@ -51,7 +51,7 @@ class LucknowCrossCheckTest extends AbstractTest {
 
     IKundali newLucknow1947(org.jyotisa.api.IKundaliOptions options) {
         ISweObjects sweObjects = new SweObjects(getSwephExp(), new SweJulianDate(DATE_1947, 0f, 10.5),
-                GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild();
+                GEO_LUCKNOW, LAHIRI_AYANAMSA_TRUE_NODE).completeBuild();
         return new Kundali(options, sweObjects);
     }
 

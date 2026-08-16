@@ -12,8 +12,8 @@ import org.swisseph.app.SweObjects;
 import java.io.IOException;
 
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
-import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA_TRUE_NODE;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA_TRUE_NODE;
 
 /**
  * @author Yura Krymlov
@@ -26,7 +26,7 @@ public class LucknowTest extends AbstractTest {
     @Test
     void testLahiriKundali() throws IOException {
         ISweObjects sweObjects = new SweObjects(getSwephExp(), new SweJulianDate(date1947, 0f, 10.5),
-                GEO_LUCKNOW, LAHIRI_AYANAMSA).completeBuild();
+                GEO_LUCKNOW, LAHIRI_AYANAMSA_TRUE_NODE).completeBuild();
 
         //String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
         String kundaliText = new Kundali(KUNDALI_7_KARAKAS, sweObjects).toString();
@@ -37,7 +37,7 @@ public class LucknowTest extends AbstractTest {
     @Test
     void testTruecitraKundali() throws IOException {
         ISweObjects sweObjects = new SweObjects(getSwephExp(), new SweJulianDate(date1947, 0f, 10.5),
-                GEO_LUCKNOW, TRUECITRA_AYANAMSA).completeBuild();
+                GEO_LUCKNOW, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild();
         //String kundaliText = printKundali(new Kundali(KUNDALI_7_KARAKAS, sweObjects)).toString();
         String kundaliText = new Kundali(KUNDALI_7_KARAKAS, sweObjects).toString();
         loadAndAssert("LUCKNOW1947_A27.txt", kundaliText);

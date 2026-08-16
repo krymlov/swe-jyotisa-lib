@@ -29,7 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
-import static org.swisseph.app.SweAyanamsa.LAHIRI;
+import static org.swisseph.app.SweAyanamsa.TRUE_CITRA;
 import static org.swisseph.app.SweHouseSystem.WHOLE_SIGN;
 
 /**
@@ -81,7 +81,8 @@ class KundaliReportGoldenTest {
 
         final JhdChart jhd = KundaliRefChartsTest.jhd(year);
         final ISweObjects objects = new SweObjects(swissEph(), jhd.julianDate(), jhd.geoLocation(),
-                new SweObjectsOptions.Builder().ayanamsa(LAHIRI).houseSystem(WHOLE_SIGN).build())
+                new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
+                        .trueNode(true).build())
                 .completeBuild();
 
         final String actual = new Kundali(KUNDALI_7_KARAKAS, objects).toString().trim();

@@ -82,17 +82,20 @@ public class Upagrahas implements IUpagrahas {
      * not fixed offsets from the Sun like the five above - each is the Ascendant rising at a
      * specific moment derived from dividing the day (or night, for a night birth) into eight
      * equal parts (BPHS 3.68 for Gulika; the same construction is classically used for the other
-     * five). The first seven parts are ruled, in order starting from the birth weekday's own
-     * lord, by Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn - the plain weekday sequence
-     * itself, which is why {@link ISweObjects}'s chart indices SY..SA (1..7) line up directly
-     * with weekday 0..6 (Sunday..Saturday, {@link swisseph.SweDate#getDayOfWeekNr}'s convention).
-     * The eighth part has no lord. A night birth's eight parts follow the same seven-lord
-     * sequence but shifted 4 parts further along (equivalently: night part i has the lord day
-     * part i+4 would have had) - verified against BPHS's own examples, "Gulika is the 7th part
-     * of daytime, or the 3rd part of nighttime", for a Sunday birth.
+     * five).
      * <p>
-     * Kaala/Mrityu/Arthaprahaara/Yamaghantaka/Gulika all rise at the <b>middle</b> of their
-     * ruling planet's part; Maandi rises at its <b>beginning</b> - see {@link IUpagrahas}.
+     * The part lords are an <b>eight</b>-element cycle - Sun, Moon, Mars, Mercury, Jupiter,
+     * Venus, Saturn and one lordless slot - rotated so that the birth weekday's own lord takes
+     * the first part. The lordless slot therefore <b>moves with the weekday</b> rather than
+     * always being the eighth part: on a Sunday the parts run Sun..Saturn then lordless, but on
+     * a Friday they run Venus, Saturn, lordless, Sun, Moon, Mars, Mercury, Jupiter. A night
+     * birth uses the same cycle rotated 4 further weekday-lords along. Because
+     * {@link ISweObjects}'s chart indices SY..SA (1..7) are exactly the weekday sequence, the
+     * ruling graha's own uid drives the rotation directly - see {@link #calcKalavelaPart}.
+     * <p>
+     * Kaala/Mrityu/Arthaprahaara/Yamaghantaka/Maandi rise at the <b>middle</b> of their ruling
+     * planet's part; <b>Gulika rises at its beginning</b>. Gulika and Maandi therefore share
+     * Saturn's part and differ only in that begin/middle choice.
      */
     protected void calcKalavelaUpagrahas(final ISweObjects sweObjects) {
         final double birthUt = sweObjects.sweJulianDate().julianDay();
@@ -116,8 +119,8 @@ public class Upagrahas implements IUpagrahas {
         all[MRITYU.uid()] = buildKalavelaUpagraha(sweObjects, MRT, MA, true, weekday, dayBirth, periodStart, portionLength);
         all[ARTHAPRAHAARA.uid()] = buildKalavelaUpagraha(sweObjects, ART, BU, true, weekday, dayBirth, periodStart, portionLength);
         all[YAMAGHANTAKA.uid()] = buildKalavelaUpagraha(sweObjects, YAM, GU, true, weekday, dayBirth, periodStart, portionLength);
-        all[GULIKA.uid()] = buildKalavelaUpagraha(sweObjects, GLK, SA, true, weekday, dayBirth, periodStart, portionLength);
-        all[MAANDI.uid()] = buildKalavelaUpagraha(sweObjects, MND, SA, false, weekday, dayBirth, periodStart, portionLength);
+        all[GULIKA.uid()] = buildKalavelaUpagraha(sweObjects, GLK, SA, false, weekday, dayBirth, periodStart, portionLength);
+        all[MAANDI.uid()] = buildKalavelaUpagraha(sweObjects, MND, SA, true, weekday, dayBirth, periodStart, portionLength);
     }
 
     protected IUpagrahaEntity buildKalavelaUpagraha(final ISweObjects sweObjects, final IUpagraha upagraha,
@@ -133,15 +136,25 @@ public class Upagrahas implements IUpagrahas {
     }
 
     /**
-     * Which of the 7 lorded parts (0-indexed, 0..6) of the day or night belongs to the graha
-     * identified by {@code rulingGrahaUid} ({@link ISweObjects}'s SY..SA, 1..7), for a birth on
-     * the given civil weekday (0..6, Sunday..Saturday). Pure arithmetic, independently
-     * unit-tested against BPHS's own two worked examples and the standard published
-     * Gulika-Kalam/Yamagandam tables - see {@code UpagrahaKalavelaTest}.
+     * Which of the 8 parts (0-indexed, 0..7) of the day or night belongs to the graha identified
+     * by {@code rulingGrahaUid} ({@link ISweObjects}'s SY..SA, 1..7), for a birth on the given
+     * civil weekday (0..6, Sunday..Saturday, {@link swisseph.SweDate#getDayOfWeekNr}'s
+     * convention).
+     * <p>
+     * Two moduli, and they are deliberately different. The <b>rotation</b> is by weekday lord,
+     * of which there are only seven, so it reduces mod 7 (a night birth starts 4 lords further
+     * along). The <b>part</b> it selects is one of eight, because the cycle being rotated is
+     * {Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, lordless} - so the result reduces
+     * mod 8. Using mod 7 for both (i.e. assuming the lordless part is always the eighth) is
+     * wrong for every weekday except Sunday, and is exactly the bug this replaced.
+     * <p>
+     * Verified exhaustively - all 7 weekdays x 7 grahas x day/night - against Jagannatha Hora's
+     * own {@code day_rulers}/{@code night_rulers} tables as shipped in PyJHora, see
+     * {@code UpagrahaKalavelaTest}.
      */
     static int calcKalavelaPart(final int rulingGrahaUid, final int weekday, final boolean dayBirth) {
-        final int shift = dayBirth ? i0 : 4;
-        return modulo(i7, rulingGrahaUid - i1 - weekday - shift);
+        final int rotation = modulo(i7, weekday + (dayBirth ? i0 : 4));
+        return modulo(i8, rulingGrahaUid - i1 - rotation);
     }
 
     protected double calcAscendant(final ISweObjects sweObjects, final double jd) {
