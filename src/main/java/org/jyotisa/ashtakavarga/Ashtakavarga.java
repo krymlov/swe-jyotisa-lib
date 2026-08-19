@@ -12,6 +12,8 @@ import org.jyotisa.graha.EGraha;
 import org.jyotisa.rasi.ERasi;
 import org.swisseph.api.ISweObjects;
 
+import static org.swisseph.api.ISweConstants.i1;
+import static org.swisseph.api.ISweConstants.i12;
 import static org.swisseph.api.ISweObjects.*;
 
 /**
@@ -42,7 +44,7 @@ import static org.swisseph.api.ISweObjects.*;
  * @author Yura Krymlov
  * @version 1.0, 2026-08
  */
-public class Ashtakavarga {
+public class Ashtakavarga implements IAshtakavarga {
 
     /**
      * maitreya8's REKHA_MAP is indexed, for both the contributor (outer) and the querent
@@ -156,17 +158,39 @@ public class Ashtakavarga {
     private final int[][] rekha = new int[SA + 1][12];
     // sarva[rasi0based], sum of the 7 grahas' (not Lagna's) rekha
     private final int[] sarva = new int[12];
+    // which of the 8 points the chart actually had a rasi for
+    private final boolean[] calculated = new boolean[SA + 1];
+    private final int missing;
 
     public Ashtakavarga(final IKundaliOptions options, final ISweObjects sweObjects) {
         final int[] signs = sweObjects.signs();
         final int[] rasi0 = new int[SA + 1];
-        for (int uid : POINTS) rasi0[uid] = signs[uid] - 1;
+        int absent = 0;
+
+        for (int uid : POINTS) {
+            final int sign = signs[uid];
+            // 0 is ISweObjects' "not calculated" marker - a real rasi is 1..12. Lagna is the
+            // one routinely absent: SweObjects fills signs[LG] only in buildAscendant(), which
+            // both the (..., buildAscendant = false) constructor and every partial build skip.
+            // Subtracting 1 from it used to give -1 and blow up on the first rekha[] write.
+            calculated[uid] = sign >= i1 && sign <= i12;
+            rasi0[uid] = calculated[uid] ? sign - i1 : -1;
+            if (!calculated[uid]) absent++;
+        }
+
+        this.missing = absent;
 
         for (int contributorUid : POINTS) {
+            // a point with no rasi has no Bhinnashtakavarga of its own - its row stays zero
+            if (!calculated[contributorUid]) continue;
+
             final int ci = uidToTableIndex[contributorUid];
             final int[] contributorRekha = rekha[contributorUid];
 
             for (int querentUid : POINTS) {
+                // and it cannot be counted from either, so it contributes to nobody
+                if (!calculated[querentUid]) continue;
+
                 final int[] row = REKHA_MAP[ci][uidToTableIndex[querentUid]];
                 final int querentRasi0 = rasi0[querentUid];
 
@@ -182,24 +206,68 @@ public class Ashtakavarga {
     }
 
     /**
+     * Whether the chart supplied a rasi for this point, i.e. whether its row means anything.
+     * An uncalculated point has an all-zero Bhinnashtakavarga and contributes nothing to
+     * anyone else's.
+     *
+     * @param point one of the 8 contributing points; anything else is simply not calculated
+     */
+    @Override
+    public boolean isCalculated(final IGraha point) {
+        final int uid = point.uid();
+        return uid >= 0 && uid < calculated.length && calculated[uid];
+    }
+
+    /**
+     * Whether all 8 points were available. When false the tables are <b>partial</b>: every
+     * bindu count is short by whatever the missing points would have contributed, so the
+     * classical per-graha totals (48/49/54/52/39/56/39) will not hold and the figures must
+     * not be compared against a reference chart.
+     * <p>
+     * The usual cause is a chart built without the ascendant - see
+     * {@link ISweObjects#buildAscendant()}.
+     */
+    @Override
+    public boolean isComplete() {
+        return 0 == missing;
+    }
+
+    /**
      * Bhinnashtakavarga: the number of bindus (0-8) the given point receives in the given rasi.
      *
      * @param point one of the 7 classical grahas (Surya..Shani) or Lagna
      * @param rasi  the rasi to count bindus in
      */
+    @Override
     public int bindu(final IGraha point, final IRasi rasi) {
-        return rekha[point.uid()][rasi.fid() - 1];
+        final int uid = point.uid();
+        if (uid < 0 || uid >= rekha.length) {
+            throw new IllegalArgumentException(point.code()
+                    + " is not one of the 8 Ashtakavarga points (Surya..Shani, Lagna)");
+        }
+        return rekha[uid][rasiIndex(rasi)];
     }
 
     /**
      * Sarvashtakavarga: the combined bindu total (0-56) of the 7 classical grahas (not Lagna)
      * in the given rasi.
      */
+    @Override
     public int sarva(final IRasi rasi) {
-        return sarva[rasi.fid() - 1];
+        return sarva[rasiIndex(rasi)];
+    }
+
+    /** 1..12 to 0..11, refusing the NIL rasi rather than indexing with -1 */
+    private static int rasiIndex(final IRasi rasi) {
+        final int fid = rasi.fid();
+        if (fid < i1 || fid > i12) {
+            throw new IllegalArgumentException("not a real rasi: " + rasi.code());
+        }
+        return fid - i1;
     }
 
     /** The 8 contributing points, Surya..Shani then Lagna. */
+    @Override
     public IGraha[] points() {
         final IGraha[] result = new IGraha[POINTS.length];
         for (int i = 0; i < POINTS.length; i++) result[i] = EGraha.byUid(POINTS[i]);
@@ -220,6 +288,7 @@ public class Ashtakavarga {
             for (int rasi0based = 0; rasi0based < 12; rasi0based++) {
                 builder.append(String.format("%4d", rekha[uid][rasi0based]));
             }
+            if (!calculated[uid]) builder.append("   (not calculated)");
             builder.append('\n');
         }
 
@@ -228,6 +297,12 @@ public class Ashtakavarga {
             builder.append(String.format("%4d", sarva[rasi0based]));
         }
         builder.append('\n');
+
+        if (!isComplete()) {
+            builder.append("PARTIAL: ").append(missing)
+                    .append(" of 8 points were not calculated, so every count above is short by")
+                    .append(" what they would have contributed - do not compare with a reference.\n");
+        }
 
         return builder.toString();
     }

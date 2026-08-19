@@ -31,6 +31,7 @@ import org.jyotisa.api.upagraha.IUpagrahas;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.ashtakavarga.Ashtakavarga;
+import org.jyotisa.ashtakavarga.IAshtakavarga;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.bindu.BhriguBindu;
 import org.jyotisa.graha.EGraha;
@@ -88,7 +89,7 @@ public class Kundali implements IKundali {
     protected IUpagrahas upagrahas;
     protected IGrahas grahas;
     protected ILagnas lagnas;
-    protected Ashtakavarga ashtakavarga;
+    protected IAshtakavarga ashtakavarga;
 
     public Kundali(IKundaliOptions options, ISweObjects sweObjects) {
         this.sweObjects = sweObjects;
@@ -148,7 +149,7 @@ public class Kundali implements IKundali {
         return upagrahas = new Upagrahas(options, sweObjects);
     }
 
-    public Ashtakavarga ashtakavarga() {
+    public IAshtakavarga ashtakavarga() {
         if (null != ashtakavarga) return ashtakavarga;
         return ashtakavarga = new Ashtakavarga(options, sweObjects);
     }

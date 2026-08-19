@@ -14,6 +14,7 @@ import org.jyotisa.graha.EGraha;
 import org.jyotisa.rasi.ERasi;
 import org.junit.jupiter.api.Test;
 import org.swisseph.ISwissEph;
+import org.swisseph.api.ISweObjects;
 import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
 
@@ -180,5 +181,123 @@ class AshtakavargaTest extends AbstractTest {
             assertTrue(s.contains(code), "output must mention " + code);
         }
         assertTrue(s.contains("Sarva"));
+    }
+
+    // ===================================================== charts without a calculated Lagna
+
+    /**
+     * A chart need not have an ascendant: {@code SweObjects}' own
+     * {@code (..., buildAscendant = false)} constructor and every partial build leave
+     * {@code signs[LG]} at 0, which is its "not calculated" marker. Ashtakavarga used to
+     * subtract 1 from that and index {@code rekha[-1]}, taking the whole
+     * {@code Kundali.toString()} down with an {@code ArrayIndexOutOfBoundsException}. It must
+     * instead compute everything the chart does support.
+     */
+    private ISweObjects lucknow1947WithoutLagna() {
+        final ISweObjects objects = new SweObjects(getSwephExp(),
+                new SweJulianDate(new int[]{1947, 8, 15, 10, 30}, 0f, 10.5),
+                GEO_LUCKNOW, TRUECITRA_AYANAMSA_TRUE_NODE, false);
+        objects.buildSunMoon();
+        objects.buildMarsKetu();
+        assertEquals(0, objects.signs()[LG], "this fixture must have no ascendant");
+        return objects;
+    }
+
+    @Test
+    void withoutALagnaTheConstructorDoesNotThrow() {
+        final Ashtakavarga av = new Ashtakavarga(KUNDALI_7_KARAKAS, lucknow1947WithoutLagna());
+
+        assertFalse(av.isComplete(), "one of the 8 points is missing");
+        assertFalse(av.isCalculated(EGraha.LAGNA.graha()), "Lagna specifically");
+        for (String code : new String[]{SY_CD, CH_CD, BU_CD, SK_CD, MA_CD, GU_CD, SA_CD}) {
+            assertTrue(av.isCalculated(EGraha.byCode(code)), code + " was calculated");
+        }
+    }
+
+    @Test
+    void withoutALagnaItsOwnRowIsAllZeroRatherThanWrong() {
+        final Ashtakavarga av = new Ashtakavarga(KUNDALI_7_KARAKAS, lucknow1947WithoutLagna());
+        final IGraha lagna = EGraha.LAGNA.graha();
+
+        for (ERasi rasi : ERasi.values()) {
+            if (null == rasi.rasi()) continue;
+            assertEquals(0, av.bindu(lagna, rasi.rasi()),
+                    "an uncalculated Lagna has no Bhinnashtakavarga of its own");
+        }
+    }
+
+    /**
+     * The partial result is not merely "does not crash" - it is exactly the complete table
+     * minus what the missing point would have given, which is what makes it usable. Each
+     * graha's total must therefore fall short of its classical total by precisely the number
+     * of benefic points the Ascendant row of that graha's own REKHA_MAP block carries.
+     */
+    @Test
+    void withoutALagnaEveryTotalIsShortByExactlyLagnasContribution() {
+        final Ashtakavarga av = new Ashtakavarga(KUNDALI_7_KARAKAS, lucknow1947WithoutLagna());
+        final int ascendantTableIndex = Ashtakavarga.uidToTableIndex[LG];
+
+        for (IGraha point : av.points()) {
+            final Integer classical = CLASSICAL_TOTAL.get(point.code());
+            if (null == classical) continue; // Lagna itself
+
+            int lagnasContribution = 0;
+            for (int bindu : Ashtakavarga.REKHA_MAP[Ashtakavarga.uidToTableIndex[point.uid()]][ascendantTableIndex]) {
+                lagnasContribution += bindu;
+            }
+
+            int total = 0;
+            for (ERasi rasi : ERasi.values()) {
+                if (null == rasi.rasi()) continue;
+                total += av.bindu(point, rasi.rasi());
+            }
+
+            assertEquals(classical - lagnasContribution, total,
+                    point.code() + " must be short by exactly the Ascendant's contribution");
+        }
+    }
+
+    @Test
+    void aPartialTableSaysSoInTheReport() {
+        final String s = new Ashtakavarga(KUNDALI_7_KARAKAS, lucknow1947WithoutLagna()).toString();
+        assertTrue(s.contains("not calculated"), "the Lagna row must be marked: " + s);
+        assertTrue(s.contains("PARTIAL"), "the table as a whole must be marked partial: " + s);
+
+        // and a complete one must not carry either marker
+        final String complete = new Ashtakavarga(KUNDALI_7_KARAKAS,
+                newLucknow1947().sweObjects()).toString();
+        assertFalse(complete.contains("PARTIAL"), "a complete table is not marked partial");
+        assertFalse(complete.contains("not calculated"));
+    }
+
+    /** the reported crash was reached through the printed report, so cover that path too */
+    @Test
+    void theWholeKundaliReportRendersWithoutALagna() {
+        final String report = new Kundali(KUNDALI_7_KARAKAS, lucknow1947WithoutLagna()).toString();
+        assertTrue(report.contains("PARTIAL"), "the Ashtakavarga block must still be there");
+        assertTrue(report.contains("Sarva"), "and be complete enough to read");
+    }
+
+    @Test
+    void binduAndSarvaRejectTheNilRasiInsteadOfIndexingWithMinusOne() {
+        final Ashtakavarga av = new Ashtakavarga(KUNDALI_7_KARAKAS, newLucknow1947().sweObjects());
+        final IGraha surya = EGraha.SURYA.graha();
+
+        // ERasi.NIL.rasi() is null, so the NIL sentinel reaches this API as a fid-0 rasi only
+        // through a hand-made instance; guard the arithmetic rather than the caller
+        final IRasi nil = new org.jyotisa.api.rasi.IRasi() {
+            public IRasi[] all() { return new IRasi[0]; }
+            public int ordinal() { return 0; }
+            public String name() { return "NIL"; }
+            public int fid() { return 0; }
+            public String code() { return "NIL"; }
+            public org.swisseph.api.ISweGender gender() { return null; }
+            public org.jyotisa.api.tattva.ITattva tattva() { return null; }
+            public IGraha lord() { return null; }
+            public IRasi badhaka() { return null; }
+        };
+
+        assertThrows(IllegalArgumentException.class, () -> av.bindu(surya, nil));
+        assertThrows(IllegalArgumentException.class, () -> av.sarva(nil));
     }
 }
