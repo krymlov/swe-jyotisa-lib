@@ -28,10 +28,10 @@ import org.jyotisa.api.tithi.ITithi;
 import org.jyotisa.api.upagraha.IUpagrahaEntity;
 import org.jyotisa.api.upagraha.IUpagrahaEnum;
 import org.jyotisa.api.upagraha.IUpagrahas;
+import org.jyotisa.api.varga.IAshtakavarga;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
-import org.jyotisa.ashtakavarga.Ashtakavarga;
-import org.jyotisa.ashtakavarga.IAshtakavarga;
+import org.jyotisa.varga.Ashtakavarga;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.bindu.BhriguBindu;
 import org.jyotisa.graha.EGraha;
@@ -84,12 +84,12 @@ public class Kundali implements IKundali {
     protected final IKundaliOptions options;
     protected final ISweObjects sweObjects;
 
+    protected IAshtakavarga ashtakavarga;
     protected IKundaliFields fields;
     protected IPanchanga panchanga;
     protected IUpagrahas upagrahas;
     protected IGrahas grahas;
     protected ILagnas lagnas;
-    protected IAshtakavarga ashtakavarga;
 
     public Kundali(IKundaliOptions options, ISweObjects sweObjects) {
         this.sweObjects = sweObjects;
@@ -324,7 +324,6 @@ public class Kundali implements IKundali {
         }
 
         builder.append('\n').append(fields()).append('\n');
-
         builder.append('\n').append(ashtakavarga()).append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();
@@ -334,8 +333,7 @@ public class Kundali implements IKundali {
             final IVarga varga = iterator.next().varga();
             builder.append(varga.code()).append("\t= ");
 
-            for (int i = 0; i < grahas.length; i++) {
-                final IGrahaEntity graha = grahas[i];
+            for (final IGrahaEntity graha : grahas) {
                 final double longitude = graha.longitude();
                 final IRasi rasi = varga.rasi(longitude);
                 final double vrl = varga.rasiLongitude(longitude);

@@ -3,11 +3,12 @@
  * Author    Yura Krymlov
  * Created   2026-08
  */
-package org.jyotisa.ashtakavarga;
+package org.jyotisa.varga;
 
 import org.jyotisa.api.IKundaliOptions;
 import org.jyotisa.api.graha.IGraha;
 import org.jyotisa.api.rasi.IRasi;
+import org.jyotisa.api.varga.IAshtakavarga;
 import org.jyotisa.graha.EGraha;
 import org.jyotisa.rasi.ERasi;
 import org.swisseph.api.ISweObjects;
@@ -20,7 +21,7 @@ import static org.swisseph.api.ISweObjects.*;
  * Bhinnashtakavarga (each of the 7 classical grahas' and Lagna's own 12-rasi "bindu" table) and
  * Sarvashtakavarga (their combined total per rasi).
  * <p>
- * Each of the 8 points - the 7 grahas Surya..Shani plus Lagna - contributes benefic points
+ * Each of the 8 points - the 7 grahas Surya...Shani plus Lagna - contributes benefic points
  * ("Rekha"/"bindu") into specific houses counted from each of those same 8 points' own rasi,
  * following a fixed classical table (one row per contributor, laid out for all 8 possible
  * querents and all 12 possible house offsets). Bhinnashtakavarga for a given point is, for each
@@ -33,13 +34,6 @@ import static org.swisseph.api.ISweObjects.*;
  * separate, less commonly needed step; the unreduced Bhinnashtakavarga/Sarvashtakavarga bindus
  * implemented here are what virtually every Jyotish text and piece of software means by
  * "Ashtakavarga" by default.
- * <p>
- * The benefic-point table (`REKHA_MAP`) is classical data with no ephemeris dependency at all -
- * it is not derived here but taken from the reference implementation in
- * <a href="https://github.com/martin-pe/maitreya8">maitreya8</a>
- * (`src/jyotish/Ashtakavarga.cpp`), extracted programmatically rather than hand-transcribed (see
- * `ai-github-projects/swe-jyotisa-lib/extract-rekha-map.py`) and checked against the classical
- * per-graha bindu totals - see {@code AshtakavargaTest}.
  *
  * @author Yura Krymlov
  * @version 1.0, 2026-08
@@ -54,7 +48,7 @@ public class Ashtakavarga implements IAshtakavarga {
      * so {@code POINTS[tableIndex]} converts one way and {@link #uidToTableIndex} the other -
      * the giant table itself is never reindexed, only looked up through this pair.
      */
-    static final int[] POINTS = {SY, CH, BU, SK, MA, GU, SA, LG};
+    private static final int[] POINTS = {SY, CH, BU, SK, MA, GU, SA, LG};
 
     static final int[] uidToTableIndex = new int[SA + 1];
 
@@ -70,7 +64,7 @@ public class Ashtakavarga implements IAshtakavarga {
     // maitreya8 src/jyotish/Ashtakavarga.cpp's REKHA_MAP by
     // ai-github-projects/swe-jyotisa-lib/extract-rekha-map.py, not hand-transcribed -
     // verified against the classical per-graha bindu totals (48/49/54/52/39/56/39 for
-    // Sun..Saturn) in AshtakavargaTest.
+    // Sun...Saturn) in AshtakavargaTest.
     static final int[][][] REKHA_MAP = {
         { // Sun
             {1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0}, // Sun
@@ -156,10 +150,13 @@ public class Ashtakavarga implements IAshtakavarga {
 
     // rekha[contributorUid][rasi0based]
     private final int[][] rekha = new int[SA + 1][12];
+
     // sarva[rasi0based], sum of the 7 grahas' (not Lagna's) rekha
     private final int[] sarva = new int[12];
+
     // which of the 8 points the chart actually had a rasi for
     private final boolean[] calculated = new boolean[SA + 1];
+
     private final int missing;
 
     public Ashtakavarga(final IKundaliOptions options, final ISweObjects sweObjects) {
@@ -266,7 +263,7 @@ public class Ashtakavarga implements IAshtakavarga {
         return fid - i1;
     }
 
-    /** The 8 contributing points, Surya..Shani then Lagna. */
+    /** The 8 contributing points, Surya...Shani then Lagna. */
     @Override
     public IGraha[] points() {
         final IGraha[] result = new IGraha[POINTS.length];

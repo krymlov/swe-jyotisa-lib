@@ -3,7 +3,7 @@
  * Author    Yura Krymlov
  * Created   2026-08
  */
-package org.jyotisa.ashtakavarga;
+package org.jyotisa.varga;
 
 import org.jyotisa.AbstractTest;
 import org.jyotisa.api.IKundali;
