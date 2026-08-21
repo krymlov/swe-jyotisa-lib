@@ -122,9 +122,15 @@ public class Kundali implements IKundali {
     @Override
     public IGrahas grahas() {
         if (null != grahas) return grahas;
-        grahas = new Grahas(options, sweObjects);
 
-        final IGrahaEntity[] all = grahas.all();
+        // built into a local and published only once fully assembled - assigning the field
+        // first would let a concurrent caller see "null != grahas" and take the object away
+        // before the Chara karakas below have been assigned, i.e. with charaKaraka() still
+        // null on every graha. This class is not synchronised; publishing last is what keeps
+        // that race from having an observable wrong result.
+        final IGrahas built = new Grahas(options, sweObjects);
+
+        final IGrahaEntity[] all = built.all();
         final boolean sevenKarakas = SEVEN_KARAKAS.equals(options.charaKarakaOption());
         final List<IGrahaEntity> entities = new ArrayList<>(options.charaKarakaOption().fid());
 
@@ -140,7 +146,7 @@ public class Kundali implements IKundali {
             entities.get(index).charaKaraka(charaKaraka);
         }
 
-        return grahas;
+        return grahas = built;
     }
 
     @Override

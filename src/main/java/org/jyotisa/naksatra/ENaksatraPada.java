@@ -217,6 +217,9 @@ public enum ENaksatraPada implements INaksatraPada {
 
     // Nakshatra Pada = Longitude / 3 deg. 20 min
     public static INaksatraPada byLongitude(final double longitude) {
+        // (int) NaN is 0 in Java, so without this an undetermined longitude would
+        // silently resolve to the first member instead of saying "unknown"
+        if (Double.isNaN(longitude)) return NIL;
         return byUid(1 + (int) (fix360(longitude) / NAKSHATRA_PADA_LENGTH));
     }
 

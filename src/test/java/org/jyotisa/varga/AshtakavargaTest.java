@@ -69,7 +69,7 @@ class AshtakavargaTest extends AbstractTest {
 
             int total = 0;
             for (ERasi rasi : ERasi.values()) {
-                if (null == rasi.rasi()) continue; // NIL sentinel
+                if (rasi.rasi().isNil()) continue; // the NIL member is a real object now, not null
                 total += av.bindu(point, rasi.rasi());
             }
             assertEquals(expected, total, point.code() + "'s Bhinnashtakavarga must sum to its classical total");
@@ -79,7 +79,7 @@ class AshtakavargaTest extends AbstractTest {
     private void assertSarvaGrandTotalHolds(final Ashtakavarga av) {
         int total = 0;
         for (ERasi rasi : ERasi.values()) {
-            if (null == rasi.rasi()) continue;
+            if (rasi.rasi().isNil()) continue;
             int sarva = av.sarva(rasi.rasi());
             assertTrue(sarva >= 0 && sarva <= 56, "sarva in [0,56]: " + sarva);
             total += sarva;
@@ -115,7 +115,7 @@ class AshtakavargaTest extends AbstractTest {
         Ashtakavarga av = new Ashtakavarga(KUNDALI_7_KARAKAS, newLucknow1947().sweObjects());
         for (IGraha point : av.points()) {
             for (ERasi rasi : ERasi.values()) {
-                if (null == rasi.rasi()) continue;
+                if (rasi.rasi().isNil()) continue;
                 int bindu = av.bindu(point, rasi.rasi());
                 assertTrue(bindu >= 0 && bindu <= 8, point.code() + " bindu in [0,8]: " + bindu);
             }
@@ -220,7 +220,7 @@ class AshtakavargaTest extends AbstractTest {
         final IGraha lagna = EGraha.LAGNA.graha();
 
         for (ERasi rasi : ERasi.values()) {
-            if (null == rasi.rasi()) continue;
+            if (rasi.rasi().isNil()) continue;
             assertEquals(0, av.bindu(lagna, rasi.rasi()),
                     "an uncalculated Lagna has no Bhinnashtakavarga of its own");
         }
@@ -248,7 +248,7 @@ class AshtakavargaTest extends AbstractTest {
 
             int total = 0;
             for (ERasi rasi : ERasi.values()) {
-                if (null == rasi.rasi()) continue;
+                if (rasi.rasi().isNil()) continue;
                 total += av.bindu(point, rasi.rasi());
             }
 

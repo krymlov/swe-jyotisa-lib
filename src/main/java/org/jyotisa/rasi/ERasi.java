@@ -19,11 +19,7 @@ import static org.jyotisa.api.rasi.IRasi.rasiFid;
  * @version 1.1, 2019-08
  */
 public enum ERasi implements IRasiEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IRasi rasi() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilRasi rasi() { return NilRasi.NIL; }}, // 0  Reserved
     MESHA {@Override public IRasiMesha rasi() { return RasiMesha.R1; }},
     VRISHABHA {@Override public IRasiVrishabha rasi() { return RasiVrishabha.R2; }},
     MITHUNA {@Override public IRasiMithuna rasi() { return RasiMithuna.R3; }},
@@ -77,7 +73,19 @@ public enum ERasi implements IRasiEnum {
         return new SweEnumIterator<>(values(), rasiFrom.ordinal(), rasiTo.ordinal());
     }
 
+    /**
+     * The rasi a longitude falls in, or {@link NilRasi#NIL} when the longitude is not a
+     * number.
+     * <p>
+     * The NaN guard is not defensive padding. {@code rasiFid()} reduces to
+     * {@code (int) (fix360(longitude) / 30)}, and a {@code double}-to-{@code int} cast of NaN
+     * is <b>0</b> in Java - so without it an explicitly-undetermined longitude came back as
+     * Mesha and travelled on as ordinary chart data. Callers that mark a graha as
+     * indeterminable by writing NaN into its longitude - which real consumers do for
+     * date-without-time events - were getting Aries.
+     */
     public static IRasi byLongitude(final double longitude) {
+        if (Double.isNaN(longitude)) return NIL.rasi();
         return values()[rasiFid(longitude)].rasi();
     }
 

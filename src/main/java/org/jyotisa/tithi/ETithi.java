@@ -20,11 +20,7 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @version 1.1, 2019-10
  */
 public enum ETithi implements ITithiEnum {
-    NIL {
-        @Override public int fid() { return NIL_FID; }
-        @Override public String code() { return NIL_CD; }
-        @Override public ITithi tithi() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilTithi tithi() { return NilTithi.NIL; }}, // 0  Reserved
 
     SHUKLA_PRATIPADA {@Override public ITithiPratipada tithi() { return TithiPratipada.S1; }},
     SHUKLA_DWITIYA {@Override public ITithiDwitiya tithi() { return TithiDwitiya.S2; }},
@@ -105,6 +101,9 @@ public enum ETithi implements ITithiEnum {
      * @param offset is (Chandra longitude - Surya longitude)
      */
     public static ITithi byOffset(final double offset) {
+        // (int) NaN is 0 in Java, so without this an undetermined longitude would
+        // silently resolve to the first member instead of saying "unknown"
+        if (Double.isNaN(offset)) return NIL.tithi();
         return byUid(i1 + (int)(fix360(offset) / d12));
     }
 

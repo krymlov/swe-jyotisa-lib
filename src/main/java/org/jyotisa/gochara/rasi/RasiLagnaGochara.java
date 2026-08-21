@@ -48,9 +48,21 @@ public class RasiLagnaGochara extends KundaliSequenceIterator<IRasiEntity> {
         return forward ? segment.start() : segment.close();
     }
     
+    /**
+     * The ascendant is a geometric point, not a body, so the true-versus-apparent distinction
+     * {@code SEFLG_TRUEPOS} expresses does not apply to it - the flag is cleared before the
+     * search.
+     * <p>
+     * This used to be {@code ^ SEFLG_TRUEPOS}, which <b>toggles</b> rather than clears. It
+     * happened to do the right thing only because {@code DEFAULT_SS_TRANSIT_FLAGS} carries
+     * the bit: the moment a caller passes transit flags without it - which
+     * {@code SweObjectsOptions.Builder.transitFlags(...)} allows - the XOR would have
+     * switched it <b>on</b>, i.e. exactly the opposite of the intent, silently. Toggling a
+     * caller-supplied flag is never a meaningful contract; clearing it is.
+     */
     @Override
     public int transitCalcFlags() {
-        return super.transitCalcFlags() ^ SEFLG_TRUEPOS;
+        return super.transitCalcFlags() & ~SEFLG_TRUEPOS;
     }
 
     @Override

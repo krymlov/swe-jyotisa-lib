@@ -27,11 +27,7 @@ import static org.swisseph.api.ISweConstants.*;
  * @version 1.1, 2019-10
  */
 public enum EKarana implements IKaranaEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IKarana karana() {return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilKarana karana() { return NilKarana.NIL; }}, // 0  Reserved
     BAVA {@Override public IKaranaBava karana() {return KaranaBava.KR1; }},
     BALAVA {@Override public IKaranaBalava karana() {return KaranaBalava.KR2; }},
     KAULAVA {@Override public IKaranaKaulava karana() {return KaranaKaulava.KR3; }},
@@ -91,6 +87,9 @@ public enum EKarana implements IKaranaEnum {
     }
 
     public static IKarana byOffset(double offset) {
+        // (int) NaN is 0 in Java, so without this an undetermined longitude would
+        // silently resolve to the first member instead of saying "unknown"
+        if (Double.isNaN(offset)) return NIL.karana();
         offset = IModuloUtils.fix360(offset);
 
         final IKaranaEnum karana;

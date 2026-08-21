@@ -20,11 +20,7 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @version 1.1, 2019-10
  */
 public enum ENityaYoga implements INityaYogaEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public INityaYoga yoga() {return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilNityaYoga yoga() { return NilNityaYoga.NIL; }}, // 0  Reserved
     VISHKAMBHA {@Override public INityaYogaVishkambha yoga() { return NityaYogaVishkambha.NY1; }},
     PREETI {@Override public INityaYogaPreeti yoga() { return NityaYogaPreeti.NY2; }},
     AYUSHMANA {@Override public INityaYogaAyushmana yoga() { return NityaYogaAyushmana.NY3; }},
@@ -98,6 +94,9 @@ public enum ENityaYoga implements INityaYogaEnum {
      * @param offset is (Chandra longitude + Surya longitude)
      */
     public static INityaYoga byOffset(final double offset) {
+        // (int) NaN is 0 in Java, so without this an undetermined longitude would
+        // silently resolve to the first member instead of saying "unknown"
+        if (Double.isNaN(offset)) return NIL.yoga();
         return byUid(i1 + (int)(fix360(offset) / NITYA_YOGA_LENGTH));
     }
 

@@ -52,11 +52,7 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * @version 1.1, 2019-08
  */
 public enum ENaksatra implements INaksatraEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public INaksatra naksatra() {return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilNaksatra naksatra() { return NilNaksatra.NIL; }}, // 0  Reserved
     ASHWINI {@Override public INaksatraAshwini naksatra() { return N1; }},
     BHARANI {@Override public INaksatraBharani naksatra() { return N2; }},
     KRITTIKA {@Override public INaksatraKrittika naksatra() { return N3; }},
@@ -136,6 +132,9 @@ public enum ENaksatra implements INaksatraEnum {
 
     // Nakshatra = Chandra Longitude / 13 deg. 20 min
     public static INaksatra byLongitude(final double longitude) {
+        // (int) NaN is 0 in Java, so without this an undetermined longitude would
+        // silently resolve to the first member instead of saying "unknown"
+        if (Double.isNaN(longitude)) return NIL.naksatra();
         return byUid(1 + (int) (fix360(longitude) / NAKSHATRA_LENGTH));
     }
 

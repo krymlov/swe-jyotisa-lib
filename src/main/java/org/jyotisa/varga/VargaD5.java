@@ -27,6 +27,9 @@ public enum VargaD5 implements IVargaD5 {
 
     @Override
     public IRasi rasi(final double longitudeInD1) {
+        // D5 and D30 pick the sign by parity and by unequal spans rather than through
+        // ERasi.byLongitude, so they need the NaN guard of their own
+        if (Double.isNaN(longitudeInD1)) return ERasi.NIL.rasi();
         final double part = (d30 / 5);
         final double rem = longitudeInD1 % i30;
         final int pos = (int) (rem / part) + 1;
