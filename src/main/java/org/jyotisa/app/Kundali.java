@@ -5,6 +5,8 @@
  */
 package org.jyotisa.app;
 
+import org.jyotisa.arudha.ArudhaPadas;
+import org.jyotisa.api.arudha.IArudhaPadas;
 import org.jyotisa.bhava.BhavaChalit;
 import org.jyotisa.api.bhava.IBhavaChalit;
 import org.jyotisa.api.IKundali;
@@ -88,6 +90,7 @@ public class Kundali implements IKundali {
 
     protected IAshtakavarga ashtakavarga;
     protected IBhavaChalit chalit;
+    protected IArudhaPadas arudhaPadas;
     protected IKundaliFields fields;
     protected IPanchanga panchanga;
     protected IUpagrahas upagrahas;
@@ -168,6 +171,12 @@ public class Kundali implements IKundali {
     public IBhavaChalit chalit() {
         if (null != chalit) return chalit;
         return chalit = new BhavaChalit(sweObjects);
+    }
+
+    @Override
+    public IArudhaPadas arudhaPadas() {
+        if (null != arudhaPadas) return arudhaPadas;
+        return arudhaPadas = new ArudhaPadas(sweObjects);
     }
 
     @Override
@@ -346,6 +355,7 @@ public class Kundali implements IKundali {
         builder.append('\n').append(fields()).append('\n');
         builder.append('\n').append(ashtakavarga()).append('\n');
         builder.append(chalit()).append('\n');
+        builder.append(arudhaPadas()).append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();
         final IGrahaEntity[] grahas = grahas().all();

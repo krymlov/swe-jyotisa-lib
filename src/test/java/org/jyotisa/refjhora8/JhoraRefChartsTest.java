@@ -12,6 +12,10 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.jyotisa.api.bhava.IBhava;
 import org.jyotisa.api.bhava.IBhavaChalit;
 import org.jyotisa.bhava.EBhava;
+import org.jyotisa.api.arudha.IArudhaPada;
+import org.jyotisa.api.arudha.IArudhaPadas;
+import org.jyotisa.arudha.EArudhaPada;
+import org.jyotisa.rasi.ERasi;
 import org.jyotisa.app.Kundali;
 import org.jyotisa.refcharts.JhdChart;
 import org.jyotisa.refcharts.KundaliText;
@@ -627,6 +631,214 @@ class JhoraRefChartsTest {
                 ((SweJulianDate) chart.julianDate()).calendar(SE_GREG_CAL), chart.geoLocation(),
                 new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
                         .trueNode(true).build()).completeBuild()).chalit();
+    }
+
+    // ============================================================ arudha padas
+
+    /**
+     * <b>The twelve Arudha Padas</b> - the perceived image each bhava casts - against JHora's own
+     * D-1 column, at every one of the seventeen epochs.
+     * <p>
+     * An arudha is a whole sign counted from another whole sign, so there is no degree here to be
+     * a fraction out: a disagreement would be a disagreement about the rule. That makes this a
+     * sharper check than a longitude, and it reaches all seventeen epochs rather than only the
+     * modern ten - delta t cannot move a sign here unless it moves a graha across a boundary.
+     */
+    @ParameterizedTest(name = "ref{0} arudha padas")
+    @ValueSource(ints = {0, 100, 500, 1000, 1500, 1700, 1800, 1900,
+            1970, 1990, 2000, 2010, 2030, 2050, 2070, 2090, 2100})
+    void arudhaPadasAgreeWithJagannathaHora(final int year) {
+        requireEphemeris();
+
+        final Map<String, String> theirs = JhoraReport.read(year).arudhas();
+        final IArudhaPadas mine = arudhaPadasOf(year);
+
+        assertEquals(12, theirs.size(), year + " should list twelve arudha padas");
+
+        for (Map.Entry<String, String> entry : theirs.entrySet()) {
+            final IArudhaPada pada = EArudhaPada.byName(entry.getKey());
+
+            assertFalse(pada.isNil(), year + ": JHora names a pada this library does not: "
+                    + entry.getKey());
+            assertEquals(entry.getValue(), mine.rasi(pada).label(),
+                    year + " " + entry.getKey());
+        }
+    }
+
+    /**
+     * The exception really is two cases, and both are exercised by the reference charts.
+     * <p>
+     * The arudha is moved to the tenth when it lands on the bhava's own rasi - which happens when
+     * the lord is in the first or the seventh from it - <b>or</b> on the seventh from the bhava,
+     * which happens when the lord is in the fourth or the tenth. An implementation guarding only
+     * the first half passes most padas and fails a few; this asserts both halves occur in the
+     * data, so the test above is genuinely testing them.
+     */
+    @Test
+    void bothHalvesOfTheArudhaExceptionOccurInTheReferenceCharts() {
+        requireEphemeris();
+
+        int ownRasi = 0, seventhFrom = 0;
+
+        for (int year : ALL) {
+            final KundaliText ours = ours(year);
+            final int lagna = rasiIndexOf(ours.row("LG").rasi) + 1;
+
+            for (int bhava = 1; bhava <= 12; bhava++) {
+                final int sign = (lagna - 1 + bhava - 1) % 12 + 1;
+                final org.jyotisa.api.graha.IGraha lord = ERasi.byUid(sign).lord();
+                final int at = rasiIndexOf(ours.row(lord.code()).rasi) + 1;
+
+                final int steps = (at - sign + 12) % 12 + 1;      // inclusive distance
+                final int plain = (at - 1 + steps - 1) % 12 + 1;  // before the exception
+
+                if (plain == sign) ownRasi++;
+                else if (plain == (sign - 1 + 6) % 12 + 1) seventhFrom++;
+            }
+        }
+
+        assertTrue(ownRasi > 0, "no pada landed on its own bhava in seventeen charts");
+        assertTrue(seventhFrom > 0, "no pada landed on the seventh from its bhava - the second"
+                + " half of the exception would then be untested by the comparison above");
+    }
+
+    private static int rasiIndexOf(final String label) {
+        int index = 0;
+        for (String code : JhoraReport.SIGNS.values()) {
+            if (code.equals(label)) return index;
+            index++;
+        }
+        throw new AssertionError("not a rasi: " + label);
+    }
+
+    /** a chart with no ascendant has no bhavas to cast an image, and says so */
+    @Test
+    void withoutAnAscendantThereAreNoArudhaPadas() {
+        requireEphemeris();
+
+        final ISweObjects partial = new SweObjects(swissEph(),
+                ((SweJulianDate) jhd(1970).julianDate()).calendar(SE_GREG_CAL),
+                jhd(1970).geoLocation(),
+                new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
+                        .trueNode(true).build(), false);
+        partial.buildSunMoon();
+
+        final IArudhaPadas padas = new Kundali(KUNDALI_7_KARAKAS, partial).arudhaPadas();
+
+        assertFalse(padas.isCalculated(), "no ascendant, no arudha padas");
+        assertTrue(padas.arudhaLagna().isNil(), "and no Arudha Lagna to answer with");
+        assertTrue(padas.upapadaLagna().isNil(), "nor an Upapada Lagna");
+    }
+
+    /** {@code AL} and {@code UL} are the first and the twelfth, and the accessors say so */
+    @Test
+    void arudhaLagnaAndUpapadaLagnaAreTheFirstAndTheTwelfth() {
+        requireEphemeris();
+
+        for (int year : MODERN) {
+            final IArudhaPadas padas = arudhaPadasOf(year);
+
+            assertEquals(padas.rasi(EArudhaPada.byUid(1)), padas.arudhaLagna(), year + " AL");
+            assertEquals(padas.rasi(EArudhaPada.byUid(12)), padas.upapadaLagna(), year + " UL");
+
+            assertEquals("AL", EArudhaPada.byUid(1).label(), "A1 is labelled AL");
+            assertEquals("UL", EArudhaPada.byUid(12).label(), "A12 is labelled UL");
+        }
+    }
+
+    private IArudhaPadas arudhaPadasOf(final int year) {
+        final JhdChart chart = jhd(year);
+
+        return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph(),
+                ((SweJulianDate) chart.julianDate()).calendar(SE_GREG_CAL), chart.geoLocation(),
+                new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
+                        .trueNode(true).build()).completeBuild()).arudhaPadas();
+    }
+
+    /**
+     * <b>Scorpio and Aquarius have two owners each, and which of the two is stronger decides two
+     * of every chart's twelve padas.</b>
+     * <p>
+     * Whole-sign bhavas cover all twelve signs, so every chart has exactly one Scorpio bhava and
+     * one Aquarius bhava. Taking the primary lord unconditionally - Mars and Saturn - is wrong for
+     * 10 of the 34 such bhavas in these seventeen charts, and taking the node unconditionally is
+     * wrong for 16. Neither shortcut works; the cascade in {@code ArudhaLords} is what does.
+     */
+    @Test
+    void neitherCoLordAloneAnswersTheScorpioAndAquariusBhavas() {
+        requireEphemeris();
+
+        int primaryWrong = 0, nodeWrong = 0, both = 0, total = 0;
+
+        for (int year : ALL) {
+            final Map<String, String> theirs = JhoraReport.read(year).arudhas();
+            final KundaliText ours = ours(year);
+            final int lagna = ERasi.byName(ours.row("LG").rasi).fid();
+
+            for (int bhava = 1; bhava <= 12; bhava++) {
+                final int sign = (lagna - 1 + bhava - 1) % 12 + 1;
+                if (8 != sign && 11 != sign) continue;      // Vrischika / Kumbha
+
+                final String want = theirs.get(bhava == 1 ? "AL" : bhava == 12 ? "UL" : "A" + bhava);
+                final String byPrimary = arudhaUnder(ours, sign, 8 == sign ? "MA" : "SA");
+                final String byNode = arudhaUnder(ours, sign, 8 == sign ? "KE" : "RA");
+
+                total++;
+                if (!want.equals(byPrimary)) primaryWrong++;
+                if (!want.equals(byNode)) nodeWrong++;
+                if (byPrimary.equals(byNode)) both++;
+
+                assertTrue(want.equals(byPrimary) || want.equals(byNode), year + " bhava " + bhava
+                        + ": JHora's answer is neither co-lord's - the rule itself must be wrong");
+            }
+        }
+
+        assertEquals(2 * ALL.length, total, "one Scorpio and one Aquarius bhava per chart");
+        assertTrue(primaryWrong > 0, "the primary lord alone would do, and the cascade is pointless");
+        assertTrue(nodeWrong > 0, "the node alone would do, and the cascade is pointless");
+        assertTrue(both > 0, "some pairs stand in the same sign, where the choice cannot matter");
+    }
+
+    /** the arudha of a bhava, computed with a named graha forced as its lord */
+    private static String arudhaUnder(final KundaliText ours, final int sign, final String lord) {
+        final int at = ERasi.byName(ours.row(lord).rasi).fid();
+
+        final int steps = (at - sign + 12) % 12 + 1;
+        final int plain = (at - 1 + steps - 1) % 12 + 1;
+        final int pada = (plain == sign || plain == (sign - 1 + 6) % 12 + 1)
+                ? (plain - 1 + 9) % 12 + 1 : plain;
+
+        return ERasi.byUid(pada).label();
+    }
+
+    /**
+     * <b>The last rung of the cascade runs opposite to the way it is usually stated</b>, and these
+     * are the two charts that say so.
+     * <p>
+     * When every earlier rung ties, the classical rule is "the graha further <i>advanced</i>
+     * through its rasi" - which is what {@code maitreya8} and {@code PyJHora} both implement.
+     * Jagannatha Hora resolves both of the cases below the other way, in favour of the <b>less</b>
+     * advanced. Two observations is thin support, so they are pinned here by name: a third chart
+     * that reached this rung would either confirm the reading or overturn it, and either way it
+     * would be visible rather than buried.
+     */
+    @Test
+    void theTwoChartsThatSettleTheLastRungOfTheCoLordCascade() {
+        requireEphemeris();
+
+        // 1800: the Aquarius bhava - Saturn at 12deg16' of Karkata, Rahu at 6deg33' of Mesha
+        assertEquals("MIT", arudhaOfSign(1800, 11), "1800: JHora takes Rahu, the less advanced");
+
+        // 2010: the Aquarius bhava - Saturn at 6deg15' of Kanya, Rahu at 22deg34' of Dhanus
+        assertEquals("MES", arudhaOfSign(2010, 11), "2010: JHora takes Saturn, the less advanced");
+    }
+
+    /** this library's arudha for whichever bhava happens to fall in that rasi */
+    private String arudhaOfSign(final int year, final int rasi) {
+        final IArudhaPadas padas = arudhaPadasOf(year);
+        final int lagna = ERasi.byName(ours(year).row("LG").rasi).fid();
+
+        return padas.rasi(EArudhaPada.byUid((rasi - lagna + 12) % 12 + 1)).label();
     }
 
     // ============================================================ the basics

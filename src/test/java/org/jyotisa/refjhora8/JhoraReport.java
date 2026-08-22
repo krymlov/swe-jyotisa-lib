@@ -202,6 +202,7 @@ public final class JhoraReport {
     private final Map<String, Map<String, Cell>> vargas = new LinkedHashMap<>();
     private final Map<String, int[]> bav = new LinkedHashMap<>();
     private final List<Chalit> chalit = new ArrayList<>();
+    private final Map<String, String> arudhas = new LinkedHashMap<>();
     private final List<String> vargaCodes = new ArrayList<>();
 
     private double ayanamsa;
@@ -256,6 +257,9 @@ public final class JhoraReport {
                 + "\u0491\u0430 \u0440\u0430\u0441\u0456-\u043a\u0430\u0440\u0442\u0438:"));
         report.parseChalit(section(text, "\u0411\u0445\u0430\u0432\u0430 "
                 + "\u0447\u0430\u043b\u0456\u0442"));                 // Bhava chalit
+        report.parseArudhas(section(text, "\u0420\u0430\u0441\u0456, "
+                + "\u0437\u0430\u0439\u043d\u044f\u0442\u0456 \u0432 "
+                + "\u0443\u0441\u0456\u0445 \u0432\u0430\u0440\u0491\u0430\u0445"));
         return report;
     }
 
@@ -431,6 +435,22 @@ public final class JhoraReport {
                 + Double.parseDouble(m.group(group + 3)) / 3600.;
     }
 
+    private static final Pattern ARUDHA =
+            Pattern.compile("^(AL|UL|A\\d{1,2})\\s+([A-Z][a-z])\\s.*$");
+
+    /**
+     * The twelve arudha padas, from the D-1 column of "Расі, зайняті в усіх варґах".
+     * <p>
+     * JHora labels the first and the twelfth by their own names - {@code AL} and {@code UL} -
+     * and the other ten by number, which is the same convention {@code EArudhaPada} uses.
+     */
+    private void parseArudhas(final String block) {
+        for (String line : block.split("\\R")) {
+            final Matcher m = ARUDHA.matcher(line.trim());
+            if (m.matches()) arudhas.put(m.group(1), SIGNS.get(m.group(2)));
+        }
+    }
+
     static int signIndex(final String rasi) {
         int index = 0;
         for (String code : SIGNS.values()) {
@@ -446,6 +466,7 @@ public final class JhoraReport {
     public Map<String, Map<String, Cell>> vargas() { return Collections.unmodifiableMap(vargas); }
     public Map<String, int[]> bav() { return Collections.unmodifiableMap(bav); }
     public List<Chalit> chalit() { return Collections.unmodifiableList(chalit); }
+    public Map<String, String> arudhas() { return Collections.unmodifiableMap(arudhas); }
     public List<String> vargaCodes() { return Collections.unmodifiableList(vargaCodes); }
 
     public double ayanamsa() { return ayanamsa; }

@@ -1,0 +1,168 @@
+== org.jyotisa.arudha.ArudhaPadaA1 | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A1 | A1 | 1 | 1 | 0 | 0.00000000
+last | AL | A1 | 1 | 1 | 1 | 0.00000000
+following[0] | A1 | A1 | 1 | 1 | 0 | 0.00000000
+following[1] | AL | A1 | 1 | 1 | 1 | 0.00000000
+previous[0] | AL | A1 | 1 | 1 | 1 | 0.00000000
+previous[1] | A1 | A1 | 1 | 1 | 0 | 0.00000000
+follow(+0) | A1 | A1 | 1 | 1 | 0 | 0.00000000
+follow(+1) | AL | A1 | 1 | 1 | 1 | 0.00000000
+follow(-0) | A1 | A1 | 1 | 1 | 0 | 0.00000000
+follow(-1) | AL | A1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA10 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A10 | A10 | 10 | 10 | 0 | 0.00000000
+last | A10 | A10 | 10 | 10 | 0 | 0.00000000
+following[0] | A10 | A10 | 10 | 10 | 0 | 0.00000000
+previous[0] | A10 | A10 | 10 | 10 | 0 | 0.00000000
+follow(+0) | A10 | A10 | 10 | 10 | 0 | 0.00000000
+follow(-0) | A10 | A10 | 10 | 10 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA11 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A11 | A11 | 11 | 11 | 0 | 0.00000000
+last | A11 | A11 | 11 | 11 | 0 | 0.00000000
+following[0] | A11 | A11 | 11 | 11 | 0 | 0.00000000
+previous[0] | A11 | A11 | 11 | 11 | 0 | 0.00000000
+follow(+0) | A11 | A11 | 11 | 11 | 0 | 0.00000000
+follow(-0) | A11 | A11 | 11 | 11 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA12 | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A12 | A12 | 12 | 12 | 0 | 0.00000000
+last | UL | A12 | 12 | 12 | 1 | 0.00000000
+following[0] | A12 | A12 | 12 | 12 | 0 | 0.00000000
+following[1] | UL | A12 | 12 | 12 | 1 | 0.00000000
+previous[0] | UL | A12 | 12 | 12 | 1 | 0.00000000
+previous[1] | A12 | A12 | 12 | 12 | 0 | 0.00000000
+follow(+0) | A12 | A12 | 12 | 12 | 0 | 0.00000000
+follow(+1) | UL | A12 | 12 | 12 | 1 | 0.00000000
+follow(-0) | A12 | A12 | 12 | 12 | 0 | 0.00000000
+follow(-1) | UL | A12 | 12 | 12 | 1 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA2 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A2 | A2 | 2 | 2 | 0 | 0.00000000
+last | A2 | A2 | 2 | 2 | 0 | 0.00000000
+following[0] | A2 | A2 | 2 | 2 | 0 | 0.00000000
+previous[0] | A2 | A2 | 2 | 2 | 0 | 0.00000000
+follow(+0) | A2 | A2 | 2 | 2 | 0 | 0.00000000
+follow(-0) | A2 | A2 | 2 | 2 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA3 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A3 | A3 | 3 | 3 | 0 | 0.00000000
+last | A3 | A3 | 3 | 3 | 0 | 0.00000000
+following[0] | A3 | A3 | 3 | 3 | 0 | 0.00000000
+previous[0] | A3 | A3 | 3 | 3 | 0 | 0.00000000
+follow(+0) | A3 | A3 | 3 | 3 | 0 | 0.00000000
+follow(-0) | A3 | A3 | 3 | 3 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA4 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A4 | A4 | 4 | 4 | 0 | 0.00000000
+last | A4 | A4 | 4 | 4 | 0 | 0.00000000
+following[0] | A4 | A4 | 4 | 4 | 0 | 0.00000000
+previous[0] | A4 | A4 | 4 | 4 | 0 | 0.00000000
+follow(+0) | A4 | A4 | 4 | 4 | 0 | 0.00000000
+follow(-0) | A4 | A4 | 4 | 4 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA5 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A5 | A5 | 5 | 5 | 0 | 0.00000000
+last | A5 | A5 | 5 | 5 | 0 | 0.00000000
+following[0] | A5 | A5 | 5 | 5 | 0 | 0.00000000
+previous[0] | A5 | A5 | 5 | 5 | 0 | 0.00000000
+follow(+0) | A5 | A5 | 5 | 5 | 0 | 0.00000000
+follow(-0) | A5 | A5 | 5 | 5 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA6 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A6 | A6 | 6 | 6 | 0 | 0.00000000
+last | A6 | A6 | 6 | 6 | 0 | 0.00000000
+following[0] | A6 | A6 | 6 | 6 | 0 | 0.00000000
+previous[0] | A6 | A6 | 6 | 6 | 0 | 0.00000000
+follow(+0) | A6 | A6 | 6 | 6 | 0 | 0.00000000
+follow(-0) | A6 | A6 | 6 | 6 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA7 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A7 | A7 | 7 | 7 | 0 | 0.00000000
+last | A7 | A7 | 7 | 7 | 0 | 0.00000000
+following[0] | A7 | A7 | 7 | 7 | 0 | 0.00000000
+previous[0] | A7 | A7 | 7 | 7 | 0 | 0.00000000
+follow(+0) | A7 | A7 | 7 | 7 | 0 | 0.00000000
+follow(-0) | A7 | A7 | 7 | 7 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA8 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A8 | A8 | 8 | 8 | 0 | 0.00000000
+last | A8 | A8 | 8 | 8 | 0 | 0.00000000
+following[0] | A8 | A8 | 8 | 8 | 0 | 0.00000000
+previous[0] | A8 | A8 | 8 | 8 | 0 | 0.00000000
+follow(+0) | A8 | A8 | 8 | 8 | 0 | 0.00000000
+follow(-0) | A8 | A8 | 8 | 8 | 0 | 0.00000000
+
+== org.jyotisa.arudha.ArudhaPadaA9 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A9 | A9 | 9 | 9 | 0 | 0.00000000
+last | A9 | A9 | 9 | 9 | 0 | 0.00000000
+following[0] | A9 | A9 | 9 | 9 | 0 | 0.00000000
+previous[0] | A9 | A9 | 9 | 9 | 0 | 0.00000000
+follow(+0) | A9 | A9 | 9 | 9 | 0 | 0.00000000
+follow(-0) | A9 | A9 | 9 | 9 | 0 | 0.00000000
+
+== org.jyotisa.arudha.EArudhaPada | 13 constants
+-- step | name | code | fid | uid | ordinal | length
+first | A1 | A1 | 1 | 1 | 1 | 0.00000000
+last | A12 | A12 | 12 | 12 | 12 | 0.00000000
+following[0] | A1 | A1 | 1 | 1 | 1 | 0.00000000
+following[1] | A2 | A2 | 2 | 2 | 2 | 0.00000000
+following[2] | A3 | A3 | 3 | 3 | 3 | 0.00000000
+following[3] | A4 | A4 | 4 | 4 | 4 | 0.00000000
+following[4] | A5 | A5 | 5 | 5 | 5 | 0.00000000
+following[5] | A6 | A6 | 6 | 6 | 6 | 0.00000000
+following[6] | A7 | A7 | 7 | 7 | 7 | 0.00000000
+following[7] | A8 | A8 | 8 | 8 | 8 | 0.00000000
+following[8] | A9 | A9 | 9 | 9 | 9 | 0.00000000
+following[9] | A10 | A10 | 10 | 10 | 10 | 0.00000000
+following[10] | A11 | A11 | 11 | 11 | 11 | 0.00000000
+following[11] | A12 | A12 | 12 | 12 | 12 | 0.00000000
+previous[0] | A12 | A12 | 12 | 12 | 12 | 0.00000000
+previous[1] | A11 | A11 | 11 | 11 | 11 | 0.00000000
+previous[2] | A10 | A10 | 10 | 10 | 10 | 0.00000000
+previous[3] | A9 | A9 | 9 | 9 | 9 | 0.00000000
+previous[4] | A8 | A8 | 8 | 8 | 8 | 0.00000000
+previous[5] | A7 | A7 | 7 | 7 | 7 | 0.00000000
+previous[6] | A6 | A6 | 6 | 6 | 6 | 0.00000000
+previous[7] | A5 | A5 | 5 | 5 | 5 | 0.00000000
+previous[8] | A4 | A4 | 4 | 4 | 4 | 0.00000000
+previous[9] | A3 | A3 | 3 | 3 | 3 | 0.00000000
+previous[10] | A2 | A2 | 2 | 2 | 2 | 0.00000000
+previous[11] | A1 | A1 | 1 | 1 | 1 | 0.00000000
+follow(+0) | A1 | A1 | 1 | 1 | 1 | 0.00000000
+follow(+1) | A2 | A2 | 2 | 2 | 2 | 0.00000000
+follow(+2) | A3 | A3 | 3 | 3 | 3 | 0.00000000
+follow(+3) | A4 | A4 | 4 | 4 | 4 | 0.00000000
+follow(+4) | A5 | A5 | 5 | 5 | 5 | 0.00000000
+follow(+5) | A6 | A6 | 6 | 6 | 6 | 0.00000000
+follow(+6) | A7 | A7 | 7 | 7 | 7 | 0.00000000
+follow(+7) | A8 | A8 | 8 | 8 | 8 | 0.00000000
+follow(+8) | A9 | A9 | 9 | 9 | 9 | 0.00000000
+follow(+9) | A10 | A10 | 10 | 10 | 10 | 0.00000000
+follow(+10) | A11 | A11 | 11 | 11 | 11 | 0.00000000
+follow(+11) | A12 | A12 | 12 | 12 | 12 | 0.00000000
+follow(-0) | A1 | A1 | 1 | 1 | 1 | 0.00000000
+follow(-1) | A12 | A12 | 12 | 12 | 12 | 0.00000000
+follow(-2) | A11 | A11 | 11 | 11 | 11 | 0.00000000
+follow(-3) | A10 | A10 | 10 | 10 | 10 | 0.00000000
+follow(-4) | A9 | A9 | 9 | 9 | 9 | 0.00000000
+follow(-5) | A8 | A8 | 8 | 8 | 8 | 0.00000000
+follow(-6) | A7 | A7 | 7 | 7 | 7 | 0.00000000
+follow(-7) | A6 | A6 | 6 | 6 | 6 | 0.00000000
+follow(-8) | A5 | A5 | 5 | 5 | 5 | 0.00000000
+follow(-9) | A4 | A4 | 4 | 4 | 4 | 0.00000000
+follow(-10) | A3 | A3 | 3 | 3 | 3 | 0.00000000
+follow(-11) | A2 | A2 | 2 | 2 | 2 | 0.00000000
