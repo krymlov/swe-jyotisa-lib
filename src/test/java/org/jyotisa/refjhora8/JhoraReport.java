@@ -203,6 +203,7 @@ public final class JhoraReport {
     private final Map<String, int[]> bav = new LinkedHashMap<>();
     private final List<Chalit> chalit = new ArrayList<>();
     private final Map<String, String> arudhas = new LinkedHashMap<>();
+    private final Map<String, String> avasthas = new LinkedHashMap<>();
     private final List<String> vargaCodes = new ArrayList<>();
 
     private double ayanamsa;
@@ -257,6 +258,8 @@ public final class JhoraReport {
                 + "\u0491\u0430 \u0440\u0430\u0441\u0456-\u043a\u0430\u0440\u0442\u0438:"));
         report.parseChalit(section(text, "\u0411\u0445\u0430\u0432\u0430 "
                 + "\u0447\u0430\u043b\u0456\u0442"));                 // Bhava chalit
+        report.parseAvasthas(section(text, "\u041e\u0441\u043d\u043e\u0432\u043d\u0456 "
+                + "\u0430\u0432\u0430\u0441\u0442\u0445\u0438"));   // Osnovni avasthy
         report.parseArudhas(section(text, "\u0420\u0430\u0441\u0456, "
                 + "\u0437\u0430\u0439\u043d\u044f\u0442\u0456 \u0432 "
                 + "\u0443\u0441\u0456\u0445 \u0432\u0430\u0440\u0491\u0430\u0445"));
@@ -451,6 +454,36 @@ public final class JhoraReport {
         }
     }
 
+    /** the age avastha JHora prints first, in this library's own codes */
+    static final Map<String, String> AVASTHAS = new LinkedHashMap<>();
+
+    static {
+        AVASTHAS.put("\u0411\u0430\u043b\u0430", "AV1");                       // Bala
+        AVASTHAS.put("\u041a\u0443\u043c\u0430\u0440\u0430", "AV2");         // Kumara
+        AVASTHAS.put("\u042e\u0432\u0430", "AV3");                              // Yuva
+        AVASTHAS.put("\u0412\u0440\u0456\u0434\u0445\u0430", "AV4");         // Vriddha
+        AVASTHAS.put("\u041c\u0440\u0456\u0442\u0430", "AV5");                // Mrita
+    }
+
+    /**
+     * The first column of "Основні авастхи" - the age avastha of each graha.
+     * <p>
+     * JHora prints it as a Sanskrit name followed by a gloss in brackets, so only the leading word
+     * is read. The other two columns of that block - wakefulness and mood - are not parsed:
+     * wakefulness needs the dignity and mood is a <i>set</i> per graha, and neither is implemented.
+     */
+    private void parseAvasthas(final String block) {
+        for (String line : block.split("\\R")) {
+            final Matcher m = Pattern.compile("^(\\S+)\\s+(\\S+)\\s").matcher(line.trim());
+            if (!m.find()) continue;
+
+            final String code = OBJECTS.get(strip(m.group(1)));
+            final String avastha = AVASTHAS.get(m.group(2));
+
+            if (null != code && null != avastha) avasthas.put(code, avastha);
+        }
+    }
+
     static int signIndex(final String rasi) {
         int index = 0;
         for (String code : SIGNS.values()) {
@@ -467,6 +500,7 @@ public final class JhoraReport {
     public Map<String, int[]> bav() { return Collections.unmodifiableMap(bav); }
     public List<Chalit> chalit() { return Collections.unmodifiableList(chalit); }
     public Map<String, String> arudhas() { return Collections.unmodifiableMap(arudhas); }
+    public Map<String, String> avasthas() { return Collections.unmodifiableMap(avasthas); }
     public List<String> vargaCodes() { return Collections.unmodifiableList(vargaCodes); }
 
     public double ayanamsa() { return ayanamsa; }

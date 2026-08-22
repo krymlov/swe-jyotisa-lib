@@ -5,6 +5,7 @@
  */
 package org.jyotisa.app;
 
+import org.jyotisa.avastha.EAvastha;
 import org.jyotisa.arudha.ArudhaPadas;
 import org.jyotisa.api.arudha.IArudhaPadas;
 import org.jyotisa.bhava.BhavaChalit;
@@ -19,7 +20,6 @@ import org.jyotisa.api.graha.IGrahas;
 import org.jyotisa.api.grahan.IGrahan;
 import org.jyotisa.api.karaka.ICharaKaraka;
 import org.jyotisa.api.karana.IKarana;
-import org.jyotisa.api.lagna.ILagna;
 import org.jyotisa.api.lagna.ILagnaEntity;
 import org.jyotisa.api.lagna.ILagnaEnum;
 import org.jyotisa.api.lagna.ILagnas;
@@ -89,7 +89,7 @@ public class Kundali implements IKundali {
     protected final ISweObjects sweObjects;
 
     protected IAshtakavarga ashtakavarga;
-    protected IBhavaChalit chalit;
+    protected IBhavaChalit bhavaChalit;
     protected IArudhaPadas arudhaPadas;
     protected IKundaliFields fields;
     protected IPanchanga panchanga;
@@ -168,9 +168,9 @@ public class Kundali implements IKundali {
     }
 
     @Override
-    public IBhavaChalit chalit() {
-        if (null != chalit) return chalit;
-        return chalit = new BhavaChalit(sweObjects);
+    public IBhavaChalit bhavaChalit() {
+        if (null != bhavaChalit) return bhavaChalit;
+        return bhavaChalit = new BhavaChalit(sweObjects);
     }
 
     @Override
@@ -299,14 +299,15 @@ public class Kundali implements IKundali {
             double mrityuBhaga = graha.inMrityuBhaga(degree);
 
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s -> Naksatra= %3s|%2s (%-5s%%) " +
-                "-> Navamsa= %3s|%2s -> Bhava= %-3s -> Dignity= %-3s -> %3s -> %-2s\n",
+                "-> Navamsa= %3s|%2s -> Bhava= %-3s -> Dignity= %-3s -> %3s -> %-2s -> %s\n",
                     strGraha, toDMSms(degree), rasi == null ? "?" : rasi.label(),
                     graha.progressInRasi(degree), toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
                     graha.progressInNaksatra(degree), pada.navamsa().label(), pada.navamsa().lord().code(),
                     EBhava.byUid(grahaInBhava[i]),
                     (null != dignity ? grhs[i].dignity() : NIL_CD),
                     (null == karaka ? "   " : karaka.code()),
-                    (d0 == mrityuBhaga ? "  " : "!" + Math.round(mrityuBhaga) + "%")
+                    (d0 == mrityuBhaga ? "  " : "!" + Math.round(mrityuBhaga) + "%"),
+                    EAvastha.byLongitude(degree).code()
                 )
             );
         }
@@ -354,7 +355,7 @@ public class Kundali implements IKundali {
 
         builder.append('\n').append(fields()).append('\n');
         builder.append('\n').append(ashtakavarga()).append('\n');
-        builder.append(chalit()).append('\n');
+        builder.append(bhavaChalit()).append('\n');
         builder.append(arudhaPadas()).append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();

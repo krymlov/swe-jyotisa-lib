@@ -1,19 +1,19 @@
 Ayanamsa: LAHIRI|23°07'18.71", Event Date: 1947–08–15 10:30:00 UTC:+00:00:00, Location: 81°49'48"E / 25°57'00"N
 Housesys: WHOLE_SIGN, Naksatra: PUS(80.46%), Tithi: K14(78.55%), Vaara: SKVR, Nitya Yoga: VYAT(70.23%), Karana: SKN(57.11%)
 Bhrigu Bindu: 69°51'06.98", Bhava: B7, Rasi: MIT, Naksatra: ARD
-LG   = 256°22'36.50" -> Rasi= DHN (54.59%) | 16°22'36.50" -> Naksatra= PSH1|SK (22.83%) -> Navamsa= SIM|SY -> Bhava= B1  -> Dignity= NIL ->     ->   
-SY   = 118°38'07.16" -> Rasi= KAR (95.45%) | 28°38'07.16" -> Naksatra= ASL4|BU (89.76%) -> Navamsa= MEE|GU -> Bhava= B8  -> Dignity= MIR ->  AK ->   
-CH   = 104°03'42.47" -> Rasi= KAR (46.87%) | 14°03'42.47" -> Naksatra= PUS4|SA (80.46%) -> Navamsa= VRC|MA -> Bhava= B8  -> Dignity= SWT ->  GK ->   
-MA   = 67°54'06.08"  -> Rasi= MIT (26.34%) | 07°54'06.08" -> Naksatra= ARD1|RA (9.26 %) -> Navamsa= DHN|GU -> Bhava= B7  -> Dignity= SRU ->  DK ->   
-BU   = 104°54'03.44" -> Rasi= KAR (49.67%) | 14°54'03.44" -> Naksatra= PUS4|SA (86.76%) -> Navamsa= VRC|MA -> Bhava= B8  -> Dignity= SRU ->  PK ->   
-GU   = 205°56'16.24" -> Rasi= TUL (86.46%) | 25°56'16.24" -> Naksatra= VIS2|GU (44.53%) -> Navamsa= VRB|SK -> Bhava= B11 -> Dignity= SRU -> AmK ->   
-SK   = 113°23'48.92" -> Rasi= KAR (77.99%) | 23°23'48.92" -> Naksatra= ASL3|BU (50.48%) -> Navamsa= KUM|SA -> Bhava= B8  -> Dignity= SRU ->  BK ->   
-SA   = 110°33'56.57" -> Rasi= KAR (68.55%) | 20°33'56.57" -> Naksatra= ASL2|BU (29.24%) -> Navamsa= MAK|SA -> Bhava= B8  -> Dignity= SRU ->  MK ->   
-(RA) = 35°38'31.49"  -> Rasi= VRB (81.19%) | 05°38'31.49" -> Naksatra= KRI3|SY (32.68%) -> Navamsa= KUM|SA -> Bhava= B6  -> Dignity= NIL ->     ->   
-(KE) = 215°38'31.49" -> Rasi= VRC (81.19%) | 05°38'31.49" -> Naksatra= ANU1|SA (82.68%) -> Navamsa= SIM|SY -> Bhava= B12 -> Dignity= SWT ->     ->   
-SW   = 62°05'00.72"  -> Rasi= MIT (6.95 %) | 02°05'00.72" -> Naksatra= MRG3|MA (65.63%) -> Navamsa= TUL|SK -> Bhava= B7  -> Dignity= NIL ->     ->   
-SM   = 165°43'49.39" -> Rasi= KAN (52.43%) | 15°43'49.39" -> Naksatra= HAS2|CH (42.98%) -> Navamsa= VRB|SK -> Bhava= B10 -> Dignity= NIL ->     ->   
-TE   = 110°08'03.42" -> Rasi= KAR (67.11%) | 20°08'03.42" -> Naksatra= ASL2|BU (26.01%) -> Navamsa= MAK|SA -> Bhava= B8  -> Dignity= NIL ->     ->   
+LG   = 256°22'36.50" -> Rasi= DHN (54.59%) | 16°22'36.50" -> Naksatra= PSH1|SK (22.83%) -> Navamsa= SIM|SY -> Bhava= B1  -> Dignity= NIL ->     ->    -> AV3
+SY   = 118°38'07.16" -> Rasi= KAR (95.45%) | 28°38'07.16" -> Naksatra= ASL4|BU (89.76%) -> Navamsa= MEE|GU -> Bhava= B8  -> Dignity= MIR ->  AK ->    -> AV1
+CH   = 104°03'42.47" -> Rasi= KAR (46.87%) | 14°03'42.47" -> Naksatra= PUS4|SA (80.46%) -> Navamsa= VRC|MA -> Bhava= B8  -> Dignity= SWT ->  GK ->    -> AV3
+MA   = 67°54'06.08"  -> Rasi= MIT (26.34%) | 07°54'06.08" -> Naksatra= ARD1|RA (9.26 %) -> Navamsa= DHN|GU -> Bhava= B7  -> Dignity= SRU ->  DK ->    -> AV2
+BU   = 104°54'03.44" -> Rasi= KAR (49.67%) | 14°54'03.44" -> Naksatra= PUS4|SA (86.76%) -> Navamsa= VRC|MA -> Bhava= B8  -> Dignity= SRU ->  PK ->    -> AV3
+GU   = 205°56'16.24" -> Rasi= TUL (86.46%) | 25°56'16.24" -> Naksatra= VIS2|GU (44.53%) -> Navamsa= VRB|SK -> Bhava= B11 -> Dignity= SRU -> AmK ->    -> AV5
+SK   = 113°23'48.92" -> Rasi= KAR (77.99%) | 23°23'48.92" -> Naksatra= ASL3|BU (50.48%) -> Navamsa= KUM|SA -> Bhava= B8  -> Dignity= SRU ->  BK ->    -> AV2
+SA   = 110°33'56.57" -> Rasi= KAR (68.55%) | 20°33'56.57" -> Naksatra= ASL2|BU (29.24%) -> Navamsa= MAK|SA -> Bhava= B8  -> Dignity= SRU ->  MK ->    -> AV2
+(RA) = 35°38'31.49"  -> Rasi= VRB (81.19%) | 05°38'31.49" -> Naksatra= KRI3|SY (32.68%) -> Navamsa= KUM|SA -> Bhava= B6  -> Dignity= NIL ->     ->    -> AV5
+(KE) = 215°38'31.49" -> Rasi= VRC (81.19%) | 05°38'31.49" -> Naksatra= ANU1|SA (82.68%) -> Navamsa= SIM|SY -> Bhava= B12 -> Dignity= SWT ->     ->    -> AV5
+SW   = 62°05'00.72"  -> Rasi= MIT (6.95 %) | 02°05'00.72" -> Naksatra= MRG3|MA (65.63%) -> Navamsa= TUL|SK -> Bhava= B7  -> Dignity= NIL ->     ->    -> AV1
+SM   = 165°43'49.39" -> Rasi= KAN (52.43%) | 15°43'49.39" -> Naksatra= HAS2|CH (42.98%) -> Navamsa= VRB|SK -> Bhava= B10 -> Dignity= NIL ->     ->    -> AV3
+TE   = 110°08'03.42" -> Rasi= KAR (67.11%) | 20°08'03.42" -> Naksatra= ASL2|BU (26.01%) -> Navamsa= MAK|SA -> Bhava= B8  -> Dignity= NIL ->     ->    -> AV2
 DHU  = 251°58'07.16" -> Rasi= DHN (39.9 %) | 11°58'07.16" -> Naksatra= MUL4|KE (89.76%) -> Navamsa= KAR|CH -> Bhava= B1 
 VYA  = 108°01'52.84" -> Rasi= KAR (60.1 %) | 18°01'52.84" -> Naksatra= ASL1|BU (10.24%) -> Navamsa= DHN|GU -> Bhava= B8 
 PAR  = 288°01'52.84" -> Rasi= MAK (60.1 %) | 18°01'52.84" -> Naksatra= SHR3|CH (60.24%) -> Navamsa= MIT|BU -> Bhava= B2 

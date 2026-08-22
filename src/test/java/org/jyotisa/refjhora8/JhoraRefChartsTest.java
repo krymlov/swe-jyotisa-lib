@@ -16,6 +16,7 @@ import org.jyotisa.api.arudha.IArudhaPada;
 import org.jyotisa.api.arudha.IArudhaPadas;
 import org.jyotisa.arudha.EArudhaPada;
 import org.jyotisa.rasi.ERasi;
+import org.jyotisa.avastha.EAvastha;
 import org.jyotisa.app.Kundali;
 import org.jyotisa.refcharts.JhdChart;
 import org.jyotisa.refcharts.KundaliText;
@@ -617,7 +618,7 @@ class JhoraRefChartsTest {
                         .trueNode(true).build(), false);
         partial.buildSunMoon();
 
-        final IBhavaChalit chalit = new Kundali(KUNDALI_7_KARAKAS, partial).chalit();
+        final IBhavaChalit chalit = new Kundali(KUNDALI_7_KARAKAS, partial).bhavaChalit();
 
         assertFalse(chalit.isCalculated(), "no ascendant, no chalit");
         assertTrue(chalit.bhava(120.).isNil(), "and no bhava to answer with");
@@ -630,7 +631,7 @@ class JhoraRefChartsTest {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph(),
                 ((SweJulianDate) chart.julianDate()).calendar(SE_GREG_CAL), chart.geoLocation(),
                 new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
-                        .trueNode(true).build()).completeBuild()).chalit();
+                        .trueNode(true).build()).completeBuild()).bhavaChalit();
     }
 
     // ============================================================ arudha padas
@@ -839,6 +840,60 @@ class JhoraRefChartsTest {
         final int lagna = ERasi.byName(ours(year).row("LG").rasi).fid();
 
         return padas.rasi(EArudhaPada.byUid((rasi - lagna + 12) % 12 + 1)).label();
+    }
+
+    // ============================================================ avasthas
+
+    /**
+     * <b>The age avastha of every graha</b> - JHora's first "Основні авастхи" column - at all
+     * seventeen epochs.
+     * <p>
+     * Five parts of 6&deg; to a sign, forward through an odd sign and backward through an even
+     * one. A 6&deg; band is coarse enough that delta t cannot move a graha across it at these
+     * epochs, so this reaches the ancient charts as well as the modern ones.
+     * <p>
+     * Only the age column is compared. JHora prints three more families beside it - wakefulness,
+     * mood and the twelve-fold shayanadi activity - and none of the three is implemented here:
+     * the mood is a <i>set</i> per graha rather than one value, and the other two need the
+     * dignity and a further computation.
+     */
+    @ParameterizedTest(name = "ref{0} avasthas")
+    @ValueSource(ints = {0, 100, 500, 1000, 1500, 1700, 1800, 1900,
+            1970, 1990, 2000, 2010, 2030, 2050, 2070, 2090, 2100})
+    void avasthasAgreeWithJagannathaHora(final int year) {
+        requireEphemeris();
+
+        final Map<String, String> theirs = JhoraReport.read(year).avasthas();
+        final KundaliText ours = ours(year);
+
+        assertEquals(9, theirs.size(), year + " should list the seven grahas and both nodes");
+
+        for (Map.Entry<String, String> entry : theirs.entrySet()) {
+            final double longitude = ours.row(entry.getKey()).longitude;
+
+            assertEquals(entry.getValue(), EAvastha.byLongitude(longitude).code(),
+                    year + " " + entry.getKey() + " at " + longitude);
+        }
+    }
+
+    /**
+     * The reversal is what makes this more than a fifth-of-a-sign lookup, so it is pinned
+     * directly: the same degree gives opposite avasthas in an odd and an even sign.
+     */
+    @Test
+    void theAvasthaRunsBackwardThroughAnEvenSign() {
+        // Mesha is the first sign and so an odd one, Vrishabha the second and even
+        assertEquals("AV1", EAvastha.byLongitude(1.).code(), "the start of an odd sign is the infant");
+        assertEquals("AV5", EAvastha.byLongitude(29.).code(), "and its end is the dead");
+
+        assertEquals("AV5", EAvastha.byLongitude(31.).code(), "the start of an even sign is the dead");
+        assertEquals("AV1", EAvastha.byLongitude(59.).code(), "and its end is the infant");
+
+        // the middle band is the same either way, being the middle
+        assertEquals("AV3", EAvastha.byLongitude(15.).code());
+        assertEquals("AV3", EAvastha.byLongitude(45.).code());
+
+        assertTrue(EAvastha.byLongitude(Double.NaN).isNil(), "an unknown longitude names no avastha");
     }
 
     // ============================================================ the basics
