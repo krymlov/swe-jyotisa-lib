@@ -42,7 +42,7 @@ import static org.swisseph.utils.IModuloUtils.fix360;
  * shares no code with the library:
  * <pre>
  * D1   the sign itself
- * D2   odd sign: 1st half Leo, 2nd half Cancer; even sign: reversed
+ * D2   NOT classical - see jhoraHoraSign() below; this library follows Jagannatha Hora
  * D3   1st third the sign, 2nd the 5th from it, 3rd the 9th from it
  * D4   the sign, then the 4th, 7th, 10th from it
  * D7   odd sign: from the sign; even sign: from the 7th from it
@@ -121,6 +121,41 @@ class VargaClassicalRulesTest {
     }
 
     /**
+     * The degree a varga reports within its own sign.
+     * <p>
+     * For every division but one this is the fractional part scaled up: {@code (deg * n) % 30}.
+     * <b>D-2 is the exception since 2026-08-22</b>, when the library adopted Jagannatha Hora's
+     * hora - that scheme runs an even sign <i>backward</i>, so the half is measured from the end
+     * of the sign rather than from its start and the reported degree is the mirror image of the
+     * classical one.
+     */
+    static double expectedVargaDegree(final int n, final int sign, final double deg) {
+        if (2 == n) {
+            final double within = oddSign(sign) ? deg : (30. - deg);
+            return ((sign * 30. + within) * 2.) % 30.;
+        }
+        return (deg * n) % 30.;
+    }
+
+    /**
+     * D-2 is the one varga this library does <b>not</b> take from Brihat Parashara Hora Shastra.
+     * <p>
+     * The classical hora would be
+     * {@code oddSign(sign) ? (part == 0 ? 4 : 3) : (part == 0 ? 3 : 4)} - Leo and Cancer and
+     * nothing else. Since 2026-08-22 the library follows Jagannatha Hora's "D-2 (US)" instead, on
+     * the author's decision, so that its chart matches the reference program. That rule runs the
+     * hora forward through an odd sign and backward through an even one and lays the doubled
+     * position on the whole zodiac.
+     * <p>
+     * Written out here independently of {@code VargaD2}, like every other rule in this file, so
+     * the two are still checked against each other rather than against themselves.
+     */
+    static int jhoraHoraSign(final int sign, final double deg) {
+        final double within = oddSign(sign) ? deg : (30. - deg);
+        return (int) (((sign * 30. + within) * 2.) % 360.) / 30;
+    }
+
+    /**
      * @param n    the divisor, e.g. 9 for navamsa
      * @param sign the 0-based sign of the D1 longitude
      * @param deg  the degree within that sign, [0,30)
@@ -131,7 +166,7 @@ class VargaClassicalRulesTest {
 
         switch (n) {
             case 1:  return sign;
-            case 2:  return oddSign(sign) ? (part == 0 ? 4 : 3) : (part == 0 ? 3 : 4);
+            case 2:  return jhoraHoraSign(sign, deg);
             case 3:  return (sign + 4 * part) % 12;
             case 4:  return (sign + 3 * part) % 12;
             case 7:  return ((oddSign(sign) ? sign : sign + 6) + part) % 12;
@@ -245,8 +280,9 @@ class VargaClassicalRulesTest {
             for (int i = 0; i < KundaliText.VARGA_COLUMNS.length; i++) {
                 final String graha = KundaliText.VARGA_COLUMNS[i];
                 final double lon = fix360(text.row(graha).longitude);
-                final double deg = lon - ((int) (lon / 30.)) * 30.;
-                final double expected = (deg * n) % 30.;
+                final int sign = (int) (lon / 30.);
+                final double deg = lon - sign * 30.;
+                final double expected = expectedVargaDegree(n, sign, deg);
 
                 if (Math.abs(expected - row.degrees[i]) > delta) {
                     problems.add(String.format("D%d %s: D1 deg %.6f -> expected %.6f, printed %.6f",
@@ -292,8 +328,9 @@ class VargaClassicalRulesTest {
 
             for (int i = 0; i < longitudes.length; i++) {
                 final double lon = fix360(longitudes[i]);
-                final double deg = lon - ((int) (lon / 30.)) * 30.;
-                final double expected = (deg * n) % 30.;
+                final int sign = (int) (lon / 30.);
+                final double deg = lon - sign * 30.;
+                final double expected = expectedVargaDegree(n, sign, deg);
                 // only toDMS's own rounding to the whole arc second is unaccounted for
                 final double diff = Math.abs(expected - row.degrees[i]);
 
