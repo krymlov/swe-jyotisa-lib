@@ -111,7 +111,9 @@ public enum ETithi implements ITithiEnum {
         final ETithi[] values = values();
         for (int i = 1; i <= 15; i++) {
             ITithi value = values[i].tithi().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).tithi();
     }

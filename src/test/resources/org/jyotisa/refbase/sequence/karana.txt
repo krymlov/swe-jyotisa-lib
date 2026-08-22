@@ -1,12 +1,3 @@
-== org.jyotisa.api.karana.NilKarana | 1 constants
--- step | name | code | fid | uid | ordinal | length
-first | NIL | NIL | 0 | 0 | 0 | 6.00000000
-last | NIL | NIL | 0 | 0 | 0 | 6.00000000
-following[0] | NIL | NIL | 0 | 0 | 0 | 6.00000000
-previous[0] | NIL | NIL | 0 | 0 | 0 | 6.00000000
-follow(+0) | NIL | NIL | 0 | 0 | 0 | 6.00000000
-follow(-0) | NIL | NIL | 0 | 0 | 0 | 6.00000000
-
 == org.jyotisa.karana.EKarana | 12 constants
 -- step | name | code | fid | uid | ordinal | length
 first | BAVA | KR1 | 1 | 1 | 1 | 6.00000000

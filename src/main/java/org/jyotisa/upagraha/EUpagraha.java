@@ -6,6 +6,7 @@
 
 package org.jyotisa.upagraha;
 
+import org.jyotisa.api.upagraha.NilUpagraha;
 import org.jyotisa.api.upagraha.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -16,11 +17,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.1, 2019-08
  */
 public enum EUpagraha implements IUpagrahaEnum {
-    NIL {
-        @Override public int fid() { return NIL_FID; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IUpagraha upagraha() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilUpagraha upagraha() { return NilUpagraha.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     DHUMA {@Override public IUpagrahaDhuma upagraha() { return UpagrahaDhuma.UG1; }},
     VYATIPAATA {@Override public IUpagrahaVyatipaata upagraha() { return UpagrahaVyatipaata.UG2; }},
     PARIVESHA {@Override public IUpagrahaParivesha upagraha() { return UpagrahaParivesha.UG3; }},
@@ -78,7 +75,9 @@ public enum EUpagraha implements IUpagrahaEnum {
         final EUpagraha[] values = values();
         for (int i = 1; i < values.length; i++) {
             IUpagraha value = values[i].upagraha().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).upagraha();
     }

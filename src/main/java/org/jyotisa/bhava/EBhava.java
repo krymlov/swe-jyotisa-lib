@@ -6,6 +6,7 @@
 
 package org.jyotisa.bhava;
 
+import org.jyotisa.api.bhava.NilBhava;
 import org.jyotisa.api.bhava.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -17,11 +18,7 @@ import org.swisseph.app.SweEnumIterator;
  *
  */
 public enum EBhava implements IBhavaEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IBhava bhava() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilBhava bhava() { return NilBhava.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     TANU {@Override public IBhavaTanu bhava() { return BhavaTanu.B1; }},
     DHANA {@Override public IBhavaDhana bhava() { return BhavaDhana.B2; }},
     BHRATRI {@Override public IBhavaBhratri bhava() { return BhavaBhratri.B3; }},
@@ -79,7 +76,9 @@ public enum EBhava implements IBhavaEnum {
         final EBhava[] values = values();
         for (int i = 1; i < values.length; i++) {
             IBhava value = values[i].bhava().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).bhava();
     }

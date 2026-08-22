@@ -6,9 +6,11 @@
 
 package org.jyotisa.naksatra;
 
+import org.jyotisa.api.naksatra.NilNaksatra;
 import org.jyotisa.api.naksatra.INaksatra;
 import org.jyotisa.api.naksatra.INaksatraPada;
 import org.jyotisa.api.rasi.IRasi;
+import org.jyotisa.api.rasi.NilRasi;
 import org.jyotisa.rasi.ERasi;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -48,7 +50,11 @@ public enum ENaksatraPada implements INaksatraPada {
     NIL {
         @Override public int fid() { return 0; }
         @Override public String code() { return NIL_CD; }
-        @Override public INaksatra naksatra() {return null; }
+        @Override public INaksatra naksatra() { return NilNaksatra.NIL; }
+        // rasi() is computed from the ordinal, and for the reserved member that arithmetic
+        // lands on a real sign - (0 - 1) * 3deg20' wraps to 356.67, i.e. Meena. A non-pada
+        // has no rasi, so it is answered as such rather than by the formula.
+        @Override public NilRasi rasi() { return NilRasi.NIL; }
     }, // 0  Reserved
     ASH1,    //   1 -> [00°00'00" - 03°20'00") == [0.0 - 3.3333333333333335)
     ASH2,    //   2 -> [03°20'00" - 06°40'00") == [3.3333333333333335 - 6.666666666666667)

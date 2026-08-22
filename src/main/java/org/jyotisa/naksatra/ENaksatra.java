@@ -142,7 +142,9 @@ public enum ENaksatra implements INaksatraEnum {
         final ENaksatra[] values = values();
         for (int i = 1; i < values.length; i++) {
             INaksatra value = values[i].naksatra().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).naksatra();
     }

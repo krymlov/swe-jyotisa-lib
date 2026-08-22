@@ -22,11 +22,7 @@ import static org.jyotisa.maasa.IMaasa.*;
  * @version 1.0, 2021-12
  */
 public enum EMaasa implements IMaasaEnum {
-    NIL {
-        @Override public int fid() { return NIL_FID; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IMaasa maasa() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilMaasa maasa() { return NilMaasa.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     MADHUSUDANA {
         @Override public int fid() { return 1; }
         @Override public String code() { return APRMAY_CD; }

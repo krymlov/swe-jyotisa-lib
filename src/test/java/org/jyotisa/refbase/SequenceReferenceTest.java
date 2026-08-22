@@ -72,6 +72,9 @@ class SequenceReferenceTest {
         final Map<String, List<Class<?>>> families = new LinkedHashMap<>();
 
         for (Class<?> type : implementations()) {
+            // a Nil* family is nothing but its reserved member, and NIL does not belong in a
+            // reference file - see SequenceReference#isWalkable
+            if (!SequenceReference.isWalkable(type)) continue;
             families.computeIfAbsent(familyOf(type), k -> new ArrayList<>()).add(type);
         }
 
@@ -190,7 +193,12 @@ class SequenceReferenceTest {
         assertTrue(all.contains(org.jyotisa.api.rasi.NilRasi.class),
                 "swe-jyotisa-api's Nil* sequences live in a jar and must be scanned there");
 
-        assertEquals(all.size(), families().values().stream().mapToInt(List::size).sum(),
-                "grouping into families must not lose or duplicate a class");
+        final int walkable = (int) all.stream().filter(SequenceReference::isWalkable).count();
+        assertEquals(walkable, families().values().stream().mapToInt(List::size).sum(),
+                "grouping into families must not lose or duplicate a walkable class");
+
+        assertEquals(all.size() - walkable, all.stream()
+                        .filter(t -> !SequenceReference.isWalkable(t)).count(),
+                "the only non-walkable sequences are the Nil* Null Objects");
     }
 }

@@ -6,6 +6,7 @@
 
 package org.jyotisa.tattva;
 
+import org.jyotisa.api.tattva.NilTattva;
 import org.jyotisa.api.tattva.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -16,22 +17,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.1, 2019-09
  */
 public enum ETattva implements ITattvaEnum {
-    NIL {
-        @Override
-        public int fid() {
-            return NIL_FID;
-        }
-
-        @Override
-        public String code() {
-            return NIL_CD;
-        }
-
-        @Override
-        public ITattva tattva() {
-            return null;
-        }
-    }, // 0  Reserved
+    NIL {@Override public NilTattva tattva() { return NilTattva.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     /**
      * 1. AKASHA
      */
@@ -118,7 +104,9 @@ public enum ETattva implements ITattvaEnum {
         final ETattva[] values = values();
         for (int i = 1; i < values.length; i++) {
             ITattva value = values[i].tattva().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).tattva();
     }

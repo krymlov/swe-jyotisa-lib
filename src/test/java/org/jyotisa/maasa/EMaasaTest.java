@@ -9,7 +9,8 @@ import org.apache.commons.lang3.NotImplementedException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
@@ -24,9 +25,15 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
  */
 class EMaasaTest {
 
+    /**
+     * NIL is the one member of this family that can answer, because "no month" needs no
+     * arithmetic - and since 2026-08-22 it answers {@link NilMaasa} rather than {@code null}, so
+     * that a failed {@code by*} lookup here behaves like a failed lookup anywhere else.
+     */
     @Test
-    void nil_maasaIsNull() {
-        assertNull(EMaasa.NIL.maasa());
+    void nil_maasaIsTheNullObjectRatherThanNull() {
+        assertSame(NilMaasa.NIL, EMaasa.NIL.maasa());
+        assertTrue(EMaasa.NIL.maasa().isNil());
     }
 
     @Test

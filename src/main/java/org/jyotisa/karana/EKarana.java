@@ -106,7 +106,9 @@ public enum EKarana implements IKaranaEnum {
         final EKarana[] values = values();
         for (int i = 1; i < values.length; i++) {
             IKarana value = values[i].karana().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).karana();
     }

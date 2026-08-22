@@ -6,6 +6,7 @@
 
 package org.jyotisa.varga;
 
+import org.jyotisa.api.varga.NilVarga;
 import org.jyotisa.api.varga.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -16,11 +17,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.1, 2019-08
  */
 public enum EVarga implements IVargaEnum {
-    NIL {
-        @Override public int fid() { return NIL_FID; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IVarga varga() {return null;}
-    }, // 0  Reserved
+    NIL {@Override public NilVarga varga() { return NilVarga.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     RASI {@Override public IVargaD1 varga() {return VargaD1.D1;}},
     HORA {@Override public IVargaD2 varga() {return VargaD2.D2;}},
     DREKKANA {@Override public IVargaD3 varga() {return VargaD3.D3;}},
@@ -89,7 +86,9 @@ public enum EVarga implements IVargaEnum {
         final EVarga[] values = values();
         for (int i = 1; i < values.length; i++) {
             IVarga value = values[i].varga().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).varga();
     }

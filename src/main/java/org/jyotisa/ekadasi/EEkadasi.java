@@ -6,6 +6,7 @@
 
 package org.jyotisa.ekadasi;
 
+import org.jyotisa.api.ekadasi.NilEkadasi;
 import org.jyotisa.api.ekadasi.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -16,11 +17,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.0, 2022-01
  */
 public enum EEkadasi implements IEkadasiEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IEkadasi ekadasi() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilEkadasi ekadasi() { return NilEkadasi.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     UTPANNA {@Override public IUtpannaEkadasi ekadasi() { return UtpannaEkadasi.EK1; }},
     MOKSADA {@Override public IMoksadaEkadasi ekadasi() { return MoksadaEkadasi.EK2; }},
     SAPHALA {@Override public ISaphalaEkadasi ekadasi() { return SaphalaEkadasi.EK3; }},
@@ -84,7 +81,9 @@ public enum EEkadasi implements IEkadasiEnum {
         final EEkadasi[] values = values();
         for (int i = 1; i < values.length; i++) {
             IEkadasi value = values[i].ekadasi().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).ekadasi();
     }

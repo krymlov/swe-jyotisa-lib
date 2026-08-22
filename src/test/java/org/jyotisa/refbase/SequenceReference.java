@@ -151,6 +151,21 @@ public final class SequenceReference {
      * halves of the range that the old implementation got wrong are exercised for every sequence
      * in the workspace.
      */
+    /**
+     * Whether this family is anything more than its own reserved member.
+     * <p>
+     * A {@code Nil*} class holds a single NIL constant and nothing else, so walking it would put
+     * NIL into a reference file - and NIL has no business being there. It is reserved, not a
+     * value. Such a family is skipped entirely rather than rendered as one NIL row.
+     */
+    public static boolean isWalkable(final Class<?> type) {
+        final Object[] constants = type.getEnumConstants();
+        if (null == constants || 0 == constants.length) return false;
+
+        for (Object constant : constants) if (!((ISweEnumSequence<?>) constant).isNil()) return true;
+        return false;
+    }
+
     @SuppressWarnings({"rawtypes", "unchecked"})
     public static List<String> walk(final Class<?> type) {
         final ISweEnumSequence[] constants = (ISweEnumSequence[]) type.getEnumConstants();
@@ -167,6 +182,13 @@ public final class SequenceReference {
         final ISweEnumSequence first = constants[0].first();
         final ISweEnumSequence last = constants[0].last();
         final int count = last.ordinal() - first.ordinal() + 1;
+
+        // a reserved member must not reach a reference file; if one ever does, the walk is
+        // wrong rather than the file, so this fails loudly instead of writing it out
+        if (first.isNil() || last.isNil()) {
+            throw new IllegalStateException(type.getName()
+                    + ": first()/last() answered the reserved NIL member");
+        }
 
         lines.add(render("first", first));
         lines.add(render("last", last));
@@ -199,6 +221,10 @@ public final class SequenceReference {
      * locale here renders a comma.
      */
     private static String render(final String step, final ISweEnumSequence<?> element) {
+        if (element.isNil()) {
+            throw new IllegalStateException(step + " reached the reserved NIL member");
+        }
+
         return step
                 + " | " + element.name()
                 + " | " + safe(element::code)

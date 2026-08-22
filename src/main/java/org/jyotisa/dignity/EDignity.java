@@ -7,6 +7,7 @@
 package org.jyotisa.dignity;
 
 
+import org.jyotisa.api.dignity.NilDignity;
 import org.jyotisa.api.dignity.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -19,11 +20,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.1, 2019-09
  */
 public enum EDignity implements IDignityEnum {
-    NIL {
-        @Override public int fid() { return 0; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IDignity dignity() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilDignity dignity() { return NilDignity.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     NEECHA {@Override public IDignityNeecha dignity() {return DignityNeecha.DG1; }},
     DEFICIENT {@Override public IDignityDeficient dignity() {return DignityDeficient.DG2; }},
     ADHISATRU {@Override public IDignityAdhisatru dignity() {return DignityAdhisatru.DG3; }},
@@ -80,7 +77,9 @@ public enum EDignity implements IDignityEnum {
         final EDignity[] values = values();
         for (int i = 1; i < values.length; i++) {
             IDignity value = values[i].dignity().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).dignity();
     }

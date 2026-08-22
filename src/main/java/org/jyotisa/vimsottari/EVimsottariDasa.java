@@ -6,6 +6,7 @@
 
 package org.jyotisa.vimsottari;
 
+import org.jyotisa.api.vimsottari.NilVimsottariDasa;
 import org.jyotisa.api.vimsottari.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -23,11 +24,7 @@ import org.swisseph.app.SweEnumIterator;
  * @version 1.0, 2019-11
  */
 public enum EVimsottariDasa implements IVimsottariDasaEnum {
-    NIL {
-        @Override public int fid() { return NIL_FID; }
-        @Override public String code() { return NIL_CD; }
-        @Override public IVimsottariDasa dasa() { return null; }
-    }, // 0  Reserved
+    NIL {@Override public NilVimsottariDasa dasa() { return NilVimsottariDasa.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     SURYA_DASA {@Override public IVimsottariDasaSurya dasa() {return VimsottariDasaSurya.VD1;}},
     CHANDRA_DASA {@Override public IVimsottariDasaChandra dasa() {return VimsottariDasaChandra.VD2;}},
     MANGALA_DASA {@Override public IVimsottariDasaMangala dasa() {return VimsottariDasaMangala.VD3;}},
@@ -83,7 +80,9 @@ public enum EVimsottariDasa implements IVimsottariDasaEnum {
         final EVimsottariDasa[] values = values();
         for (int i = 1; i < values.length; i++) {
             IVimsottariDasa value = values[i].dasa().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).dasa();
     }

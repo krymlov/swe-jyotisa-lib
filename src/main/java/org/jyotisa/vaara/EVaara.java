@@ -7,6 +7,7 @@
 package org.jyotisa.vaara;
 
 
+import org.jyotisa.api.vaara.NilVaara;
 import org.jyotisa.api.vaara.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -23,22 +24,7 @@ import static org.swisseph.api.ISweConstants.i1;
  * @version 1.1, 2019-10
  */
 public enum EVaara implements IVaaraEnum {
-    NIL {
-        @Override
-        public int fid() {
-            return NIL_FID;
-        }
-
-        @Override
-        public String code() {
-            return NIL_CD;
-        }
-
-        @Override
-        public IVaara vaara() {
-            return null;
-        }
-    }, // 0  Reserved
+    NIL {@Override public NilVaara vaara() { return NilVaara.NIL; }}, // 0  Reserved - fid()/code() come from the Null Object
     /**
      * 1. Sūryavāra
      */
@@ -152,7 +138,9 @@ public enum EVaara implements IVaaraEnum {
         final EVaara[] values = values();
         for (int i = 1; i < values.length; i++) {
             IVaara value = values[i].vaara().findByName(name);
-            if (null != value) return value;
+            // an alias leaf (RasiMesha{R1, MES}) declares no NIL of its own, so findByName
+            // still answers null there - the registry fallthrough is what makes byName total
+            if (null != value && !value.isNil()) return value;
         }
         return ISweEnum.byName(name, values).vaara();
     }
