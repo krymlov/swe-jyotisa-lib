@@ -1,0 +1,342 @@
+== org.jyotisa.ekadasi.AmalakiEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+last | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+following[0] | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+previous[0] | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+follow(+0) | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+follow(-0) | EK8 | EK8 | 8 | 8 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.AnnadaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+last | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+following[0] | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+previous[0] | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+follow(+0) | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+follow(-0) | EK19 | EK19 | 19 | 19 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.AparaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+last | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+following[0] | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+previous[0] | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+follow(+0) | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+follow(-0) | EK13 | EK13 | 13 | 13 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.EEkadasi | 27 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UTPANNA | EK1 | 1 | 1 | 1 | 24.00000000
+last | PARAMA | EK26 | 26 | 26 | 26 | 24.00000000
+following[0] | UTPANNA | EK1 | 1 | 1 | 1 | 24.00000000
+following[1] | MOKSADA | EK2 | 2 | 2 | 2 | 24.00000000
+following[2] | SAPHALA | EK3 | 3 | 3 | 3 | 24.00000000
+following[3] | PUTRADA | EK4 | 4 | 4 | 4 | 24.00000000
+following[4] | SATTILA | EK5 | 5 | 5 | 5 | 24.00000000
+following[5] | JAYA | EK6 | 6 | 6 | 6 | 24.00000000
+following[6] | VIJAYA | EK7 | 7 | 7 | 7 | 24.00000000
+following[7] | AMALAKI | EK8 | 8 | 8 | 8 | 24.00000000
+following[8] | PAAPMOCHANI | EK9 | 9 | 9 | 9 | 24.00000000
+following[9] | KAMADA | EK10 | 10 | 10 | 10 | 24.00000000
+following[10] | VARUTHINI | EK11 | 11 | 11 | 11 | 24.00000000
+following[11] | MOHINI | EK12 | 12 | 12 | 12 | 24.00000000
+following[12] | APARA | EK13 | 13 | 13 | 13 | 24.00000000
+following[13] | NIRJALA | EK14 | 14 | 14 | 14 | 24.00000000
+following[14] | YOGINI | EK15 | 15 | 15 | 15 | 24.00000000
+following[15] | SAYANA | EK16 | 16 | 16 | 16 | 24.00000000
+following[16] | KAMIKA | EK17 | 17 | 17 | 17 | 24.00000000
+following[17] | PAVITROPANA | EK18 | 18 | 18 | 18 | 24.00000000
+following[18] | ANNADA | EK19 | 19 | 19 | 19 | 24.00000000
+following[19] | PARSVA | EK20 | 20 | 20 | 20 | 24.00000000
+following[20] | INDIRA | EK21 | 21 | 21 | 21 | 24.00000000
+following[21] | PASANKUSA | EK22 | 22 | 22 | 22 | 24.00000000
+following[22] | RAMA | EK23 | 23 | 23 | 23 | 24.00000000
+following[23] | UTTHANA | EK24 | 24 | 24 | 24 | 24.00000000
+following[24] | PADMINI | EK25 | 25 | 25 | 25 | 24.00000000
+following[25] | PARAMA | EK26 | 26 | 26 | 26 | 24.00000000
+previous[0] | PARAMA | EK26 | 26 | 26 | 26 | 24.00000000
+previous[1] | PADMINI | EK25 | 25 | 25 | 25 | 24.00000000
+previous[2] | UTTHANA | EK24 | 24 | 24 | 24 | 24.00000000
+previous[3] | RAMA | EK23 | 23 | 23 | 23 | 24.00000000
+previous[4] | PASANKUSA | EK22 | 22 | 22 | 22 | 24.00000000
+previous[5] | INDIRA | EK21 | 21 | 21 | 21 | 24.00000000
+previous[6] | PARSVA | EK20 | 20 | 20 | 20 | 24.00000000
+previous[7] | ANNADA | EK19 | 19 | 19 | 19 | 24.00000000
+previous[8] | PAVITROPANA | EK18 | 18 | 18 | 18 | 24.00000000
+previous[9] | KAMIKA | EK17 | 17 | 17 | 17 | 24.00000000
+previous[10] | SAYANA | EK16 | 16 | 16 | 16 | 24.00000000
+previous[11] | YOGINI | EK15 | 15 | 15 | 15 | 24.00000000
+previous[12] | NIRJALA | EK14 | 14 | 14 | 14 | 24.00000000
+previous[13] | APARA | EK13 | 13 | 13 | 13 | 24.00000000
+previous[14] | MOHINI | EK12 | 12 | 12 | 12 | 24.00000000
+previous[15] | VARUTHINI | EK11 | 11 | 11 | 11 | 24.00000000
+previous[16] | KAMADA | EK10 | 10 | 10 | 10 | 24.00000000
+previous[17] | PAAPMOCHANI | EK9 | 9 | 9 | 9 | 24.00000000
+previous[18] | AMALAKI | EK8 | 8 | 8 | 8 | 24.00000000
+previous[19] | VIJAYA | EK7 | 7 | 7 | 7 | 24.00000000
+previous[20] | JAYA | EK6 | 6 | 6 | 6 | 24.00000000
+previous[21] | SATTILA | EK5 | 5 | 5 | 5 | 24.00000000
+previous[22] | PUTRADA | EK4 | 4 | 4 | 4 | 24.00000000
+previous[23] | SAPHALA | EK3 | 3 | 3 | 3 | 24.00000000
+previous[24] | MOKSADA | EK2 | 2 | 2 | 2 | 24.00000000
+previous[25] | UTPANNA | EK1 | 1 | 1 | 1 | 24.00000000
+follow(+0) | UTPANNA | EK1 | 1 | 1 | 1 | 24.00000000
+follow(+1) | MOKSADA | EK2 | 2 | 2 | 2 | 24.00000000
+follow(+2) | SAPHALA | EK3 | 3 | 3 | 3 | 24.00000000
+follow(+3) | PUTRADA | EK4 | 4 | 4 | 4 | 24.00000000
+follow(+4) | SATTILA | EK5 | 5 | 5 | 5 | 24.00000000
+follow(+5) | JAYA | EK6 | 6 | 6 | 6 | 24.00000000
+follow(+6) | VIJAYA | EK7 | 7 | 7 | 7 | 24.00000000
+follow(+7) | AMALAKI | EK8 | 8 | 8 | 8 | 24.00000000
+follow(+8) | PAAPMOCHANI | EK9 | 9 | 9 | 9 | 24.00000000
+follow(+9) | KAMADA | EK10 | 10 | 10 | 10 | 24.00000000
+follow(+10) | VARUTHINI | EK11 | 11 | 11 | 11 | 24.00000000
+follow(+11) | MOHINI | EK12 | 12 | 12 | 12 | 24.00000000
+follow(+12) | APARA | EK13 | 13 | 13 | 13 | 24.00000000
+follow(+13) | NIRJALA | EK14 | 14 | 14 | 14 | 24.00000000
+follow(+14) | YOGINI | EK15 | 15 | 15 | 15 | 24.00000000
+follow(+15) | SAYANA | EK16 | 16 | 16 | 16 | 24.00000000
+follow(+16) | KAMIKA | EK17 | 17 | 17 | 17 | 24.00000000
+follow(+17) | PAVITROPANA | EK18 | 18 | 18 | 18 | 24.00000000
+follow(+18) | ANNADA | EK19 | 19 | 19 | 19 | 24.00000000
+follow(+19) | PARSVA | EK20 | 20 | 20 | 20 | 24.00000000
+follow(+20) | INDIRA | EK21 | 21 | 21 | 21 | 24.00000000
+follow(+21) | PASANKUSA | EK22 | 22 | 22 | 22 | 24.00000000
+follow(+22) | RAMA | EK23 | 23 | 23 | 23 | 24.00000000
+follow(+23) | UTTHANA | EK24 | 24 | 24 | 24 | 24.00000000
+follow(+24) | PADMINI | EK25 | 25 | 25 | 25 | 24.00000000
+follow(+25) | PARAMA | EK26 | 26 | 26 | 26 | 24.00000000
+follow(-0) | UTPANNA | EK1 | 1 | 1 | 1 | 24.00000000
+follow(-1) | PARAMA | EK26 | 26 | 26 | 26 | 24.00000000
+follow(-2) | PADMINI | EK25 | 25 | 25 | 25 | 24.00000000
+follow(-3) | UTTHANA | EK24 | 24 | 24 | 24 | 24.00000000
+follow(-4) | RAMA | EK23 | 23 | 23 | 23 | 24.00000000
+follow(-5) | PASANKUSA | EK22 | 22 | 22 | 22 | 24.00000000
+follow(-6) | INDIRA | EK21 | 21 | 21 | 21 | 24.00000000
+follow(-7) | PARSVA | EK20 | 20 | 20 | 20 | 24.00000000
+follow(-8) | ANNADA | EK19 | 19 | 19 | 19 | 24.00000000
+follow(-9) | PAVITROPANA | EK18 | 18 | 18 | 18 | 24.00000000
+follow(-10) | KAMIKA | EK17 | 17 | 17 | 17 | 24.00000000
+follow(-11) | SAYANA | EK16 | 16 | 16 | 16 | 24.00000000
+follow(-12) | YOGINI | EK15 | 15 | 15 | 15 | 24.00000000
+follow(-13) | NIRJALA | EK14 | 14 | 14 | 14 | 24.00000000
+follow(-14) | APARA | EK13 | 13 | 13 | 13 | 24.00000000
+follow(-15) | MOHINI | EK12 | 12 | 12 | 12 | 24.00000000
+follow(-16) | VARUTHINI | EK11 | 11 | 11 | 11 | 24.00000000
+follow(-17) | KAMADA | EK10 | 10 | 10 | 10 | 24.00000000
+follow(-18) | PAAPMOCHANI | EK9 | 9 | 9 | 9 | 24.00000000
+follow(-19) | AMALAKI | EK8 | 8 | 8 | 8 | 24.00000000
+follow(-20) | VIJAYA | EK7 | 7 | 7 | 7 | 24.00000000
+follow(-21) | JAYA | EK6 | 6 | 6 | 6 | 24.00000000
+follow(-22) | SATTILA | EK5 | 5 | 5 | 5 | 24.00000000
+follow(-23) | PUTRADA | EK4 | 4 | 4 | 4 | 24.00000000
+follow(-24) | SAPHALA | EK3 | 3 | 3 | 3 | 24.00000000
+follow(-25) | MOKSADA | EK2 | 2 | 2 | 2 | 24.00000000
+
+== org.jyotisa.ekadasi.IndiraEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+last | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+following[0] | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+previous[0] | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+follow(+0) | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+follow(-0) | EK21 | EK21 | 21 | 21 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.JayaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+last | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+following[0] | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+previous[0] | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+follow(+0) | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+follow(-0) | EK6 | EK6 | 6 | 6 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.KamadaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+last | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+following[0] | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+previous[0] | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+follow(+0) | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+follow(-0) | EK10 | EK10 | 10 | 10 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.KamikaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+last | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+following[0] | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+previous[0] | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+follow(+0) | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+follow(-0) | EK17 | EK17 | 17 | 17 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.MohiniEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+last | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+following[0] | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+previous[0] | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+follow(+0) | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+follow(-0) | EK12 | EK12 | 12 | 12 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.MoksadaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+last | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+following[0] | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+previous[0] | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+follow(+0) | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+follow(-0) | EK2 | EK2 | 2 | 2 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.NirjalaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+last | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+following[0] | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+previous[0] | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+follow(+0) | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+follow(-0) | EK14 | EK14 | 14 | 14 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.PaapmochaniEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+last | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+following[0] | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+previous[0] | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+follow(+0) | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+follow(-0) | EK9 | EK9 | 9 | 9 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.PadminiEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+last | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+following[0] | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+previous[0] | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+follow(+0) | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+follow(-0) | EK25 | EK25 | 25 | 25 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.ParamaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+last | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+following[0] | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+previous[0] | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+follow(+0) | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+follow(-0) | EK26 | EK26 | 26 | 26 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.ParsvaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+last | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+following[0] | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+previous[0] | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+follow(+0) | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+follow(-0) | EK20 | EK20 | 20 | 20 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.PasankusaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+last | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+following[0] | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+previous[0] | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+follow(+0) | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+follow(-0) | EK22 | EK22 | 22 | 22 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.PavitropanaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+last | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+following[0] | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+previous[0] | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+follow(+0) | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+follow(-0) | EK18 | EK18 | 18 | 18 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.PutradaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+last | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+following[0] | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+previous[0] | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+follow(+0) | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+follow(-0) | EK4 | EK4 | 4 | 4 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.RamaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+last | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+following[0] | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+previous[0] | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+follow(+0) | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+follow(-0) | EK23 | EK23 | 23 | 23 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.SaphalaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+last | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+following[0] | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+previous[0] | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+follow(+0) | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+follow(-0) | EK3 | EK3 | 3 | 3 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.SattilaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+last | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+following[0] | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+previous[0] | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+follow(+0) | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+follow(-0) | EK5 | EK5 | 5 | 5 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.SayanaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+last | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+following[0] | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+previous[0] | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+follow(+0) | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+follow(-0) | EK16 | EK16 | 16 | 16 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.UtpannaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+last | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+following[0] | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+previous[0] | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+follow(+0) | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+follow(-0) | EK1 | EK1 | 1 | 1 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.UtthanaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+last | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+following[0] | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+previous[0] | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+follow(+0) | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+follow(-0) | EK24 | EK24 | 24 | 24 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.VaruthiniEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+last | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+following[0] | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+previous[0] | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+follow(+0) | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+follow(-0) | EK11 | EK11 | 11 | 11 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.VijayaEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+last | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+following[0] | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+previous[0] | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+follow(+0) | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+follow(-0) | EK7 | EK7 | 7 | 7 | 0 | 24.00000000
+
+== org.jyotisa.ekadasi.YoginiEkadasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | EK15 | EK15 | 15 | 15 | 0 | 24.00000000
+last | EK15 | EK15 | 15 | 15 | 0 | 24.00000000
+following[0] | EK15 | EK15 | 15 | 15 | 0 | 24.00000000
+previous[0] | EK15 | EK15 | 15 | 15 | 0 | 24.00000000
+follow(+0) | EK15 | EK15 | 15 | 15 | 0 | 24.00000000
+follow(-0) | EK15 | EK15 | 15 | 15 | 0 | 24.00000000

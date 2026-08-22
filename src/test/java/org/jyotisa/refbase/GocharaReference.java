@@ -5,24 +5,17 @@
  */
 package org.jyotisa.refbase;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.swisseph.ISwissEph;
 import org.swisseph.api.ISweEnumEntity;
 import org.swisseph.api.ISweJulianDate;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Function;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.swisseph.utils.IDegreeUtils.toDMSms;
 
 /**
@@ -64,20 +57,6 @@ public final class GocharaReference {
      * rather than recorded - the file has to be shortened instead.
      */
     public static final int EPHE_FIRST_YEAR = 1, EPHE_LAST_YEAR = 2399;
-
-    /** where the files live, relative to the test classpath root */
-    public static final String RESOURCES = "org/jyotisa/refbase/";
-
-    /**
-     * Bootstrap switch: {@code mvn -o test -Dtest=GocharaReferenceTest -Drefbase.generate=true}
-     * writes every file without comparing, so a whole base can be created in one run.
-     * <p>
-     * It is <b>not</b> a "fix the tests" button. It writes to the temp directory like any other
-     * run - putting the result into {@code src/test/resources} is a deliberate, reviewable copy,
-     * which is what keeps these files golden masters rather than a record of whatever the code
-     * did last.
-     */
-    public static final String GENERATE = "refbase.generate";
 
     private GocharaReference() {
     }
@@ -150,33 +129,12 @@ public final class GocharaReference {
     // ------------------------------------------------------------------ checking
 
     /**
-     * Compares against the checked-in reference, writing the actual output to the temp
-     * directory first so a diff is one copy away.
+     * Compares against the checked-in reference - see {@link ReferenceFile}.
      *
      * @param name file name without the extension, e.g. {@code rasi-graha-CH-forward}
      */
     public static void assertMatchesReference(final String name, final List<String> actual)
             throws IOException {
-
-        final String resource = RESOURCES + name + ".txt";
-        final String text = String.join("\n", actual);
-
-        save(resource, text);
-        if (Boolean.getBoolean(GENERATE)) return;
-
-        assertEquals(load(resource), text, name
-                + " differs from its reference; the actual output was written to the temp"
-                + " directory as " + resource);
-    }
-
-    private static String load(final String resource) throws IOException {
-        final URL url = GocharaReference.class.getClassLoader().getResource(resource);
-        assertNotNull(url, "missing reference file: " + resource
-                + " - generate it by copying the one written to the temp directory");
-        return IOUtils.toString(url, UTF_8).replace("\r\n", "\n").trim();
-    }
-
-    private static void save(final String resource, final String text) throws IOException {
-        FileUtils.write(new File(FileUtils.getTempDirectory(), resource), text, UTF_8);
+        ReferenceFile.assertMatches(name, actual);
     }
 }

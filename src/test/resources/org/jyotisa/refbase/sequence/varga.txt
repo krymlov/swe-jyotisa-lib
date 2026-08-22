@@ -1,0 +1,303 @@
+== org.jyotisa.varga.EVarga | 24 constants
+-- step | name | code | fid | uid | ordinal | length
+first | RASI | D1 | 1 | 1 | 1 | 360.00000000
+last | DVADASDVADASAMSA | D144 | 144 | 23 | 23 | 360.00000000
+following[0] | RASI | D1 | 1 | 1 | 1 | 360.00000000
+following[1] | HORA | D2 | 2 | 2 | 2 | 360.00000000
+following[2] | DREKKANA | D3 | 3 | 3 | 3 | 360.00000000
+following[3] | CHATURTHAMSA | D4 | 4 | 4 | 4 | 360.00000000
+following[4] | PANCHAMSA | D5 | 5 | 5 | 5 | 360.00000000
+following[5] | SHASHTHAMSA | D6 | 6 | 6 | 6 | 360.00000000
+following[6] | SAPTAMSA | D7 | 7 | 7 | 7 | 360.00000000
+following[7] | ASHTAMSA | D8 | 8 | 8 | 8 | 360.00000000
+following[8] | NAVAMSA | D9 | 9 | 9 | 9 | 360.00000000
+following[9] | DASAMSA | D10 | 10 | 10 | 10 | 360.00000000
+following[10] | RUDRAMSA | D11 | 11 | 11 | 11 | 360.00000000
+following[11] | DWADASAMSA | D12 | 12 | 12 | 12 | 360.00000000
+following[12] | SHODASAMSA | D16 | 16 | 13 | 13 | 360.00000000
+following[13] | VIMSAMSA | D20 | 20 | 14 | 14 | 360.00000000
+following[14] | CHATURVIMSAMSA | D24 | 24 | 15 | 15 | 360.00000000
+following[15] | NAKSHATRAMSA | D27 | 27 | 16 | 16 | 360.00000000
+following[16] | TRIMSAMSA | D30 | 30 | 17 | 17 | 360.00000000
+following[17] | KHAVEDAMSA | D40 | 40 | 18 | 18 | 360.00000000
+following[18] | AKSHAVEDAMSA | D45 | 45 | 19 | 19 | 360.00000000
+following[19] | SHASHTYAMSA | D60 | 60 | 20 | 20 | 360.00000000
+following[20] | NAVANAVAMSA | D81 | 81 | 21 | 21 | 360.00000000
+following[21] | ASHTOTTARAMSA | D108 | 108 | 22 | 22 | 360.00000000
+following[22] | DVADASDVADASAMSA | D144 | 144 | 23 | 23 | 360.00000000
+previous[0] | DVADASDVADASAMSA | D144 | 144 | 23 | 23 | 360.00000000
+previous[1] | ASHTOTTARAMSA | D108 | 108 | 22 | 22 | 360.00000000
+previous[2] | NAVANAVAMSA | D81 | 81 | 21 | 21 | 360.00000000
+previous[3] | SHASHTYAMSA | D60 | 60 | 20 | 20 | 360.00000000
+previous[4] | AKSHAVEDAMSA | D45 | 45 | 19 | 19 | 360.00000000
+previous[5] | KHAVEDAMSA | D40 | 40 | 18 | 18 | 360.00000000
+previous[6] | TRIMSAMSA | D30 | 30 | 17 | 17 | 360.00000000
+previous[7] | NAKSHATRAMSA | D27 | 27 | 16 | 16 | 360.00000000
+previous[8] | CHATURVIMSAMSA | D24 | 24 | 15 | 15 | 360.00000000
+previous[9] | VIMSAMSA | D20 | 20 | 14 | 14 | 360.00000000
+previous[10] | SHODASAMSA | D16 | 16 | 13 | 13 | 360.00000000
+previous[11] | DWADASAMSA | D12 | 12 | 12 | 12 | 360.00000000
+previous[12] | RUDRAMSA | D11 | 11 | 11 | 11 | 360.00000000
+previous[13] | DASAMSA | D10 | 10 | 10 | 10 | 360.00000000
+previous[14] | NAVAMSA | D9 | 9 | 9 | 9 | 360.00000000
+previous[15] | ASHTAMSA | D8 | 8 | 8 | 8 | 360.00000000
+previous[16] | SAPTAMSA | D7 | 7 | 7 | 7 | 360.00000000
+previous[17] | SHASHTHAMSA | D6 | 6 | 6 | 6 | 360.00000000
+previous[18] | PANCHAMSA | D5 | 5 | 5 | 5 | 360.00000000
+previous[19] | CHATURTHAMSA | D4 | 4 | 4 | 4 | 360.00000000
+previous[20] | DREKKANA | D3 | 3 | 3 | 3 | 360.00000000
+previous[21] | HORA | D2 | 2 | 2 | 2 | 360.00000000
+previous[22] | RASI | D1 | 1 | 1 | 1 | 360.00000000
+follow(+0) | RASI | D1 | 1 | 1 | 1 | 360.00000000
+follow(+1) | HORA | D2 | 2 | 2 | 2 | 360.00000000
+follow(+2) | DREKKANA | D3 | 3 | 3 | 3 | 360.00000000
+follow(+3) | CHATURTHAMSA | D4 | 4 | 4 | 4 | 360.00000000
+follow(+4) | PANCHAMSA | D5 | 5 | 5 | 5 | 360.00000000
+follow(+5) | SHASHTHAMSA | D6 | 6 | 6 | 6 | 360.00000000
+follow(+6) | SAPTAMSA | D7 | 7 | 7 | 7 | 360.00000000
+follow(+7) | ASHTAMSA | D8 | 8 | 8 | 8 | 360.00000000
+follow(+8) | NAVAMSA | D9 | 9 | 9 | 9 | 360.00000000
+follow(+9) | DASAMSA | D10 | 10 | 10 | 10 | 360.00000000
+follow(+10) | RUDRAMSA | D11 | 11 | 11 | 11 | 360.00000000
+follow(+11) | DWADASAMSA | D12 | 12 | 12 | 12 | 360.00000000
+follow(+12) | SHODASAMSA | D16 | 16 | 13 | 13 | 360.00000000
+follow(+13) | VIMSAMSA | D20 | 20 | 14 | 14 | 360.00000000
+follow(+14) | CHATURVIMSAMSA | D24 | 24 | 15 | 15 | 360.00000000
+follow(+15) | NAKSHATRAMSA | D27 | 27 | 16 | 16 | 360.00000000
+follow(+16) | TRIMSAMSA | D30 | 30 | 17 | 17 | 360.00000000
+follow(+17) | KHAVEDAMSA | D40 | 40 | 18 | 18 | 360.00000000
+follow(+18) | AKSHAVEDAMSA | D45 | 45 | 19 | 19 | 360.00000000
+follow(+19) | SHASHTYAMSA | D60 | 60 | 20 | 20 | 360.00000000
+follow(+20) | NAVANAVAMSA | D81 | 81 | 21 | 21 | 360.00000000
+follow(+21) | ASHTOTTARAMSA | D108 | 108 | 22 | 22 | 360.00000000
+follow(+22) | DVADASDVADASAMSA | D144 | 144 | 23 | 23 | 360.00000000
+follow(-0) | RASI | D1 | 1 | 1 | 1 | 360.00000000
+follow(-1) | DVADASDVADASAMSA | D144 | 144 | 23 | 23 | 360.00000000
+follow(-2) | ASHTOTTARAMSA | D108 | 108 | 22 | 22 | 360.00000000
+follow(-3) | NAVANAVAMSA | D81 | 81 | 21 | 21 | 360.00000000
+follow(-4) | SHASHTYAMSA | D60 | 60 | 20 | 20 | 360.00000000
+follow(-5) | AKSHAVEDAMSA | D45 | 45 | 19 | 19 | 360.00000000
+follow(-6) | KHAVEDAMSA | D40 | 40 | 18 | 18 | 360.00000000
+follow(-7) | TRIMSAMSA | D30 | 30 | 17 | 17 | 360.00000000
+follow(-8) | NAKSHATRAMSA | D27 | 27 | 16 | 16 | 360.00000000
+follow(-9) | CHATURVIMSAMSA | D24 | 24 | 15 | 15 | 360.00000000
+follow(-10) | VIMSAMSA | D20 | 20 | 14 | 14 | 360.00000000
+follow(-11) | SHODASAMSA | D16 | 16 | 13 | 13 | 360.00000000
+follow(-12) | DWADASAMSA | D12 | 12 | 12 | 12 | 360.00000000
+follow(-13) | RUDRAMSA | D11 | 11 | 11 | 11 | 360.00000000
+follow(-14) | DASAMSA | D10 | 10 | 10 | 10 | 360.00000000
+follow(-15) | NAVAMSA | D9 | 9 | 9 | 9 | 360.00000000
+follow(-16) | ASHTAMSA | D8 | 8 | 8 | 8 | 360.00000000
+follow(-17) | SAPTAMSA | D7 | 7 | 7 | 7 | 360.00000000
+follow(-18) | SHASHTHAMSA | D6 | 6 | 6 | 6 | 360.00000000
+follow(-19) | PANCHAMSA | D5 | 5 | 5 | 5 | 360.00000000
+follow(-20) | CHATURTHAMSA | D4 | 4 | 4 | 4 | 360.00000000
+follow(-21) | DREKKANA | D3 | 3 | 3 | 3 | 360.00000000
+follow(-22) | HORA | D2 | 2 | 2 | 2 | 360.00000000
+
+== org.jyotisa.varga.VargaD1 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D1 | D1 | 1 | 1 | 0 | 360.00000000
+last | D1 | D1 | 1 | 1 | 0 | 360.00000000
+following[0] | D1 | D1 | 1 | 1 | 0 | 360.00000000
+previous[0] | D1 | D1 | 1 | 1 | 0 | 360.00000000
+follow(+0) | D1 | D1 | 1 | 1 | 0 | 360.00000000
+follow(-0) | D1 | D1 | 1 | 1 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD10 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D10 | D10 | 10 | 10 | 0 | 360.00000000
+last | D10 | D10 | 10 | 10 | 0 | 360.00000000
+following[0] | D10 | D10 | 10 | 10 | 0 | 360.00000000
+previous[0] | D10 | D10 | 10 | 10 | 0 | 360.00000000
+follow(+0) | D10 | D10 | 10 | 10 | 0 | 360.00000000
+follow(-0) | D10 | D10 | 10 | 10 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD108 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D108 | D108 | 108 | 108 | 0 | 360.00000000
+last | D108 | D108 | 108 | 108 | 0 | 360.00000000
+following[0] | D108 | D108 | 108 | 108 | 0 | 360.00000000
+previous[0] | D108 | D108 | 108 | 108 | 0 | 360.00000000
+follow(+0) | D108 | D108 | 108 | 108 | 0 | 360.00000000
+follow(-0) | D108 | D108 | 108 | 108 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD11 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D11 | D11 | 11 | 11 | 0 | 360.00000000
+last | D11 | D11 | 11 | 11 | 0 | 360.00000000
+following[0] | D11 | D11 | 11 | 11 | 0 | 360.00000000
+previous[0] | D11 | D11 | 11 | 11 | 0 | 360.00000000
+follow(+0) | D11 | D11 | 11 | 11 | 0 | 360.00000000
+follow(-0) | D11 | D11 | 11 | 11 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD12 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D12 | D12 | 12 | 12 | 0 | 360.00000000
+last | D12 | D12 | 12 | 12 | 0 | 360.00000000
+following[0] | D12 | D12 | 12 | 12 | 0 | 360.00000000
+previous[0] | D12 | D12 | 12 | 12 | 0 | 360.00000000
+follow(+0) | D12 | D12 | 12 | 12 | 0 | 360.00000000
+follow(-0) | D12 | D12 | 12 | 12 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD144 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D144 | D144 | 144 | 144 | 0 | 360.00000000
+last | D144 | D144 | 144 | 144 | 0 | 360.00000000
+following[0] | D144 | D144 | 144 | 144 | 0 | 360.00000000
+previous[0] | D144 | D144 | 144 | 144 | 0 | 360.00000000
+follow(+0) | D144 | D144 | 144 | 144 | 0 | 360.00000000
+follow(-0) | D144 | D144 | 144 | 144 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD16 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D16 | D16 | 16 | 16 | 0 | 360.00000000
+last | D16 | D16 | 16 | 16 | 0 | 360.00000000
+following[0] | D16 | D16 | 16 | 16 | 0 | 360.00000000
+previous[0] | D16 | D16 | 16 | 16 | 0 | 360.00000000
+follow(+0) | D16 | D16 | 16 | 16 | 0 | 360.00000000
+follow(-0) | D16 | D16 | 16 | 16 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD2 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D2 | D2 | 2 | 2 | 0 | 360.00000000
+last | D2 | D2 | 2 | 2 | 0 | 360.00000000
+following[0] | D2 | D2 | 2 | 2 | 0 | 360.00000000
+previous[0] | D2 | D2 | 2 | 2 | 0 | 360.00000000
+follow(+0) | D2 | D2 | 2 | 2 | 0 | 360.00000000
+follow(-0) | D2 | D2 | 2 | 2 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD20 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D20 | D20 | 20 | 20 | 0 | 360.00000000
+last | D20 | D20 | 20 | 20 | 0 | 360.00000000
+following[0] | D20 | D20 | 20 | 20 | 0 | 360.00000000
+previous[0] | D20 | D20 | 20 | 20 | 0 | 360.00000000
+follow(+0) | D20 | D20 | 20 | 20 | 0 | 360.00000000
+follow(-0) | D20 | D20 | 20 | 20 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD24 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D24 | D24 | 24 | 24 | 0 | 360.00000000
+last | D24 | D24 | 24 | 24 | 0 | 360.00000000
+following[0] | D24 | D24 | 24 | 24 | 0 | 360.00000000
+previous[0] | D24 | D24 | 24 | 24 | 0 | 360.00000000
+follow(+0) | D24 | D24 | 24 | 24 | 0 | 360.00000000
+follow(-0) | D24 | D24 | 24 | 24 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD27 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D27 | D27 | 27 | 27 | 0 | 360.00000000
+last | D27 | D27 | 27 | 27 | 0 | 360.00000000
+following[0] | D27 | D27 | 27 | 27 | 0 | 360.00000000
+previous[0] | D27 | D27 | 27 | 27 | 0 | 360.00000000
+follow(+0) | D27 | D27 | 27 | 27 | 0 | 360.00000000
+follow(-0) | D27 | D27 | 27 | 27 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD3 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D3 | D3 | 3 | 3 | 0 | 360.00000000
+last | D3 | D3 | 3 | 3 | 0 | 360.00000000
+following[0] | D3 | D3 | 3 | 3 | 0 | 360.00000000
+previous[0] | D3 | D3 | 3 | 3 | 0 | 360.00000000
+follow(+0) | D3 | D3 | 3 | 3 | 0 | 360.00000000
+follow(-0) | D3 | D3 | 3 | 3 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD30 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D30 | D30 | 30 | 30 | 0 | 360.00000000
+last | D30 | D30 | 30 | 30 | 0 | 360.00000000
+following[0] | D30 | D30 | 30 | 30 | 0 | 360.00000000
+previous[0] | D30 | D30 | 30 | 30 | 0 | 360.00000000
+follow(+0) | D30 | D30 | 30 | 30 | 0 | 360.00000000
+follow(-0) | D30 | D30 | 30 | 30 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD4 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D4 | D4 | 4 | 4 | 0 | 360.00000000
+last | D4 | D4 | 4 | 4 | 0 | 360.00000000
+following[0] | D4 | D4 | 4 | 4 | 0 | 360.00000000
+previous[0] | D4 | D4 | 4 | 4 | 0 | 360.00000000
+follow(+0) | D4 | D4 | 4 | 4 | 0 | 360.00000000
+follow(-0) | D4 | D4 | 4 | 4 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD40 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D40 | D40 | 40 | 40 | 0 | 360.00000000
+last | D40 | D40 | 40 | 40 | 0 | 360.00000000
+following[0] | D40 | D40 | 40 | 40 | 0 | 360.00000000
+previous[0] | D40 | D40 | 40 | 40 | 0 | 360.00000000
+follow(+0) | D40 | D40 | 40 | 40 | 0 | 360.00000000
+follow(-0) | D40 | D40 | 40 | 40 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD45 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D45 | D45 | 45 | 45 | 0 | 360.00000000
+last | D45 | D45 | 45 | 45 | 0 | 360.00000000
+following[0] | D45 | D45 | 45 | 45 | 0 | 360.00000000
+previous[0] | D45 | D45 | 45 | 45 | 0 | 360.00000000
+follow(+0) | D45 | D45 | 45 | 45 | 0 | 360.00000000
+follow(-0) | D45 | D45 | 45 | 45 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD5 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D5 | D5 | 5 | 5 | 0 | 360.00000000
+last | D5 | D5 | 5 | 5 | 0 | 360.00000000
+following[0] | D5 | D5 | 5 | 5 | 0 | 360.00000000
+previous[0] | D5 | D5 | 5 | 5 | 0 | 360.00000000
+follow(+0) | D5 | D5 | 5 | 5 | 0 | 360.00000000
+follow(-0) | D5 | D5 | 5 | 5 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD6 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D6 | D6 | 6 | 6 | 0 | 360.00000000
+last | D6 | D6 | 6 | 6 | 0 | 360.00000000
+following[0] | D6 | D6 | 6 | 6 | 0 | 360.00000000
+previous[0] | D6 | D6 | 6 | 6 | 0 | 360.00000000
+follow(+0) | D6 | D6 | 6 | 6 | 0 | 360.00000000
+follow(-0) | D6 | D6 | 6 | 6 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD60 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D60 | D60 | 60 | 60 | 0 | 360.00000000
+last | D60 | D60 | 60 | 60 | 0 | 360.00000000
+following[0] | D60 | D60 | 60 | 60 | 0 | 360.00000000
+previous[0] | D60 | D60 | 60 | 60 | 0 | 360.00000000
+follow(+0) | D60 | D60 | 60 | 60 | 0 | 360.00000000
+follow(-0) | D60 | D60 | 60 | 60 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD7 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D7 | D7 | 7 | 7 | 0 | 360.00000000
+last | D7 | D7 | 7 | 7 | 0 | 360.00000000
+following[0] | D7 | D7 | 7 | 7 | 0 | 360.00000000
+previous[0] | D7 | D7 | 7 | 7 | 0 | 360.00000000
+follow(+0) | D7 | D7 | 7 | 7 | 0 | 360.00000000
+follow(-0) | D7 | D7 | 7 | 7 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD8 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D8 | D8 | 8 | 8 | 0 | 360.00000000
+last | D8 | D8 | 8 | 8 | 0 | 360.00000000
+following[0] | D8 | D8 | 8 | 8 | 0 | 360.00000000
+previous[0] | D8 | D8 | 8 | 8 | 0 | 360.00000000
+follow(+0) | D8 | D8 | 8 | 8 | 0 | 360.00000000
+follow(-0) | D8 | D8 | 8 | 8 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD81 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D81 | D81 | 81 | 81 | 0 | 360.00000000
+last | D81 | D81 | 81 | 81 | 0 | 360.00000000
+following[0] | D81 | D81 | 81 | 81 | 0 | 360.00000000
+previous[0] | D81 | D81 | 81 | 81 | 0 | 360.00000000
+follow(+0) | D81 | D81 | 81 | 81 | 0 | 360.00000000
+follow(-0) | D81 | D81 | 81 | 81 | 0 | 360.00000000
+
+== org.jyotisa.varga.VargaD9 | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | D9 | D9 | 9 | 9 | 0 | 360.00000000
+last | D9 | D9 | 9 | 9 | 0 | 360.00000000
+following[0] | D9 | D9 | 9 | 9 | 0 | 360.00000000
+previous[0] | D9 | D9 | 9 | 9 | 0 | 360.00000000
+follow(+0) | D9 | D9 | 9 | 9 | 0 | 360.00000000
+follow(-0) | D9 | D9 | 9 | 9 | 0 | 360.00000000

@@ -1,0 +1,157 @@
+== org.jyotisa.vimsottari.EVimsottariDasa | 10 constants
+-- step | name | code | fid | uid | ordinal | length
+first | SURYA_DASA | SYVD | 1 | 1 | 1 | 6.00000000
+last | SHUKRA_DASA | SKVD | 9 | 9 | 9 | 20.00000000
+following[0] | SURYA_DASA | SYVD | 1 | 1 | 1 | 6.00000000
+following[1] | CHANDRA_DASA | CHVD | 2 | 2 | 2 | 10.00000000
+following[2] | MANGALA_DASA | MAVD | 3 | 3 | 3 | 7.00000000
+following[3] | RAHU_DASA | RAVD | 4 | 4 | 4 | 18.00000000
+following[4] | GURU_DASA | GUVD | 5 | 5 | 5 | 16.00000000
+following[5] | SHANI_DASA | SAVD | 6 | 6 | 6 | 19.00000000
+following[6] | BUDHA_DASA | BUVD | 7 | 7 | 7 | 17.00000000
+following[7] | KETU_DASA | KEVD | 8 | 8 | 8 | 7.00000000
+following[8] | SHUKRA_DASA | SKVD | 9 | 9 | 9 | 20.00000000
+previous[0] | SHUKRA_DASA | SKVD | 9 | 9 | 9 | 20.00000000
+previous[1] | KETU_DASA | KEVD | 8 | 8 | 8 | 7.00000000
+previous[2] | BUDHA_DASA | BUVD | 7 | 7 | 7 | 17.00000000
+previous[3] | SHANI_DASA | SAVD | 6 | 6 | 6 | 19.00000000
+previous[4] | GURU_DASA | GUVD | 5 | 5 | 5 | 16.00000000
+previous[5] | RAHU_DASA | RAVD | 4 | 4 | 4 | 18.00000000
+previous[6] | MANGALA_DASA | MAVD | 3 | 3 | 3 | 7.00000000
+previous[7] | CHANDRA_DASA | CHVD | 2 | 2 | 2 | 10.00000000
+previous[8] | SURYA_DASA | SYVD | 1 | 1 | 1 | 6.00000000
+follow(+0) | SURYA_DASA | SYVD | 1 | 1 | 1 | 6.00000000
+follow(+1) | CHANDRA_DASA | CHVD | 2 | 2 | 2 | 10.00000000
+follow(+2) | MANGALA_DASA | MAVD | 3 | 3 | 3 | 7.00000000
+follow(+3) | RAHU_DASA | RAVD | 4 | 4 | 4 | 18.00000000
+follow(+4) | GURU_DASA | GUVD | 5 | 5 | 5 | 16.00000000
+follow(+5) | SHANI_DASA | SAVD | 6 | 6 | 6 | 19.00000000
+follow(+6) | BUDHA_DASA | BUVD | 7 | 7 | 7 | 17.00000000
+follow(+7) | KETU_DASA | KEVD | 8 | 8 | 8 | 7.00000000
+follow(+8) | SHUKRA_DASA | SKVD | 9 | 9 | 9 | 20.00000000
+follow(-0) | SURYA_DASA | SYVD | 1 | 1 | 1 | 6.00000000
+follow(-1) | SHUKRA_DASA | SKVD | 9 | 9 | 9 | 20.00000000
+follow(-2) | KETU_DASA | KEVD | 8 | 8 | 8 | 7.00000000
+follow(-3) | BUDHA_DASA | BUVD | 7 | 7 | 7 | 17.00000000
+follow(-4) | SHANI_DASA | SAVD | 6 | 6 | 6 | 19.00000000
+follow(-5) | GURU_DASA | GUVD | 5 | 5 | 5 | 16.00000000
+follow(-6) | RAHU_DASA | RAVD | 4 | 4 | 4 | 18.00000000
+follow(-7) | MANGALA_DASA | MAVD | 3 | 3 | 3 | 7.00000000
+follow(-8) | CHANDRA_DASA | CHVD | 2 | 2 | 2 | 10.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaBudha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD7 | BUVD | 7 | 7 | 0 | 17.00000000
+last | BUVD | BUVD | 7 | 7 | 1 | 17.00000000
+following[0] | VD7 | BUVD | 7 | 7 | 0 | 17.00000000
+following[1] | BUVD | BUVD | 7 | 7 | 1 | 17.00000000
+previous[0] | BUVD | BUVD | 7 | 7 | 1 | 17.00000000
+previous[1] | VD7 | BUVD | 7 | 7 | 0 | 17.00000000
+follow(+0) | VD7 | BUVD | 7 | 7 | 0 | 17.00000000
+follow(+1) | BUVD | BUVD | 7 | 7 | 1 | 17.00000000
+follow(-0) | VD7 | BUVD | 7 | 7 | 0 | 17.00000000
+follow(-1) | BUVD | BUVD | 7 | 7 | 1 | 17.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaChandra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD2 | CHVD | 2 | 2 | 0 | 10.00000000
+last | CHVD | CHVD | 2 | 2 | 1 | 10.00000000
+following[0] | VD2 | CHVD | 2 | 2 | 0 | 10.00000000
+following[1] | CHVD | CHVD | 2 | 2 | 1 | 10.00000000
+previous[0] | CHVD | CHVD | 2 | 2 | 1 | 10.00000000
+previous[1] | VD2 | CHVD | 2 | 2 | 0 | 10.00000000
+follow(+0) | VD2 | CHVD | 2 | 2 | 0 | 10.00000000
+follow(+1) | CHVD | CHVD | 2 | 2 | 1 | 10.00000000
+follow(-0) | VD2 | CHVD | 2 | 2 | 0 | 10.00000000
+follow(-1) | CHVD | CHVD | 2 | 2 | 1 | 10.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaGuru | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD5 | GUVD | 5 | 5 | 0 | 16.00000000
+last | GUVD | GUVD | 5 | 5 | 1 | 16.00000000
+following[0] | VD5 | GUVD | 5 | 5 | 0 | 16.00000000
+following[1] | GUVD | GUVD | 5 | 5 | 1 | 16.00000000
+previous[0] | GUVD | GUVD | 5 | 5 | 1 | 16.00000000
+previous[1] | VD5 | GUVD | 5 | 5 | 0 | 16.00000000
+follow(+0) | VD5 | GUVD | 5 | 5 | 0 | 16.00000000
+follow(+1) | GUVD | GUVD | 5 | 5 | 1 | 16.00000000
+follow(-0) | VD5 | GUVD | 5 | 5 | 0 | 16.00000000
+follow(-1) | GUVD | GUVD | 5 | 5 | 1 | 16.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaKetu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD8 | KEVD | 8 | 8 | 0 | 7.00000000
+last | KEVD | KEVD | 8 | 8 | 1 | 7.00000000
+following[0] | VD8 | KEVD | 8 | 8 | 0 | 7.00000000
+following[1] | KEVD | KEVD | 8 | 8 | 1 | 7.00000000
+previous[0] | KEVD | KEVD | 8 | 8 | 1 | 7.00000000
+previous[1] | VD8 | KEVD | 8 | 8 | 0 | 7.00000000
+follow(+0) | VD8 | KEVD | 8 | 8 | 0 | 7.00000000
+follow(+1) | KEVD | KEVD | 8 | 8 | 1 | 7.00000000
+follow(-0) | VD8 | KEVD | 8 | 8 | 0 | 7.00000000
+follow(-1) | KEVD | KEVD | 8 | 8 | 1 | 7.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaMangala | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD3 | MAVD | 3 | 3 | 0 | 7.00000000
+last | MAVD | MAVD | 3 | 3 | 1 | 7.00000000
+following[0] | VD3 | MAVD | 3 | 3 | 0 | 7.00000000
+following[1] | MAVD | MAVD | 3 | 3 | 1 | 7.00000000
+previous[0] | MAVD | MAVD | 3 | 3 | 1 | 7.00000000
+previous[1] | VD3 | MAVD | 3 | 3 | 0 | 7.00000000
+follow(+0) | VD3 | MAVD | 3 | 3 | 0 | 7.00000000
+follow(+1) | MAVD | MAVD | 3 | 3 | 1 | 7.00000000
+follow(-0) | VD3 | MAVD | 3 | 3 | 0 | 7.00000000
+follow(-1) | MAVD | MAVD | 3 | 3 | 1 | 7.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaRahu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD4 | RAVD | 4 | 4 | 0 | 18.00000000
+last | RAVD | RAVD | 4 | 4 | 1 | 18.00000000
+following[0] | VD4 | RAVD | 4 | 4 | 0 | 18.00000000
+following[1] | RAVD | RAVD | 4 | 4 | 1 | 18.00000000
+previous[0] | RAVD | RAVD | 4 | 4 | 1 | 18.00000000
+previous[1] | VD4 | RAVD | 4 | 4 | 0 | 18.00000000
+follow(+0) | VD4 | RAVD | 4 | 4 | 0 | 18.00000000
+follow(+1) | RAVD | RAVD | 4 | 4 | 1 | 18.00000000
+follow(-0) | VD4 | RAVD | 4 | 4 | 0 | 18.00000000
+follow(-1) | RAVD | RAVD | 4 | 4 | 1 | 18.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaShani | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD6 | SAVD | 6 | 6 | 0 | 19.00000000
+last | SAVD | SAVD | 6 | 6 | 1 | 19.00000000
+following[0] | VD6 | SAVD | 6 | 6 | 0 | 19.00000000
+following[1] | SAVD | SAVD | 6 | 6 | 1 | 19.00000000
+previous[0] | SAVD | SAVD | 6 | 6 | 1 | 19.00000000
+previous[1] | VD6 | SAVD | 6 | 6 | 0 | 19.00000000
+follow(+0) | VD6 | SAVD | 6 | 6 | 0 | 19.00000000
+follow(+1) | SAVD | SAVD | 6 | 6 | 1 | 19.00000000
+follow(-0) | VD6 | SAVD | 6 | 6 | 0 | 19.00000000
+follow(-1) | SAVD | SAVD | 6 | 6 | 1 | 19.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaShukra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD9 | SKVD | 9 | 9 | 0 | 20.00000000
+last | SKVD | SKVD | 9 | 9 | 1 | 20.00000000
+following[0] | VD9 | SKVD | 9 | 9 | 0 | 20.00000000
+following[1] | SKVD | SKVD | 9 | 9 | 1 | 20.00000000
+previous[0] | SKVD | SKVD | 9 | 9 | 1 | 20.00000000
+previous[1] | VD9 | SKVD | 9 | 9 | 0 | 20.00000000
+follow(+0) | VD9 | SKVD | 9 | 9 | 0 | 20.00000000
+follow(+1) | SKVD | SKVD | 9 | 9 | 1 | 20.00000000
+follow(-0) | VD9 | SKVD | 9 | 9 | 0 | 20.00000000
+follow(-1) | SKVD | SKVD | 9 | 9 | 1 | 20.00000000
+
+== org.jyotisa.vimsottari.VimsottariDasaSurya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VD1 | SYVD | 1 | 1 | 0 | 6.00000000
+last | SYVD | SYVD | 1 | 1 | 1 | 6.00000000
+following[0] | VD1 | SYVD | 1 | 1 | 0 | 6.00000000
+following[1] | SYVD | SYVD | 1 | 1 | 1 | 6.00000000
+previous[0] | SYVD | SYVD | 1 | 1 | 1 | 6.00000000
+previous[1] | VD1 | SYVD | 1 | 1 | 0 | 6.00000000
+follow(+0) | VD1 | SYVD | 1 | 1 | 0 | 6.00000000
+follow(+1) | SYVD | SYVD | 1 | 1 | 1 | 6.00000000
+follow(-0) | VD1 | SYVD | 1 | 1 | 0 | 6.00000000
+follow(-1) | SYVD | SYVD | 1 | 1 | 1 | 6.00000000

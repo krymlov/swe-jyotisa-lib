@@ -1,0 +1,36 @@
+== org.jyotisa.karaka.ECharaKaraka | 9 constants
+-- step | name | code | fid | uid | ordinal | length
+first | ATMA_KARAKA | AK | 1 | 1 | 1 | 0.00000000
+last | DARA_KARAKA | DK | 8 | 8 | 8 | 0.00000000
+following[0] | ATMA_KARAKA | AK | 1 | 1 | 1 | 0.00000000
+following[1] | AMATYA_KARAKA | AmK | 2 | 2 | 2 | 0.00000000
+following[2] | BHRATRI_KARAKA | BK | 3 | 3 | 3 | 0.00000000
+following[3] | MATRI_KARAKA | MK | 4 | 4 | 4 | 0.00000000
+following[4] | PITRI_KARAKA | PiK | 5 | 5 | 5 | 0.00000000
+following[5] | PUTRA_KARAKA | PK | 6 | 6 | 6 | 0.00000000
+following[6] | GNATI_KARAKA | GK | 7 | 7 | 7 | 0.00000000
+following[7] | DARA_KARAKA | DK | 8 | 8 | 8 | 0.00000000
+previous[0] | DARA_KARAKA | DK | 8 | 8 | 8 | 0.00000000
+previous[1] | GNATI_KARAKA | GK | 7 | 7 | 7 | 0.00000000
+previous[2] | PUTRA_KARAKA | PK | 6 | 6 | 6 | 0.00000000
+previous[3] | PITRI_KARAKA | PiK | 5 | 5 | 5 | 0.00000000
+previous[4] | MATRI_KARAKA | MK | 4 | 4 | 4 | 0.00000000
+previous[5] | BHRATRI_KARAKA | BK | 3 | 3 | 3 | 0.00000000
+previous[6] | AMATYA_KARAKA | AmK | 2 | 2 | 2 | 0.00000000
+previous[7] | ATMA_KARAKA | AK | 1 | 1 | 1 | 0.00000000
+follow(+0) | ATMA_KARAKA | AK | 1 | 1 | 1 | 0.00000000
+follow(+1) | AMATYA_KARAKA | AmK | 2 | 2 | 2 | 0.00000000
+follow(+2) | BHRATRI_KARAKA | BK | 3 | 3 | 3 | 0.00000000
+follow(+3) | MATRI_KARAKA | MK | 4 | 4 | 4 | 0.00000000
+follow(+4) | PITRI_KARAKA | PiK | 5 | 5 | 5 | 0.00000000
+follow(+5) | PUTRA_KARAKA | PK | 6 | 6 | 6 | 0.00000000
+follow(+6) | GNATI_KARAKA | GK | 7 | 7 | 7 | 0.00000000
+follow(+7) | DARA_KARAKA | DK | 8 | 8 | 8 | 0.00000000
+follow(-0) | ATMA_KARAKA | AK | 1 | 1 | 1 | 0.00000000
+follow(-1) | DARA_KARAKA | DK | 8 | 8 | 8 | 0.00000000
+follow(-2) | GNATI_KARAKA | GK | 7 | 7 | 7 | 0.00000000
+follow(-3) | PUTRA_KARAKA | PK | 6 | 6 | 6 | 0.00000000
+follow(-4) | PITRI_KARAKA | PiK | 5 | 5 | 5 | 0.00000000
+follow(-5) | MATRI_KARAKA | MK | 4 | 4 | 4 | 0.00000000
+follow(-6) | BHRATRI_KARAKA | BK | 3 | 3 | 3 | 0.00000000
+follow(-7) | AMATYA_KARAKA | AmK | 2 | 2 | 2 | 0.00000000

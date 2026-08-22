@@ -1,0 +1,389 @@
+== org.jyotisa.graha.EGraha | 13 constants
+-- step | name | code | fid | uid | ordinal | length
+first | LAGNA | LG | 0 | 0 | 0 | 0.00000000
+last | TEEVRA | TE | 12 | 12 | 12 | 0.00000000
+following[0] | LAGNA | LG | 0 | 0 | 0 | 0.00000000
+following[1] | SURYA | SY | 1 | 1 | 1 | 0.00000000
+following[2] | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+following[3] | MANGALA | MA | 9 | 3 | 3 | 0.00000000
+following[4] | BUDHA | BU | 5 | 4 | 4 | 0.00000000
+following[5] | GURU | GU | 3 | 5 | 5 | 0.00000000
+following[6] | SHUKRA | SK | 6 | 6 | 6 | 0.00000000
+following[7] | SHANI | SA | 8 | 7 | 7 | 0.00000000
+following[8] | RAHU | RA | 4 | 8 | 8 | 0.00000000
+following[9] | KETU | KE | 7 | 9 | 9 | 0.00000000
+following[10] | SWETA | SW | 10 | 10 | 10 | 0.00000000
+following[11] | SYAMA | SM | 11 | 11 | 11 | 0.00000000
+following[12] | TEEVRA | TE | 12 | 12 | 12 | 0.00000000
+previous[0] | TEEVRA | TE | 12 | 12 | 12 | 0.00000000
+previous[1] | SYAMA | SM | 11 | 11 | 11 | 0.00000000
+previous[2] | SWETA | SW | 10 | 10 | 10 | 0.00000000
+previous[3] | KETU | KE | 7 | 9 | 9 | 0.00000000
+previous[4] | RAHU | RA | 4 | 8 | 8 | 0.00000000
+previous[5] | SHANI | SA | 8 | 7 | 7 | 0.00000000
+previous[6] | SHUKRA | SK | 6 | 6 | 6 | 0.00000000
+previous[7] | GURU | GU | 3 | 5 | 5 | 0.00000000
+previous[8] | BUDHA | BU | 5 | 4 | 4 | 0.00000000
+previous[9] | MANGALA | MA | 9 | 3 | 3 | 0.00000000
+previous[10] | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+previous[11] | SURYA | SY | 1 | 1 | 1 | 0.00000000
+previous[12] | LAGNA | LG | 0 | 0 | 0 | 0.00000000
+follow(+0) | LAGNA | LG | 0 | 0 | 0 | 0.00000000
+follow(+1) | SURYA | SY | 1 | 1 | 1 | 0.00000000
+follow(+2) | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+follow(+3) | MANGALA | MA | 9 | 3 | 3 | 0.00000000
+follow(+4) | BUDHA | BU | 5 | 4 | 4 | 0.00000000
+follow(+5) | GURU | GU | 3 | 5 | 5 | 0.00000000
+follow(+6) | SHUKRA | SK | 6 | 6 | 6 | 0.00000000
+follow(+7) | SHANI | SA | 8 | 7 | 7 | 0.00000000
+follow(+8) | RAHU | RA | 4 | 8 | 8 | 0.00000000
+follow(+9) | KETU | KE | 7 | 9 | 9 | 0.00000000
+follow(+10) | SWETA | SW | 10 | 10 | 10 | 0.00000000
+follow(+11) | SYAMA | SM | 11 | 11 | 11 | 0.00000000
+follow(+12) | TEEVRA | TE | 12 | 12 | 12 | 0.00000000
+follow(-0) | LAGNA | LG | 0 | 0 | 0 | 0.00000000
+follow(-1) | TEEVRA | TE | 12 | 12 | 12 | 0.00000000
+follow(-2) | SYAMA | SM | 11 | 11 | 11 | 0.00000000
+follow(-3) | SWETA | SW | 10 | 10 | 10 | 0.00000000
+follow(-4) | KETU | KE | 7 | 9 | 9 | 0.00000000
+follow(-5) | RAHU | RA | 4 | 8 | 8 | 0.00000000
+follow(-6) | SHANI | SA | 8 | 7 | 7 | 0.00000000
+follow(-7) | SHUKRA | SK | 6 | 6 | 6 | 0.00000000
+follow(-8) | GURU | GU | 3 | 5 | 5 | 0.00000000
+follow(-9) | BUDHA | BU | 5 | 4 | 4 | 0.00000000
+follow(-10) | MANGALA | MA | 9 | 3 | 3 | 0.00000000
+follow(-11) | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+follow(-12) | SURYA | SY | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.graha.budha.GrahaBudha | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G5 | BU | 5 | 4 | 0 | 0.00000000
+last | Mercury | BU | 5 | 4 | 4 | 0.00000000
+following[0] | G5 | BU | 5 | 4 | 0 | 0.00000000
+following[1] | BU | BU | 5 | 4 | 1 | 0.00000000
+following[2] | BUDHA | BU | 5 | 4 | 2 | 0.00000000
+following[3] | Me | BU | 5 | 4 | 3 | 0.00000000
+following[4] | Mercury | BU | 5 | 4 | 4 | 0.00000000
+previous[0] | Mercury | BU | 5 | 4 | 4 | 0.00000000
+previous[1] | Me | BU | 5 | 4 | 3 | 0.00000000
+previous[2] | BUDHA | BU | 5 | 4 | 2 | 0.00000000
+previous[3] | BU | BU | 5 | 4 | 1 | 0.00000000
+previous[4] | G5 | BU | 5 | 4 | 0 | 0.00000000
+follow(+0) | G5 | BU | 5 | 4 | 0 | 0.00000000
+follow(+1) | BU | BU | 5 | 4 | 1 | 0.00000000
+follow(+2) | BUDHA | BU | 5 | 4 | 2 | 0.00000000
+follow(+3) | Me | BU | 5 | 4 | 3 | 0.00000000
+follow(+4) | Mercury | BU | 5 | 4 | 4 | 0.00000000
+follow(-0) | G5 | BU | 5 | 4 | 0 | 0.00000000
+follow(-1) | Mercury | BU | 5 | 4 | 4 | 0.00000000
+follow(-2) | Me | BU | 5 | 4 | 3 | 0.00000000
+follow(-3) | BUDHA | BU | 5 | 4 | 2 | 0.00000000
+follow(-4) | BU | BU | 5 | 4 | 1 | 0.00000000
+
+== org.jyotisa.graha.chandra.GrahaChandra | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G2 | CH | 2 | 2 | 0 | 0.00000000
+last | Moon | CH | 2 | 2 | 4 | 0.00000000
+following[0] | G2 | CH | 2 | 2 | 0 | 0.00000000
+following[1] | CH | CH | 2 | 2 | 1 | 0.00000000
+following[2] | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+following[3] | Mo | CH | 2 | 2 | 3 | 0.00000000
+following[4] | Moon | CH | 2 | 2 | 4 | 0.00000000
+previous[0] | Moon | CH | 2 | 2 | 4 | 0.00000000
+previous[1] | Mo | CH | 2 | 2 | 3 | 0.00000000
+previous[2] | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+previous[3] | CH | CH | 2 | 2 | 1 | 0.00000000
+previous[4] | G2 | CH | 2 | 2 | 0 | 0.00000000
+follow(+0) | G2 | CH | 2 | 2 | 0 | 0.00000000
+follow(+1) | CH | CH | 2 | 2 | 1 | 0.00000000
+follow(+2) | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+follow(+3) | Mo | CH | 2 | 2 | 3 | 0.00000000
+follow(+4) | Moon | CH | 2 | 2 | 4 | 0.00000000
+follow(-0) | G2 | CH | 2 | 2 | 0 | 0.00000000
+follow(-1) | Moon | CH | 2 | 2 | 4 | 0.00000000
+follow(-2) | Mo | CH | 2 | 2 | 3 | 0.00000000
+follow(-3) | CHANDRA | CH | 2 | 2 | 2 | 0.00000000
+follow(-4) | CH | CH | 2 | 2 | 1 | 0.00000000
+
+== org.jyotisa.graha.chaya.GrahaKetu | 6 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G7 | KE | 7 | 9 | 0 | 0.00000000
+last | KETU_TRUE | KE | 7 | 9 | 5 | 0.00000000
+following[0] | G7 | KE | 7 | 9 | 0 | 0.00000000
+following[1] | KE | KE | 7 | 9 | 1 | 0.00000000
+following[2] | KETU | KE | 7 | 9 | 2 | 0.00000000
+following[3] | Ke | KE | 7 | 9 | 3 | 0.00000000
+following[4] | Ketu | KE | 7 | 9 | 4 | 0.00000000
+following[5] | KETU_TRUE | KE | 7 | 9 | 5 | 0.00000000
+previous[0] | KETU_TRUE | KE | 7 | 9 | 5 | 0.00000000
+previous[1] | Ketu | KE | 7 | 9 | 4 | 0.00000000
+previous[2] | Ke | KE | 7 | 9 | 3 | 0.00000000
+previous[3] | KETU | KE | 7 | 9 | 2 | 0.00000000
+previous[4] | KE | KE | 7 | 9 | 1 | 0.00000000
+previous[5] | G7 | KE | 7 | 9 | 0 | 0.00000000
+follow(+0) | G7 | KE | 7 | 9 | 0 | 0.00000000
+follow(+1) | KE | KE | 7 | 9 | 1 | 0.00000000
+follow(+2) | KETU | KE | 7 | 9 | 2 | 0.00000000
+follow(+3) | Ke | KE | 7 | 9 | 3 | 0.00000000
+follow(+4) | Ketu | KE | 7 | 9 | 4 | 0.00000000
+follow(+5) | KETU_TRUE | KE | 7 | 9 | 5 | 0.00000000
+follow(-0) | G7 | KE | 7 | 9 | 0 | 0.00000000
+follow(-1) | KETU_TRUE | KE | 7 | 9 | 5 | 0.00000000
+follow(-2) | Ketu | KE | 7 | 9 | 4 | 0.00000000
+follow(-3) | Ke | KE | 7 | 9 | 3 | 0.00000000
+follow(-4) | KETU | KE | 7 | 9 | 2 | 0.00000000
+follow(-5) | KE | KE | 7 | 9 | 1 | 0.00000000
+
+== org.jyotisa.graha.chaya.GrahaRahu | 6 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G4 | RA | 4 | 8 | 0 | 0.00000000
+last | RAHU_TRUE | RA | 4 | 8 | 5 | 0.00000000
+following[0] | G4 | RA | 4 | 8 | 0 | 0.00000000
+following[1] | RA | RA | 4 | 8 | 1 | 0.00000000
+following[2] | RAHU | RA | 4 | 8 | 2 | 0.00000000
+following[3] | Ra | RA | 4 | 8 | 3 | 0.00000000
+following[4] | Rahu | RA | 4 | 8 | 4 | 0.00000000
+following[5] | RAHU_TRUE | RA | 4 | 8 | 5 | 0.00000000
+previous[0] | RAHU_TRUE | RA | 4 | 8 | 5 | 0.00000000
+previous[1] | Rahu | RA | 4 | 8 | 4 | 0.00000000
+previous[2] | Ra | RA | 4 | 8 | 3 | 0.00000000
+previous[3] | RAHU | RA | 4 | 8 | 2 | 0.00000000
+previous[4] | RA | RA | 4 | 8 | 1 | 0.00000000
+previous[5] | G4 | RA | 4 | 8 | 0 | 0.00000000
+follow(+0) | G4 | RA | 4 | 8 | 0 | 0.00000000
+follow(+1) | RA | RA | 4 | 8 | 1 | 0.00000000
+follow(+2) | RAHU | RA | 4 | 8 | 2 | 0.00000000
+follow(+3) | Ra | RA | 4 | 8 | 3 | 0.00000000
+follow(+4) | Rahu | RA | 4 | 8 | 4 | 0.00000000
+follow(+5) | RAHU_TRUE | RA | 4 | 8 | 5 | 0.00000000
+follow(-0) | G4 | RA | 4 | 8 | 0 | 0.00000000
+follow(-1) | RAHU_TRUE | RA | 4 | 8 | 5 | 0.00000000
+follow(-2) | Rahu | RA | 4 | 8 | 4 | 0.00000000
+follow(-3) | Ra | RA | 4 | 8 | 3 | 0.00000000
+follow(-4) | RAHU | RA | 4 | 8 | 2 | 0.00000000
+follow(-5) | RA | RA | 4 | 8 | 1 | 0.00000000
+
+== org.jyotisa.graha.guru.GrahaGuru | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G3 | GU | 3 | 5 | 0 | 0.00000000
+last | Jupiter | GU | 3 | 5 | 4 | 0.00000000
+following[0] | G3 | GU | 3 | 5 | 0 | 0.00000000
+following[1] | GU | GU | 3 | 5 | 1 | 0.00000000
+following[2] | GURU | GU | 3 | 5 | 2 | 0.00000000
+following[3] | Ju | GU | 3 | 5 | 3 | 0.00000000
+following[4] | Jupiter | GU | 3 | 5 | 4 | 0.00000000
+previous[0] | Jupiter | GU | 3 | 5 | 4 | 0.00000000
+previous[1] | Ju | GU | 3 | 5 | 3 | 0.00000000
+previous[2] | GURU | GU | 3 | 5 | 2 | 0.00000000
+previous[3] | GU | GU | 3 | 5 | 1 | 0.00000000
+previous[4] | G3 | GU | 3 | 5 | 0 | 0.00000000
+follow(+0) | G3 | GU | 3 | 5 | 0 | 0.00000000
+follow(+1) | GU | GU | 3 | 5 | 1 | 0.00000000
+follow(+2) | GURU | GU | 3 | 5 | 2 | 0.00000000
+follow(+3) | Ju | GU | 3 | 5 | 3 | 0.00000000
+follow(+4) | Jupiter | GU | 3 | 5 | 4 | 0.00000000
+follow(-0) | G3 | GU | 3 | 5 | 0 | 0.00000000
+follow(-1) | Jupiter | GU | 3 | 5 | 4 | 0.00000000
+follow(-2) | Ju | GU | 3 | 5 | 3 | 0.00000000
+follow(-3) | GURU | GU | 3 | 5 | 2 | 0.00000000
+follow(-4) | GU | GU | 3 | 5 | 1 | 0.00000000
+
+== org.jyotisa.graha.lagna.GrahaLagna | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G0 | LG | 0 | 0 | 0 | 0.00000000
+last | Ascendant | LG | 0 | 0 | 4 | 0.00000000
+following[0] | G0 | LG | 0 | 0 | 0 | 0.00000000
+following[1] | LG | LG | 0 | 0 | 1 | 0.00000000
+following[2] | LAGNA | LG | 0 | 0 | 2 | 0.00000000
+following[3] | AC | LG | 0 | 0 | 3 | 0.00000000
+following[4] | Ascendant | LG | 0 | 0 | 4 | 0.00000000
+previous[0] | Ascendant | LG | 0 | 0 | 4 | 0.00000000
+previous[1] | AC | LG | 0 | 0 | 3 | 0.00000000
+previous[2] | LAGNA | LG | 0 | 0 | 2 | 0.00000000
+previous[3] | LG | LG | 0 | 0 | 1 | 0.00000000
+previous[4] | G0 | LG | 0 | 0 | 0 | 0.00000000
+follow(+0) | G0 | LG | 0 | 0 | 0 | 0.00000000
+follow(+1) | LG | LG | 0 | 0 | 1 | 0.00000000
+follow(+2) | LAGNA | LG | 0 | 0 | 2 | 0.00000000
+follow(+3) | AC | LG | 0 | 0 | 3 | 0.00000000
+follow(+4) | Ascendant | LG | 0 | 0 | 4 | 0.00000000
+follow(-0) | G0 | LG | 0 | 0 | 0 | 0.00000000
+follow(-1) | Ascendant | LG | 0 | 0 | 4 | 0.00000000
+follow(-2) | AC | LG | 0 | 0 | 3 | 0.00000000
+follow(-3) | LAGNA | LG | 0 | 0 | 2 | 0.00000000
+follow(-4) | LG | LG | 0 | 0 | 1 | 0.00000000
+
+== org.jyotisa.graha.mangala.GrahaMangala | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G9 | MA | 9 | 3 | 0 | 0.00000000
+last | Mars | MA | 9 | 3 | 4 | 0.00000000
+following[0] | G9 | MA | 9 | 3 | 0 | 0.00000000
+following[1] | MA | MA | 9 | 3 | 1 | 0.00000000
+following[2] | MANGALA | MA | 9 | 3 | 2 | 0.00000000
+following[3] | Ma | MA | 9 | 3 | 3 | 0.00000000
+following[4] | Mars | MA | 9 | 3 | 4 | 0.00000000
+previous[0] | Mars | MA | 9 | 3 | 4 | 0.00000000
+previous[1] | Ma | MA | 9 | 3 | 3 | 0.00000000
+previous[2] | MANGALA | MA | 9 | 3 | 2 | 0.00000000
+previous[3] | MA | MA | 9 | 3 | 1 | 0.00000000
+previous[4] | G9 | MA | 9 | 3 | 0 | 0.00000000
+follow(+0) | G9 | MA | 9 | 3 | 0 | 0.00000000
+follow(+1) | MA | MA | 9 | 3 | 1 | 0.00000000
+follow(+2) | MANGALA | MA | 9 | 3 | 2 | 0.00000000
+follow(+3) | Ma | MA | 9 | 3 | 3 | 0.00000000
+follow(+4) | Mars | MA | 9 | 3 | 4 | 0.00000000
+follow(-0) | G9 | MA | 9 | 3 | 0 | 0.00000000
+follow(-1) | Mars | MA | 9 | 3 | 4 | 0.00000000
+follow(-2) | Ma | MA | 9 | 3 | 3 | 0.00000000
+follow(-3) | MANGALA | MA | 9 | 3 | 2 | 0.00000000
+follow(-4) | MA | MA | 9 | 3 | 1 | 0.00000000
+
+== org.jyotisa.graha.shani.GrahaShani | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G8 | SA | 8 | 7 | 0 | 0.00000000
+last | Saturn | SA | 8 | 7 | 4 | 0.00000000
+following[0] | G8 | SA | 8 | 7 | 0 | 0.00000000
+following[1] | SA | SA | 8 | 7 | 1 | 0.00000000
+following[2] | SHANI | SA | 8 | 7 | 2 | 0.00000000
+following[3] | Sa | SA | 8 | 7 | 3 | 0.00000000
+following[4] | Saturn | SA | 8 | 7 | 4 | 0.00000000
+previous[0] | Saturn | SA | 8 | 7 | 4 | 0.00000000
+previous[1] | Sa | SA | 8 | 7 | 3 | 0.00000000
+previous[2] | SHANI | SA | 8 | 7 | 2 | 0.00000000
+previous[3] | SA | SA | 8 | 7 | 1 | 0.00000000
+previous[4] | G8 | SA | 8 | 7 | 0 | 0.00000000
+follow(+0) | G8 | SA | 8 | 7 | 0 | 0.00000000
+follow(+1) | SA | SA | 8 | 7 | 1 | 0.00000000
+follow(+2) | SHANI | SA | 8 | 7 | 2 | 0.00000000
+follow(+3) | Sa | SA | 8 | 7 | 3 | 0.00000000
+follow(+4) | Saturn | SA | 8 | 7 | 4 | 0.00000000
+follow(-0) | G8 | SA | 8 | 7 | 0 | 0.00000000
+follow(-1) | Saturn | SA | 8 | 7 | 4 | 0.00000000
+follow(-2) | Sa | SA | 8 | 7 | 3 | 0.00000000
+follow(-3) | SHANI | SA | 8 | 7 | 2 | 0.00000000
+follow(-4) | SA | SA | 8 | 7 | 1 | 0.00000000
+
+== org.jyotisa.graha.shukra.GrahaShukra | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G6 | SK | 6 | 6 | 0 | 0.00000000
+last | Venus | SK | 6 | 6 | 4 | 0.00000000
+following[0] | G6 | SK | 6 | 6 | 0 | 0.00000000
+following[1] | SK | SK | 6 | 6 | 1 | 0.00000000
+following[2] | SHUKRA | SK | 6 | 6 | 2 | 0.00000000
+following[3] | Ve | SK | 6 | 6 | 3 | 0.00000000
+following[4] | Venus | SK | 6 | 6 | 4 | 0.00000000
+previous[0] | Venus | SK | 6 | 6 | 4 | 0.00000000
+previous[1] | Ve | SK | 6 | 6 | 3 | 0.00000000
+previous[2] | SHUKRA | SK | 6 | 6 | 2 | 0.00000000
+previous[3] | SK | SK | 6 | 6 | 1 | 0.00000000
+previous[4] | G6 | SK | 6 | 6 | 0 | 0.00000000
+follow(+0) | G6 | SK | 6 | 6 | 0 | 0.00000000
+follow(+1) | SK | SK | 6 | 6 | 1 | 0.00000000
+follow(+2) | SHUKRA | SK | 6 | 6 | 2 | 0.00000000
+follow(+3) | Ve | SK | 6 | 6 | 3 | 0.00000000
+follow(+4) | Venus | SK | 6 | 6 | 4 | 0.00000000
+follow(-0) | G6 | SK | 6 | 6 | 0 | 0.00000000
+follow(-1) | Venus | SK | 6 | 6 | 4 | 0.00000000
+follow(-2) | Ve | SK | 6 | 6 | 3 | 0.00000000
+follow(-3) | SHUKRA | SK | 6 | 6 | 2 | 0.00000000
+follow(-4) | SK | SK | 6 | 6 | 1 | 0.00000000
+
+== org.jyotisa.graha.surya.GrahaSurya | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G1 | SY | 1 | 1 | 0 | 0.00000000
+last | Sun | SY | 1 | 1 | 4 | 0.00000000
+following[0] | G1 | SY | 1 | 1 | 0 | 0.00000000
+following[1] | SY | SY | 1 | 1 | 1 | 0.00000000
+following[2] | SURYA | SY | 1 | 1 | 2 | 0.00000000
+following[3] | Su | SY | 1 | 1 | 3 | 0.00000000
+following[4] | Sun | SY | 1 | 1 | 4 | 0.00000000
+previous[0] | Sun | SY | 1 | 1 | 4 | 0.00000000
+previous[1] | Su | SY | 1 | 1 | 3 | 0.00000000
+previous[2] | SURYA | SY | 1 | 1 | 2 | 0.00000000
+previous[3] | SY | SY | 1 | 1 | 1 | 0.00000000
+previous[4] | G1 | SY | 1 | 1 | 0 | 0.00000000
+follow(+0) | G1 | SY | 1 | 1 | 0 | 0.00000000
+follow(+1) | SY | SY | 1 | 1 | 1 | 0.00000000
+follow(+2) | SURYA | SY | 1 | 1 | 2 | 0.00000000
+follow(+3) | Su | SY | 1 | 1 | 3 | 0.00000000
+follow(+4) | Sun | SY | 1 | 1 | 4 | 0.00000000
+follow(-0) | G1 | SY | 1 | 1 | 0 | 0.00000000
+follow(-1) | Sun | SY | 1 | 1 | 4 | 0.00000000
+follow(-2) | Su | SY | 1 | 1 | 3 | 0.00000000
+follow(-3) | SURYA | SY | 1 | 1 | 2 | 0.00000000
+follow(-4) | SY | SY | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.graha.sweta.GrahaSweta | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G10 | SW | 10 | 10 | 0 | 0.00000000
+last | Uranus | SW | 10 | 10 | 4 | 0.00000000
+following[0] | G10 | SW | 10 | 10 | 0 | 0.00000000
+following[1] | SW | SW | 10 | 10 | 1 | 0.00000000
+following[2] | SWETA | SW | 10 | 10 | 2 | 0.00000000
+following[3] | Ur | SW | 10 | 10 | 3 | 0.00000000
+following[4] | Uranus | SW | 10 | 10 | 4 | 0.00000000
+previous[0] | Uranus | SW | 10 | 10 | 4 | 0.00000000
+previous[1] | Ur | SW | 10 | 10 | 3 | 0.00000000
+previous[2] | SWETA | SW | 10 | 10 | 2 | 0.00000000
+previous[3] | SW | SW | 10 | 10 | 1 | 0.00000000
+previous[4] | G10 | SW | 10 | 10 | 0 | 0.00000000
+follow(+0) | G10 | SW | 10 | 10 | 0 | 0.00000000
+follow(+1) | SW | SW | 10 | 10 | 1 | 0.00000000
+follow(+2) | SWETA | SW | 10 | 10 | 2 | 0.00000000
+follow(+3) | Ur | SW | 10 | 10 | 3 | 0.00000000
+follow(+4) | Uranus | SW | 10 | 10 | 4 | 0.00000000
+follow(-0) | G10 | SW | 10 | 10 | 0 | 0.00000000
+follow(-1) | Uranus | SW | 10 | 10 | 4 | 0.00000000
+follow(-2) | Ur | SW | 10 | 10 | 3 | 0.00000000
+follow(-3) | SWETA | SW | 10 | 10 | 2 | 0.00000000
+follow(-4) | SW | SW | 10 | 10 | 1 | 0.00000000
+
+== org.jyotisa.graha.syama.GrahaSyama | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G11 | SM | 11 | 11 | 0 | 0.00000000
+last | Neptune | SM | 11 | 11 | 4 | 0.00000000
+following[0] | G11 | SM | 11 | 11 | 0 | 0.00000000
+following[1] | SM | SM | 11 | 11 | 1 | 0.00000000
+following[2] | SYAMA | SM | 11 | 11 | 2 | 0.00000000
+following[3] | Ne | SM | 11 | 11 | 3 | 0.00000000
+following[4] | Neptune | SM | 11 | 11 | 4 | 0.00000000
+previous[0] | Neptune | SM | 11 | 11 | 4 | 0.00000000
+previous[1] | Ne | SM | 11 | 11 | 3 | 0.00000000
+previous[2] | SYAMA | SM | 11 | 11 | 2 | 0.00000000
+previous[3] | SM | SM | 11 | 11 | 1 | 0.00000000
+previous[4] | G11 | SM | 11 | 11 | 0 | 0.00000000
+follow(+0) | G11 | SM | 11 | 11 | 0 | 0.00000000
+follow(+1) | SM | SM | 11 | 11 | 1 | 0.00000000
+follow(+2) | SYAMA | SM | 11 | 11 | 2 | 0.00000000
+follow(+3) | Ne | SM | 11 | 11 | 3 | 0.00000000
+follow(+4) | Neptune | SM | 11 | 11 | 4 | 0.00000000
+follow(-0) | G11 | SM | 11 | 11 | 0 | 0.00000000
+follow(-1) | Neptune | SM | 11 | 11 | 4 | 0.00000000
+follow(-2) | Ne | SM | 11 | 11 | 3 | 0.00000000
+follow(-3) | SYAMA | SM | 11 | 11 | 2 | 0.00000000
+follow(-4) | SM | SM | 11 | 11 | 1 | 0.00000000
+
+== org.jyotisa.graha.teevra.GrahaTeevra | 5 constants
+-- step | name | code | fid | uid | ordinal | length
+first | G12 | TE | 12 | 12 | 0 | 0.00000000
+last | Pluto | TE | 12 | 12 | 4 | 0.00000000
+following[0] | G12 | TE | 12 | 12 | 0 | 0.00000000
+following[1] | TE | TE | 12 | 12 | 1 | 0.00000000
+following[2] | TEEVRA | TE | 12 | 12 | 2 | 0.00000000
+following[3] | Pl | TE | 12 | 12 | 3 | 0.00000000
+following[4] | Pluto | TE | 12 | 12 | 4 | 0.00000000
+previous[0] | Pluto | TE | 12 | 12 | 4 | 0.00000000
+previous[1] | Pl | TE | 12 | 12 | 3 | 0.00000000
+previous[2] | TEEVRA | TE | 12 | 12 | 2 | 0.00000000
+previous[3] | TE | TE | 12 | 12 | 1 | 0.00000000
+previous[4] | G12 | TE | 12 | 12 | 0 | 0.00000000
+follow(+0) | G12 | TE | 12 | 12 | 0 | 0.00000000
+follow(+1) | TE | TE | 12 | 12 | 1 | 0.00000000
+follow(+2) | TEEVRA | TE | 12 | 12 | 2 | 0.00000000
+follow(+3) | Pl | TE | 12 | 12 | 3 | 0.00000000
+follow(+4) | Pluto | TE | 12 | 12 | 4 | 0.00000000
+follow(-0) | G12 | TE | 12 | 12 | 0 | 0.00000000
+follow(-1) | Pluto | TE | 12 | 12 | 4 | 0.00000000
+follow(-2) | Pl | TE | 12 | 12 | 3 | 0.00000000
+follow(-3) | TEEVRA | TE | 12 | 12 | 2 | 0.00000000
+follow(-4) | TE | TE | 12 | 12 | 1 | 0.00000000

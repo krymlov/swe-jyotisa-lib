@@ -1,0 +1,123 @@
+== org.jyotisa.vaara.EVaara | 8 constants
+-- step | name | code | fid | uid | ordinal | length
+first | SURYA_VAARA | SYVR | 1 | 1 | 1 | 24.00000000
+last | SHANI_VAARA | SAVR | 7 | 7 | 7 | 24.00000000
+following[0] | SURYA_VAARA | SYVR | 1 | 1 | 1 | 24.00000000
+following[1] | CHANDRA_VAARA | CHVR | 2 | 2 | 2 | 24.00000000
+following[2] | MANGALA_VAARA | MAVR | 3 | 3 | 3 | 24.00000000
+following[3] | BUDHA_VAARA | BUVR | 4 | 4 | 4 | 24.00000000
+following[4] | GURU_VAARA | GUVR | 5 | 5 | 5 | 24.00000000
+following[5] | SHUKRA_VAARA | SKVR | 6 | 6 | 6 | 24.00000000
+following[6] | SHANI_VAARA | SAVR | 7 | 7 | 7 | 24.00000000
+previous[0] | SHANI_VAARA | SAVR | 7 | 7 | 7 | 24.00000000
+previous[1] | SHUKRA_VAARA | SKVR | 6 | 6 | 6 | 24.00000000
+previous[2] | GURU_VAARA | GUVR | 5 | 5 | 5 | 24.00000000
+previous[3] | BUDHA_VAARA | BUVR | 4 | 4 | 4 | 24.00000000
+previous[4] | MANGALA_VAARA | MAVR | 3 | 3 | 3 | 24.00000000
+previous[5] | CHANDRA_VAARA | CHVR | 2 | 2 | 2 | 24.00000000
+previous[6] | SURYA_VAARA | SYVR | 1 | 1 | 1 | 24.00000000
+follow(+0) | SURYA_VAARA | SYVR | 1 | 1 | 1 | 24.00000000
+follow(+1) | CHANDRA_VAARA | CHVR | 2 | 2 | 2 | 24.00000000
+follow(+2) | MANGALA_VAARA | MAVR | 3 | 3 | 3 | 24.00000000
+follow(+3) | BUDHA_VAARA | BUVR | 4 | 4 | 4 | 24.00000000
+follow(+4) | GURU_VAARA | GUVR | 5 | 5 | 5 | 24.00000000
+follow(+5) | SHUKRA_VAARA | SKVR | 6 | 6 | 6 | 24.00000000
+follow(+6) | SHANI_VAARA | SAVR | 7 | 7 | 7 | 24.00000000
+follow(-0) | SURYA_VAARA | SYVR | 1 | 1 | 1 | 24.00000000
+follow(-1) | SHANI_VAARA | SAVR | 7 | 7 | 7 | 24.00000000
+follow(-2) | SHUKRA_VAARA | SKVR | 6 | 6 | 6 | 24.00000000
+follow(-3) | GURU_VAARA | GUVR | 5 | 5 | 5 | 24.00000000
+follow(-4) | BUDHA_VAARA | BUVR | 4 | 4 | 4 | 24.00000000
+follow(-5) | MANGALA_VAARA | MAVR | 3 | 3 | 3 | 24.00000000
+follow(-6) | CHANDRA_VAARA | CHVR | 2 | 2 | 2 | 24.00000000
+
+== org.jyotisa.vaara.VaaraBudha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR4 | BUVR | 4 | 4 | 0 | 24.00000000
+last | BUVR | BUVR | 4 | 4 | 1 | 24.00000000
+following[0] | VR4 | BUVR | 4 | 4 | 0 | 24.00000000
+following[1] | BUVR | BUVR | 4 | 4 | 1 | 24.00000000
+previous[0] | BUVR | BUVR | 4 | 4 | 1 | 24.00000000
+previous[1] | VR4 | BUVR | 4 | 4 | 0 | 24.00000000
+follow(+0) | VR4 | BUVR | 4 | 4 | 0 | 24.00000000
+follow(+1) | BUVR | BUVR | 4 | 4 | 1 | 24.00000000
+follow(-0) | VR4 | BUVR | 4 | 4 | 0 | 24.00000000
+follow(-1) | BUVR | BUVR | 4 | 4 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraChandra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR2 | CHVR | 2 | 2 | 0 | 24.00000000
+last | CHVR | CHVR | 2 | 2 | 1 | 24.00000000
+following[0] | VR2 | CHVR | 2 | 2 | 0 | 24.00000000
+following[1] | CHVR | CHVR | 2 | 2 | 1 | 24.00000000
+previous[0] | CHVR | CHVR | 2 | 2 | 1 | 24.00000000
+previous[1] | VR2 | CHVR | 2 | 2 | 0 | 24.00000000
+follow(+0) | VR2 | CHVR | 2 | 2 | 0 | 24.00000000
+follow(+1) | CHVR | CHVR | 2 | 2 | 1 | 24.00000000
+follow(-0) | VR2 | CHVR | 2 | 2 | 0 | 24.00000000
+follow(-1) | CHVR | CHVR | 2 | 2 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraGuru | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR5 | GUVR | 5 | 5 | 0 | 24.00000000
+last | GUVR | GUVR | 5 | 5 | 1 | 24.00000000
+following[0] | VR5 | GUVR | 5 | 5 | 0 | 24.00000000
+following[1] | GUVR | GUVR | 5 | 5 | 1 | 24.00000000
+previous[0] | GUVR | GUVR | 5 | 5 | 1 | 24.00000000
+previous[1] | VR5 | GUVR | 5 | 5 | 0 | 24.00000000
+follow(+0) | VR5 | GUVR | 5 | 5 | 0 | 24.00000000
+follow(+1) | GUVR | GUVR | 5 | 5 | 1 | 24.00000000
+follow(-0) | VR5 | GUVR | 5 | 5 | 0 | 24.00000000
+follow(-1) | GUVR | GUVR | 5 | 5 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraMangala | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR3 | MAVR | 3 | 3 | 0 | 24.00000000
+last | MAVR | MAVR | 3 | 3 | 1 | 24.00000000
+following[0] | VR3 | MAVR | 3 | 3 | 0 | 24.00000000
+following[1] | MAVR | MAVR | 3 | 3 | 1 | 24.00000000
+previous[0] | MAVR | MAVR | 3 | 3 | 1 | 24.00000000
+previous[1] | VR3 | MAVR | 3 | 3 | 0 | 24.00000000
+follow(+0) | VR3 | MAVR | 3 | 3 | 0 | 24.00000000
+follow(+1) | MAVR | MAVR | 3 | 3 | 1 | 24.00000000
+follow(-0) | VR3 | MAVR | 3 | 3 | 0 | 24.00000000
+follow(-1) | MAVR | MAVR | 3 | 3 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraShani | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR7 | SAVR | 7 | 7 | 0 | 24.00000000
+last | SAVR | SAVR | 7 | 7 | 1 | 24.00000000
+following[0] | VR7 | SAVR | 7 | 7 | 0 | 24.00000000
+following[1] | SAVR | SAVR | 7 | 7 | 1 | 24.00000000
+previous[0] | SAVR | SAVR | 7 | 7 | 1 | 24.00000000
+previous[1] | VR7 | SAVR | 7 | 7 | 0 | 24.00000000
+follow(+0) | VR7 | SAVR | 7 | 7 | 0 | 24.00000000
+follow(+1) | SAVR | SAVR | 7 | 7 | 1 | 24.00000000
+follow(-0) | VR7 | SAVR | 7 | 7 | 0 | 24.00000000
+follow(-1) | SAVR | SAVR | 7 | 7 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraShukra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR6 | SKVR | 6 | 6 | 0 | 24.00000000
+last | SKVR | SKVR | 6 | 6 | 1 | 24.00000000
+following[0] | VR6 | SKVR | 6 | 6 | 0 | 24.00000000
+following[1] | SKVR | SKVR | 6 | 6 | 1 | 24.00000000
+previous[0] | SKVR | SKVR | 6 | 6 | 1 | 24.00000000
+previous[1] | VR6 | SKVR | 6 | 6 | 0 | 24.00000000
+follow(+0) | VR6 | SKVR | 6 | 6 | 0 | 24.00000000
+follow(+1) | SKVR | SKVR | 6 | 6 | 1 | 24.00000000
+follow(-0) | VR6 | SKVR | 6 | 6 | 0 | 24.00000000
+follow(-1) | SKVR | SKVR | 6 | 6 | 1 | 24.00000000
+
+== org.jyotisa.vaara.VaaraSurya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VR1 | SYVR | 1 | 1 | 0 | 24.00000000
+last | SYVR | SYVR | 1 | 1 | 1 | 24.00000000
+following[0] | VR1 | SYVR | 1 | 1 | 0 | 24.00000000
+following[1] | SYVR | SYVR | 1 | 1 | 1 | 24.00000000
+previous[0] | SYVR | SYVR | 1 | 1 | 1 | 24.00000000
+previous[1] | VR1 | SYVR | 1 | 1 | 0 | 24.00000000
+follow(+0) | VR1 | SYVR | 1 | 1 | 0 | 24.00000000
+follow(+1) | SYVR | SYVR | 1 | 1 | 1 | 24.00000000
+follow(-0) | VR1 | SYVR | 1 | 1 | 0 | 24.00000000
+follow(-1) | SYVR | SYVR | 1 | 1 | 1 | 24.00000000

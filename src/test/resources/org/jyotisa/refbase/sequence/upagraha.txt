@@ -1,0 +1,191 @@
+== org.jyotisa.upagraha.EUpagraha | 12 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DHUMA | UG1 | 1 | 1 | 1 | 0.00000000
+last | MAANDI | UG11 | 11 | 11 | 11 | 0.00000000
+following[0] | DHUMA | UG1 | 1 | 1 | 1 | 0.00000000
+following[1] | VYATIPAATA | UG2 | 2 | 2 | 2 | 0.00000000
+following[2] | PARIVESHA | UG3 | 3 | 3 | 3 | 0.00000000
+following[3] | INDRACHAAPA | UG4 | 4 | 4 | 4 | 0.00000000
+following[4] | UPAKETU | UG5 | 5 | 5 | 5 | 0.00000000
+following[5] | KAALA | UG6 | 6 | 6 | 6 | 0.00000000
+following[6] | MRITYU | UG7 | 7 | 7 | 7 | 0.00000000
+following[7] | ARTHAPRAHAARA | UG8 | 8 | 8 | 8 | 0.00000000
+following[8] | YAMAGHANTAKA | UG9 | 9 | 9 | 9 | 0.00000000
+following[9] | GULIKA | UG10 | 10 | 10 | 10 | 0.00000000
+following[10] | MAANDI | UG11 | 11 | 11 | 11 | 0.00000000
+previous[0] | MAANDI | UG11 | 11 | 11 | 11 | 0.00000000
+previous[1] | GULIKA | UG10 | 10 | 10 | 10 | 0.00000000
+previous[2] | YAMAGHANTAKA | UG9 | 9 | 9 | 9 | 0.00000000
+previous[3] | ARTHAPRAHAARA | UG8 | 8 | 8 | 8 | 0.00000000
+previous[4] | MRITYU | UG7 | 7 | 7 | 7 | 0.00000000
+previous[5] | KAALA | UG6 | 6 | 6 | 6 | 0.00000000
+previous[6] | UPAKETU | UG5 | 5 | 5 | 5 | 0.00000000
+previous[7] | INDRACHAAPA | UG4 | 4 | 4 | 4 | 0.00000000
+previous[8] | PARIVESHA | UG3 | 3 | 3 | 3 | 0.00000000
+previous[9] | VYATIPAATA | UG2 | 2 | 2 | 2 | 0.00000000
+previous[10] | DHUMA | UG1 | 1 | 1 | 1 | 0.00000000
+follow(+0) | DHUMA | UG1 | 1 | 1 | 1 | 0.00000000
+follow(+1) | VYATIPAATA | UG2 | 2 | 2 | 2 | 0.00000000
+follow(+2) | PARIVESHA | UG3 | 3 | 3 | 3 | 0.00000000
+follow(+3) | INDRACHAAPA | UG4 | 4 | 4 | 4 | 0.00000000
+follow(+4) | UPAKETU | UG5 | 5 | 5 | 5 | 0.00000000
+follow(+5) | KAALA | UG6 | 6 | 6 | 6 | 0.00000000
+follow(+6) | MRITYU | UG7 | 7 | 7 | 7 | 0.00000000
+follow(+7) | ARTHAPRAHAARA | UG8 | 8 | 8 | 8 | 0.00000000
+follow(+8) | YAMAGHANTAKA | UG9 | 9 | 9 | 9 | 0.00000000
+follow(+9) | GULIKA | UG10 | 10 | 10 | 10 | 0.00000000
+follow(+10) | MAANDI | UG11 | 11 | 11 | 11 | 0.00000000
+follow(-0) | DHUMA | UG1 | 1 | 1 | 1 | 0.00000000
+follow(-1) | MAANDI | UG11 | 11 | 11 | 11 | 0.00000000
+follow(-2) | GULIKA | UG10 | 10 | 10 | 10 | 0.00000000
+follow(-3) | YAMAGHANTAKA | UG9 | 9 | 9 | 9 | 0.00000000
+follow(-4) | ARTHAPRAHAARA | UG8 | 8 | 8 | 8 | 0.00000000
+follow(-5) | MRITYU | UG7 | 7 | 7 | 7 | 0.00000000
+follow(-6) | KAALA | UG6 | 6 | 6 | 6 | 0.00000000
+follow(-7) | UPAKETU | UG5 | 5 | 5 | 5 | 0.00000000
+follow(-8) | INDRACHAAPA | UG4 | 4 | 4 | 4 | 0.00000000
+follow(-9) | PARIVESHA | UG3 | 3 | 3 | 3 | 0.00000000
+follow(-10) | VYATIPAATA | UG2 | 2 | 2 | 2 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaArthaprahaara | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG8 | UG8 | 8 | 8 | 0 | 0.00000000
+last | ART | UG8 | 8 | 8 | 1 | 0.00000000
+following[0] | UG8 | UG8 | 8 | 8 | 0 | 0.00000000
+following[1] | ART | UG8 | 8 | 8 | 1 | 0.00000000
+previous[0] | ART | UG8 | 8 | 8 | 1 | 0.00000000
+previous[1] | UG8 | UG8 | 8 | 8 | 0 | 0.00000000
+follow(+0) | UG8 | UG8 | 8 | 8 | 0 | 0.00000000
+follow(+1) | ART | UG8 | 8 | 8 | 1 | 0.00000000
+follow(-0) | UG8 | UG8 | 8 | 8 | 0 | 0.00000000
+follow(-1) | ART | UG8 | 8 | 8 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaDhuma | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG1 | UG1 | 1 | 1 | 0 | 0.00000000
+last | DHU | UG1 | 1 | 1 | 1 | 0.00000000
+following[0] | UG1 | UG1 | 1 | 1 | 0 | 0.00000000
+following[1] | DHU | UG1 | 1 | 1 | 1 | 0.00000000
+previous[0] | DHU | UG1 | 1 | 1 | 1 | 0.00000000
+previous[1] | UG1 | UG1 | 1 | 1 | 0 | 0.00000000
+follow(+0) | UG1 | UG1 | 1 | 1 | 0 | 0.00000000
+follow(+1) | DHU | UG1 | 1 | 1 | 1 | 0.00000000
+follow(-0) | UG1 | UG1 | 1 | 1 | 0 | 0.00000000
+follow(-1) | DHU | UG1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaGulika | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG10 | UG10 | 10 | 10 | 0 | 0.00000000
+last | GLK | UG10 | 10 | 10 | 1 | 0.00000000
+following[0] | UG10 | UG10 | 10 | 10 | 0 | 0.00000000
+following[1] | GLK | UG10 | 10 | 10 | 1 | 0.00000000
+previous[0] | GLK | UG10 | 10 | 10 | 1 | 0.00000000
+previous[1] | UG10 | UG10 | 10 | 10 | 0 | 0.00000000
+follow(+0) | UG10 | UG10 | 10 | 10 | 0 | 0.00000000
+follow(+1) | GLK | UG10 | 10 | 10 | 1 | 0.00000000
+follow(-0) | UG10 | UG10 | 10 | 10 | 0 | 0.00000000
+follow(-1) | GLK | UG10 | 10 | 10 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaIndrachaapa | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG4 | UG4 | 4 | 4 | 0 | 0.00000000
+last | CHP | UG4 | 4 | 4 | 1 | 0.00000000
+following[0] | UG4 | UG4 | 4 | 4 | 0 | 0.00000000
+following[1] | CHP | UG4 | 4 | 4 | 1 | 0.00000000
+previous[0] | CHP | UG4 | 4 | 4 | 1 | 0.00000000
+previous[1] | UG4 | UG4 | 4 | 4 | 0 | 0.00000000
+follow(+0) | UG4 | UG4 | 4 | 4 | 0 | 0.00000000
+follow(+1) | CHP | UG4 | 4 | 4 | 1 | 0.00000000
+follow(-0) | UG4 | UG4 | 4 | 4 | 0 | 0.00000000
+follow(-1) | CHP | UG4 | 4 | 4 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaKaala | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG6 | UG6 | 6 | 6 | 0 | 0.00000000
+last | KAA | UG6 | 6 | 6 | 1 | 0.00000000
+following[0] | UG6 | UG6 | 6 | 6 | 0 | 0.00000000
+following[1] | KAA | UG6 | 6 | 6 | 1 | 0.00000000
+previous[0] | KAA | UG6 | 6 | 6 | 1 | 0.00000000
+previous[1] | UG6 | UG6 | 6 | 6 | 0 | 0.00000000
+follow(+0) | UG6 | UG6 | 6 | 6 | 0 | 0.00000000
+follow(+1) | KAA | UG6 | 6 | 6 | 1 | 0.00000000
+follow(-0) | UG6 | UG6 | 6 | 6 | 0 | 0.00000000
+follow(-1) | KAA | UG6 | 6 | 6 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaMaandi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG11 | UG11 | 11 | 11 | 0 | 0.00000000
+last | MND | UG11 | 11 | 11 | 1 | 0.00000000
+following[0] | UG11 | UG11 | 11 | 11 | 0 | 0.00000000
+following[1] | MND | UG11 | 11 | 11 | 1 | 0.00000000
+previous[0] | MND | UG11 | 11 | 11 | 1 | 0.00000000
+previous[1] | UG11 | UG11 | 11 | 11 | 0 | 0.00000000
+follow(+0) | UG11 | UG11 | 11 | 11 | 0 | 0.00000000
+follow(+1) | MND | UG11 | 11 | 11 | 1 | 0.00000000
+follow(-0) | UG11 | UG11 | 11 | 11 | 0 | 0.00000000
+follow(-1) | MND | UG11 | 11 | 11 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaMrityu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG7 | UG7 | 7 | 7 | 0 | 0.00000000
+last | MRT | UG7 | 7 | 7 | 1 | 0.00000000
+following[0] | UG7 | UG7 | 7 | 7 | 0 | 0.00000000
+following[1] | MRT | UG7 | 7 | 7 | 1 | 0.00000000
+previous[0] | MRT | UG7 | 7 | 7 | 1 | 0.00000000
+previous[1] | UG7 | UG7 | 7 | 7 | 0 | 0.00000000
+follow(+0) | UG7 | UG7 | 7 | 7 | 0 | 0.00000000
+follow(+1) | MRT | UG7 | 7 | 7 | 1 | 0.00000000
+follow(-0) | UG7 | UG7 | 7 | 7 | 0 | 0.00000000
+follow(-1) | MRT | UG7 | 7 | 7 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaParivesha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG3 | UG3 | 3 | 3 | 0 | 0.00000000
+last | PAR | UG3 | 3 | 3 | 1 | 0.00000000
+following[0] | UG3 | UG3 | 3 | 3 | 0 | 0.00000000
+following[1] | PAR | UG3 | 3 | 3 | 1 | 0.00000000
+previous[0] | PAR | UG3 | 3 | 3 | 1 | 0.00000000
+previous[1] | UG3 | UG3 | 3 | 3 | 0 | 0.00000000
+follow(+0) | UG3 | UG3 | 3 | 3 | 0 | 0.00000000
+follow(+1) | PAR | UG3 | 3 | 3 | 1 | 0.00000000
+follow(-0) | UG3 | UG3 | 3 | 3 | 0 | 0.00000000
+follow(-1) | PAR | UG3 | 3 | 3 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaUpaketu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG5 | UG5 | 5 | 5 | 0 | 0.00000000
+last | UPK | UG5 | 5 | 5 | 1 | 0.00000000
+following[0] | UG5 | UG5 | 5 | 5 | 0 | 0.00000000
+following[1] | UPK | UG5 | 5 | 5 | 1 | 0.00000000
+previous[0] | UPK | UG5 | 5 | 5 | 1 | 0.00000000
+previous[1] | UG5 | UG5 | 5 | 5 | 0 | 0.00000000
+follow(+0) | UG5 | UG5 | 5 | 5 | 0 | 0.00000000
+follow(+1) | UPK | UG5 | 5 | 5 | 1 | 0.00000000
+follow(-0) | UG5 | UG5 | 5 | 5 | 0 | 0.00000000
+follow(-1) | UPK | UG5 | 5 | 5 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaVyatipaata | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG2 | UG2 | 2 | 2 | 0 | 0.00000000
+last | VYA | UG2 | 2 | 2 | 1 | 0.00000000
+following[0] | UG2 | UG2 | 2 | 2 | 0 | 0.00000000
+following[1] | VYA | UG2 | 2 | 2 | 1 | 0.00000000
+previous[0] | VYA | UG2 | 2 | 2 | 1 | 0.00000000
+previous[1] | UG2 | UG2 | 2 | 2 | 0 | 0.00000000
+follow(+0) | UG2 | UG2 | 2 | 2 | 0 | 0.00000000
+follow(+1) | VYA | UG2 | 2 | 2 | 1 | 0.00000000
+follow(-0) | UG2 | UG2 | 2 | 2 | 0 | 0.00000000
+follow(-1) | VYA | UG2 | 2 | 2 | 1 | 0.00000000
+
+== org.jyotisa.upagraha.UpagrahaYamaghantaka | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | UG9 | UG9 | 9 | 9 | 0 | 0.00000000
+last | YAM | UG9 | 9 | 9 | 1 | 0.00000000
+following[0] | UG9 | UG9 | 9 | 9 | 0 | 0.00000000
+following[1] | YAM | UG9 | 9 | 9 | 1 | 0.00000000
+previous[0] | YAM | UG9 | 9 | 9 | 1 | 0.00000000
+previous[1] | UG9 | UG9 | 9 | 9 | 0 | 0.00000000
+follow(+0) | UG9 | UG9 | 9 | 9 | 0 | 0.00000000
+follow(+1) | YAM | UG9 | 9 | 9 | 1 | 0.00000000
+follow(-0) | UG9 | UG9 | 9 | 9 | 0 | 0.00000000
+follow(-1) | YAM | UG9 | 9 | 9 | 1 | 0.00000000

@@ -1,0 +1,200 @@
+== org.jyotisa.api.karana.NilKarana | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NIL | NIL | 0 | 0 | 0 | 6.00000000
+last | NIL | NIL | 0 | 0 | 0 | 6.00000000
+following[0] | NIL | NIL | 0 | 0 | 0 | 6.00000000
+previous[0] | NIL | NIL | 0 | 0 | 0 | 6.00000000
+follow(+0) | NIL | NIL | 0 | 0 | 0 | 6.00000000
+follow(-0) | NIL | NIL | 0 | 0 | 0 | 6.00000000
+
+== org.jyotisa.karana.EKarana | 12 constants
+-- step | name | code | fid | uid | ordinal | length
+first | BAVA | KR1 | 1 | 1 | 1 | 6.00000000
+last | KIMSTUGHNA | KR11 | 11 | 11 | 11 | 6.00000000
+following[0] | BAVA | KR1 | 1 | 1 | 1 | 6.00000000
+following[1] | BALAVA | KR2 | 2 | 2 | 2 | 6.00000000
+following[2] | KAULAVA | KR3 | 3 | 3 | 3 | 6.00000000
+following[3] | TAITULA | KR4 | 4 | 4 | 4 | 6.00000000
+following[4] | GARIJA | KR5 | 5 | 5 | 5 | 6.00000000
+following[5] | VANIJA | KR6 | 6 | 6 | 6 | 6.00000000
+following[6] | VISHTI | KR7 | 7 | 7 | 7 | 6.00000000
+following[7] | SAKUNA | KR8 | 8 | 8 | 8 | 6.00000000
+following[8] | CHATUSHPADA | KR9 | 9 | 9 | 9 | 6.00000000
+following[9] | NAGA | KR10 | 10 | 10 | 10 | 6.00000000
+following[10] | KIMSTUGHNA | KR11 | 11 | 11 | 11 | 6.00000000
+previous[0] | KIMSTUGHNA | KR11 | 11 | 11 | 11 | 6.00000000
+previous[1] | NAGA | KR10 | 10 | 10 | 10 | 6.00000000
+previous[2] | CHATUSHPADA | KR9 | 9 | 9 | 9 | 6.00000000
+previous[3] | SAKUNA | KR8 | 8 | 8 | 8 | 6.00000000
+previous[4] | VISHTI | KR7 | 7 | 7 | 7 | 6.00000000
+previous[5] | VANIJA | KR6 | 6 | 6 | 6 | 6.00000000
+previous[6] | GARIJA | KR5 | 5 | 5 | 5 | 6.00000000
+previous[7] | TAITULA | KR4 | 4 | 4 | 4 | 6.00000000
+previous[8] | KAULAVA | KR3 | 3 | 3 | 3 | 6.00000000
+previous[9] | BALAVA | KR2 | 2 | 2 | 2 | 6.00000000
+previous[10] | BAVA | KR1 | 1 | 1 | 1 | 6.00000000
+follow(+0) | BAVA | KR1 | 1 | 1 | 1 | 6.00000000
+follow(+1) | BALAVA | KR2 | 2 | 2 | 2 | 6.00000000
+follow(+2) | KAULAVA | KR3 | 3 | 3 | 3 | 6.00000000
+follow(+3) | TAITULA | KR4 | 4 | 4 | 4 | 6.00000000
+follow(+4) | GARIJA | KR5 | 5 | 5 | 5 | 6.00000000
+follow(+5) | VANIJA | KR6 | 6 | 6 | 6 | 6.00000000
+follow(+6) | VISHTI | KR7 | 7 | 7 | 7 | 6.00000000
+follow(+7) | SAKUNA | KR8 | 8 | 8 | 8 | 6.00000000
+follow(+8) | CHATUSHPADA | KR9 | 9 | 9 | 9 | 6.00000000
+follow(+9) | NAGA | KR10 | 10 | 10 | 10 | 6.00000000
+follow(+10) | KIMSTUGHNA | KR11 | 11 | 11 | 11 | 6.00000000
+follow(-0) | BAVA | KR1 | 1 | 1 | 1 | 6.00000000
+follow(-1) | KIMSTUGHNA | KR11 | 11 | 11 | 11 | 6.00000000
+follow(-2) | NAGA | KR10 | 10 | 10 | 10 | 6.00000000
+follow(-3) | CHATUSHPADA | KR9 | 9 | 9 | 9 | 6.00000000
+follow(-4) | SAKUNA | KR8 | 8 | 8 | 8 | 6.00000000
+follow(-5) | VISHTI | KR7 | 7 | 7 | 7 | 6.00000000
+follow(-6) | VANIJA | KR6 | 6 | 6 | 6 | 6.00000000
+follow(-7) | GARIJA | KR5 | 5 | 5 | 5 | 6.00000000
+follow(-8) | TAITULA | KR4 | 4 | 4 | 4 | 6.00000000
+follow(-9) | KAULAVA | KR3 | 3 | 3 | 3 | 6.00000000
+follow(-10) | BALAVA | KR2 | 2 | 2 | 2 | 6.00000000
+
+== org.jyotisa.karana.KaranaBalava | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR2 | KR2 | 2 | 2 | 0 | 6.00000000
+last | BLV | KR2 | 2 | 2 | 1 | 6.00000000
+following[0] | KR2 | KR2 | 2 | 2 | 0 | 6.00000000
+following[1] | BLV | KR2 | 2 | 2 | 1 | 6.00000000
+previous[0] | BLV | KR2 | 2 | 2 | 1 | 6.00000000
+previous[1] | KR2 | KR2 | 2 | 2 | 0 | 6.00000000
+follow(+0) | KR2 | KR2 | 2 | 2 | 0 | 6.00000000
+follow(+1) | BLV | KR2 | 2 | 2 | 1 | 6.00000000
+follow(-0) | KR2 | KR2 | 2 | 2 | 0 | 6.00000000
+follow(-1) | BLV | KR2 | 2 | 2 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaBava | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR1 | KR1 | 1 | 1 | 0 | 6.00000000
+last | BAV | KR1 | 1 | 1 | 1 | 6.00000000
+following[0] | KR1 | KR1 | 1 | 1 | 0 | 6.00000000
+following[1] | BAV | KR1 | 1 | 1 | 1 | 6.00000000
+previous[0] | BAV | KR1 | 1 | 1 | 1 | 6.00000000
+previous[1] | KR1 | KR1 | 1 | 1 | 0 | 6.00000000
+follow(+0) | KR1 | KR1 | 1 | 1 | 0 | 6.00000000
+follow(+1) | BAV | KR1 | 1 | 1 | 1 | 6.00000000
+follow(-0) | KR1 | KR1 | 1 | 1 | 0 | 6.00000000
+follow(-1) | BAV | KR1 | 1 | 1 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaChatushpada | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR9 | KR9 | 9 | 9 | 0 | 6.00000000
+last | CSP | KR9 | 9 | 9 | 1 | 6.00000000
+following[0] | KR9 | KR9 | 9 | 9 | 0 | 6.00000000
+following[1] | CSP | KR9 | 9 | 9 | 1 | 6.00000000
+previous[0] | CSP | KR9 | 9 | 9 | 1 | 6.00000000
+previous[1] | KR9 | KR9 | 9 | 9 | 0 | 6.00000000
+follow(+0) | KR9 | KR9 | 9 | 9 | 0 | 6.00000000
+follow(+1) | CSP | KR9 | 9 | 9 | 1 | 6.00000000
+follow(-0) | KR9 | KR9 | 9 | 9 | 0 | 6.00000000
+follow(-1) | CSP | KR9 | 9 | 9 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaGarija | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR5 | KR5 | 5 | 5 | 0 | 6.00000000
+last | GRJ | KR5 | 5 | 5 | 1 | 6.00000000
+following[0] | KR5 | KR5 | 5 | 5 | 0 | 6.00000000
+following[1] | GRJ | KR5 | 5 | 5 | 1 | 6.00000000
+previous[0] | GRJ | KR5 | 5 | 5 | 1 | 6.00000000
+previous[1] | KR5 | KR5 | 5 | 5 | 0 | 6.00000000
+follow(+0) | KR5 | KR5 | 5 | 5 | 0 | 6.00000000
+follow(+1) | GRJ | KR5 | 5 | 5 | 1 | 6.00000000
+follow(-0) | KR5 | KR5 | 5 | 5 | 0 | 6.00000000
+follow(-1) | GRJ | KR5 | 5 | 5 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaKaulava | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR3 | KR3 | 3 | 3 | 0 | 6.00000000
+last | KLV | KR3 | 3 | 3 | 1 | 6.00000000
+following[0] | KR3 | KR3 | 3 | 3 | 0 | 6.00000000
+following[1] | KLV | KR3 | 3 | 3 | 1 | 6.00000000
+previous[0] | KLV | KR3 | 3 | 3 | 1 | 6.00000000
+previous[1] | KR3 | KR3 | 3 | 3 | 0 | 6.00000000
+follow(+0) | KR3 | KR3 | 3 | 3 | 0 | 6.00000000
+follow(+1) | KLV | KR3 | 3 | 3 | 1 | 6.00000000
+follow(-0) | KR3 | KR3 | 3 | 3 | 0 | 6.00000000
+follow(-1) | KLV | KR3 | 3 | 3 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaKimstughna | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR11 | KR11 | 11 | 11 | 0 | 6.00000000
+last | KSG | KR11 | 11 | 11 | 1 | 6.00000000
+following[0] | KR11 | KR11 | 11 | 11 | 0 | 6.00000000
+following[1] | KSG | KR11 | 11 | 11 | 1 | 6.00000000
+previous[0] | KSG | KR11 | 11 | 11 | 1 | 6.00000000
+previous[1] | KR11 | KR11 | 11 | 11 | 0 | 6.00000000
+follow(+0) | KR11 | KR11 | 11 | 11 | 0 | 6.00000000
+follow(+1) | KSG | KR11 | 11 | 11 | 1 | 6.00000000
+follow(-0) | KR11 | KR11 | 11 | 11 | 0 | 6.00000000
+follow(-1) | KSG | KR11 | 11 | 11 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaNaga | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR10 | KR10 | 10 | 10 | 0 | 6.00000000
+last | NAG | KR10 | 10 | 10 | 1 | 6.00000000
+following[0] | KR10 | KR10 | 10 | 10 | 0 | 6.00000000
+following[1] | NAG | KR10 | 10 | 10 | 1 | 6.00000000
+previous[0] | NAG | KR10 | 10 | 10 | 1 | 6.00000000
+previous[1] | KR10 | KR10 | 10 | 10 | 0 | 6.00000000
+follow(+0) | KR10 | KR10 | 10 | 10 | 0 | 6.00000000
+follow(+1) | NAG | KR10 | 10 | 10 | 1 | 6.00000000
+follow(-0) | KR10 | KR10 | 10 | 10 | 0 | 6.00000000
+follow(-1) | NAG | KR10 | 10 | 10 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaSakuna | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR8 | KR8 | 8 | 8 | 0 | 6.00000000
+last | SKN | KR8 | 8 | 8 | 1 | 6.00000000
+following[0] | KR8 | KR8 | 8 | 8 | 0 | 6.00000000
+following[1] | SKN | KR8 | 8 | 8 | 1 | 6.00000000
+previous[0] | SKN | KR8 | 8 | 8 | 1 | 6.00000000
+previous[1] | KR8 | KR8 | 8 | 8 | 0 | 6.00000000
+follow(+0) | KR8 | KR8 | 8 | 8 | 0 | 6.00000000
+follow(+1) | SKN | KR8 | 8 | 8 | 1 | 6.00000000
+follow(-0) | KR8 | KR8 | 8 | 8 | 0 | 6.00000000
+follow(-1) | SKN | KR8 | 8 | 8 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaTaitula | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR4 | KR4 | 4 | 4 | 0 | 6.00000000
+last | TTL | KR4 | 4 | 4 | 1 | 6.00000000
+following[0] | KR4 | KR4 | 4 | 4 | 0 | 6.00000000
+following[1] | TTL | KR4 | 4 | 4 | 1 | 6.00000000
+previous[0] | TTL | KR4 | 4 | 4 | 1 | 6.00000000
+previous[1] | KR4 | KR4 | 4 | 4 | 0 | 6.00000000
+follow(+0) | KR4 | KR4 | 4 | 4 | 0 | 6.00000000
+follow(+1) | TTL | KR4 | 4 | 4 | 1 | 6.00000000
+follow(-0) | KR4 | KR4 | 4 | 4 | 0 | 6.00000000
+follow(-1) | TTL | KR4 | 4 | 4 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaVanija | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR6 | KR6 | 6 | 6 | 0 | 6.00000000
+last | VNJ | KR6 | 6 | 6 | 1 | 6.00000000
+following[0] | KR6 | KR6 | 6 | 6 | 0 | 6.00000000
+following[1] | VNJ | KR6 | 6 | 6 | 1 | 6.00000000
+previous[0] | VNJ | KR6 | 6 | 6 | 1 | 6.00000000
+previous[1] | KR6 | KR6 | 6 | 6 | 0 | 6.00000000
+follow(+0) | KR6 | KR6 | 6 | 6 | 0 | 6.00000000
+follow(+1) | VNJ | KR6 | 6 | 6 | 1 | 6.00000000
+follow(-0) | KR6 | KR6 | 6 | 6 | 0 | 6.00000000
+follow(-1) | VNJ | KR6 | 6 | 6 | 1 | 6.00000000
+
+== org.jyotisa.karana.KaranaVishti | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | KR7 | KR7 | 7 | 7 | 0 | 6.00000000
+last | VST | KR7 | 7 | 7 | 1 | 6.00000000
+following[0] | KR7 | KR7 | 7 | 7 | 0 | 6.00000000
+following[1] | VST | KR7 | 7 | 7 | 1 | 6.00000000
+previous[0] | VST | KR7 | 7 | 7 | 1 | 6.00000000
+previous[1] | KR7 | KR7 | 7 | 7 | 0 | 6.00000000
+follow(+0) | KR7 | KR7 | 7 | 7 | 0 | 6.00000000
+follow(+1) | VST | KR7 | 7 | 7 | 1 | 6.00000000
+follow(-0) | KR7 | KR7 | 7 | 7 | 0 | 6.00000000
+follow(-1) | VST | KR7 | 7 | 7 | 1 | 6.00000000

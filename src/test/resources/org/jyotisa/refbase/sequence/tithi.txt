@@ -1,0 +1,328 @@
+== org.jyotisa.api.tithi.NilTithi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NIL | NIL | 0 | 0 | 0 | 12.00000000
+last | NIL | NIL | 0 | 0 | 0 | 12.00000000
+following[0] | NIL | NIL | 0 | 0 | 0 | 12.00000000
+previous[0] | NIL | NIL | 0 | 0 | 0 | 12.00000000
+follow(+0) | NIL | NIL | 0 | 0 | 0 | 12.00000000
+follow(-0) | NIL | NIL | 0 | 0 | 0 | 12.00000000
+
+== org.jyotisa.tithi.ETithi | 31 constants
+-- step | name | code | fid | uid | ordinal | length
+first | SHUKLA_PRATIPADA | S1 | 1 | 1 | 1 | 12.00000000
+last | KRISHNA_AMAVASYA | K15 | 15 | 30 | 30 | 12.00000000
+following[0] | SHUKLA_PRATIPADA | S1 | 1 | 1 | 1 | 12.00000000
+following[1] | SHUKLA_DWITIYA | S2 | 2 | 2 | 2 | 12.00000000
+following[2] | SHUKLA_TRITIYA | S3 | 3 | 3 | 3 | 12.00000000
+following[3] | SHUKLA_CHATURTHI | S4 | 4 | 4 | 4 | 12.00000000
+following[4] | SHUKLA_PANCHAMI | S5 | 5 | 5 | 5 | 12.00000000
+following[5] | SHUKLA_SHASHTHI | S6 | 6 | 6 | 6 | 12.00000000
+following[6] | SHUKLA_SAPTAMI | S7 | 7 | 7 | 7 | 12.00000000
+following[7] | SHUKLA_ASHTAMI | S8 | 8 | 8 | 8 | 12.00000000
+following[8] | SHUKLA_NAVAMI | S9 | 9 | 9 | 9 | 12.00000000
+following[9] | SHUKLA_DASHAMI | S10 | 10 | 10 | 10 | 12.00000000
+following[10] | SHUKLA_EKADASI | S11 | 11 | 11 | 11 | 12.00000000
+following[11] | SHUKLA_DWADASI | S12 | 12 | 12 | 12 | 12.00000000
+following[12] | SHUKLA_TRAYODASI | S13 | 13 | 13 | 13 | 12.00000000
+following[13] | SHUKLA_CHATURDASI | S14 | 14 | 14 | 14 | 12.00000000
+following[14] | SHUKLA_POORNIMA | S15 | 15 | 15 | 15 | 12.00000000
+following[15] | KRISHNA_PRATIPADA | K1 | 1 | 16 | 16 | 12.00000000
+following[16] | KRISHNA_DWITIYA | K2 | 2 | 17 | 17 | 12.00000000
+following[17] | KRISHNA_TRITIYA | K3 | 3 | 18 | 18 | 12.00000000
+following[18] | KRISHNA_CHATURTHI | K4 | 4 | 19 | 19 | 12.00000000
+following[19] | KRISHNA_PANCHAMI | K5 | 5 | 20 | 20 | 12.00000000
+following[20] | KRISHNA_SHASHTHI | K6 | 6 | 21 | 21 | 12.00000000
+following[21] | KRISHNA_SAPTAMI | K7 | 7 | 22 | 22 | 12.00000000
+following[22] | KRISHNA_ASHTAMI | K8 | 8 | 23 | 23 | 12.00000000
+following[23] | KRISHNA_NAVAMI | K9 | 9 | 24 | 24 | 12.00000000
+following[24] | KRISHNA_DASHAMI | K10 | 10 | 25 | 25 | 12.00000000
+following[25] | KRISHNA_EKADASI | K11 | 11 | 26 | 26 | 12.00000000
+following[26] | KRISHNA_DWADASI | K12 | 12 | 27 | 27 | 12.00000000
+following[27] | KRISHNA_TRAYODASI | K13 | 13 | 28 | 28 | 12.00000000
+following[28] | KRISHNA_CHATURDASI | K14 | 14 | 29 | 29 | 12.00000000
+following[29] | KRISHNA_AMAVASYA | K15 | 15 | 30 | 30 | 12.00000000
+previous[0] | KRISHNA_AMAVASYA | K15 | 15 | 30 | 30 | 12.00000000
+previous[1] | KRISHNA_CHATURDASI | K14 | 14 | 29 | 29 | 12.00000000
+previous[2] | KRISHNA_TRAYODASI | K13 | 13 | 28 | 28 | 12.00000000
+previous[3] | KRISHNA_DWADASI | K12 | 12 | 27 | 27 | 12.00000000
+previous[4] | KRISHNA_EKADASI | K11 | 11 | 26 | 26 | 12.00000000
+previous[5] | KRISHNA_DASHAMI | K10 | 10 | 25 | 25 | 12.00000000
+previous[6] | KRISHNA_NAVAMI | K9 | 9 | 24 | 24 | 12.00000000
+previous[7] | KRISHNA_ASHTAMI | K8 | 8 | 23 | 23 | 12.00000000
+previous[8] | KRISHNA_SAPTAMI | K7 | 7 | 22 | 22 | 12.00000000
+previous[9] | KRISHNA_SHASHTHI | K6 | 6 | 21 | 21 | 12.00000000
+previous[10] | KRISHNA_PANCHAMI | K5 | 5 | 20 | 20 | 12.00000000
+previous[11] | KRISHNA_CHATURTHI | K4 | 4 | 19 | 19 | 12.00000000
+previous[12] | KRISHNA_TRITIYA | K3 | 3 | 18 | 18 | 12.00000000
+previous[13] | KRISHNA_DWITIYA | K2 | 2 | 17 | 17 | 12.00000000
+previous[14] | KRISHNA_PRATIPADA | K1 | 1 | 16 | 16 | 12.00000000
+previous[15] | SHUKLA_POORNIMA | S15 | 15 | 15 | 15 | 12.00000000
+previous[16] | SHUKLA_CHATURDASI | S14 | 14 | 14 | 14 | 12.00000000
+previous[17] | SHUKLA_TRAYODASI | S13 | 13 | 13 | 13 | 12.00000000
+previous[18] | SHUKLA_DWADASI | S12 | 12 | 12 | 12 | 12.00000000
+previous[19] | SHUKLA_EKADASI | S11 | 11 | 11 | 11 | 12.00000000
+previous[20] | SHUKLA_DASHAMI | S10 | 10 | 10 | 10 | 12.00000000
+previous[21] | SHUKLA_NAVAMI | S9 | 9 | 9 | 9 | 12.00000000
+previous[22] | SHUKLA_ASHTAMI | S8 | 8 | 8 | 8 | 12.00000000
+previous[23] | SHUKLA_SAPTAMI | S7 | 7 | 7 | 7 | 12.00000000
+previous[24] | SHUKLA_SHASHTHI | S6 | 6 | 6 | 6 | 12.00000000
+previous[25] | SHUKLA_PANCHAMI | S5 | 5 | 5 | 5 | 12.00000000
+previous[26] | SHUKLA_CHATURTHI | S4 | 4 | 4 | 4 | 12.00000000
+previous[27] | SHUKLA_TRITIYA | S3 | 3 | 3 | 3 | 12.00000000
+previous[28] | SHUKLA_DWITIYA | S2 | 2 | 2 | 2 | 12.00000000
+previous[29] | SHUKLA_PRATIPADA | S1 | 1 | 1 | 1 | 12.00000000
+follow(+0) | SHUKLA_PRATIPADA | S1 | 1 | 1 | 1 | 12.00000000
+follow(+1) | SHUKLA_DWITIYA | S2 | 2 | 2 | 2 | 12.00000000
+follow(+2) | SHUKLA_TRITIYA | S3 | 3 | 3 | 3 | 12.00000000
+follow(+3) | SHUKLA_CHATURTHI | S4 | 4 | 4 | 4 | 12.00000000
+follow(+4) | SHUKLA_PANCHAMI | S5 | 5 | 5 | 5 | 12.00000000
+follow(+5) | SHUKLA_SHASHTHI | S6 | 6 | 6 | 6 | 12.00000000
+follow(+6) | SHUKLA_SAPTAMI | S7 | 7 | 7 | 7 | 12.00000000
+follow(+7) | SHUKLA_ASHTAMI | S8 | 8 | 8 | 8 | 12.00000000
+follow(+8) | SHUKLA_NAVAMI | S9 | 9 | 9 | 9 | 12.00000000
+follow(+9) | SHUKLA_DASHAMI | S10 | 10 | 10 | 10 | 12.00000000
+follow(+10) | SHUKLA_EKADASI | S11 | 11 | 11 | 11 | 12.00000000
+follow(+11) | SHUKLA_DWADASI | S12 | 12 | 12 | 12 | 12.00000000
+follow(+12) | SHUKLA_TRAYODASI | S13 | 13 | 13 | 13 | 12.00000000
+follow(+13) | SHUKLA_CHATURDASI | S14 | 14 | 14 | 14 | 12.00000000
+follow(+14) | SHUKLA_POORNIMA | S15 | 15 | 15 | 15 | 12.00000000
+follow(+15) | KRISHNA_PRATIPADA | K1 | 1 | 16 | 16 | 12.00000000
+follow(+16) | KRISHNA_DWITIYA | K2 | 2 | 17 | 17 | 12.00000000
+follow(+17) | KRISHNA_TRITIYA | K3 | 3 | 18 | 18 | 12.00000000
+follow(+18) | KRISHNA_CHATURTHI | K4 | 4 | 19 | 19 | 12.00000000
+follow(+19) | KRISHNA_PANCHAMI | K5 | 5 | 20 | 20 | 12.00000000
+follow(+20) | KRISHNA_SHASHTHI | K6 | 6 | 21 | 21 | 12.00000000
+follow(+21) | KRISHNA_SAPTAMI | K7 | 7 | 22 | 22 | 12.00000000
+follow(+22) | KRISHNA_ASHTAMI | K8 | 8 | 23 | 23 | 12.00000000
+follow(+23) | KRISHNA_NAVAMI | K9 | 9 | 24 | 24 | 12.00000000
+follow(+24) | KRISHNA_DASHAMI | K10 | 10 | 25 | 25 | 12.00000000
+follow(+25) | KRISHNA_EKADASI | K11 | 11 | 26 | 26 | 12.00000000
+follow(+26) | KRISHNA_DWADASI | K12 | 12 | 27 | 27 | 12.00000000
+follow(+27) | KRISHNA_TRAYODASI | K13 | 13 | 28 | 28 | 12.00000000
+follow(+28) | KRISHNA_CHATURDASI | K14 | 14 | 29 | 29 | 12.00000000
+follow(+29) | KRISHNA_AMAVASYA | K15 | 15 | 30 | 30 | 12.00000000
+follow(-0) | SHUKLA_PRATIPADA | S1 | 1 | 1 | 1 | 12.00000000
+follow(-1) | KRISHNA_AMAVASYA | K15 | 15 | 30 | 30 | 12.00000000
+follow(-2) | KRISHNA_CHATURDASI | K14 | 14 | 29 | 29 | 12.00000000
+follow(-3) | KRISHNA_TRAYODASI | K13 | 13 | 28 | 28 | 12.00000000
+follow(-4) | KRISHNA_DWADASI | K12 | 12 | 27 | 27 | 12.00000000
+follow(-5) | KRISHNA_EKADASI | K11 | 11 | 26 | 26 | 12.00000000
+follow(-6) | KRISHNA_DASHAMI | K10 | 10 | 25 | 25 | 12.00000000
+follow(-7) | KRISHNA_NAVAMI | K9 | 9 | 24 | 24 | 12.00000000
+follow(-8) | KRISHNA_ASHTAMI | K8 | 8 | 23 | 23 | 12.00000000
+follow(-9) | KRISHNA_SAPTAMI | K7 | 7 | 22 | 22 | 12.00000000
+follow(-10) | KRISHNA_SHASHTHI | K6 | 6 | 21 | 21 | 12.00000000
+follow(-11) | KRISHNA_PANCHAMI | K5 | 5 | 20 | 20 | 12.00000000
+follow(-12) | KRISHNA_CHATURTHI | K4 | 4 | 19 | 19 | 12.00000000
+follow(-13) | KRISHNA_TRITIYA | K3 | 3 | 18 | 18 | 12.00000000
+follow(-14) | KRISHNA_DWITIYA | K2 | 2 | 17 | 17 | 12.00000000
+follow(-15) | KRISHNA_PRATIPADA | K1 | 1 | 16 | 16 | 12.00000000
+follow(-16) | SHUKLA_POORNIMA | S15 | 15 | 15 | 15 | 12.00000000
+follow(-17) | SHUKLA_CHATURDASI | S14 | 14 | 14 | 14 | 12.00000000
+follow(-18) | SHUKLA_TRAYODASI | S13 | 13 | 13 | 13 | 12.00000000
+follow(-19) | SHUKLA_DWADASI | S12 | 12 | 12 | 12 | 12.00000000
+follow(-20) | SHUKLA_EKADASI | S11 | 11 | 11 | 11 | 12.00000000
+follow(-21) | SHUKLA_DASHAMI | S10 | 10 | 10 | 10 | 12.00000000
+follow(-22) | SHUKLA_NAVAMI | S9 | 9 | 9 | 9 | 12.00000000
+follow(-23) | SHUKLA_ASHTAMI | S8 | 8 | 8 | 8 | 12.00000000
+follow(-24) | SHUKLA_SAPTAMI | S7 | 7 | 7 | 7 | 12.00000000
+follow(-25) | SHUKLA_SHASHTHI | S6 | 6 | 6 | 6 | 12.00000000
+follow(-26) | SHUKLA_PANCHAMI | S5 | 5 | 5 | 5 | 12.00000000
+follow(-27) | SHUKLA_CHATURTHI | S4 | 4 | 4 | 4 | 12.00000000
+follow(-28) | SHUKLA_TRITIYA | S3 | 3 | 3 | 3 | 12.00000000
+follow(-29) | SHUKLA_DWITIYA | S2 | 2 | 2 | 2 | 12.00000000
+
+== org.jyotisa.tithi.TithiAshtami | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S8 | S8 | 8 | 8 | 0 | 12.00000000
+last | K8 | K8 | 8 | 23 | 1 | 12.00000000
+following[0] | S8 | S8 | 8 | 8 | 0 | 12.00000000
+following[1] | K8 | K8 | 8 | 23 | 1 | 12.00000000
+previous[0] | K8 | K8 | 8 | 23 | 1 | 12.00000000
+previous[1] | S8 | S8 | 8 | 8 | 0 | 12.00000000
+follow(+0) | S8 | S8 | 8 | 8 | 0 | 12.00000000
+follow(+1) | K8 | K8 | 8 | 23 | 1 | 12.00000000
+follow(-0) | S8 | S8 | 8 | 8 | 0 | 12.00000000
+follow(-1) | K8 | K8 | 8 | 23 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiChaturdasi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S14 | S14 | 14 | 14 | 0 | 12.00000000
+last | K14 | K14 | 14 | 29 | 1 | 12.00000000
+following[0] | S14 | S14 | 14 | 14 | 0 | 12.00000000
+following[1] | K14 | K14 | 14 | 29 | 1 | 12.00000000
+previous[0] | K14 | K14 | 14 | 29 | 1 | 12.00000000
+previous[1] | S14 | S14 | 14 | 14 | 0 | 12.00000000
+follow(+0) | S14 | S14 | 14 | 14 | 0 | 12.00000000
+follow(+1) | K14 | K14 | 14 | 29 | 1 | 12.00000000
+follow(-0) | S14 | S14 | 14 | 14 | 0 | 12.00000000
+follow(-1) | K14 | K14 | 14 | 29 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiChaturthi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S4 | S4 | 4 | 4 | 0 | 12.00000000
+last | K4 | K4 | 4 | 19 | 1 | 12.00000000
+following[0] | S4 | S4 | 4 | 4 | 0 | 12.00000000
+following[1] | K4 | K4 | 4 | 19 | 1 | 12.00000000
+previous[0] | K4 | K4 | 4 | 19 | 1 | 12.00000000
+previous[1] | S4 | S4 | 4 | 4 | 0 | 12.00000000
+follow(+0) | S4 | S4 | 4 | 4 | 0 | 12.00000000
+follow(+1) | K4 | K4 | 4 | 19 | 1 | 12.00000000
+follow(-0) | S4 | S4 | 4 | 4 | 0 | 12.00000000
+follow(-1) | K4 | K4 | 4 | 19 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiDashami | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S10 | S10 | 10 | 10 | 0 | 12.00000000
+last | K10 | K10 | 10 | 25 | 1 | 12.00000000
+following[0] | S10 | S10 | 10 | 10 | 0 | 12.00000000
+following[1] | K10 | K10 | 10 | 25 | 1 | 12.00000000
+previous[0] | K10 | K10 | 10 | 25 | 1 | 12.00000000
+previous[1] | S10 | S10 | 10 | 10 | 0 | 12.00000000
+follow(+0) | S10 | S10 | 10 | 10 | 0 | 12.00000000
+follow(+1) | K10 | K10 | 10 | 25 | 1 | 12.00000000
+follow(-0) | S10 | S10 | 10 | 10 | 0 | 12.00000000
+follow(-1) | K10 | K10 | 10 | 25 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiDwadasi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S12 | S12 | 12 | 12 | 0 | 12.00000000
+last | K12 | K12 | 12 | 27 | 1 | 12.00000000
+following[0] | S12 | S12 | 12 | 12 | 0 | 12.00000000
+following[1] | K12 | K12 | 12 | 27 | 1 | 12.00000000
+previous[0] | K12 | K12 | 12 | 27 | 1 | 12.00000000
+previous[1] | S12 | S12 | 12 | 12 | 0 | 12.00000000
+follow(+0) | S12 | S12 | 12 | 12 | 0 | 12.00000000
+follow(+1) | K12 | K12 | 12 | 27 | 1 | 12.00000000
+follow(-0) | S12 | S12 | 12 | 12 | 0 | 12.00000000
+follow(-1) | K12 | K12 | 12 | 27 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiDwitiya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S2 | S2 | 2 | 2 | 0 | 12.00000000
+last | K2 | K2 | 2 | 17 | 1 | 12.00000000
+following[0] | S2 | S2 | 2 | 2 | 0 | 12.00000000
+following[1] | K2 | K2 | 2 | 17 | 1 | 12.00000000
+previous[0] | K2 | K2 | 2 | 17 | 1 | 12.00000000
+previous[1] | S2 | S2 | 2 | 2 | 0 | 12.00000000
+follow(+0) | S2 | S2 | 2 | 2 | 0 | 12.00000000
+follow(+1) | K2 | K2 | 2 | 17 | 1 | 12.00000000
+follow(-0) | S2 | S2 | 2 | 2 | 0 | 12.00000000
+follow(-1) | K2 | K2 | 2 | 17 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiEkadasi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S11 | S11 | 11 | 11 | 0 | 12.00000000
+last | K11 | K11 | 11 | 26 | 1 | 12.00000000
+following[0] | S11 | S11 | 11 | 11 | 0 | 12.00000000
+following[1] | K11 | K11 | 11 | 26 | 1 | 12.00000000
+previous[0] | K11 | K11 | 11 | 26 | 1 | 12.00000000
+previous[1] | S11 | S11 | 11 | 11 | 0 | 12.00000000
+follow(+0) | S11 | S11 | 11 | 11 | 0 | 12.00000000
+follow(+1) | K11 | K11 | 11 | 26 | 1 | 12.00000000
+follow(-0) | S11 | S11 | 11 | 11 | 0 | 12.00000000
+follow(-1) | K11 | K11 | 11 | 26 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiNavami | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S9 | S9 | 9 | 9 | 0 | 12.00000000
+last | K9 | K9 | 9 | 24 | 1 | 12.00000000
+following[0] | S9 | S9 | 9 | 9 | 0 | 12.00000000
+following[1] | K9 | K9 | 9 | 24 | 1 | 12.00000000
+previous[0] | K9 | K9 | 9 | 24 | 1 | 12.00000000
+previous[1] | S9 | S9 | 9 | 9 | 0 | 12.00000000
+follow(+0) | S9 | S9 | 9 | 9 | 0 | 12.00000000
+follow(+1) | K9 | K9 | 9 | 24 | 1 | 12.00000000
+follow(-0) | S9 | S9 | 9 | 9 | 0 | 12.00000000
+follow(-1) | K9 | K9 | 9 | 24 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiPanchami | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S5 | S5 | 5 | 5 | 0 | 12.00000000
+last | K5 | K5 | 5 | 20 | 1 | 12.00000000
+following[0] | S5 | S5 | 5 | 5 | 0 | 12.00000000
+following[1] | K5 | K5 | 5 | 20 | 1 | 12.00000000
+previous[0] | K5 | K5 | 5 | 20 | 1 | 12.00000000
+previous[1] | S5 | S5 | 5 | 5 | 0 | 12.00000000
+follow(+0) | S5 | S5 | 5 | 5 | 0 | 12.00000000
+follow(+1) | K5 | K5 | 5 | 20 | 1 | 12.00000000
+follow(-0) | S5 | S5 | 5 | 5 | 0 | 12.00000000
+follow(-1) | K5 | K5 | 5 | 20 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiPoornima | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S15 | S15 | 15 | 15 | 0 | 12.00000000
+last | K15 | K15 | 15 | 30 | 1 | 12.00000000
+following[0] | S15 | S15 | 15 | 15 | 0 | 12.00000000
+following[1] | K15 | K15 | 15 | 30 | 1 | 12.00000000
+previous[0] | K15 | K15 | 15 | 30 | 1 | 12.00000000
+previous[1] | S15 | S15 | 15 | 15 | 0 | 12.00000000
+follow(+0) | S15 | S15 | 15 | 15 | 0 | 12.00000000
+follow(+1) | K15 | K15 | 15 | 30 | 1 | 12.00000000
+follow(-0) | S15 | S15 | 15 | 15 | 0 | 12.00000000
+follow(-1) | K15 | K15 | 15 | 30 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiPratipada | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S1 | S1 | 1 | 1 | 0 | 12.00000000
+last | K1 | K1 | 1 | 16 | 1 | 12.00000000
+following[0] | S1 | S1 | 1 | 1 | 0 | 12.00000000
+following[1] | K1 | K1 | 1 | 16 | 1 | 12.00000000
+previous[0] | K1 | K1 | 1 | 16 | 1 | 12.00000000
+previous[1] | S1 | S1 | 1 | 1 | 0 | 12.00000000
+follow(+0) | S1 | S1 | 1 | 1 | 0 | 12.00000000
+follow(+1) | K1 | K1 | 1 | 16 | 1 | 12.00000000
+follow(-0) | S1 | S1 | 1 | 1 | 0 | 12.00000000
+follow(-1) | K1 | K1 | 1 | 16 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiSaptami | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S7 | S7 | 7 | 7 | 0 | 12.00000000
+last | K7 | K7 | 7 | 22 | 1 | 12.00000000
+following[0] | S7 | S7 | 7 | 7 | 0 | 12.00000000
+following[1] | K7 | K7 | 7 | 22 | 1 | 12.00000000
+previous[0] | K7 | K7 | 7 | 22 | 1 | 12.00000000
+previous[1] | S7 | S7 | 7 | 7 | 0 | 12.00000000
+follow(+0) | S7 | S7 | 7 | 7 | 0 | 12.00000000
+follow(+1) | K7 | K7 | 7 | 22 | 1 | 12.00000000
+follow(-0) | S7 | S7 | 7 | 7 | 0 | 12.00000000
+follow(-1) | K7 | K7 | 7 | 22 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiShashthi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S6 | S6 | 6 | 6 | 0 | 12.00000000
+last | K6 | K6 | 6 | 21 | 1 | 12.00000000
+following[0] | S6 | S6 | 6 | 6 | 0 | 12.00000000
+following[1] | K6 | K6 | 6 | 21 | 1 | 12.00000000
+previous[0] | K6 | K6 | 6 | 21 | 1 | 12.00000000
+previous[1] | S6 | S6 | 6 | 6 | 0 | 12.00000000
+follow(+0) | S6 | S6 | 6 | 6 | 0 | 12.00000000
+follow(+1) | K6 | K6 | 6 | 21 | 1 | 12.00000000
+follow(-0) | S6 | S6 | 6 | 6 | 0 | 12.00000000
+follow(-1) | K6 | K6 | 6 | 21 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiTrayodasi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S13 | S13 | 13 | 13 | 0 | 12.00000000
+last | K13 | K13 | 13 | 28 | 1 | 12.00000000
+following[0] | S13 | S13 | 13 | 13 | 0 | 12.00000000
+following[1] | K13 | K13 | 13 | 28 | 1 | 12.00000000
+previous[0] | K13 | K13 | 13 | 28 | 1 | 12.00000000
+previous[1] | S13 | S13 | 13 | 13 | 0 | 12.00000000
+follow(+0) | S13 | S13 | 13 | 13 | 0 | 12.00000000
+follow(+1) | K13 | K13 | 13 | 28 | 1 | 12.00000000
+follow(-0) | S13 | S13 | 13 | 13 | 0 | 12.00000000
+follow(-1) | K13 | K13 | 13 | 28 | 1 | 12.00000000
+
+== org.jyotisa.tithi.TithiTritiya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | S3 | S3 | 3 | 3 | 0 | 12.00000000
+last | K3 | K3 | 3 | 18 | 1 | 12.00000000
+following[0] | S3 | S3 | 3 | 3 | 0 | 12.00000000
+following[1] | K3 | K3 | 3 | 18 | 1 | 12.00000000
+previous[0] | K3 | K3 | 3 | 18 | 1 | 12.00000000
+previous[1] | S3 | S3 | 3 | 3 | 0 | 12.00000000
+follow(+0) | S3 | S3 | 3 | 3 | 0 | 12.00000000
+follow(+1) | K3 | K3 | 3 | 18 | 1 | 12.00000000
+follow(-0) | S3 | S3 | 3 | 3 | 0 | 12.00000000
+follow(-1) | K3 | K3 | 3 | 18 | 1 | 12.00000000

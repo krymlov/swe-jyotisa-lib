@@ -1,0 +1,472 @@
+== org.jyotisa.api.nityayoga.NilNityaYoga | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NIL | NIL | 0 | 0 | 0 | 13.33333333
+last | NIL | NIL | 0 | 0 | 0 | 13.33333333
+following[0] | NIL | NIL | 0 | 0 | 0 | 13.33333333
+previous[0] | NIL | NIL | 0 | 0 | 0 | 13.33333333
+follow(+0) | NIL | NIL | 0 | 0 | 0 | 13.33333333
+follow(-0) | NIL | NIL | 0 | 0 | 0 | 13.33333333
+
+== org.jyotisa.nityayoga.ENityaYoga | 28 constants
+-- step | name | code | fid | uid | ordinal | length
+first | VISHKAMBHA | NY1 | 1 | 1 | 1 | 13.33333333
+last | VAIDHRITI | NY27 | 27 | 27 | 27 | 13.33333333
+following[0] | VISHKAMBHA | NY1 | 1 | 1 | 1 | 13.33333333
+following[1] | PREETI | NY2 | 2 | 2 | 2 | 13.33333333
+following[2] | AYUSHMANA | NY3 | 3 | 3 | 3 | 13.33333333
+following[3] | SAUBHAGYA | NY4 | 4 | 4 | 4 | 13.33333333
+following[4] | SOBHANA | NY5 | 5 | 5 | 5 | 13.33333333
+following[5] | ATIGANDA | NY6 | 6 | 6 | 6 | 13.33333333
+following[6] | SUKARMAN | NY7 | 7 | 7 | 7 | 13.33333333
+following[7] | DHRITI | NY8 | 8 | 8 | 8 | 13.33333333
+following[8] | SHULA | NY9 | 9 | 9 | 9 | 13.33333333
+following[9] | GANDA | NY10 | 10 | 10 | 10 | 13.33333333
+following[10] | VRIDDHI | NY11 | 11 | 11 | 11 | 13.33333333
+following[11] | DHRUVA | NY12 | 12 | 12 | 12 | 13.33333333
+following[12] | VYAGHATA | NY13 | 13 | 13 | 13 | 13.33333333
+following[13] | HARSHANA | NY14 | 14 | 14 | 14 | 13.33333333
+following[14] | VAJRA | NY15 | 15 | 15 | 15 | 13.33333333
+following[15] | SIDDHI | NY16 | 16 | 16 | 16 | 13.33333333
+following[16] | VYATIPATA | NY17 | 17 | 17 | 17 | 13.33333333
+following[17] | VARIYAN | NY18 | 18 | 18 | 18 | 13.33333333
+following[18] | PARIGHA | NY19 | 19 | 19 | 19 | 13.33333333
+following[19] | SHIVA | NY20 | 20 | 20 | 20 | 13.33333333
+following[20] | SIDDHA | NY21 | 21 | 21 | 21 | 13.33333333
+following[21] | SADHYA | NY22 | 22 | 22 | 22 | 13.33333333
+following[22] | SHUBHA | NY23 | 23 | 23 | 23 | 13.33333333
+following[23] | SHUKLA | NY24 | 24 | 24 | 24 | 13.33333333
+following[24] | BRAHMA | NY25 | 25 | 25 | 25 | 13.33333333
+following[25] | INDRA | NY26 | 26 | 26 | 26 | 13.33333333
+following[26] | VAIDHRITI | NY27 | 27 | 27 | 27 | 13.33333333
+previous[0] | VAIDHRITI | NY27 | 27 | 27 | 27 | 13.33333333
+previous[1] | INDRA | NY26 | 26 | 26 | 26 | 13.33333333
+previous[2] | BRAHMA | NY25 | 25 | 25 | 25 | 13.33333333
+previous[3] | SHUKLA | NY24 | 24 | 24 | 24 | 13.33333333
+previous[4] | SHUBHA | NY23 | 23 | 23 | 23 | 13.33333333
+previous[5] | SADHYA | NY22 | 22 | 22 | 22 | 13.33333333
+previous[6] | SIDDHA | NY21 | 21 | 21 | 21 | 13.33333333
+previous[7] | SHIVA | NY20 | 20 | 20 | 20 | 13.33333333
+previous[8] | PARIGHA | NY19 | 19 | 19 | 19 | 13.33333333
+previous[9] | VARIYAN | NY18 | 18 | 18 | 18 | 13.33333333
+previous[10] | VYATIPATA | NY17 | 17 | 17 | 17 | 13.33333333
+previous[11] | SIDDHI | NY16 | 16 | 16 | 16 | 13.33333333
+previous[12] | VAJRA | NY15 | 15 | 15 | 15 | 13.33333333
+previous[13] | HARSHANA | NY14 | 14 | 14 | 14 | 13.33333333
+previous[14] | VYAGHATA | NY13 | 13 | 13 | 13 | 13.33333333
+previous[15] | DHRUVA | NY12 | 12 | 12 | 12 | 13.33333333
+previous[16] | VRIDDHI | NY11 | 11 | 11 | 11 | 13.33333333
+previous[17] | GANDA | NY10 | 10 | 10 | 10 | 13.33333333
+previous[18] | SHULA | NY9 | 9 | 9 | 9 | 13.33333333
+previous[19] | DHRITI | NY8 | 8 | 8 | 8 | 13.33333333
+previous[20] | SUKARMAN | NY7 | 7 | 7 | 7 | 13.33333333
+previous[21] | ATIGANDA | NY6 | 6 | 6 | 6 | 13.33333333
+previous[22] | SOBHANA | NY5 | 5 | 5 | 5 | 13.33333333
+previous[23] | SAUBHAGYA | NY4 | 4 | 4 | 4 | 13.33333333
+previous[24] | AYUSHMANA | NY3 | 3 | 3 | 3 | 13.33333333
+previous[25] | PREETI | NY2 | 2 | 2 | 2 | 13.33333333
+previous[26] | VISHKAMBHA | NY1 | 1 | 1 | 1 | 13.33333333
+follow(+0) | VISHKAMBHA | NY1 | 1 | 1 | 1 | 13.33333333
+follow(+1) | PREETI | NY2 | 2 | 2 | 2 | 13.33333333
+follow(+2) | AYUSHMANA | NY3 | 3 | 3 | 3 | 13.33333333
+follow(+3) | SAUBHAGYA | NY4 | 4 | 4 | 4 | 13.33333333
+follow(+4) | SOBHANA | NY5 | 5 | 5 | 5 | 13.33333333
+follow(+5) | ATIGANDA | NY6 | 6 | 6 | 6 | 13.33333333
+follow(+6) | SUKARMAN | NY7 | 7 | 7 | 7 | 13.33333333
+follow(+7) | DHRITI | NY8 | 8 | 8 | 8 | 13.33333333
+follow(+8) | SHULA | NY9 | 9 | 9 | 9 | 13.33333333
+follow(+9) | GANDA | NY10 | 10 | 10 | 10 | 13.33333333
+follow(+10) | VRIDDHI | NY11 | 11 | 11 | 11 | 13.33333333
+follow(+11) | DHRUVA | NY12 | 12 | 12 | 12 | 13.33333333
+follow(+12) | VYAGHATA | NY13 | 13 | 13 | 13 | 13.33333333
+follow(+13) | HARSHANA | NY14 | 14 | 14 | 14 | 13.33333333
+follow(+14) | VAJRA | NY15 | 15 | 15 | 15 | 13.33333333
+follow(+15) | SIDDHI | NY16 | 16 | 16 | 16 | 13.33333333
+follow(+16) | VYATIPATA | NY17 | 17 | 17 | 17 | 13.33333333
+follow(+17) | VARIYAN | NY18 | 18 | 18 | 18 | 13.33333333
+follow(+18) | PARIGHA | NY19 | 19 | 19 | 19 | 13.33333333
+follow(+19) | SHIVA | NY20 | 20 | 20 | 20 | 13.33333333
+follow(+20) | SIDDHA | NY21 | 21 | 21 | 21 | 13.33333333
+follow(+21) | SADHYA | NY22 | 22 | 22 | 22 | 13.33333333
+follow(+22) | SHUBHA | NY23 | 23 | 23 | 23 | 13.33333333
+follow(+23) | SHUKLA | NY24 | 24 | 24 | 24 | 13.33333333
+follow(+24) | BRAHMA | NY25 | 25 | 25 | 25 | 13.33333333
+follow(+25) | INDRA | NY26 | 26 | 26 | 26 | 13.33333333
+follow(+26) | VAIDHRITI | NY27 | 27 | 27 | 27 | 13.33333333
+follow(-0) | VISHKAMBHA | NY1 | 1 | 1 | 1 | 13.33333333
+follow(-1) | VAIDHRITI | NY27 | 27 | 27 | 27 | 13.33333333
+follow(-2) | INDRA | NY26 | 26 | 26 | 26 | 13.33333333
+follow(-3) | BRAHMA | NY25 | 25 | 25 | 25 | 13.33333333
+follow(-4) | SHUKLA | NY24 | 24 | 24 | 24 | 13.33333333
+follow(-5) | SHUBHA | NY23 | 23 | 23 | 23 | 13.33333333
+follow(-6) | SADHYA | NY22 | 22 | 22 | 22 | 13.33333333
+follow(-7) | SIDDHA | NY21 | 21 | 21 | 21 | 13.33333333
+follow(-8) | SHIVA | NY20 | 20 | 20 | 20 | 13.33333333
+follow(-9) | PARIGHA | NY19 | 19 | 19 | 19 | 13.33333333
+follow(-10) | VARIYAN | NY18 | 18 | 18 | 18 | 13.33333333
+follow(-11) | VYATIPATA | NY17 | 17 | 17 | 17 | 13.33333333
+follow(-12) | SIDDHI | NY16 | 16 | 16 | 16 | 13.33333333
+follow(-13) | VAJRA | NY15 | 15 | 15 | 15 | 13.33333333
+follow(-14) | HARSHANA | NY14 | 14 | 14 | 14 | 13.33333333
+follow(-15) | VYAGHATA | NY13 | 13 | 13 | 13 | 13.33333333
+follow(-16) | DHRUVA | NY12 | 12 | 12 | 12 | 13.33333333
+follow(-17) | VRIDDHI | NY11 | 11 | 11 | 11 | 13.33333333
+follow(-18) | GANDA | NY10 | 10 | 10 | 10 | 13.33333333
+follow(-19) | SHULA | NY9 | 9 | 9 | 9 | 13.33333333
+follow(-20) | DHRITI | NY8 | 8 | 8 | 8 | 13.33333333
+follow(-21) | SUKARMAN | NY7 | 7 | 7 | 7 | 13.33333333
+follow(-22) | ATIGANDA | NY6 | 6 | 6 | 6 | 13.33333333
+follow(-23) | SOBHANA | NY5 | 5 | 5 | 5 | 13.33333333
+follow(-24) | SAUBHAGYA | NY4 | 4 | 4 | 4 | 13.33333333
+follow(-25) | AYUSHMANA | NY3 | 3 | 3 | 3 | 13.33333333
+follow(-26) | PREETI | NY2 | 2 | 2 | 2 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaAtiganda | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY6 | NY6 | 6 | 6 | 0 | 13.33333333
+last | ATIG | NY6 | 6 | 6 | 1 | 13.33333333
+following[0] | NY6 | NY6 | 6 | 6 | 0 | 13.33333333
+following[1] | ATIG | NY6 | 6 | 6 | 1 | 13.33333333
+previous[0] | ATIG | NY6 | 6 | 6 | 1 | 13.33333333
+previous[1] | NY6 | NY6 | 6 | 6 | 0 | 13.33333333
+follow(+0) | NY6 | NY6 | 6 | 6 | 0 | 13.33333333
+follow(+1) | ATIG | NY6 | 6 | 6 | 1 | 13.33333333
+follow(-0) | NY6 | NY6 | 6 | 6 | 0 | 13.33333333
+follow(-1) | ATIG | NY6 | 6 | 6 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaAyushmana | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY3 | NY3 | 3 | 3 | 0 | 13.33333333
+last | AYUS | NY3 | 3 | 3 | 1 | 13.33333333
+following[0] | NY3 | NY3 | 3 | 3 | 0 | 13.33333333
+following[1] | AYUS | NY3 | 3 | 3 | 1 | 13.33333333
+previous[0] | AYUS | NY3 | 3 | 3 | 1 | 13.33333333
+previous[1] | NY3 | NY3 | 3 | 3 | 0 | 13.33333333
+follow(+0) | NY3 | NY3 | 3 | 3 | 0 | 13.33333333
+follow(+1) | AYUS | NY3 | 3 | 3 | 1 | 13.33333333
+follow(-0) | NY3 | NY3 | 3 | 3 | 0 | 13.33333333
+follow(-1) | AYUS | NY3 | 3 | 3 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaBrahma | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY25 | NY25 | 25 | 25 | 0 | 13.33333333
+last | BRAH | NY25 | 25 | 25 | 1 | 13.33333333
+following[0] | NY25 | NY25 | 25 | 25 | 0 | 13.33333333
+following[1] | BRAH | NY25 | 25 | 25 | 1 | 13.33333333
+previous[0] | BRAH | NY25 | 25 | 25 | 1 | 13.33333333
+previous[1] | NY25 | NY25 | 25 | 25 | 0 | 13.33333333
+follow(+0) | NY25 | NY25 | 25 | 25 | 0 | 13.33333333
+follow(+1) | BRAH | NY25 | 25 | 25 | 1 | 13.33333333
+follow(-0) | NY25 | NY25 | 25 | 25 | 0 | 13.33333333
+follow(-1) | BRAH | NY25 | 25 | 25 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaDhriti | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY8 | NY8 | 8 | 8 | 0 | 13.33333333
+last | DHRI | NY8 | 8 | 8 | 1 | 13.33333333
+following[0] | NY8 | NY8 | 8 | 8 | 0 | 13.33333333
+following[1] | DHRI | NY8 | 8 | 8 | 1 | 13.33333333
+previous[0] | DHRI | NY8 | 8 | 8 | 1 | 13.33333333
+previous[1] | NY8 | NY8 | 8 | 8 | 0 | 13.33333333
+follow(+0) | NY8 | NY8 | 8 | 8 | 0 | 13.33333333
+follow(+1) | DHRI | NY8 | 8 | 8 | 1 | 13.33333333
+follow(-0) | NY8 | NY8 | 8 | 8 | 0 | 13.33333333
+follow(-1) | DHRI | NY8 | 8 | 8 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaDhruva | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY12 | NY12 | 12 | 12 | 0 | 13.33333333
+last | DHRU | NY12 | 12 | 12 | 1 | 13.33333333
+following[0] | NY12 | NY12 | 12 | 12 | 0 | 13.33333333
+following[1] | DHRU | NY12 | 12 | 12 | 1 | 13.33333333
+previous[0] | DHRU | NY12 | 12 | 12 | 1 | 13.33333333
+previous[1] | NY12 | NY12 | 12 | 12 | 0 | 13.33333333
+follow(+0) | NY12 | NY12 | 12 | 12 | 0 | 13.33333333
+follow(+1) | DHRU | NY12 | 12 | 12 | 1 | 13.33333333
+follow(-0) | NY12 | NY12 | 12 | 12 | 0 | 13.33333333
+follow(-1) | DHRU | NY12 | 12 | 12 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaGanda | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY10 | NY10 | 10 | 10 | 0 | 13.33333333
+last | GAND | NY10 | 10 | 10 | 1 | 13.33333333
+following[0] | NY10 | NY10 | 10 | 10 | 0 | 13.33333333
+following[1] | GAND | NY10 | 10 | 10 | 1 | 13.33333333
+previous[0] | GAND | NY10 | 10 | 10 | 1 | 13.33333333
+previous[1] | NY10 | NY10 | 10 | 10 | 0 | 13.33333333
+follow(+0) | NY10 | NY10 | 10 | 10 | 0 | 13.33333333
+follow(+1) | GAND | NY10 | 10 | 10 | 1 | 13.33333333
+follow(-0) | NY10 | NY10 | 10 | 10 | 0 | 13.33333333
+follow(-1) | GAND | NY10 | 10 | 10 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaHarshana | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY14 | NY14 | 14 | 14 | 0 | 13.33333333
+last | HARS | NY14 | 14 | 14 | 1 | 13.33333333
+following[0] | NY14 | NY14 | 14 | 14 | 0 | 13.33333333
+following[1] | HARS | NY14 | 14 | 14 | 1 | 13.33333333
+previous[0] | HARS | NY14 | 14 | 14 | 1 | 13.33333333
+previous[1] | NY14 | NY14 | 14 | 14 | 0 | 13.33333333
+follow(+0) | NY14 | NY14 | 14 | 14 | 0 | 13.33333333
+follow(+1) | HARS | NY14 | 14 | 14 | 1 | 13.33333333
+follow(-0) | NY14 | NY14 | 14 | 14 | 0 | 13.33333333
+follow(-1) | HARS | NY14 | 14 | 14 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaIndra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY26 | NY26 | 26 | 26 | 0 | 13.33333333
+last | INDR | NY26 | 26 | 26 | 1 | 13.33333333
+following[0] | NY26 | NY26 | 26 | 26 | 0 | 13.33333333
+following[1] | INDR | NY26 | 26 | 26 | 1 | 13.33333333
+previous[0] | INDR | NY26 | 26 | 26 | 1 | 13.33333333
+previous[1] | NY26 | NY26 | 26 | 26 | 0 | 13.33333333
+follow(+0) | NY26 | NY26 | 26 | 26 | 0 | 13.33333333
+follow(+1) | INDR | NY26 | 26 | 26 | 1 | 13.33333333
+follow(-0) | NY26 | NY26 | 26 | 26 | 0 | 13.33333333
+follow(-1) | INDR | NY26 | 26 | 26 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaParigha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY19 | NY19 | 19 | 19 | 0 | 13.33333333
+last | PARI | NY19 | 19 | 19 | 1 | 13.33333333
+following[0] | NY19 | NY19 | 19 | 19 | 0 | 13.33333333
+following[1] | PARI | NY19 | 19 | 19 | 1 | 13.33333333
+previous[0] | PARI | NY19 | 19 | 19 | 1 | 13.33333333
+previous[1] | NY19 | NY19 | 19 | 19 | 0 | 13.33333333
+follow(+0) | NY19 | NY19 | 19 | 19 | 0 | 13.33333333
+follow(+1) | PARI | NY19 | 19 | 19 | 1 | 13.33333333
+follow(-0) | NY19 | NY19 | 19 | 19 | 0 | 13.33333333
+follow(-1) | PARI | NY19 | 19 | 19 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaPreeti | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY2 | NY2 | 2 | 2 | 0 | 13.33333333
+last | PREE | NY2 | 2 | 2 | 1 | 13.33333333
+following[0] | NY2 | NY2 | 2 | 2 | 0 | 13.33333333
+following[1] | PREE | NY2 | 2 | 2 | 1 | 13.33333333
+previous[0] | PREE | NY2 | 2 | 2 | 1 | 13.33333333
+previous[1] | NY2 | NY2 | 2 | 2 | 0 | 13.33333333
+follow(+0) | NY2 | NY2 | 2 | 2 | 0 | 13.33333333
+follow(+1) | PREE | NY2 | 2 | 2 | 1 | 13.33333333
+follow(-0) | NY2 | NY2 | 2 | 2 | 0 | 13.33333333
+follow(-1) | PREE | NY2 | 2 | 2 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSadhya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY22 | NY22 | 22 | 22 | 0 | 13.33333333
+last | SADH | NY22 | 22 | 22 | 1 | 13.33333333
+following[0] | NY22 | NY22 | 22 | 22 | 0 | 13.33333333
+following[1] | SADH | NY22 | 22 | 22 | 1 | 13.33333333
+previous[0] | SADH | NY22 | 22 | 22 | 1 | 13.33333333
+previous[1] | NY22 | NY22 | 22 | 22 | 0 | 13.33333333
+follow(+0) | NY22 | NY22 | 22 | 22 | 0 | 13.33333333
+follow(+1) | SADH | NY22 | 22 | 22 | 1 | 13.33333333
+follow(-0) | NY22 | NY22 | 22 | 22 | 0 | 13.33333333
+follow(-1) | SADH | NY22 | 22 | 22 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSaubhagya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY4 | NY4 | 4 | 4 | 0 | 13.33333333
+last | SAUB | NY4 | 4 | 4 | 1 | 13.33333333
+following[0] | NY4 | NY4 | 4 | 4 | 0 | 13.33333333
+following[1] | SAUB | NY4 | 4 | 4 | 1 | 13.33333333
+previous[0] | SAUB | NY4 | 4 | 4 | 1 | 13.33333333
+previous[1] | NY4 | NY4 | 4 | 4 | 0 | 13.33333333
+follow(+0) | NY4 | NY4 | 4 | 4 | 0 | 13.33333333
+follow(+1) | SAUB | NY4 | 4 | 4 | 1 | 13.33333333
+follow(-0) | NY4 | NY4 | 4 | 4 | 0 | 13.33333333
+follow(-1) | SAUB | NY4 | 4 | 4 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaShiva | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY20 | NY20 | 20 | 20 | 0 | 13.33333333
+last | SIVA | NY20 | 20 | 20 | 1 | 13.33333333
+following[0] | NY20 | NY20 | 20 | 20 | 0 | 13.33333333
+following[1] | SIVA | NY20 | 20 | 20 | 1 | 13.33333333
+previous[0] | SIVA | NY20 | 20 | 20 | 1 | 13.33333333
+previous[1] | NY20 | NY20 | 20 | 20 | 0 | 13.33333333
+follow(+0) | NY20 | NY20 | 20 | 20 | 0 | 13.33333333
+follow(+1) | SIVA | NY20 | 20 | 20 | 1 | 13.33333333
+follow(-0) | NY20 | NY20 | 20 | 20 | 0 | 13.33333333
+follow(-1) | SIVA | NY20 | 20 | 20 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaShubha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY23 | NY23 | 23 | 23 | 0 | 13.33333333
+last | SUBH | NY23 | 23 | 23 | 1 | 13.33333333
+following[0] | NY23 | NY23 | 23 | 23 | 0 | 13.33333333
+following[1] | SUBH | NY23 | 23 | 23 | 1 | 13.33333333
+previous[0] | SUBH | NY23 | 23 | 23 | 1 | 13.33333333
+previous[1] | NY23 | NY23 | 23 | 23 | 0 | 13.33333333
+follow(+0) | NY23 | NY23 | 23 | 23 | 0 | 13.33333333
+follow(+1) | SUBH | NY23 | 23 | 23 | 1 | 13.33333333
+follow(-0) | NY23 | NY23 | 23 | 23 | 0 | 13.33333333
+follow(-1) | SUBH | NY23 | 23 | 23 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaShukla | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY24 | NY24 | 24 | 24 | 0 | 13.33333333
+last | SUKL | NY24 | 24 | 24 | 1 | 13.33333333
+following[0] | NY24 | NY24 | 24 | 24 | 0 | 13.33333333
+following[1] | SUKL | NY24 | 24 | 24 | 1 | 13.33333333
+previous[0] | SUKL | NY24 | 24 | 24 | 1 | 13.33333333
+previous[1] | NY24 | NY24 | 24 | 24 | 0 | 13.33333333
+follow(+0) | NY24 | NY24 | 24 | 24 | 0 | 13.33333333
+follow(+1) | SUKL | NY24 | 24 | 24 | 1 | 13.33333333
+follow(-0) | NY24 | NY24 | 24 | 24 | 0 | 13.33333333
+follow(-1) | SUKL | NY24 | 24 | 24 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaShula | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY9 | NY9 | 9 | 9 | 0 | 13.33333333
+last | SULA | NY9 | 9 | 9 | 1 | 13.33333333
+following[0] | NY9 | NY9 | 9 | 9 | 0 | 13.33333333
+following[1] | SULA | NY9 | 9 | 9 | 1 | 13.33333333
+previous[0] | SULA | NY9 | 9 | 9 | 1 | 13.33333333
+previous[1] | NY9 | NY9 | 9 | 9 | 0 | 13.33333333
+follow(+0) | NY9 | NY9 | 9 | 9 | 0 | 13.33333333
+follow(+1) | SULA | NY9 | 9 | 9 | 1 | 13.33333333
+follow(-0) | NY9 | NY9 | 9 | 9 | 0 | 13.33333333
+follow(-1) | SULA | NY9 | 9 | 9 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSiddha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY21 | NY21 | 21 | 21 | 0 | 13.33333333
+last | SDHA | NY21 | 21 | 21 | 1 | 13.33333333
+following[0] | NY21 | NY21 | 21 | 21 | 0 | 13.33333333
+following[1] | SDHA | NY21 | 21 | 21 | 1 | 13.33333333
+previous[0] | SDHA | NY21 | 21 | 21 | 1 | 13.33333333
+previous[1] | NY21 | NY21 | 21 | 21 | 0 | 13.33333333
+follow(+0) | NY21 | NY21 | 21 | 21 | 0 | 13.33333333
+follow(+1) | SDHA | NY21 | 21 | 21 | 1 | 13.33333333
+follow(-0) | NY21 | NY21 | 21 | 21 | 0 | 13.33333333
+follow(-1) | SDHA | NY21 | 21 | 21 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSiddhi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY16 | NY16 | 16 | 16 | 0 | 13.33333333
+last | SDHI | NY16 | 16 | 16 | 1 | 13.33333333
+following[0] | NY16 | NY16 | 16 | 16 | 0 | 13.33333333
+following[1] | SDHI | NY16 | 16 | 16 | 1 | 13.33333333
+previous[0] | SDHI | NY16 | 16 | 16 | 1 | 13.33333333
+previous[1] | NY16 | NY16 | 16 | 16 | 0 | 13.33333333
+follow(+0) | NY16 | NY16 | 16 | 16 | 0 | 13.33333333
+follow(+1) | SDHI | NY16 | 16 | 16 | 1 | 13.33333333
+follow(-0) | NY16 | NY16 | 16 | 16 | 0 | 13.33333333
+follow(-1) | SDHI | NY16 | 16 | 16 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSobhana | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY5 | NY5 | 5 | 5 | 0 | 13.33333333
+last | SOBH | NY5 | 5 | 5 | 1 | 13.33333333
+following[0] | NY5 | NY5 | 5 | 5 | 0 | 13.33333333
+following[1] | SOBH | NY5 | 5 | 5 | 1 | 13.33333333
+previous[0] | SOBH | NY5 | 5 | 5 | 1 | 13.33333333
+previous[1] | NY5 | NY5 | 5 | 5 | 0 | 13.33333333
+follow(+0) | NY5 | NY5 | 5 | 5 | 0 | 13.33333333
+follow(+1) | SOBH | NY5 | 5 | 5 | 1 | 13.33333333
+follow(-0) | NY5 | NY5 | 5 | 5 | 0 | 13.33333333
+follow(-1) | SOBH | NY5 | 5 | 5 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaSukarman | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY7 | NY7 | 7 | 7 | 0 | 13.33333333
+last | SUKA | NY7 | 7 | 7 | 1 | 13.33333333
+following[0] | NY7 | NY7 | 7 | 7 | 0 | 13.33333333
+following[1] | SUKA | NY7 | 7 | 7 | 1 | 13.33333333
+previous[0] | SUKA | NY7 | 7 | 7 | 1 | 13.33333333
+previous[1] | NY7 | NY7 | 7 | 7 | 0 | 13.33333333
+follow(+0) | NY7 | NY7 | 7 | 7 | 0 | 13.33333333
+follow(+1) | SUKA | NY7 | 7 | 7 | 1 | 13.33333333
+follow(-0) | NY7 | NY7 | 7 | 7 | 0 | 13.33333333
+follow(-1) | SUKA | NY7 | 7 | 7 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVaidhriti | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY27 | NY27 | 27 | 27 | 0 | 13.33333333
+last | VAID | NY27 | 27 | 27 | 1 | 13.33333333
+following[0] | NY27 | NY27 | 27 | 27 | 0 | 13.33333333
+following[1] | VAID | NY27 | 27 | 27 | 1 | 13.33333333
+previous[0] | VAID | NY27 | 27 | 27 | 1 | 13.33333333
+previous[1] | NY27 | NY27 | 27 | 27 | 0 | 13.33333333
+follow(+0) | NY27 | NY27 | 27 | 27 | 0 | 13.33333333
+follow(+1) | VAID | NY27 | 27 | 27 | 1 | 13.33333333
+follow(-0) | NY27 | NY27 | 27 | 27 | 0 | 13.33333333
+follow(-1) | VAID | NY27 | 27 | 27 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVajra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY15 | NY15 | 15 | 15 | 0 | 13.33333333
+last | VAJR | NY15 | 15 | 15 | 1 | 13.33333333
+following[0] | NY15 | NY15 | 15 | 15 | 0 | 13.33333333
+following[1] | VAJR | NY15 | 15 | 15 | 1 | 13.33333333
+previous[0] | VAJR | NY15 | 15 | 15 | 1 | 13.33333333
+previous[1] | NY15 | NY15 | 15 | 15 | 0 | 13.33333333
+follow(+0) | NY15 | NY15 | 15 | 15 | 0 | 13.33333333
+follow(+1) | VAJR | NY15 | 15 | 15 | 1 | 13.33333333
+follow(-0) | NY15 | NY15 | 15 | 15 | 0 | 13.33333333
+follow(-1) | VAJR | NY15 | 15 | 15 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVariyan | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY18 | NY18 | 18 | 18 | 0 | 13.33333333
+last | VARI | NY18 | 18 | 18 | 1 | 13.33333333
+following[0] | NY18 | NY18 | 18 | 18 | 0 | 13.33333333
+following[1] | VARI | NY18 | 18 | 18 | 1 | 13.33333333
+previous[0] | VARI | NY18 | 18 | 18 | 1 | 13.33333333
+previous[1] | NY18 | NY18 | 18 | 18 | 0 | 13.33333333
+follow(+0) | NY18 | NY18 | 18 | 18 | 0 | 13.33333333
+follow(+1) | VARI | NY18 | 18 | 18 | 1 | 13.33333333
+follow(-0) | NY18 | NY18 | 18 | 18 | 0 | 13.33333333
+follow(-1) | VARI | NY18 | 18 | 18 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVishkambha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY1 | NY1 | 1 | 1 | 0 | 13.33333333
+last | VISK | NY1 | 1 | 1 | 1 | 13.33333333
+following[0] | NY1 | NY1 | 1 | 1 | 0 | 13.33333333
+following[1] | VISK | NY1 | 1 | 1 | 1 | 13.33333333
+previous[0] | VISK | NY1 | 1 | 1 | 1 | 13.33333333
+previous[1] | NY1 | NY1 | 1 | 1 | 0 | 13.33333333
+follow(+0) | NY1 | NY1 | 1 | 1 | 0 | 13.33333333
+follow(+1) | VISK | NY1 | 1 | 1 | 1 | 13.33333333
+follow(-0) | NY1 | NY1 | 1 | 1 | 0 | 13.33333333
+follow(-1) | VISK | NY1 | 1 | 1 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVriddhi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY11 | NY11 | 11 | 11 | 0 | 13.33333333
+last | VRID | NY11 | 11 | 11 | 1 | 13.33333333
+following[0] | NY11 | NY11 | 11 | 11 | 0 | 13.33333333
+following[1] | VRID | NY11 | 11 | 11 | 1 | 13.33333333
+previous[0] | VRID | NY11 | 11 | 11 | 1 | 13.33333333
+previous[1] | NY11 | NY11 | 11 | 11 | 0 | 13.33333333
+follow(+0) | NY11 | NY11 | 11 | 11 | 0 | 13.33333333
+follow(+1) | VRID | NY11 | 11 | 11 | 1 | 13.33333333
+follow(-0) | NY11 | NY11 | 11 | 11 | 0 | 13.33333333
+follow(-1) | VRID | NY11 | 11 | 11 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVyaghata | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY13 | NY13 | 13 | 13 | 0 | 13.33333333
+last | VYAG | NY13 | 13 | 13 | 1 | 13.33333333
+following[0] | NY13 | NY13 | 13 | 13 | 0 | 13.33333333
+following[1] | VYAG | NY13 | 13 | 13 | 1 | 13.33333333
+previous[0] | VYAG | NY13 | 13 | 13 | 1 | 13.33333333
+previous[1] | NY13 | NY13 | 13 | 13 | 0 | 13.33333333
+follow(+0) | NY13 | NY13 | 13 | 13 | 0 | 13.33333333
+follow(+1) | VYAG | NY13 | 13 | 13 | 1 | 13.33333333
+follow(-0) | NY13 | NY13 | 13 | 13 | 0 | 13.33333333
+follow(-1) | VYAG | NY13 | 13 | 13 | 1 | 13.33333333
+
+== org.jyotisa.nityayoga.NityaYogaVyatipata | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NY17 | NY17 | 17 | 17 | 0 | 13.33333333
+last | VYAT | NY17 | 17 | 17 | 1 | 13.33333333
+following[0] | NY17 | NY17 | 17 | 17 | 0 | 13.33333333
+following[1] | VYAT | NY17 | 17 | 17 | 1 | 13.33333333
+previous[0] | VYAT | NY17 | 17 | 17 | 1 | 13.33333333
+previous[1] | NY17 | NY17 | 17 | 17 | 0 | 13.33333333
+follow(+0) | NY17 | NY17 | 17 | 17 | 0 | 13.33333333
+follow(+1) | VYAT | NY17 | 17 | 17 | 1 | 13.33333333
+follow(-0) | NY17 | NY17 | 17 | 17 | 0 | 13.33333333
+follow(-1) | VYAT | NY17 | 17 | 17 | 1 | 13.33333333

@@ -1,0 +1,208 @@
+== org.jyotisa.bhava.BhavaAri | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B6 | B6 | 6 | 6 | 0 | 30.00000000
+last | ARI | B6 | 6 | 6 | 1 | 30.00000000
+following[0] | B6 | B6 | 6 | 6 | 0 | 30.00000000
+following[1] | ARI | B6 | 6 | 6 | 1 | 30.00000000
+previous[0] | ARI | B6 | 6 | 6 | 1 | 30.00000000
+previous[1] | B6 | B6 | 6 | 6 | 0 | 30.00000000
+follow(+0) | B6 | B6 | 6 | 6 | 0 | 30.00000000
+follow(+1) | ARI | B6 | 6 | 6 | 1 | 30.00000000
+follow(-0) | B6 | B6 | 6 | 6 | 0 | 30.00000000
+follow(-1) | ARI | B6 | 6 | 6 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaAyur | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B8 | B8 | 8 | 8 | 0 | 30.00000000
+last | AYR | B8 | 8 | 8 | 1 | 30.00000000
+following[0] | B8 | B8 | 8 | 8 | 0 | 30.00000000
+following[1] | AYR | B8 | 8 | 8 | 1 | 30.00000000
+previous[0] | AYR | B8 | 8 | 8 | 1 | 30.00000000
+previous[1] | B8 | B8 | 8 | 8 | 0 | 30.00000000
+follow(+0) | B8 | B8 | 8 | 8 | 0 | 30.00000000
+follow(+1) | AYR | B8 | 8 | 8 | 1 | 30.00000000
+follow(-0) | B8 | B8 | 8 | 8 | 0 | 30.00000000
+follow(-1) | AYR | B8 | 8 | 8 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaBhratri | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B3 | B3 | 3 | 3 | 0 | 30.00000000
+last | BRT | B3 | 3 | 3 | 1 | 30.00000000
+following[0] | B3 | B3 | 3 | 3 | 0 | 30.00000000
+following[1] | BRT | B3 | 3 | 3 | 1 | 30.00000000
+previous[0] | BRT | B3 | 3 | 3 | 1 | 30.00000000
+previous[1] | B3 | B3 | 3 | 3 | 0 | 30.00000000
+follow(+0) | B3 | B3 | 3 | 3 | 0 | 30.00000000
+follow(+1) | BRT | B3 | 3 | 3 | 1 | 30.00000000
+follow(-0) | B3 | B3 | 3 | 3 | 0 | 30.00000000
+follow(-1) | BRT | B3 | 3 | 3 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaDhana | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B2 | B2 | 2 | 2 | 0 | 30.00000000
+last | DAN | B2 | 2 | 2 | 1 | 30.00000000
+following[0] | B2 | B2 | 2 | 2 | 0 | 30.00000000
+following[1] | DAN | B2 | 2 | 2 | 1 | 30.00000000
+previous[0] | DAN | B2 | 2 | 2 | 1 | 30.00000000
+previous[1] | B2 | B2 | 2 | 2 | 0 | 30.00000000
+follow(+0) | B2 | B2 | 2 | 2 | 0 | 30.00000000
+follow(+1) | DAN | B2 | 2 | 2 | 1 | 30.00000000
+follow(-0) | B2 | B2 | 2 | 2 | 0 | 30.00000000
+follow(-1) | DAN | B2 | 2 | 2 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaDharma | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B9 | B9 | 9 | 9 | 0 | 30.00000000
+last | DRM | B9 | 9 | 9 | 1 | 30.00000000
+following[0] | B9 | B9 | 9 | 9 | 0 | 30.00000000
+following[1] | DRM | B9 | 9 | 9 | 1 | 30.00000000
+previous[0] | DRM | B9 | 9 | 9 | 1 | 30.00000000
+previous[1] | B9 | B9 | 9 | 9 | 0 | 30.00000000
+follow(+0) | B9 | B9 | 9 | 9 | 0 | 30.00000000
+follow(+1) | DRM | B9 | 9 | 9 | 1 | 30.00000000
+follow(-0) | B9 | B9 | 9 | 9 | 0 | 30.00000000
+follow(-1) | DRM | B9 | 9 | 9 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaKama | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B7 | B7 | 7 | 7 | 0 | 30.00000000
+last | KAM | B7 | 7 | 7 | 1 | 30.00000000
+following[0] | B7 | B7 | 7 | 7 | 0 | 30.00000000
+following[1] | KAM | B7 | 7 | 7 | 1 | 30.00000000
+previous[0] | KAM | B7 | 7 | 7 | 1 | 30.00000000
+previous[1] | B7 | B7 | 7 | 7 | 0 | 30.00000000
+follow(+0) | B7 | B7 | 7 | 7 | 0 | 30.00000000
+follow(+1) | KAM | B7 | 7 | 7 | 1 | 30.00000000
+follow(-0) | B7 | B7 | 7 | 7 | 0 | 30.00000000
+follow(-1) | KAM | B7 | 7 | 7 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaKarma | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B10 | B10 | 10 | 10 | 0 | 30.00000000
+last | KRM | B10 | 10 | 10 | 1 | 30.00000000
+following[0] | B10 | B10 | 10 | 10 | 0 | 30.00000000
+following[1] | KRM | B10 | 10 | 10 | 1 | 30.00000000
+previous[0] | KRM | B10 | 10 | 10 | 1 | 30.00000000
+previous[1] | B10 | B10 | 10 | 10 | 0 | 30.00000000
+follow(+0) | B10 | B10 | 10 | 10 | 0 | 30.00000000
+follow(+1) | KRM | B10 | 10 | 10 | 1 | 30.00000000
+follow(-0) | B10 | B10 | 10 | 10 | 0 | 30.00000000
+follow(-1) | KRM | B10 | 10 | 10 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaLabha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B11 | B11 | 11 | 11 | 0 | 30.00000000
+last | AYA | B11 | 11 | 11 | 1 | 30.00000000
+following[0] | B11 | B11 | 11 | 11 | 0 | 30.00000000
+following[1] | AYA | B11 | 11 | 11 | 1 | 30.00000000
+previous[0] | AYA | B11 | 11 | 11 | 1 | 30.00000000
+previous[1] | B11 | B11 | 11 | 11 | 0 | 30.00000000
+follow(+0) | B11 | B11 | 11 | 11 | 0 | 30.00000000
+follow(+1) | AYA | B11 | 11 | 11 | 1 | 30.00000000
+follow(-0) | B11 | B11 | 11 | 11 | 0 | 30.00000000
+follow(-1) | AYA | B11 | 11 | 11 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaMatri | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B4 | B4 | 4 | 4 | 0 | 30.00000000
+last | MTR | B4 | 4 | 4 | 1 | 30.00000000
+following[0] | B4 | B4 | 4 | 4 | 0 | 30.00000000
+following[1] | MTR | B4 | 4 | 4 | 1 | 30.00000000
+previous[0] | MTR | B4 | 4 | 4 | 1 | 30.00000000
+previous[1] | B4 | B4 | 4 | 4 | 0 | 30.00000000
+follow(+0) | B4 | B4 | 4 | 4 | 0 | 30.00000000
+follow(+1) | MTR | B4 | 4 | 4 | 1 | 30.00000000
+follow(-0) | B4 | B4 | 4 | 4 | 0 | 30.00000000
+follow(-1) | MTR | B4 | 4 | 4 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaPutra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B5 | B5 | 5 | 5 | 0 | 30.00000000
+last | PTR | B5 | 5 | 5 | 1 | 30.00000000
+following[0] | B5 | B5 | 5 | 5 | 0 | 30.00000000
+following[1] | PTR | B5 | 5 | 5 | 1 | 30.00000000
+previous[0] | PTR | B5 | 5 | 5 | 1 | 30.00000000
+previous[1] | B5 | B5 | 5 | 5 | 0 | 30.00000000
+follow(+0) | B5 | B5 | 5 | 5 | 0 | 30.00000000
+follow(+1) | PTR | B5 | 5 | 5 | 1 | 30.00000000
+follow(-0) | B5 | B5 | 5 | 5 | 0 | 30.00000000
+follow(-1) | PTR | B5 | 5 | 5 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaTanu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B1 | B1 | 1 | 1 | 0 | 30.00000000
+last | TAN | B1 | 1 | 1 | 1 | 30.00000000
+following[0] | B1 | B1 | 1 | 1 | 0 | 30.00000000
+following[1] | TAN | B1 | 1 | 1 | 1 | 30.00000000
+previous[0] | TAN | B1 | 1 | 1 | 1 | 30.00000000
+previous[1] | B1 | B1 | 1 | 1 | 0 | 30.00000000
+follow(+0) | B1 | B1 | 1 | 1 | 0 | 30.00000000
+follow(+1) | TAN | B1 | 1 | 1 | 1 | 30.00000000
+follow(-0) | B1 | B1 | 1 | 1 | 0 | 30.00000000
+follow(-1) | TAN | B1 | 1 | 1 | 1 | 30.00000000
+
+== org.jyotisa.bhava.BhavaVyaya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | B12 | B12 | 12 | 12 | 0 | 30.00000000
+last | VYY | B12 | 12 | 12 | 1 | 30.00000000
+following[0] | B12 | B12 | 12 | 12 | 0 | 30.00000000
+following[1] | VYY | B12 | 12 | 12 | 1 | 30.00000000
+previous[0] | VYY | B12 | 12 | 12 | 1 | 30.00000000
+previous[1] | B12 | B12 | 12 | 12 | 0 | 30.00000000
+follow(+0) | B12 | B12 | 12 | 12 | 0 | 30.00000000
+follow(+1) | VYY | B12 | 12 | 12 | 1 | 30.00000000
+follow(-0) | B12 | B12 | 12 | 12 | 0 | 30.00000000
+follow(-1) | VYY | B12 | 12 | 12 | 1 | 30.00000000
+
+== org.jyotisa.bhava.EBhava | 13 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TANU | B1 | 1 | 1 | 1 | 30.00000000
+last | VYAYA | B12 | 12 | 12 | 12 | 30.00000000
+following[0] | TANU | B1 | 1 | 1 | 1 | 30.00000000
+following[1] | DHANA | B2 | 2 | 2 | 2 | 30.00000000
+following[2] | BHRATRI | B3 | 3 | 3 | 3 | 30.00000000
+following[3] | MATRI | B4 | 4 | 4 | 4 | 30.00000000
+following[4] | PUTRA | B5 | 5 | 5 | 5 | 30.00000000
+following[5] | ARI | B6 | 6 | 6 | 6 | 30.00000000
+following[6] | KAMA | B7 | 7 | 7 | 7 | 30.00000000
+following[7] | AYUR | B8 | 8 | 8 | 8 | 30.00000000
+following[8] | DHARMA | B9 | 9 | 9 | 9 | 30.00000000
+following[9] | KARMA | B10 | 10 | 10 | 10 | 30.00000000
+following[10] | LABHA | B11 | 11 | 11 | 11 | 30.00000000
+following[11] | VYAYA | B12 | 12 | 12 | 12 | 30.00000000
+previous[0] | VYAYA | B12 | 12 | 12 | 12 | 30.00000000
+previous[1] | LABHA | B11 | 11 | 11 | 11 | 30.00000000
+previous[2] | KARMA | B10 | 10 | 10 | 10 | 30.00000000
+previous[3] | DHARMA | B9 | 9 | 9 | 9 | 30.00000000
+previous[4] | AYUR | B8 | 8 | 8 | 8 | 30.00000000
+previous[5] | KAMA | B7 | 7 | 7 | 7 | 30.00000000
+previous[6] | ARI | B6 | 6 | 6 | 6 | 30.00000000
+previous[7] | PUTRA | B5 | 5 | 5 | 5 | 30.00000000
+previous[8] | MATRI | B4 | 4 | 4 | 4 | 30.00000000
+previous[9] | BHRATRI | B3 | 3 | 3 | 3 | 30.00000000
+previous[10] | DHANA | B2 | 2 | 2 | 2 | 30.00000000
+previous[11] | TANU | B1 | 1 | 1 | 1 | 30.00000000
+follow(+0) | TANU | B1 | 1 | 1 | 1 | 30.00000000
+follow(+1) | DHANA | B2 | 2 | 2 | 2 | 30.00000000
+follow(+2) | BHRATRI | B3 | 3 | 3 | 3 | 30.00000000
+follow(+3) | MATRI | B4 | 4 | 4 | 4 | 30.00000000
+follow(+4) | PUTRA | B5 | 5 | 5 | 5 | 30.00000000
+follow(+5) | ARI | B6 | 6 | 6 | 6 | 30.00000000
+follow(+6) | KAMA | B7 | 7 | 7 | 7 | 30.00000000
+follow(+7) | AYUR | B8 | 8 | 8 | 8 | 30.00000000
+follow(+8) | DHARMA | B9 | 9 | 9 | 9 | 30.00000000
+follow(+9) | KARMA | B10 | 10 | 10 | 10 | 30.00000000
+follow(+10) | LABHA | B11 | 11 | 11 | 11 | 30.00000000
+follow(+11) | VYAYA | B12 | 12 | 12 | 12 | 30.00000000
+follow(-0) | TANU | B1 | 1 | 1 | 1 | 30.00000000
+follow(-1) | VYAYA | B12 | 12 | 12 | 12 | 30.00000000
+follow(-2) | LABHA | B11 | 11 | 11 | 11 | 30.00000000
+follow(-3) | KARMA | B10 | 10 | 10 | 10 | 30.00000000
+follow(-4) | DHARMA | B9 | 9 | 9 | 9 | 30.00000000
+follow(-5) | AYUR | B8 | 8 | 8 | 8 | 30.00000000
+follow(-6) | KAMA | B7 | 7 | 7 | 7 | 30.00000000
+follow(-7) | ARI | B6 | 6 | 6 | 6 | 30.00000000
+follow(-8) | PUTRA | B5 | 5 | 5 | 5 | 30.00000000
+follow(-9) | MATRI | B4 | 4 | 4 | 4 | 30.00000000
+follow(-10) | BHRATRI | B3 | 3 | 3 | 3 | 30.00000000
+follow(-11) | DHANA | B2 | 2 | 2 | 2 | 30.00000000

@@ -1,0 +1,89 @@
+== org.jyotisa.tattva.ETattva | 6 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AKASHA | TT1 | 1 | 1 | 1 | 0.00000000
+last | JALA | TT5 | 5 | 5 | 5 | 0.00000000
+following[0] | AKASHA | TT1 | 1 | 1 | 1 | 0.00000000
+following[1] | AGNI | TT2 | 2 | 2 | 2 | 0.00000000
+following[2] | PRITHVI | TT3 | 3 | 3 | 3 | 0.00000000
+following[3] | VAYU | TT4 | 4 | 4 | 4 | 0.00000000
+following[4] | JALA | TT5 | 5 | 5 | 5 | 0.00000000
+previous[0] | JALA | TT5 | 5 | 5 | 5 | 0.00000000
+previous[1] | VAYU | TT4 | 4 | 4 | 4 | 0.00000000
+previous[2] | PRITHVI | TT3 | 3 | 3 | 3 | 0.00000000
+previous[3] | AGNI | TT2 | 2 | 2 | 2 | 0.00000000
+previous[4] | AKASHA | TT1 | 1 | 1 | 1 | 0.00000000
+follow(+0) | AKASHA | TT1 | 1 | 1 | 1 | 0.00000000
+follow(+1) | AGNI | TT2 | 2 | 2 | 2 | 0.00000000
+follow(+2) | PRITHVI | TT3 | 3 | 3 | 3 | 0.00000000
+follow(+3) | VAYU | TT4 | 4 | 4 | 4 | 0.00000000
+follow(+4) | JALA | TT5 | 5 | 5 | 5 | 0.00000000
+follow(-0) | AKASHA | TT1 | 1 | 1 | 1 | 0.00000000
+follow(-1) | JALA | TT5 | 5 | 5 | 5 | 0.00000000
+follow(-2) | VAYU | TT4 | 4 | 4 | 4 | 0.00000000
+follow(-3) | PRITHVI | TT3 | 3 | 3 | 3 | 0.00000000
+follow(-4) | AGNI | TT2 | 2 | 2 | 2 | 0.00000000
+
+== org.jyotisa.tattva.TattvaAgni | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TT2 | TT2 | 2 | 2 | 0 | 0.00000000
+last | AGN | TT2 | 2 | 2 | 1 | 0.00000000
+following[0] | TT2 | TT2 | 2 | 2 | 0 | 0.00000000
+following[1] | AGN | TT2 | 2 | 2 | 1 | 0.00000000
+previous[0] | AGN | TT2 | 2 | 2 | 1 | 0.00000000
+previous[1] | TT2 | TT2 | 2 | 2 | 0 | 0.00000000
+follow(+0) | TT2 | TT2 | 2 | 2 | 0 | 0.00000000
+follow(+1) | AGN | TT2 | 2 | 2 | 1 | 0.00000000
+follow(-0) | TT2 | TT2 | 2 | 2 | 0 | 0.00000000
+follow(-1) | AGN | TT2 | 2 | 2 | 1 | 0.00000000
+
+== org.jyotisa.tattva.TattvaAkasha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TT1 | TT1 | 1 | 1 | 0 | 0.00000000
+last | AKA | TT1 | 1 | 1 | 1 | 0.00000000
+following[0] | TT1 | TT1 | 1 | 1 | 0 | 0.00000000
+following[1] | AKA | TT1 | 1 | 1 | 1 | 0.00000000
+previous[0] | AKA | TT1 | 1 | 1 | 1 | 0.00000000
+previous[1] | TT1 | TT1 | 1 | 1 | 0 | 0.00000000
+follow(+0) | TT1 | TT1 | 1 | 1 | 0 | 0.00000000
+follow(+1) | AKA | TT1 | 1 | 1 | 1 | 0.00000000
+follow(-0) | TT1 | TT1 | 1 | 1 | 0 | 0.00000000
+follow(-1) | AKA | TT1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.tattva.TattvaJala | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TT5 | TT5 | 5 | 5 | 0 | 0.00000000
+last | JAL | TT5 | 5 | 5 | 1 | 0.00000000
+following[0] | TT5 | TT5 | 5 | 5 | 0 | 0.00000000
+following[1] | JAL | TT5 | 5 | 5 | 1 | 0.00000000
+previous[0] | JAL | TT5 | 5 | 5 | 1 | 0.00000000
+previous[1] | TT5 | TT5 | 5 | 5 | 0 | 0.00000000
+follow(+0) | TT5 | TT5 | 5 | 5 | 0 | 0.00000000
+follow(+1) | JAL | TT5 | 5 | 5 | 1 | 0.00000000
+follow(-0) | TT5 | TT5 | 5 | 5 | 0 | 0.00000000
+follow(-1) | JAL | TT5 | 5 | 5 | 1 | 0.00000000
+
+== org.jyotisa.tattva.TattvaPrithvi | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TT3 | TT3 | 3 | 3 | 0 | 0.00000000
+last | PRI | TT3 | 3 | 3 | 1 | 0.00000000
+following[0] | TT3 | TT3 | 3 | 3 | 0 | 0.00000000
+following[1] | PRI | TT3 | 3 | 3 | 1 | 0.00000000
+previous[0] | PRI | TT3 | 3 | 3 | 1 | 0.00000000
+previous[1] | TT3 | TT3 | 3 | 3 | 0 | 0.00000000
+follow(+0) | TT3 | TT3 | 3 | 3 | 0 | 0.00000000
+follow(+1) | PRI | TT3 | 3 | 3 | 1 | 0.00000000
+follow(-0) | TT3 | TT3 | 3 | 3 | 0 | 0.00000000
+follow(-1) | PRI | TT3 | 3 | 3 | 1 | 0.00000000
+
+== org.jyotisa.tattva.TattvaVayu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | TT4 | TT4 | 4 | 4 | 0 | 0.00000000
+last | VAY | TT4 | 4 | 4 | 1 | 0.00000000
+following[0] | TT4 | TT4 | 4 | 4 | 0 | 0.00000000
+following[1] | VAY | TT4 | 4 | 4 | 1 | 0.00000000
+previous[0] | VAY | TT4 | 4 | 4 | 1 | 0.00000000
+previous[1] | TT4 | TT4 | 4 | 4 | 0 | 0.00000000
+follow(+0) | TT4 | TT4 | 4 | 4 | 0 | 0.00000000
+follow(+1) | VAY | TT4 | 4 | 4 | 1 | 0.00000000
+follow(-0) | TT4 | TT4 | 4 | 4 | 0 | 0.00000000
+follow(-1) | VAY | TT4 | 4 | 4 | 1 | 0.00000000

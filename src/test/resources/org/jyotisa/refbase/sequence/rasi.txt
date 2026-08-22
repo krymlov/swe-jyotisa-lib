@@ -1,0 +1,217 @@
+== org.jyotisa.api.rasi.NilRasi | 1 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NIL | NIL | 0 | 0 | 0 | 30.00000000
+last | NIL | NIL | 0 | 0 | 0 | 30.00000000
+following[0] | NIL | NIL | 0 | 0 | 0 | 30.00000000
+previous[0] | NIL | NIL | 0 | 0 | 0 | 30.00000000
+follow(+0) | NIL | NIL | 0 | 0 | 0 | 30.00000000
+follow(-0) | NIL | NIL | 0 | 0 | 0 | 30.00000000
+
+== org.jyotisa.rasi.ERasi | 13 constants
+-- step | name | code | fid | uid | ordinal | length
+first | MESHA | R1 | 1 | 1 | 1 | 30.00000000
+last | MEENA | R12 | 12 | 12 | 12 | 30.00000000
+following[0] | MESHA | R1 | 1 | 1 | 1 | 30.00000000
+following[1] | VRISHABHA | R2 | 2 | 2 | 2 | 30.00000000
+following[2] | MITHUNA | R3 | 3 | 3 | 3 | 30.00000000
+following[3] | KARKATA | R4 | 4 | 4 | 4 | 30.00000000
+following[4] | SIMHA | R5 | 5 | 5 | 5 | 30.00000000
+following[5] | KANYA | R6 | 6 | 6 | 6 | 30.00000000
+following[6] | TULA | R7 | 7 | 7 | 7 | 30.00000000
+following[7] | VRISCHIKA | R8 | 8 | 8 | 8 | 30.00000000
+following[8] | DHANUS | R9 | 9 | 9 | 9 | 30.00000000
+following[9] | MAKARA | R10 | 10 | 10 | 10 | 30.00000000
+following[10] | KUMBHA | R11 | 11 | 11 | 11 | 30.00000000
+following[11] | MEENA | R12 | 12 | 12 | 12 | 30.00000000
+previous[0] | MEENA | R12 | 12 | 12 | 12 | 30.00000000
+previous[1] | KUMBHA | R11 | 11 | 11 | 11 | 30.00000000
+previous[2] | MAKARA | R10 | 10 | 10 | 10 | 30.00000000
+previous[3] | DHANUS | R9 | 9 | 9 | 9 | 30.00000000
+previous[4] | VRISCHIKA | R8 | 8 | 8 | 8 | 30.00000000
+previous[5] | TULA | R7 | 7 | 7 | 7 | 30.00000000
+previous[6] | KANYA | R6 | 6 | 6 | 6 | 30.00000000
+previous[7] | SIMHA | R5 | 5 | 5 | 5 | 30.00000000
+previous[8] | KARKATA | R4 | 4 | 4 | 4 | 30.00000000
+previous[9] | MITHUNA | R3 | 3 | 3 | 3 | 30.00000000
+previous[10] | VRISHABHA | R2 | 2 | 2 | 2 | 30.00000000
+previous[11] | MESHA | R1 | 1 | 1 | 1 | 30.00000000
+follow(+0) | MESHA | R1 | 1 | 1 | 1 | 30.00000000
+follow(+1) | VRISHABHA | R2 | 2 | 2 | 2 | 30.00000000
+follow(+2) | MITHUNA | R3 | 3 | 3 | 3 | 30.00000000
+follow(+3) | KARKATA | R4 | 4 | 4 | 4 | 30.00000000
+follow(+4) | SIMHA | R5 | 5 | 5 | 5 | 30.00000000
+follow(+5) | KANYA | R6 | 6 | 6 | 6 | 30.00000000
+follow(+6) | TULA | R7 | 7 | 7 | 7 | 30.00000000
+follow(+7) | VRISCHIKA | R8 | 8 | 8 | 8 | 30.00000000
+follow(+8) | DHANUS | R9 | 9 | 9 | 9 | 30.00000000
+follow(+9) | MAKARA | R10 | 10 | 10 | 10 | 30.00000000
+follow(+10) | KUMBHA | R11 | 11 | 11 | 11 | 30.00000000
+follow(+11) | MEENA | R12 | 12 | 12 | 12 | 30.00000000
+follow(-0) | MESHA | R1 | 1 | 1 | 1 | 30.00000000
+follow(-1) | MEENA | R12 | 12 | 12 | 12 | 30.00000000
+follow(-2) | KUMBHA | R11 | 11 | 11 | 11 | 30.00000000
+follow(-3) | MAKARA | R10 | 10 | 10 | 10 | 30.00000000
+follow(-4) | DHANUS | R9 | 9 | 9 | 9 | 30.00000000
+follow(-5) | VRISCHIKA | R8 | 8 | 8 | 8 | 30.00000000
+follow(-6) | TULA | R7 | 7 | 7 | 7 | 30.00000000
+follow(-7) | KANYA | R6 | 6 | 6 | 6 | 30.00000000
+follow(-8) | SIMHA | R5 | 5 | 5 | 5 | 30.00000000
+follow(-9) | KARKATA | R4 | 4 | 4 | 4 | 30.00000000
+follow(-10) | MITHUNA | R3 | 3 | 3 | 3 | 30.00000000
+follow(-11) | VRISHABHA | R2 | 2 | 2 | 2 | 30.00000000
+
+== org.jyotisa.rasi.RasiDhanus | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R9 | R9 | 9 | 9 | 0 | 30.00000000
+last | DHN | R9 | 9 | 9 | 1 | 30.00000000
+following[0] | R9 | R9 | 9 | 9 | 0 | 30.00000000
+following[1] | DHN | R9 | 9 | 9 | 1 | 30.00000000
+previous[0] | DHN | R9 | 9 | 9 | 1 | 30.00000000
+previous[1] | R9 | R9 | 9 | 9 | 0 | 30.00000000
+follow(+0) | R9 | R9 | 9 | 9 | 0 | 30.00000000
+follow(+1) | DHN | R9 | 9 | 9 | 1 | 30.00000000
+follow(-0) | R9 | R9 | 9 | 9 | 0 | 30.00000000
+follow(-1) | DHN | R9 | 9 | 9 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiKanya | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R6 | R6 | 6 | 6 | 0 | 30.00000000
+last | KAN | R6 | 6 | 6 | 1 | 30.00000000
+following[0] | R6 | R6 | 6 | 6 | 0 | 30.00000000
+following[1] | KAN | R6 | 6 | 6 | 1 | 30.00000000
+previous[0] | KAN | R6 | 6 | 6 | 1 | 30.00000000
+previous[1] | R6 | R6 | 6 | 6 | 0 | 30.00000000
+follow(+0) | R6 | R6 | 6 | 6 | 0 | 30.00000000
+follow(+1) | KAN | R6 | 6 | 6 | 1 | 30.00000000
+follow(-0) | R6 | R6 | 6 | 6 | 0 | 30.00000000
+follow(-1) | KAN | R6 | 6 | 6 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiKarkata | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R4 | R4 | 4 | 4 | 0 | 30.00000000
+last | KAR | R4 | 4 | 4 | 1 | 30.00000000
+following[0] | R4 | R4 | 4 | 4 | 0 | 30.00000000
+following[1] | KAR | R4 | 4 | 4 | 1 | 30.00000000
+previous[0] | KAR | R4 | 4 | 4 | 1 | 30.00000000
+previous[1] | R4 | R4 | 4 | 4 | 0 | 30.00000000
+follow(+0) | R4 | R4 | 4 | 4 | 0 | 30.00000000
+follow(+1) | KAR | R4 | 4 | 4 | 1 | 30.00000000
+follow(-0) | R4 | R4 | 4 | 4 | 0 | 30.00000000
+follow(-1) | KAR | R4 | 4 | 4 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiKumbha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R11 | R11 | 11 | 11 | 0 | 30.00000000
+last | KUM | R11 | 11 | 11 | 1 | 30.00000000
+following[0] | R11 | R11 | 11 | 11 | 0 | 30.00000000
+following[1] | KUM | R11 | 11 | 11 | 1 | 30.00000000
+previous[0] | KUM | R11 | 11 | 11 | 1 | 30.00000000
+previous[1] | R11 | R11 | 11 | 11 | 0 | 30.00000000
+follow(+0) | R11 | R11 | 11 | 11 | 0 | 30.00000000
+follow(+1) | KUM | R11 | 11 | 11 | 1 | 30.00000000
+follow(-0) | R11 | R11 | 11 | 11 | 0 | 30.00000000
+follow(-1) | KUM | R11 | 11 | 11 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiMakara | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R10 | R10 | 10 | 10 | 0 | 30.00000000
+last | MAK | R10 | 10 | 10 | 1 | 30.00000000
+following[0] | R10 | R10 | 10 | 10 | 0 | 30.00000000
+following[1] | MAK | R10 | 10 | 10 | 1 | 30.00000000
+previous[0] | MAK | R10 | 10 | 10 | 1 | 30.00000000
+previous[1] | R10 | R10 | 10 | 10 | 0 | 30.00000000
+follow(+0) | R10 | R10 | 10 | 10 | 0 | 30.00000000
+follow(+1) | MAK | R10 | 10 | 10 | 1 | 30.00000000
+follow(-0) | R10 | R10 | 10 | 10 | 0 | 30.00000000
+follow(-1) | MAK | R10 | 10 | 10 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiMeena | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R12 | R12 | 12 | 12 | 0 | 30.00000000
+last | MEE | R12 | 12 | 12 | 1 | 30.00000000
+following[0] | R12 | R12 | 12 | 12 | 0 | 30.00000000
+following[1] | MEE | R12 | 12 | 12 | 1 | 30.00000000
+previous[0] | MEE | R12 | 12 | 12 | 1 | 30.00000000
+previous[1] | R12 | R12 | 12 | 12 | 0 | 30.00000000
+follow(+0) | R12 | R12 | 12 | 12 | 0 | 30.00000000
+follow(+1) | MEE | R12 | 12 | 12 | 1 | 30.00000000
+follow(-0) | R12 | R12 | 12 | 12 | 0 | 30.00000000
+follow(-1) | MEE | R12 | 12 | 12 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiMesha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R1 | R1 | 1 | 1 | 0 | 30.00000000
+last | MES | R1 | 1 | 1 | 1 | 30.00000000
+following[0] | R1 | R1 | 1 | 1 | 0 | 30.00000000
+following[1] | MES | R1 | 1 | 1 | 1 | 30.00000000
+previous[0] | MES | R1 | 1 | 1 | 1 | 30.00000000
+previous[1] | R1 | R1 | 1 | 1 | 0 | 30.00000000
+follow(+0) | R1 | R1 | 1 | 1 | 0 | 30.00000000
+follow(+1) | MES | R1 | 1 | 1 | 1 | 30.00000000
+follow(-0) | R1 | R1 | 1 | 1 | 0 | 30.00000000
+follow(-1) | MES | R1 | 1 | 1 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiMithuna | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R3 | R3 | 3 | 3 | 0 | 30.00000000
+last | MIT | R3 | 3 | 3 | 1 | 30.00000000
+following[0] | R3 | R3 | 3 | 3 | 0 | 30.00000000
+following[1] | MIT | R3 | 3 | 3 | 1 | 30.00000000
+previous[0] | MIT | R3 | 3 | 3 | 1 | 30.00000000
+previous[1] | R3 | R3 | 3 | 3 | 0 | 30.00000000
+follow(+0) | R3 | R3 | 3 | 3 | 0 | 30.00000000
+follow(+1) | MIT | R3 | 3 | 3 | 1 | 30.00000000
+follow(-0) | R3 | R3 | 3 | 3 | 0 | 30.00000000
+follow(-1) | MIT | R3 | 3 | 3 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiSimha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R5 | R5 | 5 | 5 | 0 | 30.00000000
+last | SIM | R5 | 5 | 5 | 1 | 30.00000000
+following[0] | R5 | R5 | 5 | 5 | 0 | 30.00000000
+following[1] | SIM | R5 | 5 | 5 | 1 | 30.00000000
+previous[0] | SIM | R5 | 5 | 5 | 1 | 30.00000000
+previous[1] | R5 | R5 | 5 | 5 | 0 | 30.00000000
+follow(+0) | R5 | R5 | 5 | 5 | 0 | 30.00000000
+follow(+1) | SIM | R5 | 5 | 5 | 1 | 30.00000000
+follow(-0) | R5 | R5 | 5 | 5 | 0 | 30.00000000
+follow(-1) | SIM | R5 | 5 | 5 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiTula | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R7 | R7 | 7 | 7 | 0 | 30.00000000
+last | TUL | R7 | 7 | 7 | 1 | 30.00000000
+following[0] | R7 | R7 | 7 | 7 | 0 | 30.00000000
+following[1] | TUL | R7 | 7 | 7 | 1 | 30.00000000
+previous[0] | TUL | R7 | 7 | 7 | 1 | 30.00000000
+previous[1] | R7 | R7 | 7 | 7 | 0 | 30.00000000
+follow(+0) | R7 | R7 | 7 | 7 | 0 | 30.00000000
+follow(+1) | TUL | R7 | 7 | 7 | 1 | 30.00000000
+follow(-0) | R7 | R7 | 7 | 7 | 0 | 30.00000000
+follow(-1) | TUL | R7 | 7 | 7 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiVrischika | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R8 | R8 | 8 | 8 | 0 | 30.00000000
+last | VRC | R8 | 8 | 8 | 1 | 30.00000000
+following[0] | R8 | R8 | 8 | 8 | 0 | 30.00000000
+following[1] | VRC | R8 | 8 | 8 | 1 | 30.00000000
+previous[0] | VRC | R8 | 8 | 8 | 1 | 30.00000000
+previous[1] | R8 | R8 | 8 | 8 | 0 | 30.00000000
+follow(+0) | R8 | R8 | 8 | 8 | 0 | 30.00000000
+follow(+1) | VRC | R8 | 8 | 8 | 1 | 30.00000000
+follow(-0) | R8 | R8 | 8 | 8 | 0 | 30.00000000
+follow(-1) | VRC | R8 | 8 | 8 | 1 | 30.00000000
+
+== org.jyotisa.rasi.RasiVrishabha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | R2 | R2 | 2 | 2 | 0 | 30.00000000
+last | VRB | R2 | 2 | 2 | 1 | 30.00000000
+following[0] | R2 | R2 | 2 | 2 | 0 | 30.00000000
+following[1] | VRB | R2 | 2 | 2 | 1 | 30.00000000
+previous[0] | VRB | R2 | 2 | 2 | 1 | 30.00000000
+previous[1] | R2 | R2 | 2 | 2 | 0 | 30.00000000
+follow(+0) | R2 | R2 | 2 | 2 | 0 | 30.00000000
+follow(+1) | VRB | R2 | 2 | 2 | 1 | 30.00000000
+follow(-0) | R2 | R2 | 2 | 2 | 0 | 30.00000000
+follow(-1) | VRB | R2 | 2 | 2 | 1 | 30.00000000

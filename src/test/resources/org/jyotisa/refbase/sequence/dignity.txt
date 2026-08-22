@@ -1,0 +1,191 @@
+== org.jyotisa.dignity.DignityAdhimitra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG7 | DG7 | 7 | 7 | 0 | 37.00000000
+last | ADM | DG7 | 7 | 7 | 1 | 37.00000000
+following[0] | DG7 | DG7 | 7 | 7 | 0 | 37.00000000
+following[1] | ADM | DG7 | 7 | 7 | 1 | 37.00000000
+previous[0] | ADM | DG7 | 7 | 7 | 1 | 37.00000000
+previous[1] | DG7 | DG7 | 7 | 7 | 0 | 37.00000000
+follow(+0) | DG7 | DG7 | 7 | 7 | 0 | 37.00000000
+follow(+1) | ADM | DG7 | 7 | 7 | 1 | 37.00000000
+follow(-0) | DG7 | DG7 | 7 | 7 | 0 | 37.00000000
+follow(-1) | ADM | DG7 | 7 | 7 | 1 | 37.00000000
+
+== org.jyotisa.dignity.DignityAdhisatru | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG3 | DG3 | 3 | 3 | 0 | 3.00000000
+last | ADS | DG3 | 3 | 3 | 1 | 3.00000000
+following[0] | DG3 | DG3 | 3 | 3 | 0 | 3.00000000
+following[1] | ADS | DG3 | 3 | 3 | 1 | 3.00000000
+previous[0] | ADS | DG3 | 3 | 3 | 1 | 3.00000000
+previous[1] | DG3 | DG3 | 3 | 3 | 0 | 3.00000000
+follow(+0) | DG3 | DG3 | 3 | 3 | 0 | 3.00000000
+follow(+1) | ADS | DG3 | 3 | 3 | 1 | 3.00000000
+follow(-0) | DG3 | DG3 | 3 | 3 | 0 | 3.00000000
+follow(-1) | ADS | DG3 | 3 | 3 | 1 | 3.00000000
+
+== org.jyotisa.dignity.DignityDeficient | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG2 | DG2 | 2 | 2 | 0 | 1.00000000
+last | DET | DG2 | 2 | 2 | 1 | 1.00000000
+following[0] | DG2 | DG2 | 2 | 2 | 0 | 1.00000000
+following[1] | DET | DG2 | 2 | 2 | 1 | 1.00000000
+previous[0] | DET | DG2 | 2 | 2 | 1 | 1.00000000
+previous[1] | DG2 | DG2 | 2 | 2 | 0 | 1.00000000
+follow(+0) | DG2 | DG2 | 2 | 2 | 0 | 1.00000000
+follow(+1) | DET | DG2 | 2 | 2 | 1 | 1.00000000
+follow(-0) | DG2 | DG2 | 2 | 2 | 0 | 1.00000000
+follow(-1) | DET | DG2 | 2 | 2 | 1 | 1.00000000
+
+== org.jyotisa.dignity.DignityExcellent | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG10 | DG10 | 10 | 10 | 0 | 95.00000000
+last | EXT | DG10 | 10 | 10 | 1 | 95.00000000
+following[0] | DG10 | DG10 | 10 | 10 | 0 | 95.00000000
+following[1] | EXT | DG10 | 10 | 10 | 1 | 95.00000000
+previous[0] | EXT | DG10 | 10 | 10 | 1 | 95.00000000
+previous[1] | DG10 | DG10 | 10 | 10 | 0 | 95.00000000
+follow(+0) | DG10 | DG10 | 10 | 10 | 0 | 95.00000000
+follow(+1) | EXT | DG10 | 10 | 10 | 1 | 95.00000000
+follow(-0) | DG10 | DG10 | 10 | 10 | 0 | 95.00000000
+follow(-1) | EXT | DG10 | 10 | 10 | 1 | 95.00000000
+
+== org.jyotisa.dignity.DignityMitra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG6 | DG6 | 6 | 6 | 0 | 25.00000000
+last | MIR | DG6 | 6 | 6 | 1 | 25.00000000
+following[0] | DG6 | DG6 | 6 | 6 | 0 | 25.00000000
+following[1] | MIR | DG6 | 6 | 6 | 1 | 25.00000000
+previous[0] | MIR | DG6 | 6 | 6 | 1 | 25.00000000
+previous[1] | DG6 | DG6 | 6 | 6 | 0 | 25.00000000
+follow(+0) | DG6 | DG6 | 6 | 6 | 0 | 25.00000000
+follow(+1) | MIR | DG6 | 6 | 6 | 1 | 25.00000000
+follow(-0) | DG6 | DG6 | 6 | 6 | 0 | 25.00000000
+follow(-1) | MIR | DG6 | 6 | 6 | 1 | 25.00000000
+
+== org.jyotisa.dignity.DignityMulatrikona | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG9 | DG9 | 9 | 9 | 0 | 75.00000000
+last | MLT | DG9 | 9 | 9 | 1 | 75.00000000
+following[0] | DG9 | DG9 | 9 | 9 | 0 | 75.00000000
+following[1] | MLT | DG9 | 9 | 9 | 1 | 75.00000000
+previous[0] | MLT | DG9 | 9 | 9 | 1 | 75.00000000
+previous[1] | DG9 | DG9 | 9 | 9 | 0 | 75.00000000
+follow(+0) | DG9 | DG9 | 9 | 9 | 0 | 75.00000000
+follow(+1) | MLT | DG9 | 9 | 9 | 1 | 75.00000000
+follow(-0) | DG9 | DG9 | 9 | 9 | 0 | 75.00000000
+follow(-1) | MLT | DG9 | 9 | 9 | 1 | 75.00000000
+
+== org.jyotisa.dignity.DignityNeecha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG1 | DG1 | 1 | 1 | 0 | 0.00000000
+last | NEE | DG1 | 1 | 1 | 1 | 0.00000000
+following[0] | DG1 | DG1 | 1 | 1 | 0 | 0.00000000
+following[1] | NEE | DG1 | 1 | 1 | 1 | 0.00000000
+previous[0] | NEE | DG1 | 1 | 1 | 1 | 0.00000000
+previous[1] | DG1 | DG1 | 1 | 1 | 0 | 0.00000000
+follow(+0) | DG1 | DG1 | 1 | 1 | 0 | 0.00000000
+follow(+1) | NEE | DG1 | 1 | 1 | 1 | 0.00000000
+follow(-0) | DG1 | DG1 | 1 | 1 | 0 | 0.00000000
+follow(-1) | NEE | DG1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.dignity.DignitySama | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG5 | DG5 | 5 | 5 | 0 | 12.00000000
+last | SAM | DG5 | 5 | 5 | 1 | 12.00000000
+following[0] | DG5 | DG5 | 5 | 5 | 0 | 12.00000000
+following[1] | SAM | DG5 | 5 | 5 | 1 | 12.00000000
+previous[0] | SAM | DG5 | 5 | 5 | 1 | 12.00000000
+previous[1] | DG5 | DG5 | 5 | 5 | 0 | 12.00000000
+follow(+0) | DG5 | DG5 | 5 | 5 | 0 | 12.00000000
+follow(+1) | SAM | DG5 | 5 | 5 | 1 | 12.00000000
+follow(-0) | DG5 | DG5 | 5 | 5 | 0 | 12.00000000
+follow(-1) | SAM | DG5 | 5 | 5 | 1 | 12.00000000
+
+== org.jyotisa.dignity.DignitySatru | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG4 | DG4 | 4 | 4 | 0 | 6.00000000
+last | SRU | DG4 | 4 | 4 | 1 | 6.00000000
+following[0] | DG4 | DG4 | 4 | 4 | 0 | 6.00000000
+following[1] | SRU | DG4 | 4 | 4 | 1 | 6.00000000
+previous[0] | SRU | DG4 | 4 | 4 | 1 | 6.00000000
+previous[1] | DG4 | DG4 | 4 | 4 | 0 | 6.00000000
+follow(+0) | DG4 | DG4 | 4 | 4 | 0 | 6.00000000
+follow(+1) | SRU | DG4 | 4 | 4 | 1 | 6.00000000
+follow(-0) | DG4 | DG4 | 4 | 4 | 0 | 6.00000000
+follow(-1) | SRU | DG4 | 4 | 4 | 1 | 6.00000000
+
+== org.jyotisa.dignity.DignitySwakshetra | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG8 | DG8 | 8 | 8 | 0 | 50.00000000
+last | SWT | DG8 | 8 | 8 | 1 | 50.00000000
+following[0] | DG8 | DG8 | 8 | 8 | 0 | 50.00000000
+following[1] | SWT | DG8 | 8 | 8 | 1 | 50.00000000
+previous[0] | SWT | DG8 | 8 | 8 | 1 | 50.00000000
+previous[1] | DG8 | DG8 | 8 | 8 | 0 | 50.00000000
+follow(+0) | DG8 | DG8 | 8 | 8 | 0 | 50.00000000
+follow(+1) | SWT | DG8 | 8 | 8 | 1 | 50.00000000
+follow(-0) | DG8 | DG8 | 8 | 8 | 0 | 50.00000000
+follow(-1) | SWT | DG8 | 8 | 8 | 1 | 50.00000000
+
+== org.jyotisa.dignity.DignityUccha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | DG11 | DG11 | 11 | 11 | 0 | 100.00000000
+last | UCC | DG11 | 11 | 11 | 1 | 100.00000000
+following[0] | DG11 | DG11 | 11 | 11 | 0 | 100.00000000
+following[1] | UCC | DG11 | 11 | 11 | 1 | 100.00000000
+previous[0] | UCC | DG11 | 11 | 11 | 1 | 100.00000000
+previous[1] | DG11 | DG11 | 11 | 11 | 0 | 100.00000000
+follow(+0) | DG11 | DG11 | 11 | 11 | 0 | 100.00000000
+follow(+1) | UCC | DG11 | 11 | 11 | 1 | 100.00000000
+follow(-0) | DG11 | DG11 | 11 | 11 | 0 | 100.00000000
+follow(-1) | UCC | DG11 | 11 | 11 | 1 | 100.00000000
+
+== org.jyotisa.dignity.EDignity | 12 constants
+-- step | name | code | fid | uid | ordinal | length
+first | NEECHA | DG1 | 1 | 1 | 1 | 0.00000000
+last | UCCHA | DG11 | 11 | 11 | 11 | 100.00000000
+following[0] | NEECHA | DG1 | 1 | 1 | 1 | 0.00000000
+following[1] | DEFICIENT | DG2 | 2 | 2 | 2 | 1.00000000
+following[2] | ADHISATRU | DG3 | 3 | 3 | 3 | 3.00000000
+following[3] | SATRU | DG4 | 4 | 4 | 4 | 6.00000000
+following[4] | SAMA | DG5 | 5 | 5 | 5 | 12.00000000
+following[5] | MITRA | DG6 | 6 | 6 | 6 | 25.00000000
+following[6] | ADHIMITRA | DG7 | 7 | 7 | 7 | 37.00000000
+following[7] | SWAKSHETRA | DG8 | 8 | 8 | 8 | 50.00000000
+following[8] | MULATRIKONA | DG9 | 9 | 9 | 9 | 75.00000000
+following[9] | EXCELLENT | DG10 | 10 | 10 | 10 | 95.00000000
+following[10] | UCCHA | DG11 | 11 | 11 | 11 | 100.00000000
+previous[0] | UCCHA | DG11 | 11 | 11 | 11 | 100.00000000
+previous[1] | EXCELLENT | DG10 | 10 | 10 | 10 | 95.00000000
+previous[2] | MULATRIKONA | DG9 | 9 | 9 | 9 | 75.00000000
+previous[3] | SWAKSHETRA | DG8 | 8 | 8 | 8 | 50.00000000
+previous[4] | ADHIMITRA | DG7 | 7 | 7 | 7 | 37.00000000
+previous[5] | MITRA | DG6 | 6 | 6 | 6 | 25.00000000
+previous[6] | SAMA | DG5 | 5 | 5 | 5 | 12.00000000
+previous[7] | SATRU | DG4 | 4 | 4 | 4 | 6.00000000
+previous[8] | ADHISATRU | DG3 | 3 | 3 | 3 | 3.00000000
+previous[9] | DEFICIENT | DG2 | 2 | 2 | 2 | 1.00000000
+previous[10] | NEECHA | DG1 | 1 | 1 | 1 | 0.00000000
+follow(+0) | NEECHA | DG1 | 1 | 1 | 1 | 0.00000000
+follow(+1) | DEFICIENT | DG2 | 2 | 2 | 2 | 1.00000000
+follow(+2) | ADHISATRU | DG3 | 3 | 3 | 3 | 3.00000000
+follow(+3) | SATRU | DG4 | 4 | 4 | 4 | 6.00000000
+follow(+4) | SAMA | DG5 | 5 | 5 | 5 | 12.00000000
+follow(+5) | MITRA | DG6 | 6 | 6 | 6 | 25.00000000
+follow(+6) | ADHIMITRA | DG7 | 7 | 7 | 7 | 37.00000000
+follow(+7) | SWAKSHETRA | DG8 | 8 | 8 | 8 | 50.00000000
+follow(+8) | MULATRIKONA | DG9 | 9 | 9 | 9 | 75.00000000
+follow(+9) | EXCELLENT | DG10 | 10 | 10 | 10 | 95.00000000
+follow(+10) | UCCHA | DG11 | 11 | 11 | 11 | 100.00000000
+follow(-0) | NEECHA | DG1 | 1 | 1 | 1 | 0.00000000
+follow(-1) | UCCHA | DG11 | 11 | 11 | 11 | 100.00000000
+follow(-2) | EXCELLENT | DG10 | 10 | 10 | 10 | 95.00000000
+follow(-3) | MULATRIKONA | DG9 | 9 | 9 | 9 | 75.00000000
+follow(-4) | SWAKSHETRA | DG8 | 8 | 8 | 8 | 50.00000000
+follow(-5) | ADHIMITRA | DG7 | 7 | 7 | 7 | 37.00000000
+follow(-6) | MITRA | DG6 | 6 | 6 | 6 | 25.00000000
+follow(-7) | SAMA | DG5 | 5 | 5 | 5 | 12.00000000
+follow(-8) | SATRU | DG4 | 4 | 4 | 4 | 6.00000000
+follow(-9) | ADHISATRU | DG3 | 3 | 3 | 3 | 3.00000000
+follow(-10) | DEFICIENT | DG2 | 2 | 2 | 2 | 1.00000000

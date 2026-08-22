@@ -1,0 +1,157 @@
+== org.jyotisa.lagna.ELagna | 9 constants
+-- step | name | code | fid | uid | ordinal | length
+first | JANMA_LAGNA | L0 | 0 | 0 | 0 | 0.00000000
+last | INDU_LAGNA | L8 | 8 | 8 | 8 | 0.00000000
+following[0] | JANMA_LAGNA | L0 | 0 | 0 | 0 | 0.00000000
+following[1] | BHAVA_LAGNA | L1 | 1 | 1 | 1 | 0.00000000
+following[2] | HORA_LAGNA | L2 | 2 | 2 | 2 | 0.00000000
+following[3] | GHATI_LAGNA | L3 | 3 | 3 | 3 | 0.00000000
+following[4] | VIGHATI_LAGNA | L4 | 4 | 4 | 4 | 0.00000000
+following[5] | VARNADA_LAGNA | L5 | 5 | 5 | 5 | 0.00000000
+following[6] | SREE_LAGNA | L6 | 6 | 6 | 6 | 0.00000000
+following[7] | PRANAPADA_LAGNA | L7 | 7 | 7 | 7 | 0.00000000
+following[8] | INDU_LAGNA | L8 | 8 | 8 | 8 | 0.00000000
+previous[0] | INDU_LAGNA | L8 | 8 | 8 | 8 | 0.00000000
+previous[1] | PRANAPADA_LAGNA | L7 | 7 | 7 | 7 | 0.00000000
+previous[2] | SREE_LAGNA | L6 | 6 | 6 | 6 | 0.00000000
+previous[3] | VARNADA_LAGNA | L5 | 5 | 5 | 5 | 0.00000000
+previous[4] | VIGHATI_LAGNA | L4 | 4 | 4 | 4 | 0.00000000
+previous[5] | GHATI_LAGNA | L3 | 3 | 3 | 3 | 0.00000000
+previous[6] | HORA_LAGNA | L2 | 2 | 2 | 2 | 0.00000000
+previous[7] | BHAVA_LAGNA | L1 | 1 | 1 | 1 | 0.00000000
+previous[8] | JANMA_LAGNA | L0 | 0 | 0 | 0 | 0.00000000
+follow(+0) | JANMA_LAGNA | L0 | 0 | 0 | 0 | 0.00000000
+follow(+1) | BHAVA_LAGNA | L1 | 1 | 1 | 1 | 0.00000000
+follow(+2) | HORA_LAGNA | L2 | 2 | 2 | 2 | 0.00000000
+follow(+3) | GHATI_LAGNA | L3 | 3 | 3 | 3 | 0.00000000
+follow(+4) | VIGHATI_LAGNA | L4 | 4 | 4 | 4 | 0.00000000
+follow(+5) | VARNADA_LAGNA | L5 | 5 | 5 | 5 | 0.00000000
+follow(+6) | SREE_LAGNA | L6 | 6 | 6 | 6 | 0.00000000
+follow(+7) | PRANAPADA_LAGNA | L7 | 7 | 7 | 7 | 0.00000000
+follow(+8) | INDU_LAGNA | L8 | 8 | 8 | 8 | 0.00000000
+follow(-0) | JANMA_LAGNA | L0 | 0 | 0 | 0 | 0.00000000
+follow(-1) | INDU_LAGNA | L8 | 8 | 8 | 8 | 0.00000000
+follow(-2) | PRANAPADA_LAGNA | L7 | 7 | 7 | 7 | 0.00000000
+follow(-3) | SREE_LAGNA | L6 | 6 | 6 | 6 | 0.00000000
+follow(-4) | VARNADA_LAGNA | L5 | 5 | 5 | 5 | 0.00000000
+follow(-5) | VIGHATI_LAGNA | L4 | 4 | 4 | 4 | 0.00000000
+follow(-6) | GHATI_LAGNA | L3 | 3 | 3 | 3 | 0.00000000
+follow(-7) | HORA_LAGNA | L2 | 2 | 2 | 2 | 0.00000000
+follow(-8) | BHAVA_LAGNA | L1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaBhava | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L1 | L1 | 1 | 1 | 0 | 0.00000000
+last | BL | L1 | 1 | 1 | 1 | 0.00000000
+following[0] | L1 | L1 | 1 | 1 | 0 | 0.00000000
+following[1] | BL | L1 | 1 | 1 | 1 | 0.00000000
+previous[0] | BL | L1 | 1 | 1 | 1 | 0.00000000
+previous[1] | L1 | L1 | 1 | 1 | 0 | 0.00000000
+follow(+0) | L1 | L1 | 1 | 1 | 0 | 0.00000000
+follow(+1) | BL | L1 | 1 | 1 | 1 | 0.00000000
+follow(-0) | L1 | L1 | 1 | 1 | 0 | 0.00000000
+follow(-1) | BL | L1 | 1 | 1 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaGhati | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L3 | L3 | 3 | 3 | 0 | 0.00000000
+last | GL | L3 | 3 | 3 | 1 | 0.00000000
+following[0] | L3 | L3 | 3 | 3 | 0 | 0.00000000
+following[1] | GL | L3 | 3 | 3 | 1 | 0.00000000
+previous[0] | GL | L3 | 3 | 3 | 1 | 0.00000000
+previous[1] | L3 | L3 | 3 | 3 | 0 | 0.00000000
+follow(+0) | L3 | L3 | 3 | 3 | 0 | 0.00000000
+follow(+1) | GL | L3 | 3 | 3 | 1 | 0.00000000
+follow(-0) | L3 | L3 | 3 | 3 | 0 | 0.00000000
+follow(-1) | GL | L3 | 3 | 3 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaHora | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L2 | L2 | 2 | 2 | 0 | 0.00000000
+last | HL | L2 | 2 | 2 | 1 | 0.00000000
+following[0] | L2 | L2 | 2 | 2 | 0 | 0.00000000
+following[1] | HL | L2 | 2 | 2 | 1 | 0.00000000
+previous[0] | HL | L2 | 2 | 2 | 1 | 0.00000000
+previous[1] | L2 | L2 | 2 | 2 | 0 | 0.00000000
+follow(+0) | L2 | L2 | 2 | 2 | 0 | 0.00000000
+follow(+1) | HL | L2 | 2 | 2 | 1 | 0.00000000
+follow(-0) | L2 | L2 | 2 | 2 | 0 | 0.00000000
+follow(-1) | HL | L2 | 2 | 2 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaIndu | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L8 | L8 | 8 | 8 | 0 | 0.00000000
+last | IL | L8 | 8 | 8 | 1 | 0.00000000
+following[0] | L8 | L8 | 8 | 8 | 0 | 0.00000000
+following[1] | IL | L8 | 8 | 8 | 1 | 0.00000000
+previous[0] | IL | L8 | 8 | 8 | 1 | 0.00000000
+previous[1] | L8 | L8 | 8 | 8 | 0 | 0.00000000
+follow(+0) | L8 | L8 | 8 | 8 | 0 | 0.00000000
+follow(+1) | IL | L8 | 8 | 8 | 1 | 0.00000000
+follow(-0) | L8 | L8 | 8 | 8 | 0 | 0.00000000
+follow(-1) | IL | L8 | 8 | 8 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaJanma | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L0 | L0 | 0 | 0 | 0 | 0.00000000
+last | JL | L0 | 0 | 0 | 1 | 0.00000000
+following[0] | L0 | L0 | 0 | 0 | 0 | 0.00000000
+following[1] | JL | L0 | 0 | 0 | 1 | 0.00000000
+previous[0] | JL | L0 | 0 | 0 | 1 | 0.00000000
+previous[1] | L0 | L0 | 0 | 0 | 0 | 0.00000000
+follow(+0) | L0 | L0 | 0 | 0 | 0 | 0.00000000
+follow(+1) | JL | L0 | 0 | 0 | 1 | 0.00000000
+follow(-0) | L0 | L0 | 0 | 0 | 0 | 0.00000000
+follow(-1) | JL | L0 | 0 | 0 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaPranapada | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L7 | L7 | 7 | 7 | 0 | 0.00000000
+last | PP | L7 | 7 | 7 | 1 | 0.00000000
+following[0] | L7 | L7 | 7 | 7 | 0 | 0.00000000
+following[1] | PP | L7 | 7 | 7 | 1 | 0.00000000
+previous[0] | PP | L7 | 7 | 7 | 1 | 0.00000000
+previous[1] | L7 | L7 | 7 | 7 | 0 | 0.00000000
+follow(+0) | L7 | L7 | 7 | 7 | 0 | 0.00000000
+follow(+1) | PP | L7 | 7 | 7 | 1 | 0.00000000
+follow(-0) | L7 | L7 | 7 | 7 | 0 | 0.00000000
+follow(-1) | PP | L7 | 7 | 7 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaSree | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L6 | L6 | 6 | 6 | 0 | 0.00000000
+last | SL | L6 | 6 | 6 | 1 | 0.00000000
+following[0] | L6 | L6 | 6 | 6 | 0 | 0.00000000
+following[1] | SL | L6 | 6 | 6 | 1 | 0.00000000
+previous[0] | SL | L6 | 6 | 6 | 1 | 0.00000000
+previous[1] | L6 | L6 | 6 | 6 | 0 | 0.00000000
+follow(+0) | L6 | L6 | 6 | 6 | 0 | 0.00000000
+follow(+1) | SL | L6 | 6 | 6 | 1 | 0.00000000
+follow(-0) | L6 | L6 | 6 | 6 | 0 | 0.00000000
+follow(-1) | SL | L6 | 6 | 6 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaVarnada | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L5 | L5 | 5 | 5 | 0 | 0.00000000
+last | VL | L5 | 5 | 5 | 1 | 0.00000000
+following[0] | L5 | L5 | 5 | 5 | 0 | 0.00000000
+following[1] | VL | L5 | 5 | 5 | 1 | 0.00000000
+previous[0] | VL | L5 | 5 | 5 | 1 | 0.00000000
+previous[1] | L5 | L5 | 5 | 5 | 0 | 0.00000000
+follow(+0) | L5 | L5 | 5 | 5 | 0 | 0.00000000
+follow(+1) | VL | L5 | 5 | 5 | 1 | 0.00000000
+follow(-0) | L5 | L5 | 5 | 5 | 0 | 0.00000000
+follow(-1) | VL | L5 | 5 | 5 | 1 | 0.00000000
+
+== org.jyotisa.lagna.LagnaVighati | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | L4 | L4 | 4 | 4 | 0 | 0.00000000
+last | VG | L4 | 4 | 4 | 1 | 0.00000000
+following[0] | L4 | L4 | 4 | 4 | 0 | 0.00000000
+following[1] | VG | L4 | 4 | 4 | 1 | 0.00000000
+previous[0] | VG | L4 | 4 | 4 | 1 | 0.00000000
+previous[1] | L4 | L4 | 4 | 4 | 0 | 0.00000000
+follow(+0) | L4 | L4 | 4 | 4 | 0 | 0.00000000
+follow(+1) | VG | L4 | 4 | 4 | 1 | 0.00000000
+follow(-0) | L4 | L4 | 4 | 4 | 0 | 0.00000000
+follow(-1) | VG | L4 | 4 | 4 | 1 | 0.00000000
