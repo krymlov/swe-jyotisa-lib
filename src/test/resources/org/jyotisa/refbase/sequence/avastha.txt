@@ -1,0 +1,89 @@
+== org.jyotisa.avastha.AvasthaBala | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AV1 | AV1 | 1 | 1 | 0 | 6.00000000
+last | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+following[0] | AV1 | AV1 | 1 | 1 | 0 | 6.00000000
+following[1] | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+previous[0] | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+previous[1] | AV1 | AV1 | 1 | 1 | 0 | 6.00000000
+follow(+0) | AV1 | AV1 | 1 | 1 | 0 | 6.00000000
+follow(+1) | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+follow(-0) | AV1 | AV1 | 1 | 1 | 0 | 6.00000000
+follow(-1) | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+
+== org.jyotisa.avastha.AvasthaKumara | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AV2 | AV2 | 2 | 2 | 0 | 6.00000000
+last | KUMARA | AV2 | 2 | 2 | 1 | 6.00000000
+following[0] | AV2 | AV2 | 2 | 2 | 0 | 6.00000000
+following[1] | KUMARA | AV2 | 2 | 2 | 1 | 6.00000000
+previous[0] | KUMARA | AV2 | 2 | 2 | 1 | 6.00000000
+previous[1] | AV2 | AV2 | 2 | 2 | 0 | 6.00000000
+follow(+0) | AV2 | AV2 | 2 | 2 | 0 | 6.00000000
+follow(+1) | KUMARA | AV2 | 2 | 2 | 1 | 6.00000000
+follow(-0) | AV2 | AV2 | 2 | 2 | 0 | 6.00000000
+follow(-1) | KUMARA | AV2 | 2 | 2 | 1 | 6.00000000
+
+== org.jyotisa.avastha.AvasthaMrita | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AV5 | AV5 | 5 | 5 | 0 | 6.00000000
+last | MRITA | AV5 | 5 | 5 | 1 | 6.00000000
+following[0] | AV5 | AV5 | 5 | 5 | 0 | 6.00000000
+following[1] | MRITA | AV5 | 5 | 5 | 1 | 6.00000000
+previous[0] | MRITA | AV5 | 5 | 5 | 1 | 6.00000000
+previous[1] | AV5 | AV5 | 5 | 5 | 0 | 6.00000000
+follow(+0) | AV5 | AV5 | 5 | 5 | 0 | 6.00000000
+follow(+1) | MRITA | AV5 | 5 | 5 | 1 | 6.00000000
+follow(-0) | AV5 | AV5 | 5 | 5 | 0 | 6.00000000
+follow(-1) | MRITA | AV5 | 5 | 5 | 1 | 6.00000000
+
+== org.jyotisa.avastha.AvasthaVriddha | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AV4 | AV4 | 4 | 4 | 0 | 6.00000000
+last | VRIDDHA | AV4 | 4 | 4 | 1 | 6.00000000
+following[0] | AV4 | AV4 | 4 | 4 | 0 | 6.00000000
+following[1] | VRIDDHA | AV4 | 4 | 4 | 1 | 6.00000000
+previous[0] | VRIDDHA | AV4 | 4 | 4 | 1 | 6.00000000
+previous[1] | AV4 | AV4 | 4 | 4 | 0 | 6.00000000
+follow(+0) | AV4 | AV4 | 4 | 4 | 0 | 6.00000000
+follow(+1) | VRIDDHA | AV4 | 4 | 4 | 1 | 6.00000000
+follow(-0) | AV4 | AV4 | 4 | 4 | 0 | 6.00000000
+follow(-1) | VRIDDHA | AV4 | 4 | 4 | 1 | 6.00000000
+
+== org.jyotisa.avastha.AvasthaYuva | 2 constants
+-- step | name | code | fid | uid | ordinal | length
+first | AV3 | AV3 | 3 | 3 | 0 | 6.00000000
+last | YUVA | AV3 | 3 | 3 | 1 | 6.00000000
+following[0] | AV3 | AV3 | 3 | 3 | 0 | 6.00000000
+following[1] | YUVA | AV3 | 3 | 3 | 1 | 6.00000000
+previous[0] | YUVA | AV3 | 3 | 3 | 1 | 6.00000000
+previous[1] | AV3 | AV3 | 3 | 3 | 0 | 6.00000000
+follow(+0) | AV3 | AV3 | 3 | 3 | 0 | 6.00000000
+follow(+1) | YUVA | AV3 | 3 | 3 | 1 | 6.00000000
+follow(-0) | AV3 | AV3 | 3 | 3 | 0 | 6.00000000
+follow(-1) | YUVA | AV3 | 3 | 3 | 1 | 6.00000000
+
+== org.jyotisa.avastha.EAvastha | 6 constants
+-- step | name | code | fid | uid | ordinal | length
+first | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+last | MRITA | AV5 | 5 | 5 | 5 | 6.00000000
+following[0] | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+following[1] | KUMARA | AV2 | 2 | 2 | 2 | 6.00000000
+following[2] | YUVA | AV3 | 3 | 3 | 3 | 6.00000000
+following[3] | VRIDDHA | AV4 | 4 | 4 | 4 | 6.00000000
+following[4] | MRITA | AV5 | 5 | 5 | 5 | 6.00000000
+previous[0] | MRITA | AV5 | 5 | 5 | 5 | 6.00000000
+previous[1] | VRIDDHA | AV4 | 4 | 4 | 4 | 6.00000000
+previous[2] | YUVA | AV3 | 3 | 3 | 3 | 6.00000000
+previous[3] | KUMARA | AV2 | 2 | 2 | 2 | 6.00000000
+previous[4] | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+follow(+0) | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+follow(+1) | KUMARA | AV2 | 2 | 2 | 2 | 6.00000000
+follow(+2) | YUVA | AV3 | 3 | 3 | 3 | 6.00000000
+follow(+3) | VRIDDHA | AV4 | 4 | 4 | 4 | 6.00000000
+follow(+4) | MRITA | AV5 | 5 | 5 | 5 | 6.00000000
+follow(-0) | BALA | AV1 | 1 | 1 | 1 | 6.00000000
+follow(-1) | MRITA | AV5 | 5 | 5 | 5 | 6.00000000
+follow(-2) | VRIDDHA | AV4 | 4 | 4 | 4 | 6.00000000
+follow(-3) | YUVA | AV3 | 3 | 3 | 3 | 6.00000000
+follow(-4) | KUMARA | AV2 | 2 | 2 | 2 | 6.00000000
