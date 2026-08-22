@@ -101,27 +101,27 @@ public class Lagnas implements ILagnas {
         return all[GHATI_LAGNA.uid()];
     }
 
-    //@Override
+    @Override
     public ILagnaEntity vighati() {
         return all[VIGHATI_LAGNA.uid()];
     }
 
-    //@Override
+    @Override
     public ILagnaEntity varnada() {
         return all[VARNADA_LAGNA.uid()];
     }
 
-    //@Override
+    @Override
     public ILagnaEntity sree() {
         return all[SREE_LAGNA.uid()];
     }
 
-    //@Override
+    @Override
     public ILagnaEntity pranapada() {
         return all[PRANAPADA_LAGNA.uid()];
     }
 
-    //@Override
+    @Override
     public ILagnaEntity indu() {
         return all[INDU_LAGNA.uid()];
     }

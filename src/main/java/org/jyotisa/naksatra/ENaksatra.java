@@ -6,6 +6,7 @@
 
 package org.jyotisa.naksatra;
 
+import org.jyotisa.app.KundaliRuntimeException;
 import org.jyotisa.api.naksatra.*;
 import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumIterator;
@@ -104,7 +105,7 @@ public enum ENaksatra implements INaksatraEnum {
     @Override
     public INaksatraPada pada(final int pada) {
         if (1 > pada || pada > 4) {
-            throw new RuntimeException("Wrong pada number: " + pada);
+            throw new KundaliRuntimeException("Wrong pada number: " + pada);
         }
 
         return ENaksatraPada.byUid(pada + (4 * (fid() - 1)));

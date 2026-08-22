@@ -155,6 +155,7 @@ public class Kundali implements IKundali {
         return upagrahas = new Upagrahas(options, sweObjects);
     }
 
+    @Override
     public IAshtakavarga ashtakavarga() {
         if (null != ashtakavarga) return ashtakavarga;
         return ashtakavarga = new Ashtakavarga(options, sweObjects);
@@ -309,7 +310,10 @@ public class Kundali implements IKundali {
         }
 
         // the sign the ascendant occupies - the whole sign bhava of any other point is its
-        // own sign counted from this one, exactly as UpagrahaEntity computes it
+        // own sign counted from this one, exactly as UpagrahaEntity computes it. Without a
+        // calculated ascendant there is no bhava to report, and the arithmetic would answer
+        // "sign + 1" rather than fail, so it is skipped instead.
+        final boolean hasLagna = sweObjects.isCalculated(LG);
         final int lagnaSign = sweObjects.signs()[LG];
 
         ISweEnumIterator<ILagnaEnum> lagnaIterator = ELagna.iteratorTo(ELagna.INDU_LAGNA);
@@ -326,7 +330,8 @@ public class Kundali implements IKundali {
                     toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
                     INaksatra.progress(degree), pada.navamsa().following(),
                     pada.navamsa().lord().code(),
-                    EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)));
+                    hasLagna ? EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)
+                            : EBhava.NIL.bhava()));
         }
 
         builder.append('\n').append(fields()).append('\n');

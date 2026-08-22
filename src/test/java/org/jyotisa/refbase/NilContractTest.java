@@ -96,6 +96,62 @@ class NilContractTest {
         }
     }
 
+    /**
+     * Every family declares its own {@code first()}/{@code last()}, so the NIL-skipping defaults
+     * added on 2026-08-22 are never reached from production code - reverting them to
+     * {@code all()[0]} leaves this whole sweep green, which is why they are also tested directly
+     * in {@code ISweEnumSequenceNilTest} against a family that does not override them.
+     * <p>
+     * What <i>this</i> test adds is the other half: the hand-written overrides and the default
+     * must not contradict each other. The rule is <b>narrowing is allowed, widening is not</b> -
+     * an override may exclude a real member from the cycle, but it may never reach past the
+     * default's bounds, because the only thing out there is the reserved member.
+     *
+     * <h2>Two families do narrow, and both are right to</h2>
+     * <ul>
+     * <li>{@code SweAyanamsa} keeps {@code AY_NONE} at ordinal 48 of 49 - the tropical
+     *     "no ayanamsa" setting, a real configuration that has no place in a cycle of
+     *     ayanamsas;</li>
+     * <li>{@code EMaasa} keeps {@code PURADH} - Purushottama Adhika Maasa, the intercalary
+     *     month - past {@code VISNU}, so a walk covers the twelve regular months and not the
+     *     thirteenth that only some years have.</li>
+     * </ul>
+     * Neither is a NIL, so neither is covered by the reserved-member rules; both are found by
+     * this test rather than assumed, which is why it asserts the direction rather than equality.
+     */
+    @Test
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    void anOverriddenBoundMayNarrowTheCycleButNeverReachIntoTheReservedMember() {
+        int checked = 0, narrowed = 0;
+
+        for (Class<?> type : sequences()) {
+            if (!SequenceReference.isWalkable(type)) continue;
+            final ISweEnumSequence[] constants = constantsOf(type);
+
+            // what the default computes, worked out here rather than by calling the override
+            int defaultFirst = 0;
+            while (constants[defaultFirst].isNil()) defaultFirst++;
+
+            int defaultLast = constants.length - 1;
+            while (constants[defaultLast].isNil()) defaultLast--;
+
+            final ISweEnumSequence first = constants[0].first();
+            final ISweEnumSequence last = constants[0].last();
+
+            assertTrue(first.ordinal() >= defaultFirst, type.getName() + ".first() is "
+                    + first.name() + ", before the first non-reserved member");
+            assertTrue(last.ordinal() <= defaultLast, type.getName() + ".last() is "
+                    + last.name() + ", past the last non-reserved member");
+
+            if (first.ordinal() != defaultFirst || last.ordinal() != defaultLast) narrowed++;
+            checked++;
+        }
+
+        assertTrue(checked > 200, "expected the whole taxonomy, checked " + checked);
+        assertTrue(narrowed <= 1, "EMaasa is the only jyotisa family that narrows its own cycle;"
+                + " a second one appearing here needs a look, found " + narrowed);
+    }
+
     // ============================================================ 3. the cycle never reaches NIL
 
     /**

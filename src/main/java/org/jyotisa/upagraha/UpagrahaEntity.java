@@ -28,8 +28,12 @@ public class UpagrahaEntity extends KundaliSequenceEntity<IUpagraha> implements 
     public UpagrahaEntity(final IUpagraha upagraha, final ISweObjects sweObjects, final double longitude) {
         super(longitude, upagraha, sweObjects.sweJulianDate().julianDay());
 
-        final int lagnaSign = sweObjects.signs()[ISweObjects.LG];
-        this.bhava = EBhava.byUid((pada().rasi().fid() + i12 - lagnaSign) % i12 + 1);
+        // a whole-sign bhava is this point's own sign counted from the ascendant's, so without
+        // an ascendant there is no bhava to report. The arithmetic below does not fail on a
+        // missing one - it quietly answers "sign + 1", which reads like a real bhava and is not.
+        this.bhava = sweObjects.isCalculated(ISweObjects.LG)
+                ? EBhava.byUid((pada().rasi().fid() + i12 - sweObjects.signs()[ISweObjects.LG]) % i12 + 1)
+                : EBhava.NIL.bhava();
     }
     
     @Override
