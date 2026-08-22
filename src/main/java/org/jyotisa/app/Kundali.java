@@ -247,14 +247,14 @@ public class Kundali implements IKundali {
                 .append(", Location: ").append(toLON(geo.longitude()))
                 .append(" / ").append(toLAT(geo.latitude()))
                 .append("\nHousesys: ").append(opt.houseSystem())
-                .append(", Naksatra: ").append(pnchng.pada().naksatra().following()).append('(')
+                .append(", Naksatra: ").append(pnchng.pada().naksatra().label()).append('(')
                 .append(INaksatra.progress(pnchng)).append("%)")
                 .append(", Tithi: ").append(pnchng.tithi().code()).append('(')
                 .append(ITithi.progress(pnchng)).append("%)")
                 .append(", Vaara: ").append(pnchng.vaara().code())
-                .append(", Nitya Yoga: ").append(pnchng.yoga().following()).append('(')
+                .append(", Nitya Yoga: ").append(pnchng.yoga().label()).append('(')
                 .append(INityaYoga.progress(pnchng)).append("%)")
-                .append(", Karana: ").append(pnchng.karana().following()).append('(')
+                .append(", Karana: ").append(pnchng.karana().label()).append('(')
                 .append(IKarana.progress(pnchng)).append("%)")
                 .append("\nBhrigu Bindu: ").append(new BhriguBindu(this))
                 .append('\n');
@@ -282,9 +282,9 @@ public class Kundali implements IKundali {
 
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s -> Naksatra= %3s|%2s (%-5s%%) " +
                 "-> Navamsa= %3s|%2s -> Bhava= %-3s -> Dignity= %-3s -> %3s -> %-2s\n",
-                    strGraha, toDMSms(degree), rasi == null ? "?" : rasi.following(),
+                    strGraha, toDMSms(degree), rasi == null ? "?" : rasi.label(),
                     graha.progressInRasi(degree), toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
-                    graha.progressInNaksatra(degree), pada.navamsa().following(), pada.navamsa().lord().code(),
+                    graha.progressInNaksatra(degree), pada.navamsa().label(), pada.navamsa().lord().code(),
                     EBhava.byUid(grahaInBhava[i]),
                     (null != dignity ? grhs[i].dignity() : NIL_CD),
                     (null == karaka ? "   " : karaka.code()),
@@ -303,9 +303,9 @@ public class Kundali implements IKundali {
 
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s "
                             + "-> Naksatra= %3s|%2s (%-5s%%) -> Navamsa= %3s|%2s -> Bhava= %-3s\n",
-                    strGraha, toDMSms(degree), pada.rasi().following(), IRasi.progress(degree),
+                    strGraha, toDMSms(degree), pada.rasi().label(), IRasi.progress(degree),
                     toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
-                    INaksatra.progress(degree), pada.navamsa().following(),
+                    INaksatra.progress(degree), pada.navamsa().label(),
                     pada.navamsa().lord().code(), upagraha.bhava()));
         }
 
@@ -320,15 +320,15 @@ public class Kundali implements IKundali {
         while (lagnaIterator.hasNext()) {
             ILagnaEnum lgenum = lagnaIterator.next();
             ILagnaEntity lagna = lagnas.all()[lgenum.uid()];
-            ILagna lg = lagna.entityEnum().following();
+            String lg = lagna.entityEnum().label();
             INaksatraPada pada = lagna.pada();
             double degree = lagna.longitude();
 
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s "
                             + "-> Naksatra= %3s|%2s (%-5s%%) -> Navamsa= %3s|%2s -> Bhava= %-3s\n",
-                    lg, toDMSms(degree), pada.rasi().following(), IRasi.progress(degree),
+                    lg, toDMSms(degree), pada.rasi().label(), IRasi.progress(degree),
                     toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
-                    INaksatra.progress(degree), pada.navamsa().following(),
+                    INaksatra.progress(degree), pada.navamsa().label(),
                     pada.navamsa().lord().code(),
                     hasLagna ? EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)
                             : EBhava.NIL.bhava()));
@@ -349,7 +349,7 @@ public class Kundali implements IKundali {
                 final IRasi rasi = varga.rasi(longitude);
                 final double vrl = varga.rasiLongitude(longitude);
 
-                builder.append(' ').append(rasi.following());
+                builder.append(' ').append(rasi.label());
                 builder.append('[').append(toDMS(vrl)).append(']');
             }
 

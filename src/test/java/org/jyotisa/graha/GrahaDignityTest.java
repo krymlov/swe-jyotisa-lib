@@ -16,6 +16,8 @@ import org.jyotisa.graha.surya.GrahaSurya;
 import org.jyotisa.varga.VargaD1;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
@@ -75,15 +77,38 @@ class GrahaDignityTest {
     }
 
     /**
-     * {@code IVarga.chakraLongitude()}'s {@code fid()==1} branch returns the input degree
-     * verbatim, with no {@code fix360} - unlike every other varga, which does wrap. A real
-     * ecliptic longitude from {@code swe_calc} is always already in [0,360), so this never
-     * bites in practice, but it means D1 dignity is NOT robust to an out-of-range input the
-     * way D2+ dignity is - pinned here as a documented quirk, not a bug to fix blindly.
+     * D1 normalises like every other varga - it did not until 2026-08-22.
+     * <p>
+     * {@code chakraLongitude()}'s {@code fid()==1} branch used to return the input verbatim with
+     * no {@code fix360}, which made D1 the only one of the 23 vargas able to hand back a value
+     * outside [0, 360). An out-of-range degree then fell through every dignity band and answered
+     * {@code null}, while D2..D144 answered correctly from the same input.
+     * <p>
+     * The reachable case is not 360 but a <b>tiny negative</b> one: {@code swe_calc} can return a
+     * longitude a few ULPs below zero, which is why {@code IModuloUtils.modulo} carries a
+     * tolerance snap at all. Such a longitude is in Meena, and D1 used to say nothing at all
+     * about it.
      */
     @Test
-    void chakraLongitude_forD1_doesNotWrapThreeSixtyBackToZero() {
+    void chakraLongitude_forD1_normalisesLikeEveryOtherVarga() {
         assertSame(DignityUccha.UCC, dignityOf(GrahaSurya.SY, 0.));
-        assertNull(dignityOf(GrahaSurya.SY, 360.), "360 falls through every band unmatched");
+        assertSame(dignityOf(GrahaSurya.SY, 0.), dignityOf(GrahaSurya.SY, 360.),
+                "360 is 0, and D1 must say so");
+
+        // the case a real ephemeris can produce
+        assertNotNull(dignityOf(GrahaSurya.SY, -1e-7),
+                "a longitude a few ULPs below zero is in Meena, not nowhere");
+        assertSame(dignityOf(GrahaSurya.SY, 359.9999999), dignityOf(GrahaSurya.SY, -1e-7));
+    }
+
+    /** and the normalisation is an exact identity for every degree a chart can hold */
+    @Test
+    void chakraLongitude_forD1_isTheIdentityInsideTheRange() {
+        final org.jyotisa.api.varga.IVarga d1 = VargaD1.D1;
+
+        for (double degree = 0.; degree < 360.; degree += 0.25) {
+            assertEquals(degree, d1.chakraLongitude(degree), 0.,
+                    "no rounding may creep in at " + degree);
+        }
     }
 }

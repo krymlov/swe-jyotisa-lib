@@ -48,7 +48,7 @@ public class BhriguBindu {
     @Override
     public String toString() {
         return toDMSms(longitude) + ", Bhava: " + bhava
-            + ", Rasi: " + pada().rasi().following()
-            + ", Naksatra: " + pada().naksatra().following();
+            + ", Rasi: " + pada().rasi().label()
+            + ", Naksatra: " + pada().naksatra().label();
     }
 }
