@@ -61,6 +61,30 @@ public class Ashtakavarga implements IAshtakavarga {
     // [contributor][querent][houseOffset 0..11], maitreya8's own index order:
     // Sun, Moon, Mercury, Venus, Mars, Jupiter, Saturn, Ascendant - both for the
     // contributor (outer) and the querent (middle) dimension. Extracted verbatim from
+    /*
+     * Two cells are deliberately NOT maitreya8's - the 9th from the Moon and the 9th from Mars, in
+     * the Moon's own Bhinnashtakavarga.
+     *
+     * They are the **Parashara / Varahamihira discrepancy**, a known disagreement between the two
+     * classical statements of the Moon's ashtakavarga. Jagannatha Hora resolves it Varahamihira's
+     * way - the Moon is benefic in the 9th from itself and malefic in the 9th from Mars - and so
+     * does this table. maitreya8 resolves the *other* two cells of the same discrepancy the same
+     * way (the 2nd and the 12th from Jupiter) but leaves these two on Parashara, which is an
+     * inconsistency in its table rather than a considered choice.
+     *
+     * The row total is 49 either way, so no checksum can see it: it moves one bindu from one rasi
+     * to another. Reported from a real chart - the Moon's bindu in Leo read 3 against Jagannatha
+     * Hora's 4 - then derived, not guessed: solving the eight contributor lists against the Moon
+     * rows of all 17 reference charts plus that one gives this single swap as the *only* answer.
+     * Confirmed independently against PyJHora, a port of Jagannatha Hora, which carries the six
+     * switches by name (`p_v_moon_benefic_9_from_moon`, `p_v_moon_malefic_9_from_mars`, ...) and
+     * defaults every one of them on; with all six applied its table agrees with this one in all
+     * 64 cells.
+     *
+     * ai-github-projects/scratchpad/solve_moon_bav.py and compare_rekha.py reproduce both checks.
+     * Note that re-running extract-rekha-map.py against maitreya8 would undo this - the script
+     * re-applies it, and says so.
+     */
     // maitreya8 src/jyotish/Ashtakavarga.cpp's REKHA_MAP by
     // ai-github-projects/swe-jyotisa-lib/extract-rekha-map.py, not hand-transcribed -
     // verified against the classical per-graha bindu totals (48/49/54/52/39/56/39 for
@@ -78,10 +102,10 @@ public class Ashtakavarga implements IAshtakavarga {
         },
         { // Moon
             {0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0}, // Sun
-            {1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0}, // Moon
+            {1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0}, // Moon      9th: see the note below
             {1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0}, // Mercury
             {0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0}, // Venus
-            {0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0}, // Mars
+            {0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0}, // Mars      9th: see the note below
             {1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0}, // Jupiter
             {0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0}, // Saturn
             {0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0}  // Ascendant

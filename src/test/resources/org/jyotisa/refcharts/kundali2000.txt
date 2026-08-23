@@ -46,14 +46,14 @@ UTC Sunset		: 2000–04–04 12:45:14
 
 BAV:     MES VRB MIT KAR SIM KAN TUL VRC DHN MAK KUM MEE
 SY         4   3   3   4   4   3   4   5   7   5   5   1
-CH         2   6   5   3   5   6   2   4   5   5   5   1
+CH         2   6   5   3   5   6   2   5   4   5   5   1
 BU         6   3   4   6   2   2   6   6   5   6   6   2
 SK         4   3   5   6   2   2   5   5   6   6   5   3
 MA         3   3   2   5   3   2   3   3   3   6   5   1
 GU         5   5   5   6   2   4   5   6   4   6   4   4
 SA         1   1   4   2   5   6   2   2   3   5   5   3
 LG         4   5   5   5   3   4   2   3   4   5   7   2
-Sarva:    25  24  28  32  23  25  27  31  33  39  35  15
+Sarva:    25  24  28  32  23  25  27  32  32  39  35  15
 
 Chalit: Porphyry cusps as Sripati bhavas - the madhya is the middle,
         so the lagna sits halfway along B1, not at its start

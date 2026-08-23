@@ -76,8 +76,6 @@ import static org.swisseph.app.SweHouseSystem.WHOLE_SIGN;
  *     the divergence decays to nothing by 1900. See
  *     {@link #theAncientEpochsDivergeThroughDeltaTAndNothingElse()}.</li>
  * <li><b>The ayanamsa figure</b> - a display convention: JHora prints it without nutation.</li>
- * <li><b>Two cells of the Moon's Bhinnashtakavarga</b> - see
- *     {@link #ashtakavargaAgreesExceptTwoCellsOfTheMoonsOwnRow()}.</li>
  * </ul>
  *
  * @author Yura Krymlov
@@ -1011,27 +1009,28 @@ class JhoraRefChartsTest {
     // ============================================================ the ashtakavarga
 
     /**
-     * The eight Bhinnashtakavarga rows agree cell for cell - <b>except two cells of the Moon's
-     * own row</b>, at sixteen of the seventeen epochs.
+     * The eight Bhinnashtakavarga rows agree with Jagannatha Hora <b>cell for cell</b>, at every
+     * epoch.
      * <p>
-     * The row total is identical every time, and it is the classical 49, so neither program is
-     * simply wrong: one bindu sits in a different sign. Both tables are self-consistent - this
-     * library's {@code REKHA_MAP} is checked against all seven classical per-graha totals - so
-     * this is a difference between two published tables rather than an arithmetic error, and
-     * choosing between them is an author's decision. It is pinned here, precisely, so that the
-     * day one of them changes it is visible.
+     * They did not until 2026-08-23: two cells of the Moon's own row differed - the 9th from the
+     * Moon and the 9th from Mars - which is the <b>Parashara / Varahamihira discrepancy</b>, and
+     * {@code REKHA_MAP} carried maitreya8's half-resolved version of it. The row total is 49 under
+     * either reading, so no checksum could see it; see {@link org.jyotisa.varga.Ashtakavarga} for
+     * how it was derived and confirmed.
+     * <p>
+     * This is now the strongest check on the table: 1632 cells against an independent
+     * implementation, where the classical per-graha totals in {@code AshtakavargaTest} only
+     * constrain each row's sum.
      */
     @Test
-    void ashtakavargaAgreesExceptTwoCellsOfTheMoonsOwnRow() {
+    void ashtakavargaAgreesWithJagannathaHoraCellForCell() {
         requireEphemeris();
 
-        int cells = 0, differing = 0;
-        final Set<String> rowsThatDiffer = new LinkedHashSet<>();
+        int cells = 0;
+        final List<String> differences = new ArrayList<>();
 
         for (int year : ALL) {
             final JhoraReport jhora = JhoraReport.read(year);
-            final KundaliText ours = ours(year);
-            final org.jyotisa.api.varga.IAshtakavarga av = null;   // read from the report instead
 
             for (Map.Entry<String, int[]> row : jhora.bav().entrySet()) {
                 final int[] mine = bavRow(year, row.getKey());
@@ -1043,17 +1042,15 @@ class JhoraRefChartsTest {
                 for (int i = 0; i < 12; i++) {
                     cells++;
                     if (row.getValue()[i] != mine[i]) {
-                        differing++;
-                        rowsThatDiffer.add(row.getKey());
+                        differences.add(year + " " + row.getKey() + " rasi " + (i + 1)
+                                + ": ours " + mine[i] + ", jhora " + row.getValue()[i]);
                     }
                 }
             }
         }
 
         assertTrue(cells > 1500, "expected eight rows at every epoch, compared " + cells);
-        assertEquals(new LinkedHashSet<>(java.util.Collections.singletonList("CH")), rowsThatDiffer,
-                "only the Moon's own Bhinnashtakavarga is expected to differ");
-        assertTrue(differing <= 2 * ALL.length, "at most two cells per epoch, saw " + differing);
+        assertTrue(differences.isEmpty(), differences.size() + " cell(s) differ: " + differences);
     }
 
     private static int sum(final int[] values) {
