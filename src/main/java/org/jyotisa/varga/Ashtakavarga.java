@@ -81,7 +81,7 @@ public class Ashtakavarga implements IAshtakavarga {
      * defaults every one of them on; with all six applied its table agrees with this one in all
      * 64 cells.
      *
-     * ai-github-projects/scratchpad/solve_moon_bav.py and compare_rekha.py reproduce both checks.
+     * ai-github-projects/swe-jyotisa-lib/{solve_moon_bav,compare_rekha}.py reproduce both checks.
      * Note that re-running extract-rekha-map.py against maitreya8 would undo this - the script
      * re-applies it, and says so.
      */
