@@ -6,7 +6,7 @@
 package org.jyotisa.bhava;
 
 import org.jyotisa.api.bhava.IBhava;
-import org.jyotisa.api.bhava.IBhavaChalit;
+import org.jyotisa.api.bhava.IBhavaChalita;
 import org.jyotisa.api.graha.IGraha;
 import org.jyotisa.graha.EGraha;
 import org.swisseph.api.ISweObjects;
@@ -51,13 +51,13 @@ import static swisseph.SweConst.SE_MC;
  * Bhava Chalit is this construction, not "the configured houses". A chart built with whole sign -
  * the default here - still has a real ascendant and midheaven, and those are all this needs. The
  * {@code Bhava} column of the report stays whole sign; the two readings differ on purpose, and
- * {@link IBhavaChalit} says where.
+ * {@link IBhavaChalita} says where.
  *
  * @author Yura Krymlov
  * @version 1.0, 2026-08
- * @see IBhavaChalit
+ * @see IBhavaChalita
  */
-public class BhavaChalit implements IBhavaChalit {
+public class BhavaChalita implements IBhavaChalita {
     private static final long serialVersionUID = 4192806534707261541L;
 
     /** how many of the four quadrants the twelve bhavas cut each into */
@@ -73,7 +73,7 @@ public class BhavaChalit implements IBhavaChalit {
 
     protected final boolean calculated;
 
-    public BhavaChalit(final ISweObjects sweObjects) {
+    public BhavaChalita(final ISweObjects sweObjects) {
         final double[] ascmc = sweObjects.ascmc();
         this.calculated = sweObjects.isCalculated(LG);
 

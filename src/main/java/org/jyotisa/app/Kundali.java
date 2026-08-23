@@ -8,8 +8,8 @@ package org.jyotisa.app;
 import org.jyotisa.avastha.EAvastha;
 import org.jyotisa.arudha.ArudhaPadas;
 import org.jyotisa.api.arudha.IArudhaPadas;
-import org.jyotisa.bhava.BhavaChalit;
-import org.jyotisa.api.bhava.IBhavaChalit;
+import org.jyotisa.bhava.BhavaChalita;
+import org.jyotisa.api.bhava.IBhavaChalita;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.IKundaliFields;
 import org.jyotisa.api.IKundaliOptions;
@@ -89,7 +89,7 @@ public class Kundali implements IKundali {
     protected final ISweObjects sweObjects;
 
     protected IAshtakavarga ashtakavarga;
-    protected IBhavaChalit bhavaChalit;
+    protected IBhavaChalita bhavaChalita;
     protected IArudhaPadas arudhaPadas;
     protected IKundaliFields fields;
     protected IPanchanga panchanga;
@@ -168,9 +168,9 @@ public class Kundali implements IKundali {
     }
 
     @Override
-    public IBhavaChalit bhavaChalit() {
-        if (null != bhavaChalit) return bhavaChalit;
-        return bhavaChalit = new BhavaChalit(sweObjects);
+    public IBhavaChalita bhavaChalita() {
+        if (null != bhavaChalita) return bhavaChalita;
+        return bhavaChalita = new BhavaChalita(sweObjects);
     }
 
     @Override
@@ -355,7 +355,7 @@ public class Kundali implements IKundali {
 
         builder.append('\n').append(fields()).append('\n');
         builder.append('\n').append(ashtakavarga()).append('\n');
-        builder.append(bhavaChalit()).append('\n');
+        builder.append(bhavaChalita()).append('\n');
         builder.append(arudhaPadas()).append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();

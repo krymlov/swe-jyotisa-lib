@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.jyotisa.api.bhava.IBhava;
-import org.jyotisa.api.bhava.IBhavaChalit;
+import org.jyotisa.api.bhava.IBhavaChalita;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.api.arudha.IArudhaPada;
 import org.jyotisa.api.arudha.IArudhaPadas;
@@ -534,7 +534,7 @@ class JhoraRefChartsTest {
         requireEphemeris();
 
         final List<JhoraReport.Chalit> theirs = JhoraReport.read(year).chalit();
-        final IBhavaChalit mine = chalitOf(year);
+        final IBhavaChalita mine = chalitOf(year);
 
         assertEquals(12, theirs.size(), year + " should list twelve bhavas");
         assertTrue(mine.isCalculated(), year + " must have an ascendant to build chalit from");
@@ -566,7 +566,7 @@ class JhoraRefChartsTest {
         requireEphemeris();
 
         for (int year : MODERN) {
-            final IBhavaChalit chalit = chalitOf(year);
+            final IBhavaChalita chalit = chalitOf(year);
             final IBhava first = EBhava.byUid(1);
             final double lagna = ours(year).row("LG").longitude;
 
@@ -592,7 +592,7 @@ class JhoraRefChartsTest {
 
         int differing = 0;
         for (int year : MODERN) {
-            final IBhavaChalit chalit = chalitOf(year);
+            final IBhavaChalita chalit = chalitOf(year);
             final KundaliText ours = ours(year);
 
             for (String code : KundaliText.VARGA_COLUMNS) {
@@ -618,20 +618,20 @@ class JhoraRefChartsTest {
                         .trueNode(true).build(), false);
         partial.buildSunMoon();
 
-        final IBhavaChalit chalit = new Kundali(KUNDALI_7_KARAKAS, partial).bhavaChalit();
+        final IBhavaChalita chalit = new Kundali(KUNDALI_7_KARAKAS, partial).bhavaChalita();
 
         assertFalse(chalit.isCalculated(), "no ascendant, no chalit");
         assertTrue(chalit.bhava(120.).isNil(), "and no bhava to answer with");
         assertEquals(0, chalit.grahas(EBhava.byUid(1)).length, "and nothing placed in one");
     }
 
-    private IBhavaChalit chalitOf(final int year) {
+    private IBhavaChalita chalitOf(final int year) {
         final JhdChart chart = jhd(year);
 
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph(),
                 ((SweJulianDate) chart.julianDate()).calendar(SE_GREG_CAL), chart.geoLocation(),
                 new SweObjectsOptions.Builder().ayanamsa(TRUE_CITRA).houseSystem(WHOLE_SIGN)
-                        .trueNode(true).build()).completeBuild()).bhavaChalit();
+                        .trueNode(true).build()).completeBuild()).bhavaChalita();
     }
 
     // ============================================================ arudha padas
