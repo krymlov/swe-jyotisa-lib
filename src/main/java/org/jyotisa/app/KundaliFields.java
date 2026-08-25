@@ -352,7 +352,21 @@ public class KundaliFields implements IKundaliFields {
      * conversion, instead of the impossible "24:00:00" that rounding an isolated seconds field
      * would produce.
      */
-    protected static double atWholeSecond(final double julianDay) {
+    /**
+     * Moves a julian day to the <b>middle</b> of the second it falls in, so that a formatter which
+     * truncates renders the second it is actually in.
+     * <p>
+     * Snapping to the second's <i>boundary</i> is not enough and was tried: a julian day is ~2.44e6,
+     * so {@code jd * 86400} spends twelve digits before the decimal and the round trip can land on
+     * 21.9999999, which truncates back to 21 - it once dragged a moonset at 11:05:22.07 down to
+     * 11:05:21, which rounding must never do. The half second of slack on either side removes that,
+     * and working on the julian day rather than an isolated seconds field gets the date carry right
+     * for free (23:59:59.7 becomes 00:00:00 the next day, not an impossible 24:00:00).
+     * <p>
+     * Public because the presentation layer needs exactly this - {@code IMetaJyotisaBuilder} renders
+     * the same rise and set times into the feed - and a copy of it there would be free to drift.
+     */
+    public static double atWholeSecond(final double julianDay) {
         final double seconds = julianDay * d86400;
         return (Math.floor(seconds + d05) + d05) / d86400;
     }
