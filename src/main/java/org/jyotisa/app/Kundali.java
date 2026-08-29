@@ -72,7 +72,14 @@ import static org.swisseph.api.ISweConstants.d0;
 import static org.swisseph.api.ISweConstants.i12;
 import static org.swisseph.api.ISweEnum.NIL_CD;
 import static org.swisseph.api.ISweObjects.*;
+import org.swisseph.app.SweJulianDate;
+import org.jyotisa.api.vimsottari.IVimsottariDasas;
+import org.jyotisa.api.vimsottari.IVimsottariPeriod;
+import org.jyotisa.vimsottari.VimsottariDasas;
+
+import static org.swisseph.utils.IDateUtils.format;
 import static org.swisseph.utils.IDateUtils.format6;
+import static org.swisseph.utils.IDateUtils.F4Y_2M_2D_2H_2M_2S;
 import static org.swisseph.utils.IDegreeUtils.*;
 import static org.swisseph.utils.IModuloUtils.fix30;
 import static swisseph.SweConst.SEFLG_SWIEPH;
@@ -93,6 +100,7 @@ public class Kundali implements IKundali {
     protected IArudhaPadas arudhaPadas;
     protected IKundaliFields fields;
     protected IPanchanga panchanga;
+    protected IVimsottariDasas vimsottari;
     protected IUpagrahas upagrahas;
     protected IGrahas grahas;
     protected ILagnas lagnas;
@@ -184,6 +192,17 @@ public class Kundali implements IKundali {
         if (null != panchanga) return panchanga;
         return panchanga = new Panchanga(sweObjects.longitudes()[SY], getDayOfWeekNr(
                 sweObjects.sweJulianDate().julianDay()), sweObjects.longitudes()[CH]);
+    }
+
+    /**
+     * Kept at whatever depth was asked for deepest, and a shallower request is answered from it -
+     * a three-level tree already holds the mahadashas a one-level request wants. A deeper request
+     * rebuilds, because the levels below it were never computed.
+     */
+    @Override
+    public IVimsottariDasas vimsottari(final int levels) {
+        if (null != vimsottari && vimsottari.levels() >= levels) return vimsottari;
+        return vimsottari = new VimsottariDasas(sweObjects, levels);
     }
 
     @Override
@@ -357,6 +376,8 @@ public class Kundali implements IKundali {
         builder.append('\n').append(ashtakavarga()).append('\n');
         builder.append(bhavaChalita()).append('\n');
         builder.append(arudhaPadas()).append('\n');
+        appendVimsottari(builder);
+        builder.append('\n');
 
         final Iterator<IVargaEnum> iterator = EVarga.iterator();
         final IGrahaEntity[] grahas = grahas().all();
@@ -380,4 +401,29 @@ public class Kundali implements IKundali {
         return builder.toString();
     }
 
+
+    /**
+     * The mahadashas only - the nine top-level periods and nothing under them.
+     * <p>
+     * Deeper levels are deliberately not printed: the antardashas alone would add eighty-one rows
+     * to a report that is read as a whole, and anything that wants them asks
+     * {@link #vimsottari(int)} for the depth it needs. Moments are UTC, like the rest of the
+     * report, and are moved to the middle of their second so that the formatter truncating to a
+     * whole second lands on the intended one - see {@link KundaliFields#atWholeSecond(double)}.
+     */
+    protected void appendVimsottari(final StringBuilder builder) {
+        final IVimsottariDasas dasas = vimsottari(1);
+        builder.append("\nVimsottari Dasa (").append(dasas.year()).append(")\n");
+
+        for (final IVimsottariPeriod period : dasas.periods()) {
+            builder.append(String.format("%-5s= %s -> %s%n", period.dasa().label(),
+                    utc(period.start()), utc(period.close())));
+        }
+    }
+
+    /** a julian day as this report renders a moment: UTC, to the second */
+    protected String utc(final double julianDay) {
+        return format(swissEph().initDateTime(new SweJulianDate(
+                KundaliFields.atWholeSecond(julianDay))), F4Y_2M_2D_2H_2M_2S).toString();
+    }
 }
