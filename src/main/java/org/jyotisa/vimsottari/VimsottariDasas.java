@@ -106,6 +106,14 @@ public class VimsottariDasas implements IVimsottariDasas {
 
         // which naksatra the Moon is in, and how much of it is already spent
         final INaksatra naksatra = ENaksatra.byLongitude(chandra);
+
+        // A chart whose Moon cannot be placed has no Vimsottari dasha at all - the naksatra is what
+        // names the first lord and what says how much of it is already spent, and there is nothing
+        // to fall back on. A caller marks that by writing NaN into the longitude, which an event
+        // with a date but no time has to do: the Moon crosses half a sign in a day. So this leaves
+        // `periods` empty and says so, rather than throwing or inventing Ashwini.
+        if (naksatra.isNil()) return;
+
         final double elapsed = (chandra - (naksatra.fid() - 1) * NAKSHATRA_LENGTH) / NAKSHATRA_LENGTH;
 
         IVimsottariDasaEnum lord = dasaOf(naksatra);

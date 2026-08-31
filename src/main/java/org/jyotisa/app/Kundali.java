@@ -320,8 +320,8 @@ public class Kundali implements IKundali {
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s -> Naksatra= %3s|%2s (%-5s%%) " +
                 "-> Navamsa= %3s|%2s -> Bhava= %-3s -> Dignity= %-3s -> %3s -> %-2s -> %s\n",
                     strGraha, toDMSms(degree), rasi == null ? "?" : rasi.label(),
-                    graha.progressInRasi(degree), toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
-                    graha.progressInNaksatra(degree), pada.navamsa().label(), pada.navamsa().lord().code(),
+                    graha.progressInRasi(degree), toDMSms(fix30(degree)), pada, lordCode(pada.naksatra().lord()),
+                    graha.progressInNaksatra(degree), pada.navamsa().label(), lordCode(pada.navamsa().lord()),
                     EBhava.byUid(grahaInBhava[i]),
                     (null != dignity ? grhs[i].dignity() : NIL_CD),
                     (null == karaka ? "   " : karaka.code()),
@@ -342,9 +342,9 @@ public class Kundali implements IKundali {
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s "
                             + "-> Naksatra= %3s|%2s (%-5s%%) -> Navamsa= %3s|%2s -> Bhava= %-3s\n",
                     strGraha, toDMSms(degree), pada.rasi().label(), IRasi.progress(degree),
-                    toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
+                    toDMSms(fix30(degree)), pada, lordCode(pada.naksatra().lord()),
                     INaksatra.progress(degree), pada.navamsa().label(),
-                    pada.navamsa().lord().code(), upagraha.bhava()));
+                    lordCode(pada.navamsa().lord()), upagraha.bhava()));
         }
 
         // the sign the ascendant occupies - the whole sign bhava of any other point is its
@@ -365,9 +365,9 @@ public class Kundali implements IKundali {
             builder.append(String.format("%-5s= %-13s -> Rasi= %-3s (%-5s%%) | %s "
                             + "-> Naksatra= %3s|%2s (%-5s%%) -> Navamsa= %3s|%2s -> Bhava= %-3s\n",
                     lg, toDMSms(degree), pada.rasi().label(), IRasi.progress(degree),
-                    toDMSms(fix30(degree)), pada, pada.naksatra().lord().code(),
+                    toDMSms(fix30(degree)), pada, lordCode(pada.naksatra().lord()),
                     INaksatra.progress(degree), pada.navamsa().label(),
-                    pada.navamsa().lord().code(),
+                    lordCode(pada.navamsa().lord()),
                     hasLagna ? EBhava.byUid((pada.rasi().fid() + i12 - lagnaSign) % i12 + 1)
                             : EBhava.NIL.bhava()));
         }
@@ -415,10 +415,31 @@ public class Kundali implements IKundali {
         final IVimsottariDasas dasas = vimsottari(1);
         builder.append("\nVimsottari Dasa (").append(dasas.year()).append(")\n");
 
+        // an indeterminable Moon leaves no dasha at all - said out loud, the way the Ashtakavarga
+        // block marks a partial table, rather than printed as an empty run of rows
+        if (dasas.periods().isEmpty()) {
+            builder.append("NONE: the Moon has no naksatra, so there is no dasha to compute\n");
+            return;
+        }
+
         for (final IVimsottariPeriod period : dasas.periods()) {
             builder.append(String.format("%-5s= %s -> %s%n", period.dasa().label(),
                     utc(period.start()), utc(period.close())));
         }
+    }
+
+    /**
+     * A lord's code, or NIL where there is none.
+     * <p>
+     * A {@code Nil*} member's {@code lord()} is <b>deliberately null</b> - a non-sign has no lord,
+     * and inventing one would trade a visible failure for an invisible wrong answer. A caller marks
+     * a graha as indeterminable by writing NaN into its longitude, which every lookup now answers
+     * with NIL, so a row about one has to say that rather than dereference it.
+     *
+     * @see org.jyotisa.api.rasi.NilRasi
+     */
+    protected static String lordCode(final IGraha lord) {
+        return null == lord ? NIL_CD : lord.code();
     }
 
     /** a julian day as this report renders a moment: UTC, to the second */
