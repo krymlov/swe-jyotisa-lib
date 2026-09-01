@@ -7,12 +7,15 @@ package org.jyotisa.refbase;
 
 import org.junit.jupiter.api.Test;
 import org.jyotisa.AbstractTest;
+import org.jyotisa.api.graha.IGrahaEntity;
 import org.jyotisa.app.Kundali;
 import org.swisseph.api.ISweObjects;
 import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.swisseph.api.ISweObjects.CH;
@@ -55,6 +58,40 @@ class IndeterminateLongitudeTest extends AbstractTest {
 
         objects.longitudes()[CH] = Double.NaN;
         return new Kundali(KUNDALI_7_KARAKAS, objects);
+    }
+
+    /**
+     * An indeterminable graha used to become the Atmakaraka - on exactly the chart that knows least
+     * about it.
+     * <p>
+     * {@code Double.compare} treats NaN as larger than every number and the Chara karaka comparator
+     * is descending, so a NaN longitude sorted first, every time. Reported from
+     * {@code jyotisa-basics}: the Moon took the Atmakaraka, and since a Moon with no rasi is not
+     * rendered, the Atmakaraka vanished from the list altogether.
+     */
+    @Test
+    void anIndeterminableGrahaDoesNotBecomeTheAtmakaraka() {
+        for (final IGrahaEntity entity : indeterminateMoon().grahas().all()) {
+            if (null == entity) continue;
+
+            assertNull(entity.charaKaraka(), entity.entityEnum().code()
+                    + " must carry no karaka: a rank is a position in the ordering, and with one"
+                    + " degree unknown every position is uncertain by one");
+        }
+    }
+
+    /** and a chart that knows every degree still ranks them, so the guard is not a blanket off */
+    @Test
+    void aCompleteChartStillGetsItsKarakas() {
+        final ISweObjects objects = new SweObjects(getSwephExp(),
+                new SweJulianDate(new int[]{1962, 2, 4, 8, 30}, 5.5f, 8.5),
+                GEO_CHENNAI, TRUECITRA_AYANAMSA_TRUE_NODE).completeBuild();
+
+        int assigned = 0;
+        for (final IGrahaEntity entity : new Kundali(KUNDALI_7_KARAKAS, objects).grahas().all()) {
+            if (null != entity && null != entity.charaKaraka()) assigned++;
+        }
+        assertEquals(7, assigned, "the seven-karaka scheme ranks Surya through Shani");
     }
 
     @Test

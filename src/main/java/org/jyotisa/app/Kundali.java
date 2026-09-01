@@ -151,13 +151,15 @@ public class Kundali implements IKundali {
         for (int i = SY; i < RA; i++) entities.add(all[i]);
         if ( !sevenKarakas ) entities.add(all[RA]);
 
-        // sort grahas according to Chara karakas
-        sort(entities, options.charaKarakaOption());
+        if ( rankable(entities) ) {
+            // sort grahas according to Chara karakas
+            sort(entities, options.charaKarakaOption());
 
-        for (int index = 0, karaka = 1; index < entities.size(); index++, karaka++) {
-            if ( sevenKarakas && karaka == ECharaKaraka.PITRI_KARAKA.uid() ) karaka++;
-            ICharaKaraka charaKaraka = ECharaKaraka.byUid(karaka);
-            entities.get(index).charaKaraka(charaKaraka);
+            for (int index = 0, karaka = 1; index < entities.size(); index++, karaka++) {
+                if ( sevenKarakas && karaka == ECharaKaraka.PITRI_KARAKA.uid() ) karaka++;
+                ICharaKaraka charaKaraka = ECharaKaraka.byUid(karaka);
+                entities.get(index).charaKaraka(charaKaraka);
+            }
         }
 
         return grahas = built;
@@ -426,6 +428,33 @@ public class Kundali implements IKundali {
             builder.append(String.format("%-5s= %s -> %s%n", period.dasa().label(),
                     utc(period.start()), utc(period.close())));
         }
+    }
+
+    /**
+     * Whether the Chara karakas can be ranked at all: every graha taking part must have a degree.
+     *
+     * <h2>Why one indeterminable graha costs all of them, not just its own</h2>
+     * A karaka is a <b>position in the ordering</b>, not a property of one graha. If a longitude is
+     * NaN - which is how a caller says "this cannot be determined", and what an event with a date
+     * but no time has to say about the Moon - then that graha sits at an unknown place in the
+     * descending order, and every other graha's rank is uncertain by one. Ranking the rest anyway
+     * would hand out seven ranks each of which is a guess.
+     * <p>
+     * <b>What it used to do is worse than a guess.</b> {@code Double.compare} treats NaN as larger
+     * than every number and the comparator is descending, so an indeterminable graha sorted
+     * <i>first</i> - it became the Atmakaraka, every time, on exactly the chart that knows least
+     * about it. Reported from {@code jyotisa-basics}, where the Moon then also carries no rasi, so
+     * the Atmakaraka simply vanished from the rendered list.
+     * <p>
+     * Leaving them all unassigned is the same answer this class already gives Rahu under the
+     * seven-karaka scheme, so nothing downstream is surprised by it: {@code charaKaraka()} is null
+     * and both the report and the feed already omit what is null.
+     */
+    protected static boolean rankable(final List<IGrahaEntity> entities) {
+        for (final IGrahaEntity entity : entities) {
+            if (Double.isNaN(entity.longitude())) return false;
+        }
+        return true;
     }
 
     /**
